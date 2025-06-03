@@ -1,0 +1,10 @@
+---
+title: "Remote Sensing images: optical, SAR"
+author: "Gilberto Camara, Pan Yaozhong"
+format: html
+---
+
+## Outline
+
+This chapter provides a general introduction to remote sensing imagery. The authors discuss different types of remote sensing satellites  (optical, SAR,  hyperspectral) and include examples of satellite constellations (e.g, Landsat,  Sentinel-1, CHEOS). 
+

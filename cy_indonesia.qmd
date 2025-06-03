@@ -1,0 +1,13 @@
+---
+title: "Rice Paddy Phenology in Indonesia"
+author: "Wida Widiastuti, Achmad Fauzi Bagus Firmansyah, Fawcet Jenusdy Makay, Novia Permatasari, Nasiya Alifah Utami"
+format: html
+---
+
+## Outline
+
+Combination of multi-year area sampling frame with Sentinel-1 imagery to predict rice phenology and estimate harvest areas.
+
+Rice data plays a vital role in shaping national food security policies, especially in a country like Indonesia, where rice is both a staple and a strategic commodity. At present, the paddy harvested area is estimated through a monthly ground survey known as the Area Sampling Frames (ASF), conducted by Statistics Indonesia. While this method has long served as the official approach, the high cost of data collection and recurring challenges in field implementation underscore the urgent need for more efficient and scalable alternatives. Satellite Imagery Time Series (SITS) data, particularly from the historical archives of Sentinel-1, emerges as a promising solution. By leveraging the power of the XGBoost algorithm — a state-of-the-art machine learning model — it becomes possible to detect phenological stages of paddy growth remotely and with remarkable precision.
+
+Building on this, the study in 2024 introduces an alternative approach implemented in selected 10 provinces across Indonesia based on the harvest and productivity data. The study outlines a carefully designed workflow that enhances model accuracy through a combination of clustering techniques, missing data imputation, noise reduction, and region-specific model calibration. The results show that most cluster regions achieve high accuracy in classifying paddy phenological stages, while the estimated harvested area patterns align closely with the official statistics. These outcomes not only confirm the reliability of the proposed method but also highlight its strong potential to complement or even streamline the existing survey-based system in the future.

@@ -1,0 +1,11 @@
+---
+title: "Crop classification using Digital Earth Africa"
+author: "Lisa Rebello"
+format: html
+---
+
+## Outline
+
+Digital Earth Africa offers continental-scale satellite-derived data products and provides guidance on their application in analytical workflows. This chapter demonstrates the use of high quality, cloud-free, geomedian composite images with median absolute deviations (GeoMADs) for crop type mapping. Digital Earth Africa’s GeoMADs are applied to a classification framework in the satellite image time series (SITS) package in the R language.
+
+The chapter demonstrates how high-quality, ‘off-the-shelf’ satellite image composites can overcome common challenges in classification workflows, such as the ‘curse of dimensionality’ and computational demand. It also introduces readers and users to Digital Earth Africa products and services, and modes of access, especially through the SITS R package.

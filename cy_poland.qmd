@@ -1,0 +1,9 @@
+---
+title: "Yield Forecasting in Poland"
+author: "Artur Laczynski, Przemysław Slesiński, Natlia Kotulak"
+format: html
+---
+
+## Overview
+
+Integration of Sentinel-3 and MODIS Vegetation Indices with ERA-5 Agro-Meteorological Indicators for Operational Crop Yield Forecasting.

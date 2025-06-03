@@ -1,0 +1,13 @@
+---
+title: "Machine learning classification of remote sensing images"
+author: "Gilberto Camara"
+format: html
+---
+
+## Outline
+
+This chapter describes machine learning methods for classifying individual remote sensing images and image time series. The chapter considers three kinds of algorithms:
+•	Machine learning algorithms that do not explicitly consider the spatial and temporal structure of the time series. These methods include random forests, support vector machine and extreme gradient boosting. 
+•	Deep learning methods which consider temporal relations between observed values in a time series. This class of models includes 1D convolutional neural networks and temporal attention-based encoders. 
+•	Semantic segmentation methods based on U-net paradigms and multidimensional 2D convolution. 
+

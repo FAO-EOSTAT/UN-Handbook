@@ -1,0 +1,9 @@
+---
+title: "Land cover and crop classification schemas"
+author: "Gilberto Camara, Lorenzo DeSimone"
+format: html
+---
+
+## Outline
+
+Describes the problem of designing a good classification schema and provides some examples. It includes a discussion of LCCS/FAO and highlights the limitations of land cover classification based on space first, especially in complex landscapes. Investigate land classification schemes based on events detected by satellite image time series; we show these concepts to be instances of events. For continuous monitoring of land change, event recognition is better than object identification as the prevailing paradigm of LUCC. 

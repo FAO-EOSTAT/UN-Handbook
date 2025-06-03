@@ -1,0 +1,11 @@
+---
+title: "Crop classification and land use mapping in Chile"
+author: "Estefanía Pizarro, Jonathan Paredes y Alexis Gamboa"
+format: html
+---
+
+## Overview
+
+This section outlines a pilot methodology for land use and crop classification in Chile, using the Maule Region as a case study. It combines Sentinel-2 time-series imagery, digital elevation models (DEM) and machine learning to produce scalable LULC maps. Ground truth data from agricultural censuses and other sources are used to enhance classification accuracy. The approach aims to support the integration of remote sensing into official agricultural statistics.
+
+The study highlights key challenges, including data gaps, cloud cover, and crop heterogeneity. However, it also shows how time-series analysis helps capture crop phenology for better classification. This pilot sets the foundation for a standardized national mapping framework, enabling more timely and spatially detailed agricultural data for decision-making.

@@ -1,0 +1,12 @@
+---
+title: "Extraction of crop statistics from crop type and crop yield maps"
+author: "Lorenzo de Simone, Inbal Backer-Reshef, Sophie Bontemps, Sergii Scacun , Joseph Wagner"
+format: html
+---
+
+## Overview
+
+Describe concrete experiences carried out by FAO-EOSTAT, Sen4Stat, and NASA Harvest.
+Ukraine - Crop area and Yield - Production Nasa Harvest
+Stratifier, sampling, regression estimator 
+

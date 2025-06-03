@@ -1,0 +1,7 @@
+---
+title: "Multi-seasonal crop mapping in Senegal"
+author: "Lorenzo De Simone, Sophie Bontemps"
+format: html
+---
+
+## Overview

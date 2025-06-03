@@ -1,0 +1,9 @@
+---
+title: "Use Cases in Crop Type Mapping"
+author: "Gilberto Camara, Lorenzo de Simone"
+format: html
+---
+
+## Outline
+
+Describe the use cases.

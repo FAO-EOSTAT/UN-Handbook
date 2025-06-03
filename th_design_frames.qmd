@@ -1,0 +1,9 @@
+---
+title: "Remote Sensing in the Design of Sampling Frames"
+author: "Lorenzo De Simone, Pierre Defourny, Sophie Bontemps"
+format: html
+---
+
+## Outline
+
+This chapter deals with the requirements of field surveys for statistical quality and for compatibility with EO data.  Earth Observation (EO) are widely used in agricultural statistics production. However, the accuracy of EO-based land use classification is limited because of the limitations of using in situ census or survey data as training sets for EO applications. In this work, we provide recommendations for National Statistical Offices (NSO) to design in situ data collection campaigns that benefit both conventional statistics and EO-based assessments.

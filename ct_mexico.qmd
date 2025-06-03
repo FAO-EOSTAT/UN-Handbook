@@ -1,0 +1,7 @@
+---
+title: "Crop classification in Mexico"
+author: "Abel Coronado"
+format: html
+---
+
+## Outline

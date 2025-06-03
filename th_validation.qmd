@@ -1,0 +1,9 @@
+---
+title: "Map validation and use of maps for area estimation"
+author: "Gilberto Camara, Lorenzo De Simone, Pierre Defourny, Sophie Bontemps"
+format: html
+---
+
+## Outline
+
+Statistically robust and transparent approaches for assessing accuracy are essential parts of the land classification process. The sits package supports the “good practice” recommendations for designing and implementing an accuracy assessment of a change map and estimating the area based on reference sample data. These recommendations address three components: sampling design, reference data collection, and accuracy estimates. 

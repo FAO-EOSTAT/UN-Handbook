@@ -1,0 +1,7 @@
+---
+title: "WorldCereal - A Global Effort for Crop Mapping"
+author: "Kristof VanTricht and Zoltan Szantoi"
+format: html
+---
+
+## 

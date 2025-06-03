@@ -1,0 +1,13 @@
+---
+title: "Introduction"
+author: "Ronald Jansen, Lorenzo de Simone, Gilberto Camara, Pierre Defourny"
+format: html
+---
+
+## Outline
+
+The introduction should highlight the actual challenges in the uptake of Earth Observation (EO) data and the process of transforming this data into useful statistics. Many papers in the scientific literature discuss issues related to remote sensing image analysis for land cover and land use mapping. However, many NSOs still experience a knowledge gap for using remote sensing in operational agricultural statistics. It is important to share experiences to produce statistics beyond just maps. By doing so, this handbook can provide valuable insights that enhance what has already been published.
+
+This handbook differs from previous works in the field by emphasizing reproducible software. Each chapter will include scripts written in Python and/or R, which can be reviewed, reused, and repurposed by National Statistical Offices (NSOs) to assist with their tasks.
+
+

@@ -1,0 +1,11 @@
+---
+title: "Quality control of training sets for agricultural statistics"
+author: "Gilberto Camara"
+format: html
+---
+
+## Outline
+
+Selecting good training samples for machine learning classification of satellite images is critical to achieving accurate results. Experience with machine learning methods has shown that the number and quality of training samples are crucial factors in obtaining accurate results. This chapter presents pre-processing methods to improve the quality of samples and eliminate those that may have been incorrectly labelled or possess low discriminatory power. Explains the basics of machine learning and provides examples of designing and using good training sets. Explains k-fold validation, SOM clustering and sample imbalance removal, with examples in R and Python.
+
+

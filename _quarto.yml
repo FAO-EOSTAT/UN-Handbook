@@ -1,0 +1,67 @@
+project:
+  type: book
+  output-dir: _book
+
+
+book:
+  title: "UN Handbook on Remote Sensing for Agricultural Statistics"
+  reader-mode: true
+
+  page-footer:
+    background: "#21618c"
+    left: |
+      Edited by Gilberto Camara, Lorenzo de Simone and Ronald Jansen.
+    right: |
+      This book was built with <a href="https://quarto.org/">Quarto</a>.
+  
+  site-url: https://FAO-EOSTAT.github.io/UN-Handbook/
+  repo-url: https://github.com/FAO-EOSTAT/UN-Handbook
+  repo-branch: quarto
+  repo-actions: [edit, issue]
+  chapters:
+    - index.qmd
+    - howto.qmd
+    - introduction.qmd
+    - part: theory.qmd
+      chapters: 
+        - th_remote_sensing.qmd
+        - th_lucc.qmd
+        - th_quality_control.qmd
+        - th_machine_learning.qmd
+        - th_uncertainty.qmd
+        - th_validation.qmd
+        - th_data_sources.qmd
+        - th_design_frames.qmd
+        - th_parcel_extraction.qmd
+    - part: crop_type_mapping.qmd
+      chapters:
+        - ct_poland.qmd
+        - ct_mexico.qmd
+        - ct_senegal.qmd
+        - ct_zimbabwe.qmd
+        - ct_chile.qmd
+        - ct_digital_earth_africa.qmd
+    - part: crop_yield_estimation.qmd
+      chapters:
+        - cy_finland.qmd
+        - cy_indonesia.qmd
+        - cy_poland.qmd
+        - cy_colombia.qmd
+        - cy_china.qmd
+    - part: additional.qmd
+      chapters:
+        - ad_geoglam.qmd
+        - ad_world_cereal.qmd
+        - ad_uav_applications.qmd
+        - ad_disaster_response.qmd
+        - ad_governance.qmd
+format:
+  html:
+    theme:
+      - litera
+      - handbook.scss
+    code-link: true
+    author-meta: "Gilberto Camara, Lorenzo de Simone, Ronald Jansen"
+    callout-appearance: simple
+bibliography: e-sensing.bib
+csl: ieee.csl

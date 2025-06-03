@@ -1,0 +1,10 @@
+---
+title: "Crop monitoring with SAR images in Poland"
+author: "Artur Laczynski, Przemysław Slesiński, Natalia Kotulak"
+format: html
+---
+
+## Outline
+
+Country-wide crop classification using Sentinel-1 radar imagery.
+Reference: https://www.sciencedirect.com/science/article/pii/S0303243422000095

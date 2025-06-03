@@ -1,0 +1,7 @@
+---
+title: "Rice Phenology in Colombia"
+author: "Freddy Martinez"
+format: html
+---
+
+## 

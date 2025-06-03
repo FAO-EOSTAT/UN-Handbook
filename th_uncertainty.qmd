@@ -1,0 +1,9 @@
+---
+title: "Spatial map uncertainty estimation and active learning in crop classification"
+author: "Gilberto Camara"
+format: html
+---
+
+## Outline
+
+Describes methods for estimating uncertainty of machine learning classification maps and how to use such estimates to improve classification accuracy. Map uncertainty refers to the degree of doubt or ambiguity in the accuracy of each pixel of the classification results. Several sources of uncertainty can arise during land classification using satellite data, including: a) classification errors;   b) ambiguity in classification schema; c) variability in the landscape; and d) limitations of the data. The quality and quantity of input data can influence the accuracy of the classification results. Quantifying uncertainty in land classification is important for ensuring that the results are reliable and valid for decision-making. 

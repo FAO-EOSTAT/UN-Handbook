@@ -1,0 +1,9 @@
+---
+title: "Foundations"
+author: "Gilberto Camara"
+format: html
+---
+
+## Outline
+
+This is the introduction to the foundations of the book.

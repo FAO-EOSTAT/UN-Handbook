@@ -1,0 +1,9 @@
+---
+title: "Automatic Extraction of Parcels"
+author: "Ian Nunes"
+format: html
+---
+
+## Outline
+
+Describes AI methods for automatic parcel detection. The link to the forthcoming Census of Agriculture 2026 in Brazil should be treated, explaining the functionality of the boundary data set to the efficiency gains expected during the operations of the census.

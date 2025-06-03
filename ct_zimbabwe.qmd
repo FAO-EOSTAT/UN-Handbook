@@ -1,0 +1,7 @@
+---
+title: "Crop classification in Zimbabwe"
+author: "Lorenzo De Simone, Sophie Bontemps, Nelson Mpfugami"
+format: html
+---
+
+## 
