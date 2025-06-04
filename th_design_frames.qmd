@@ -1,9 +1,118 @@
 ---
 title: "Remote Sensing in the Design of Sampling Frames"
-author: "Lorenzo De Simone, Pierre Defourny, Sophie Bontemps"
+author: "Pierre Defourny, Sophie Bontemps, Lorenzo de Simone"
 format: html
 ---
 
 ## Outline
 
-This chapter deals with the requirements of field surveys for statistical quality and for compatibility with EO data.  Earth Observation (EO) are widely used in agricultural statistics production. However, the accuracy of EO-based land use classification is limited because of the limitations of using in situ census or survey data as training sets for EO applications. In this work, we provide recommendations for National Statistical Offices (NSO) to design in situ data collection campaigns that benefit both conventional statistics and EO-based assessments.
+This chapter deals with the requirements of field surveys for statistical quality and for compatibility with EO data. Earth Observation (EO) are widely used in agricultural statistics production. However, the accuracy of EO-based land use classification is limited because of the limitations of using in situ census or survey data as training sets for EO applications. In this work, we provide recommendations for National Statistical Offices (NSO) to design in situ data collection campaigns that benefit both conventional statistics and EO-based assessments.
+
+## Matching in situ survey data to remote sensing analysis needs
+
+Data collections done by NSOs can potentially become the main source of training data for EO applications for agricultural statistics. However, while national surveys often adopt GPS technology, satellite imagery remains largely unused by NSOs. To change this status quo, the Global Strategy to Improve Agricultural and Rural Statistics compiled various use cases in its Handbook on Remote Sensing for Agricultural Statistics, highlighting the missing links between EO-driven surveys and most common NSO surveys [@Delince2017]. Experience shows that sampling design, response design, and quality control of NSO surveys must follow well-documented requirements to obtain statistically sound results when using EO data.
+
+EO-related quality assurance of the in situ datasets developed in the FAO EOStat and ESA Sent4Stat projects includes two main components: (a) evaluation of survey design and (b) in situ data assessment using EO data. Quality assessment measures the suitability of a statistical survey (i.e. sampling and response design) to leverage satellite imagery in support of agriculture statistics. Many NSOs create their in situ protocols with a focus on aggregation at higher administrative tiers, often overlooking their potential application in EO contexts. Table 1 presents eleven criteria for NSOs to enable the combined use of in situ data for traditional surveys and EO applications.
+
++-----------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Criteria related to the sampling design |                                                                                                                                                                                                                          |
++-----------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                         | -   Observation timing allows identification of crop type in the field (unlike some household surveys, the survey must take place when the crop is visible on the field)                                                 |
++-----------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                         | -   Minimum number of samples for marginal crops (including intercrop types) to provide balanced datasets in terms of crop type sample distribution                                                                      |
++-----------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                         | -   Local homogeneity of each sample unit to match the corresponding satellite observation footprint                                                                                                                     |
++-----------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Criteria related to the response design |                                                                                                                                                                                                                          |
++-----------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                         | -   Georeferenced ground observation at field or point level to link with satellite geospatial dataset (household geographic coordinates being insufficient)                                                             |
++-----------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                         | -   Sample unit size at least matching the considered satellite observation footprint (not only the spatial resolution)                                                                                                  |
++-----------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                         | -   Contextual observation to document sample quality and qualify its representativity                                                                                                                                   |
++-----------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                         | -   Rich labelling of each sample beyond crop type to indicate specific growing conditions (e.g., weeds abundance, limited crop cover, water lodging, tree density)                                                      |
++-----------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                         | -   High precision of crop type nomenclature, including information about infrastructure and agriculture practices (e.g., irrigation, greenhouses, crop under canopy, agroforestry, species dominance for intercropping) |
++-----------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+: Assessment framework to qualify the compatibility of an in situ survey design to leverage EO satellite data for agriculture statistics
+
+
+## EO-based quality control of in situ surveys
+
+An integral aspect of the statistical survey process is its quality control procedure. Nationwide surveys require heavy logistics involving hundreds of enumerators dispersed across the country. In many countries, digital encoding devices have integrated GPS receivers and communication support, making near real-time quality checks feasible. In Senegal, the Direction de l'Analyse, de la Prévision et des Statistiques Agricoles (DAPSA) employs near real-time quality control to oversee national data collection, enabling the field campaign to incorporate repetition requests and corrections as needed.
+
+Achieving the quality required for EO utilization imposes demands on the training of enumerators and presents more challenges for controllers. Besides being useful for aggregated surveys, in situ data must pass EO-based quality control checks. Such protocol is even more critical when combining datasets from distinct surveys requiring strict harmonisation. Experiences of FAO-EOSTAT and Sen2Stat with list frame and area frame statistical survey datasets led us to establish an EO-based quality control protocol. This protocol relies on existing maps and satellite time series processing as independent data quality control sources. Table 2 outlines the criteria applied for EO-based data quality control.
+
+\begin{table}[h!]
+    \centering
+    \caption{EO-based assessment framework to control the quality of an in situ dataset from a satellite remote sensing point of view.}
+    \label{tab:eo_quality_control}
+    \renewcommand{\arraystretch}{1.3} % Adjust row spacing
+    \setlength{\tabcolsep}{5pt} % Adjust column spacing
+    \begin{tabular}{|p{\textwidth}|}
+        \hline
+        \textbf{Criteria for the EO-based data quality control} \\ \hline
+        \begin{itemize}
+            \item Completeness of sample information, including rich labels linked with geospatial features and survey data
+            \item Topology integrity of Georeferenced features collected on the ground (e.g., field polygon, roadside)
+            \item Metadata completeness including geographic coordinates system definition, protocol of geodata collection, and typology definition of all crop labels and related attributes
+            \item Geospatial feature GPS coordinates accuracy visually checked using most synchronous EO imagery
+            \item Sample purity based on multispectral reflectance heterogeneity assessment
+            \item Labeling quality based on NDVI time series clustering and profile similarity analysis
+        \end{itemize} \\ \hline
+    \end{tabular}
+\end{table}
+
+## Technical suitability of in situ data
+
+The first three criteria of the EO-based quality control concern the technical suitability of in situ data for EO applications. Typically, surveyors record GPS coordinates for household localization, crop observation placement, or field area measurement. Requirements for geospatial analysis include ensuring the topological soundness of spatial features, which involves verifying polygon closure, identifying duplicate points, and resolving polygon overlaps (@fig-design-frames-senegal).
+
+```{r}
+#| echo: FALSE
+#| label: fig-design-frames-senegal
+#| out-width: 80%
+#| fig-cap: |
+#|   Quality control of geospatial features and their coordinates. Examples acquired during the FAO EOStat project in Senegal from left to right: polygon recorded as points sequence instead of a closed polygon, polygon overlap detected and solved, and benchmarking of various protocols and devices (tablet with integrated GPS versus Garmin receiver) to record field boundaries.
+#| fig-align: center
+knitr::include_graphics("./images/QC_polygon_Senegal.png")
+```
+
+## Measuring spatial precision of field plot boundaries
+
+The last three criteria of the EO-based quality control rely on satellite imagery analysis. The spatial precision of field plot boundaries requires visual image interpretation of high spatial resolution imagery that aligns with the survey timeframe. This type of control usually involves overlaying the plotted polygons onto frequent data, such as monthly cloud-free surface reflectance base maps. @fig-design-frames-ethiopia shows a good-quality sample that aligns well with a cultivated field, whereas the second sample area covers multiple fields and some trees. The ideal situation is to use high-resolution images to visually check samples and plot boundaries and then classify the areas with lower spatial resolutions. A possible situation is to use 4.8-meter Planet monthly reflectance maps for sample quality control and 10-meter Sentinel-2 images for classification.
+
+From an EO perspective, assessing sample quality requires time series from satellites such as Sentinel-2 for the growing season. Open-source platforms such as Sen4Stat and Sen2Agri toolbox [@Defourny2019] allow processing of all Sentinel-2 satellite images acquired along the season. One quantitative indicator of sample purity is the NDVI standard deviation (@fig-design-frames-ethiopia, right plot) computed from the values of cloud-free satellite observations.
+
+```{r}
+#| echo: FALSE
+#| label: fig-design-frames-ethiopia
+#| out-width: 80%
+#| fig-cap: |
+#|   Cloud-free Planet monthly base map images (left) and very high-resolution imagery (middle) overlaid with point observation expected to be representative of a circle area (radius of 20 m), as reported by the 2020 wheat rust survey in Ethiopia (Blasch et al., 2022).  Plots highlight expected and unexpected NDVI profiles and the associated standard deviation for a homogeneous wheat field derived from the Sentinel-2 time series during the surveyed season..
+#| fig-align: center
+knitr::include_graphics("./images/QC_circle profile_Ethiopia.png")
+```
+
+## Using NDVI temporal profiles to assess crop phenology
+
+The last EO-based requirement is the most difficult to address. We assume that crops of the same type, grown in the same agro-climatic zone, have similar planting and growing cycles. Analysing NDVI profiles across all crop samples strengthens crop label confidence. Atypical growth patterns (e.g., varied planting/cycle length or lack of growth) indicate potential mislabeling or mislocated samples. These samples need more scrutiny before they can be deemed usable.
+
+Consider Ethiopia’s diverse crop cycles in @fig-design-frames-ethiopia2. Temporal profiles for barley, fava beans, and teff show outliers indicating marginal sample quality. The different NDVI profiles for maize samples reveal that a significant portion underwent a double cropping cycle within the observation period. Since the first crop cycle delayed planting, the sample population needs to be divided appropriately using clustering methods. The complexity of the wheat cropping cycle is heightened by sowing dates and varietal differences affecting cycle length. Thus, EO quality control aims to reject unsuitable samples for model calibration and output validation. Subsequent EO-derived results, like crop type maps, area estimates, and yield forecasts, critically depended on this quality control process.
+
+```{r}
+#| echo: FALSE
+#| label: fig-design-frames-ethiopia2
+#| out-width: 80%
+#| fig-cap: |
+#|   NDVI temporal profiles interpolated from cloud-free Sentinel-2 multispectral images acquired along the observation period. Each colour curve corresponds to a sample for a given crop, while the black curve is the average NDVI value of all samples for this crop. Teff is blue, wheat is red, barley is light green, peas are pink, fava beans are orange, and maise is dark green. The CIMMYT provided these samples in the framework of the ESA Sen4Rust partnership.
+#| fig-align: center
+knitr::include_graphics("./images/QA_plot_Ethiopia.png")
+```
+
+## Summary
+
+In this chapter, we provide recommendations for National Statistical Offices (NSO) to design in situ data collection campaigns that benefit both conventional statistics and EO-based assessments. Following these guidelines will increase the accuracy of EO-based land use classification.
+
+References{-}
