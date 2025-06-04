@@ -38,7 +38,6 @@ EO-related quality assurance of the in situ datasets developed in the FAO EOStat
 
 : Assessment framework to qualify the compatibility of an in situ survey design to leverage EO satellite data for agriculture statistics
 
-
 ## EO-based quality control of in situ surveys
 
 An integral aspect of the statistical survey process is its quality control procedure. Nationwide surveys require heavy logistics involving hundreds of enumerators dispersed across the country. In many countries, digital encoding devices have integrated GPS receivers and communication support, making near real-time quality checks feasible. In Senegal, the Direction de l'Analyse, de la Prévision et des Statistiques Agricoles (DAPSA) employs near real-time quality control to oversee national data collection, enabling the field campaign to incorporate repetition requests and corrections as needed.

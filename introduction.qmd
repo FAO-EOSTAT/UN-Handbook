@@ -4,8 +4,6 @@ author: "Lorenzo de Simone, Ronald Jansen, Gilberto Camara, Pierre Defourny"
 format: html
 ---
 
-## Outline
-
 Earth Observation (EO) stands at a pivotal juncture in its capacity to transform agricultural statistics. For National Statistical Offices (NSOs) – our primary audience – this handbook arrives at a critical moment. The integration of EO into agricultural statistics is not just a technical opportunity; it is a policy imperative. As countries strive to meet Sustainable Development Goals (SDGs), ensure food security, and respond to climate volatility, the ability to generate timely, reliable, and spatially explicit agricultural data has become essential.
 
 While satellite data availability has expanded dramatically—most notably through the Copernicus Sentinel missions, which now provide near-daily global coverage at 10–20m resolution (ESA, 2024)—the operational use of these resources by NSOs remains limited. This persistent gap is striking, given the extensive scientific literature showcasing advanced techniques for land cover and crop type mapping. As Nakalembe et al. (2024) observe, “less than 30% of NSOs in developing economies routinely incorporate EO into crop reporting”—a stark mismatch between EO's potential and its implementation.

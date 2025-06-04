@@ -345,13 +345,7 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#outline" id="toc-outline" class="nav-link active" data-scroll-target="#outline"><span class="header-section-number">2.1</span> Outline</a></li>
-  </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/FAO-EOSTAT/UN-Handbook/edit/quarto/introduction.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/FAO-EOSTAT/UN-Handbook/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -379,8 +373,6 @@ div.csl-indent {
 
 </header>
 
-<section id="outline" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="outline"><span class="header-section-number">2.1</span> Outline</h2>
 <p>Earth Observation (EO) stands at a pivotal juncture in its capacity to transform agricultural statistics. For National Statistical Offices (NSOs) – our primary audience – this handbook arrives at a critical moment. The integration of EO into agricultural statistics is not just a technical opportunity; it is a policy imperative. As countries strive to meet Sustainable Development Goals (SDGs), ensure food security, and respond to climate volatility, the ability to generate timely, reliable, and spatially explicit agricultural data has become essential.</p>
 <p>While satellite data availability has expanded dramatically—most notably through the Copernicus Sentinel missions, which now provide near-daily global coverage at 10–20m resolution (ESA, 2024)—the operational use of these resources by NSOs remains limited. This persistent gap is striking, given the extensive scientific literature showcasing advanced techniques for land cover and crop type mapping. As Nakalembe et al.&nbsp;(2024) observe, “less than 30% of NSOs in developing economies routinely incorporate EO into crop reporting”—a stark mismatch between EO’s potential and its implementation. The reasons for this gap are multifaceted. First, data abundance itself introduces complexity. Platforms like the Copernicus Data Space Ecosystem and Digital Earth Africa offer petabyte-scale Analysis-Ready Data (ARD), but turning this into actionable agricultural statistics requires high-performance computing and structured processing chains. While countries such as Poland and Brazil have established national HPC ecosystems to process continental-scale EO data cubes (Łączyński et al., 2024), many NSOs lack comparable resources.</p>
 <p>Second, research-grade EO solutions often falter in operational settings. Deep learning models may achieve over 90% accuracy under experimental conditions (Wang et al., 2024), but their deployment in national programs is challenged by inconsistent training data, cloud interference, and the need to reconcile statistical rigor with time-sensitive reporting cycles [deSimone2025]. Operational maturity demands more than algorithmic innovation—it requires adaptation, institutional readiness, and governance. To meet these challenges, the global EO community has coalesced around building robust toolchains. ESA’s Sen4Stat platform—built on GDAL and incorporating Orfeo components—offers a reproducible pipeline for crop mapping and yield forecasting <span class="citation" data-cites="Defourny2019"><a href="#ref-Defourny2019" role="doc-biblioref">[1]</a></span>. Similarly, Brazil’s SITS R package enables scalable time-series classification and is now deployed in Chile’s national land accounts [deSimone2025]. But beyond individual tools, a more integrated coordination framework is emerging.</p>
@@ -399,7 +391,6 @@ div.csl-indent {
 <div class="csl-left-margin">[2] </div><div class="csl-right-inline">G. Tseng, R. Cartuyvels, I. Zvonkov, M. Purohit, D. Rolnick, and H. Kerner, <span>“Lightweight, <span class="nocase">Pre-trained Transformers</span> for <span>Remote Sensing Timeseries</span>.”</span> arXiv, 2024, doi: <a href="https://doi.org/10.48550/arXiv.2304.14065">10.48550/arXiv.2304.14065</a>.</div>
 </div>
 </div>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -653,7 +644,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">Edited by Gilberto Camara, Lorenzo de Simone and Ronald Jansen.</div>   
     <div class="nav-footer-center">
       &nbsp;
-    </div>
+    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/FAO-EOSTAT/UN-Handbook/edit/quarto/introduction.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/FAO-EOSTAT/UN-Handbook/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
     <div class="nav-footer-right">This book was built with <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>
