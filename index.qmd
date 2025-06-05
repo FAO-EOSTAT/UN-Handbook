@@ -1,7 +1,12 @@
 
 Edited by Gilberto Camara, Lorenzo de Simone and Ronald Jansen
 
+## Disclaimer
+
+You are viewing a draft version of the UN Handbook. The final version is planned for November 2025.
+
 ## Welcome {.unnumbered}
+
 
 
 Welcome to the age of big Earth observation data! Petabytes of images are now openly accessible in cloud services. Having free access to massive data sets, we need new methods to measure change on our planet using image data. An essential contribution of big EO data has been to provide access to image time series that capture signals from the same locations continually. Time series are a powerful tool for monitoring change, providing insights and information that single snapshots cannot achieve. Better measurement of natural resources depletion caused by deforestation, forest degradation, and desertification is possible. Experts improve the production of agricultural statistics. Analysts can use large data collections to detect subtle changes in ecosystem health and distinguish between various land classes more effectively.  

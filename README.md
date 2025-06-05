@@ -16,6 +16,8 @@ If you use  this handbook on your work, please use this reference:
 
 Gilberto Camara, Lorenzo de Simone, Ronald Jansen (editors). *UN Handbook on Remote Sensing for Agricultural Statistics*. UN Statistical Division, FAO, 2025. Online book avaliable at https://fao-eostat.github.io/UN-Handbook/. 
 
+This is work in progress. The first version is planned for launch on November 2025.
+
 ### Intellectual property rights
 
 This book is licensed as [Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/) by Creative Commons. 
