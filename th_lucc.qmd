@@ -47,8 +47,31 @@ To represent change in geographical space, GIScience authors distinguish between
  
 Atemporal classification systems such as LCCS refer only to properties of continuants. One can state facts such as "this area has 30\% forest cover" using LCCS, but cannot assert that "this area lost 70\% of its forest in the last two years". To convey change, classification systems for big data need to include occurrents. In what follows, we discuss concepts used in the analysis of satellite image time series. These time series are extracted from organized collections of Earth observation data covering a geographical area in regular temporal intervals. 
 
-## Case study
+## The key role of time series
 
-This article presents a methodology for selecting samples for mapping deforestation using image time series. We distinguish between event-related samples with time series breaks, seasonal areas, and naturally stable locations. Auxiliary self-organising maps and active learning methods were used to improve sample quality. The data set was used to classify deforested areas in the state of Rondônia in Brazil in 2022 with an overall accuracy of 0.94 and producer and user accuracies above 90%. 
+Since remote sensing satellites revisit the same place, we can calibrate their images so that measures of the same place at different times are comparable (Figure \ref{fig:sits_a}). These observations can be organized so that each measure from the sensor maps to a three-dimensional array in space-time. From a data analysis perspective, each pixel location $(x, y)$ at consecutive times, $t_1,...,t_m$, makes up a satellite image time series (SITS), such as the one in Figure \ref{fig:sits_b}. From these time series, we can extract land-use and land-cover change information. In Figure \ref{fig:sits_b}, after the forest was cut in 2002, the area was used for cattle raising (pasture) for three years, during 2002 to 2008, then turned into cropland.
+
+```{r}
+#| echo: FALSE
+#| label: fig-sits-a
+#| out-width: 80%
+#| fig-cap: |
+#|   Time series measures (EVI index) of a pixel location $(x,y)$ (source:[@Picoli2018]).
+#| fig-align: center
+knitr::include_graphics("./images/sits_a.png")
+```
+
+```{r}
+#| echo: FALSE
+#| label: fig-sits-b
+#| out-width: 80%
+#| fig-cap: |
+#|   Land change events associated to a pixel location $(x,y)$ (source:[@Picoli2018]).
+#| fig-align: center
+knitr::include_graphics("./images/sits_b.png")
+```
+
+References{-}
+
 
 
