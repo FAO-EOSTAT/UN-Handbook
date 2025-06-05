@@ -207,7 +207,7 @@
     "href": "ct_mexico.html#outline",
     "title": "13  Crop classification in Mexico",
     "section": "13.1 Outline",
-    "text": "13.1 Outline"
+    "text": "13.1 Outline\nIn this chapter we will share a crop classification exercise designed to teach, step by step, a simple classification process for didactic purposes, that could be replicated by any user. For this exercise we are using harmonized Landsat and Sentinel 2 images and Sentinel 1 radar images, as well as Machine learning and Deep learning algorithms, such as TPOT libraries and Auto Sklearn. Process algorithms are programmed in Python and Conda in a Sandbox environment."
   },
   {
     "objectID": "ct_senegal.html#overview",

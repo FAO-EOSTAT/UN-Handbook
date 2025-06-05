@@ -1,24 +1,20 @@
-SITS - Satellite Image Time Series Analysis for Earth Observation Data
-Cubes
+UN Handbook on Remote Sensing for Agricultural Statistics
 ================
-[![DOI](https://zenodo.org/badge/655875510.svg)](https://zenodo.org/doi/10.5281/zenodo.13381515)
 
 
 <a href="https://github.com/e-sensing/sitsbook"><img class="cover" src="images/cover_sits_book.png" width="350" align="right" alt="Cover image" /></a>
 
 ### Contents of this repository
 
-This repository contains Rmarkdown (.Rmd) files with the text of the book "Satellite Image Time Series Analysis on Earth Observation Data Cubes", which describes the `sits` package and also provides a conceptual background on the subject of big Earth observation data analysis,
+This repository contains Quarto (.qmd) files with the text of the book "UN Handbook on Remote Sensing for Agricultural Statistics". 
 
-### Overview of sits
-
-`sits` is an open source R package for satellite image time series analysis. It enables users to apply machine learning techniques for classifying image time series obtained from earth observation data cubes. The package is available on [github](https://github.com/e-sensing/sits) and provides tools for analysis, visualization, and classification of satellite image time series. 
+This book is a practical guide that enables for using remote sensing for agricultural statistics.  It provides readers with the means of producing high-quality maps of agricutural areas and prediction of crop yields. Our main target audience are national statistical authorities which are interested in improving their surveys and census using Earth observations (EO). We aim to foster a collaborative environment where they can use EO data to enhance their national land use and cover estimates, supporting sustainable development policies.
 
 ### Citation
 
-If you use  this book on your work, please use this reference: 
+If you use  this handbook on your work, please use this reference: 
 
-Gilberto Camara, Rolf Simoes, Felipe Souza, Felipe Carlos, Charlotte Pelletier, Pedro R. Andrade, Karine Ferreira, and Gilberto Queiroz (2024). *Satellite Image Time Series Analysis on Earth Observation Data Cubes*. National Institute for Space Research (INPE), Brazil. Online book avaliable at https://github.com/e-sensing/sitsbook. [DOI: 10.5281/zenodo.13381515](https://zenodo.org/doi/10.5281/zenodo.13381515).
+Gilberto Camara, Lorenzo de Simone, Ronald Jansen (editors). *UN Handbook on Remote Sensing for Agricultural Statistics*. UN Statistical Division, FAO, 2025. Online book avaliable at https://fao-eostat.github.io/UN-Handbook/. 
 
 ### Intellectual property rights
 
