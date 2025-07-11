@@ -21,7 +21,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -330,7 +349,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">24.1</span> Overview</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">24.1</span> Introduction</a></li>
+  <li><a href="#map-corrected-estimation" id="toc-map-corrected-estimation" class="nav-link" data-scroll-target="#map-corrected-estimation"><span class="header-section-number">24.2</span> Map-Corrected Estimation</a></li>
+  <li><a href="#survey-calibrated-mapping" id="toc-survey-calibrated-mapping" class="nav-link" data-scroll-target="#survey-calibrated-mapping"><span class="header-section-number">24.3</span> Survey-Calibrated Mapping</a></li>
+  <li><a href="#uncertainty-aware-inference-from-imperfect-maps" id="toc-uncertainty-aware-inference-from-imperfect-maps" class="nav-link" data-scroll-target="#uncertainty-aware-inference-from-imperfect-maps"><span class="header-section-number">24.4</span> Uncertainty-Aware Inference from Imperfect Maps</a></li>
+  <li><a href="#why-these-paradigms-matter" id="toc-why-these-paradigms-matter" class="nav-link" data-scroll-target="#why-these-paradigms-matter"><span class="header-section-number">24.5</span> Why These Paradigms Matter</a></li>
+  <li><a href="#choosing-the-right-paradigm-comparative-considerations" id="toc-choosing-the-right-paradigm-comparative-considerations" class="nav-link" data-scroll-target="#choosing-the-right-paradigm-comparative-considerations"><span class="header-section-number">24.6</span> Choosing the Right Paradigm: Comparative Considerations</a></li>
+  <li><a href="#bridging-science-statistics-and-policy-through-the-last-mile" id="toc-bridging-science-statistics-and-policy-through-the-last-mile" class="nav-link" data-scroll-target="#bridging-science-statistics-and-policy-through-the-last-mile"><span class="header-section-number">24.7</span> Bridging Science, Statistics, and Policy through the Last Mile</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/FAO-EOSTAT/UN-Handbook/edit/quarto/ad_geoglam.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/FAO-EOSTAT/UN-Handbook/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -349,7 +375,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Lorenzo de Simone, Inbal Backer-Reshef, Sophie Bontemps, Sergii Scacun , Joseph Wagner </p>
+             <p>Lorenzo de Simone, Inbal Backer-Reshef, Sophie Bontemps, Sherrie Wang, Sergii Scacun, Joseph Wagner </p>
           </div>
   </div>
     
@@ -360,11 +386,173 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="overview" class="level2" data-number="24.1">
-<h2 data-number="24.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">24.1</span> Overview</h2>
-<p>Describe concrete experiences carried out by FAO-EOSTAT, Sen4Stat, and NASA Harvest. Ukraine - Crop area and Yield - Production Nasa Harvest Stratifier, sampling, regression estimator</p>
+<section id="introduction" class="level2" data-number="24.1">
+<h2 data-number="24.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">24.1</span> Introduction</h2>
+<p>Earth Observation (EO) has become indispensable for generating timely, spatially explicit data on agricultural production. Yet, the final and most consequential step — turning maps into statistics — remains riddled with confusion and poor practices. In particular, there is a widespread tendency to assume that once a crop type or yield map is generated, one can simply count the number of pixels in a given class and multiply by pixel size. This shortcut, though common, is statistically unsound.</p>
+<p>Pixel counting assumes that the map is a perfect representation of reality — an assumption rarely, if ever, valid. Classification errors, mixed pixels, spatial autocorrelation, and resolution mismatches all undermine the reliability of raw pixel aggregates. As <span class="citation" data-cites="Olofsson2014"><a href="#ref-Olofsson2014" role="doc-biblioref">[1]</a></span> emphasized, failure to adjust for classification error can lead to area estimates that are biased by 15% or more. Worse, these biases are often invisible to the user, as uncertainty is not quantified or reported. These concerns have been echoed in broader remote sensing literature, which warns against the widespread neglect of error propagation in map-based area statistics <span class="citation" data-cites="Stehman2019"><a href="#ref-Stehman2019" role="doc-biblioref">[2]</a></span>.</p>
+<p>For National Statistical Offices (NSOs), whose mandate is to produce statistically defensible, reproducible, and uncertainty-aware agricultural statistics, such practices are unacceptable. EO maps can and should be used — but their outputs must be interpreted and corrected within a proper statistical framework. This chapter introduces three leading paradigms that have emerged as robust and operationally viable approaches for extracting agricultural statistics from EO-derived maps. Each paradigm corresponds to a real-world use case developed by leading institutions and collaborators in this Handbook.</p>
+</section>
+<section id="map-corrected-estimation" class="level2" data-number="24.2">
+<h2 data-number="24.2" class="anchored" data-anchor-id="map-corrected-estimation"><span class="header-section-number">24.2</span> Map-Corrected Estimation</h2>
+<p>Anchored by: NASA Harvest, Inbal Becker-Reshef and collaborators</p>
+<p>This paradigm treats the EO-derived map as a primary product, but one that must be statistically adjusted using validation samples and error matrices. The approach, grounded in the methodology of <span class="citation" data-cites="Olofsson2014"><a href="#ref-Olofsson2014" role="doc-biblioref">[1]</a></span>, involves computing bias-adjusted area estimates by integrating confusion matrix values with map pixel counts and deriving confidence intervals based on sampling theory. This is consistent with operational good practice for statistically valid area estimation from remote sensing, as reviewed in <span class="citation" data-cites="Stehman2019"><a href="#ref-Stehman2019" role="doc-biblioref">[2]</a></span>.</p>
+<p>It is particularly effective when the map covers large areas, classification accuracy is high-to-moderate, and a well-distributed reference dataset is available. This paradigm has been implemented operationally in conflict settings (e.g.&nbsp;Ukraine), where it enabled rapid area estimation despite difficult field conditions. It emphasizes design-based rigor, quantified uncertainty, and transparency — essential features of any official estimate.</p>
+</section>
+<section id="survey-calibrated-mapping" class="level2" data-number="24.3">
+<h2 data-number="24.3" class="anchored" data-anchor-id="survey-calibrated-mapping"><span class="header-section-number">24.3</span> Survey-Calibrated Mapping</h2>
+<p>Anchored by: FAO EOSTAT Zimbabwe, Lorenzo De Simone &amp; Sophie Bontemps</p>
+<p>This paradigm places the statistical survey at the center, using EO maps as auxiliary information to enhance the representativeness, cost-efficiency, and resolution of national estimates. In the Zimbabwe case, a stratified ground survey (over 1,600 Secondary Sampling Units) was used not only for validating the crop type map, but also to build regression models that calibrated the mapped crop proportions. These regression estimators were then applied across the full gridded domain to derive corrected national crop area estimates. This model-assisted approach captures the best of both worlds: it leverages the spatial wall-to-wall nature of EO maps while preserving the statistical integrity of survey-based estimation. Importantly, it allowed FAO and ZIMSTAT to reduce bias and variance in estimates without increasing survey costs — a key feature for NSOs with resource constraints.</p>
+</section>
+<section id="uncertainty-aware-inference-from-imperfect-maps" class="level2" data-number="24.4">
+<h2 data-number="24.4" class="anchored" data-anchor-id="uncertainty-aware-inference-from-imperfect-maps"><span class="header-section-number">24.4</span> Uncertainty-Aware Inference from Imperfect Maps</h2>
+<p>Anchored by: Sherrie Wang (MIT/Stanford) – Prediction-Powered Inference (PPI)</p>
+<p>This emerging paradigm tackles the hardest scenario: using imperfect or low-accuracy maps to produce reliable estimates, even when the available ground data are scarce. Sherrie Wang and collaborators introduced a framework known as Prediction-Powered Inference (PPI), which explicitly accounts for the predictive (but uncertain) nature of maps. Instead of assuming that EO outputs are accurate, PPI quantifies their uncertainty and integrates it into the estimation procedure, allowing users to generate statistically valid area and regression estimates with far fewer labeled data points <span class="citation" data-cites="Kluger2021"><a href="#ref-Wang2022" role="doc-biblioref">[4]</a></span>.</p>
+<p>In benchmarking exercises, PPI was shown to dramatically reduce the confidence interval width compared to traditional methods, even when only a small ground-truth sample was available. This paradigm is particularly well-suited for data-scarce or rapidly changing contexts, where EO is the only timely source of information and statistical inference must be done with minimal fieldwork.</p>
+</section>
+<section id="why-these-paradigms-matter" class="level2" data-number="24.5">
+<h2 data-number="24.5" class="anchored" data-anchor-id="why-these-paradigms-matter"><span class="header-section-number">24.5</span> Why These Paradigms Matter</h2>
+<p>These three paradigms represent a progression — from treating maps as authoritative, to integrating them with surveys, to recognizing and modeling their imperfections. Each offers a viable pathway, depending on the country context, data availability, institutional mandate, and risk tolerance. All three converge on a single truth: map outputs must not be taken at face value. Whether through confusion matrix correction, regression calibration, or model-based inference, the path from EO-derived maps to national statistics requires methodological rigor. This chapter provides not only the conceptual foundation, but also real-world demonstrations for each of these paradigms. By replacing pixel-counting shortcuts with robust estimation frameworks, we aim to elevate EO from a promising technology to a pillar of trusted agricultural statistics.</p>
+</section>
+<section id="choosing-the-right-paradigm-comparative-considerations" class="level2" data-number="24.6">
+<h2 data-number="24.6" class="anchored" data-anchor-id="choosing-the-right-paradigm-comparative-considerations"><span class="header-section-number">24.6</span> Choosing the Right Paradigm: Comparative Considerations</h2>
+<p>The three paradigms presented in this chapter — Map-Corrected Estimation, Survey-Calibrated Mapping, and Uncertainty-Aware Inference from Imperfect Maps — are not mutually exclusive. Rather, they offer a flexible toolbox for NSOs and implementing partners to select the most appropriate approach based on external constraints and technical considerations. The decision to adopt one over another should be grounded in both institutional context and data characteristics.</p>
+<table class="table">
+<caption>External Enabling Conditions</caption>
+<colgroup>
+<col style="width: 18%">
+<col style="width: 29%">
+<col style="width: 31%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Condition</th>
+<th style="text-align: left;">Map-Corrected Estimation</th>
+<th style="text-align: left;">Survey-Calibrated Mapping</th>
+<th style="text-align: left;">Uncertainty-Aware Inference</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;">NASA Harvest</td>
+<td style="text-align: left;">FAO EOSTAT Zimbabwe</td>
+<td style="text-align: left;">Sherrie Wang/MIT PPI)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Survey Infrastructure</td>
+<td style="text-align: left;">Moderate: needs statistically valid sample for validation</td>
+<td style="text-align: left;">High: requires well-structured, stratified survey</td>
+<td style="text-align: left;">Minimal: can operate with very small ground sample</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Map Availability</td>
+<td style="text-align: left;">Required, high-quality map (e.g.&nbsp;&gt;70% OA)</td>
+<td style="text-align: left;">Required, but can tolerate local noise</td>
+<td style="text-align: left;">Required, but accuracy can be low or unknown</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Institutional Capacity (NSO)</td>
+<td style="text-align: left;">Medium: needs basic familiarity with confusion matrices</td>
+<td style="text-align: left;">High: needs regression modeling and post-strata expansion</td>
+<td style="text-align: left;">Medium: needs ability to interpret model-based uncertainty</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Urgency / Time Sensitivity</td>
+<td style="text-align: left;">High: can deliver rapidly once validation set is in place</td>
+<td style="text-align: left;">Moderate: dependent on survey completion</td>
+<td style="text-align: left;">High: useful in crisis or inaccessible areas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Budget Constraints</td>
+<td style="text-align: left;">Low–moderate cost if map is already produced</td>
+<td style="text-align: left;">Cost-effective when integrated into existing survey design</td>
+<td style="text-align: left;">Low cost; efficient use of sparse data</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<caption>Intrinsic Technical Criteria</caption>
+<colgroup>
+<col style="width: 18%">
+<col style="width: 29%">
+<col style="width: 31%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Criterion</th>
+<th style="text-align: left;">Map-Corrected Estimation</th>
+<th style="text-align: left;">Survey-Calibrated Mapping</th>
+<th style="text-align: left;">Uncertainty-Aware Inference</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Map Bias Handling</td>
+<td style="text-align: left;">Yes — through confusion matrix weighting</td>
+<td style="text-align: left;">Yes — via regression calibration</td>
+<td style="text-align: left;">Yes — explicitly modeled in PPI</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Variance Reduction</td>
+<td style="text-align: left;">Moderate — dependent on sample size</td>
+<td style="text-align: left;">High — leverages correlation to boost precision</td>
+<td style="text-align: left;">Very High — uses map + model jointly</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Error Quantification (CI)</td>
+<td style="text-align: left;">Explicit — design-based estimation</td>
+<td style="text-align: left;">Explicit — from model residuals and design</td>
+<td style="text-align: left;">Explicit — PPI produces valid intervals</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Assumption Sensitivity</td>
+<td style="text-align: left;">Low — assumes random sampling</td>
+<td style="text-align: left;">Medium — assumes linear relationship</td>
+<td style="text-align: left;">Low–Medium — relies on predictive power but corrects for error</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Scalability</td>
+<td style="text-align: left;">High — can be generalized nationally</td>
+<td style="text-align: left;">High — when survey design is in place</td>
+<td style="text-align: left;">High — especially suited for regional/rapid-scale deployment</td>
+</tr>
+</tbody>
+</table>
+<p>Synthesis: Context-Driven Method Selection</p>
+<ul>
+<li><p>If the EO map is of high quality, and a good validation sample is available, Map-Corrected Estimation provides a quick, interpretable, and rigorous path — ideal for crop area estimation in well-resourced systems or fast-response settings (e.g.&nbsp;Ukraine, US).</p></li>
+<li><p>If the NSO already operates a stratified agricultural survey, Survey-Calibrated Mapping allows integration of EO as auxiliary data, improving precision and lowering cost per estimate — as successfully demonstrated in Zimbabwe</p></li>
+<li><p>If field data are scarce or the map is noisy, but there is predictive signal in the EO layers, Uncertainty-Aware Inference (PPI) offers a powerful way to still deliver valid statistics — with strong appeal for humanitarian contexts, fragile states, or smallholder-dominant systems.</p></li>
+</ul>
+<p>These paradigms can also be combined. For example, a regression-calibrated estimator can be supplemented with design-based error correction, or PPI can be used to extend inference when only part of the territory has usable field data.</p>
+</section>
+<section id="bridging-science-statistics-and-policy-through-the-last-mile" class="level2" data-number="24.7">
+<h2 data-number="24.7" class="anchored" data-anchor-id="bridging-science-statistics-and-policy-through-the-last-mile"><span class="header-section-number">24.7</span> Bridging Science, Statistics, and Policy through the Last Mile</h2>
+<p>The issues covered in this chapter occupy a central position in the operationalization of Earth Observation (EO) for agricultural statistics: they address the last mile—the transformation of EO-derived maps into statistically valid estimates that inform national decisions. While preceding steps in the EO workflow focus on building maps, it is in this final step that spatial data are converted into policy-relevant numbers. This is the critical juncture where the potential of EO is either realized—or lost.</p>
+<p>Achieving this transformation requires more than technical capacity; it demands a structured interface between scientific innovation, statistical production, and policy needs. National Statistical Offices (NSOs) need solutions that are not only accurate, but also statistically defensible, reproducible, and aligned with official protocols. At the same time, the scientific community benefits from grounded feedback to refine models and ensure operational applicability.</p>
+<p>A key enabler of this translation has been the coordinated effort of the United Nations Committee of Experts on Big Data and Data Science for Official Statistics, particularly through its Task Team on Earth Observations for Agricultural Statistics. The Task Team has played a catalytic role in consolidating good practices, fostering country-led experimentation, and promoting the institutional adoption of EO methods within national statistical systems. By convening a diverse set of stakeholders—including NSOs, space agencies, academic experts, and international partners—it has created the conditions for methodological innovation to evolve into operational capability.</p>
+<p>This chapter embodies this convergence. It illustrates how co-designed approaches—developed through collaboration and grounded in real-world constraints—can elevate EO from a research tool to a pillar of official agricultural statistics. Crucially, it underscores that robust area and yield estimation is not a peripheral technicality, but the decisive link connecting EO technologies to food security planning, climate-smart agriculture, and policy accountability. Without this last mile, EO data remain abstract; with it, they become instruments of evidence-based policy.</p>
+</section>
+<section id="references" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
 
 
+<div id="refs" class="references csl-bib-body" role="list">
+<div id="ref-Olofsson2014" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">P. Olofsson, G. M. Foody, M. Herold, S. V. Stehman, C. E. Woodcock, and M. A. Wulder, <span>“Good practices for estimating area and assessing accuracy of land change,”</span> <em>Remote Sensing of Environment</em>, vol. 148, pp. 42–57, 2014.</div>
+</div>
+<div id="ref-Stehman2019" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">S. V. Stehman and G. M. Foody, <span>“Key issues in rigorous accuracy assessment of land cover products,”</span> <em>Remote Sensing of Environment</em>, vol. 231, p. 111199, 2019, doi: <a href="https://doi.org/10.1016/j.rse.2019.05.018">10.1016/j.rse.2019.05.018</a>.</div>
+</div>
+<div id="ref-Kluger2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">D. M. Kluger, S. Wang, and D. B. Lobell, <span>“Two shifts for crop mapping: <span>Leveraging</span> aggregate crop statistics to improve satellite-based maps in new regions,”</span> <em>Remote Sensing of Environment</em>, vol. 262, p. 112488, 2021, doi: <a href="https://doi.org/10.1016/j.rse.2021.112488">10.1016/j.rse.2021.112488</a>.</div>
+</div>
+<div id="ref-Wang2022" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">S. Wang, F. Waldner, and D. B. Lobell, <span>“Unlocking large-scale crop field delineation in smallholder farming systems with transfer learning and weak supervision,”</span> <em>Remote Sensing</em>, vol. 14, no. 22, 2022.</div>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

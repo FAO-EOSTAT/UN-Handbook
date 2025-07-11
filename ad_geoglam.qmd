@@ -1,12 +1,96 @@
 ---
 title: "Extraction of crop statistics from crop type and crop yield maps"
-author: "Lorenzo de Simone, Inbal Backer-Reshef, Sophie Bontemps, Sergii Scacun , Joseph Wagner"
+author: "Lorenzo de Simone, Inbal Backer-Reshef, Sophie Bontemps, Sherrie Wang, Sergii Scacun, Joseph Wagner"
 format: html
 ---
 
-## Overview
+## Introduction
 
-Describe concrete experiences carried out by FAO-EOSTAT, Sen4Stat, and NASA Harvest.
-Ukraine - Crop area and Yield - Production Nasa Harvest
-Stratifier, sampling, regression estimator 
+Earth Observation (EO) has become indispensable for generating timely, spatially explicit data on agricultural production. Yet, the final and most consequential step — turning maps into statistics — remains riddled with confusion and poor practices. In particular, there is a widespread tendency to assume that once a crop type or yield map is generated, one can simply count the number of pixels in a given class and multiply by pixel size. This shortcut, though common, is statistically unsound.
+
+Pixel counting assumes that the map is a perfect representation of reality — an assumption rarely, if ever, valid. Classification errors, mixed pixels, spatial autocorrelation, and resolution mismatches all undermine the reliability of raw pixel aggregates. As [@Olofsson2014] emphasized, failure to adjust for classification error can lead to area estimates that are biased by 15% or more. Worse, these biases are often invisible to the user, as uncertainty is not quantified or reported. These concerns have been echoed in broader remote sensing literature, which warns against the widespread neglect of error propagation in map-based area statistics [@Stehman2019].
+
+
+For National Statistical Offices (NSOs), whose mandate is to produce statistically defensible, reproducible, and uncertainty-aware agricultural statistics, such practices are unacceptable. EO maps can and should be used — but their outputs must be interpreted and corrected within a proper statistical framework. This chapter introduces three leading paradigms that have emerged as robust and operationally viable approaches for extracting agricultural statistics from EO-derived maps. Each paradigm corresponds to a real-world use case developed by leading institutions and collaborators in this Handbook.
+
+## Map-Corrected Estimation
+Anchored by: NASA Harvest, Inbal Becker-Reshef and collaborators
+
+This paradigm treats the EO-derived map as a primary product, but one that must be statistically adjusted using validation samples and error matrices. The approach, grounded in the methodology of [@Olofsson2014], involves computing bias-adjusted area estimates by integrating confusion matrix values with map pixel counts and deriving confidence intervals based on sampling theory. This is consistent with operational good practice for statistically valid area estimation from remote sensing, as reviewed in [@Stehman2019].
+
+It is particularly effective when the map covers large areas, classification accuracy is high-to-moderate, and a well-distributed reference dataset is available. This paradigm has been implemented operationally in conflict settings (e.g. Ukraine), where it enabled rapid area estimation despite difficult field conditions. It emphasizes design-based rigor, quantified uncertainty, and transparency — essential features of any official estimate.
+
+## Survey-Calibrated Mapping
+Anchored by: FAO EOSTAT Zimbabwe, Lorenzo De Simone & Sophie Bontemps
+
+This paradigm places the statistical survey at the center, using EO maps as auxiliary information to enhance the representativeness, cost-efficiency, and resolution of national estimates. In the Zimbabwe case, a stratified ground survey (over 1,600 Secondary Sampling Units) was used not only for validating the crop type map, but also to build regression models that calibrated the mapped crop proportions. These regression estimators were then applied across the full gridded domain to derive corrected national crop area estimates.
+This model-assisted approach captures the best of both worlds: it leverages the spatial wall-to-wall nature of EO maps while preserving the statistical integrity of survey-based estimation. Importantly, it allowed FAO and ZIMSTAT to reduce bias and variance in estimates without increasing survey costs — a key feature for NSOs with resource constraints.
+
+## Uncertainty-Aware Inference from Imperfect Maps
+
+Anchored by: Sherrie Wang (MIT/Stanford) – Prediction-Powered Inference (PPI)
+
+This emerging paradigm tackles the hardest scenario: using imperfect or low-accuracy maps to produce reliable estimates, even when the available ground data are scarce. Sherrie Wang and collaborators introduced a framework known as Prediction-Powered Inference (PPI), which explicitly accounts for the predictive (but uncertain) nature of maps. Instead of assuming that EO outputs are accurate, PPI quantifies their uncertainty and integrates it into the estimation procedure, allowing users to generate statistically valid area and regression estimates with far fewer labeled data points [@Kluger2021, @Wang2022].
+
+In benchmarking exercises, PPI was shown to dramatically reduce the confidence interval width compared to traditional methods, even when only a small ground-truth sample was available. This paradigm is particularly well-suited for data-scarce or rapidly changing contexts, where EO is the only timely source of information and statistical inference must be done with minimal fieldwork.
+
+## Why These Paradigms Matter
+
+These three paradigms represent a progression — from treating maps as authoritative, to integrating them with surveys, to recognizing and modeling their imperfections. Each offers a viable pathway, depending on the country context, data availability, institutional mandate, and risk tolerance.
+All three converge on a single truth: map outputs must not be taken at face value. Whether through confusion matrix correction, regression calibration, or model-based inference, the path from EO-derived maps to national statistics requires methodological rigor.
+This chapter provides not only the conceptual foundation, but also real-world demonstrations for each of these paradigms. By replacing pixel-counting shortcuts with robust estimation frameworks, we aim to elevate EO from a promising technology to a pillar of trusted agricultural statistics.
+
+
+## Choosing the Right Paradigm: Comparative Considerations
+
+The three paradigms presented in this chapter — Map-Corrected Estimation, Survey-Calibrated Mapping, and Uncertainty-Aware Inference from Imperfect Maps — are not mutually exclusive. Rather, they offer a flexible toolbox for NSOs and implementing partners to select the most appropriate approach based on external constraints and technical considerations. The decision to adopt one over another should be grounded in both institutional context and data characteristics.
+
+
+
+
+| Condition |	Map-Corrected Estimation |	Survey-Calibrated Mapping |	Uncertainty-Aware Inference |
+:----------|:----------------|:-----------------|:-----------|
+| Example  | NASA Harvest | FAO EOSTAT Zimbabwe | Sherrie Wang/MIT PPI) |
+| Survey Infrastructure |	Moderate: needs statistically valid sample for validation |	High: requires well-structured, stratified survey |	Minimal: can operate with very small ground sample |
+| Map Availability |	Required, high-quality map (e.g. >70% OA) |	Required, but can tolerate local noise |	Required, but accuracy can be low or unknown |
+| Institutional Capacity (NSO) |	Medium: needs basic familiarity with confusion matrices |	High: needs regression modeling and post-strata expansion |	Medium: needs ability to interpret model-based uncertainty |
+| Urgency / Time Sensitivity |	High: can deliver rapidly once validation set is in place |	Moderate: dependent on survey completion |	High: useful in crisis or inaccessible areas |
+| Budget Constraints |	Low–moderate cost if map is already produced |	Cost-effective when integrated into existing survey design | Low cost; efficient use of sparse data |
+
+: External Enabling Conditions
+
+
+
+| Criterion	| Map-Corrected Estimation |	Survey-Calibrated Mapping |	Uncertainty-Aware Inference |
+:----------|:----------------|:-----------------|:-----------|
+|Map Bias Handling  |	Yes — through confusion matrix weighting |	Yes — via regression calibration |	Yes — explicitly modeled in PPI |
+Variance Reduction |	Moderate — dependent on sample size	| High — leverages correlation to boost precision |	Very High — uses map + model jointly |
+|Error Quantification (CI) |	Explicit — design-based estimation |	Explicit — from model residuals and design |	Explicit — PPI produces valid intervals |
+Assumption Sensitivity |	Low — assumes random sampling |	Medium — assumes linear relationship |	Low–Medium — relies on predictive power but corrects for error |
+|Scalability |	High — can be generalized nationally |	High — when survey design is in place |	High — especially suited for regional/rapid-scale deployment |
+
+:Intrinsic Technical Criteria
+
+Synthesis: Context-Driven Method Selection
+
+-	If the EO map is of high quality, and a good validation sample is available, Map-Corrected Estimation provides a quick, interpretable, and rigorous path — ideal for crop area estimation in well-resourced systems or fast-response settings (e.g. Ukraine, US).
+
+-	If the NSO already operates a stratified agricultural survey, Survey-Calibrated Mapping allows integration of EO as auxiliary data, improving precision and lowering cost per estimate — as successfully demonstrated in Zimbabwe
+
+-	If field data are scarce or the map is noisy, but there is predictive signal in the EO layers, Uncertainty-Aware Inference (PPI) offers a powerful way to still deliver valid statistics — with strong appeal for humanitarian contexts, fragile states, or smallholder-dominant systems.
+
+These paradigms can also be combined. For example, a regression-calibrated estimator can be supplemented with design-based error correction, or PPI can be used to extend inference when only part of the territory has usable field data.
+
+## Bridging Science, Statistics, and Policy through the Last Mile
+
+The issues covered in this chapter occupy a central position in the operationalization of Earth Observation (EO) for agricultural statistics: they address the last mile—the transformation of EO-derived maps into statistically valid estimates that inform national decisions. While preceding steps in the EO workflow focus on building maps, it is in this final step that spatial data are converted into policy-relevant numbers. This is the critical juncture where the potential of EO is either realized—or lost.
+
+Achieving this transformation requires more than technical capacity; it demands a structured interface between scientific innovation, statistical production, and policy needs. National Statistical Offices (NSOs) need solutions that are not only accurate, but also statistically defensible, reproducible, and aligned with official protocols. At the same time, the scientific community benefits from grounded feedback to refine models and ensure operational applicability.
+
+A key enabler of this translation has been the coordinated effort of the United Nations Committee of Experts on Big Data and Data Science for Official Statistics, particularly through its Task Team on Earth Observations for Agricultural Statistics. The Task Team has played a catalytic role in consolidating good practices, fostering country-led experimentation, and promoting the institutional adoption of EO methods within national statistical systems. By convening a diverse set of stakeholders—including NSOs, space agencies, academic experts, and international partners—it has created the conditions for methodological innovation to evolve into operational capability.
+
+This chapter embodies this convergence. It illustrates how co-designed approaches—developed through collaboration and grounded in real-world constraints—can elevate EO from a research tool to a pillar of official agricultural statistics. Crucially, it underscores that robust area and yield estimation is not a peripheral technicality, but the decisive link connecting EO technologies to food security planning, climate-smart agriculture, and policy accountability. Without this last mile, EO data remain abstract; with it, they become instruments of evidence-based policy.
+
+## References{-}
+
 
