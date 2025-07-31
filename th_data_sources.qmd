@@ -17,7 +17,7 @@ ARD images are available from various satellite platforms, including Landsat, Se
 #| fig-cap: |
 #|   ARD image collection (source: USGS).
 #| fig-align: center
-knitr::include_graphics("./images/usgs_ard_tile.png")
+knitr::include_graphics("./images/th_data_sources/usgs_ard_tile.png")
 ```
 
 
@@ -41,7 +41,7 @@ ARD image collections are organized in spatial partitions. Sentinel-2/2A images 
 #| fig-cap: |
 #|   MGRS tiling system used by Sentinel-2 images (source: US Army).
 #| fig-align: center
-knitr::include_graphics("./images/s2_mgrs_grid.png")
+knitr::include_graphics("./images/th_data_sources/s2_mgrs_grid.png")
 ```
 
 The Landsat-4/5/7/8/9 satellites use the Worldwide Reference System (WRS-2), which breaks the coverage of Landsat satellites into images identified by path and row (see Figure \@ref(fig:wrs)).  The path is the descending orbit of the satellite; the WRS-2 system has 233 paths per orbit, and each path has 119 rows, where each row refers to a latitudinal center line of a frame of imagery. Images in WRS-2 are geometrically corrected to the UTM projection.
@@ -53,7 +53,7 @@ The Landsat-4/5/7/8/9 satellites use the Worldwide Reference System (WRS-2), whi
 #| fig-cap: |
 #|   MGRS tiling system used by Sentinel-2 images (source: US Army).
 #| fig-align: center
-knitr::include_graphics("./images/landsat_wrs_grid.png")
+knitr::include_graphics("./images/th_data_sources/landsat_wrs_grid.png")
 ```
 
 ## Major global or large regional cloud provides
@@ -144,7 +144,7 @@ plot(s2_23MMU_cube,
 #|   Sentinel-2 image in an area of the Northeastern coast of Brazil.
 #| fig-align: center
 
-knitr::include_graphics("./images/aws_s2.png")
+knitr::include_graphics("./images/th_data_sources/aws_s2.png")
 ```
 
 
@@ -201,7 +201,7 @@ plot(s2_20LKP_cube_MPC, red = "B11", blue = "B02", green = "B8A",
 #|   Sentinel-2 image in an area of the state of Rondonia, Brazil.
 #| fig-align: center
 
-knitr::include_graphics("./images/mpc_s2.png")
+knitr::include_graphics("./images/th_data_sources/mpc_s2.png")
 ```
 
 ### LANDSAT-C2-L2 images in MPC
@@ -254,7 +254,7 @@ plot(s2_L8_cube_MPC)
 #| fig-cap: |
 #|   Landsat-8 image in an area in Northeast Brazil.
 #| fig-align: center
-knitr::include_graphics("./images/mpc_l8.png")
+knitr::include_graphics("./images/th_data_sources/mpc_l8.png")
 ```
 
 ### SENTINEL-1-GRD images in MPC
@@ -306,7 +306,7 @@ plot(cube_s1_grd, band = "VV", palette = "Greys")
 #| fig-cap: |
 #|   Sentinel-1 image in an area in Mato Grosso, Brazil.
 #| fig-align: center
-knitr::include_graphics("./images/mpc3.png")
+knitr::include_graphics("./images/th_data_sources/mpc3.png")
 ```
 
 As explained earlier in this chapter, in areas with areas with large elevation differences, Sentinel-1 GRD images will have geometric distortions. For this reason, whenever possible, we recommend the use of RTC (radiometrically terrain corrected) images as described in the next session. 
@@ -356,7 +356,7 @@ plot(cube_s1_rtc, band = "VV", palette = "Greys")
 #| fig-cap: |
 #|   Sentinel-1-RTC image of an area in Colombia.
 #| fig-align: center
-knitr::include_graphics("./images/mpcrtcol.png")
+knitr::include_graphics("./images/th_data_sources/mpcrtcol.png")
 ```
 
 
@@ -400,82 +400,7 @@ plot(cube_dem_30, band = "ELEVATION", palette = "RdYlGn", rev = TRUE)
 #| fig-cap: |
 #|   Copernicus 30-meter DEM of an area in Brazil.
 #| fig-align: center
-knitr::include_graphics("./images/mpc4.png")
-```
-
-## Brazil Data Cube
-
-The [Brazil Data Cube](http://brazildatacube.org/en) (BDC) is built by Brazil’s National Institute for Space Research (INPE), to provide regular EO data cubes from CBERS, LANDSAT, SENTINEL-2, and TERRA/MODIS satellites for environmental applications. The collections available in the BDC are: `LANDSAT-OLI-16D` (Landsat-8 OLI, 30 m resolution, 16-day intervals),  `SENTINEL-2-16D` (Sentinel-2A and 2B MSI images at 10 m resolution, 16-day intervals), `CBERS-WFI-16D` (CBERS 4 WFI, 64 m resolution, 16-day intervals), `CBERS-WFI-8D`(CBERS 4 and 4A WFI images, 64m resolution, 8-day intervals), and `MOD13Q1-6.1` (MODIS MOD13SQ1 product, collection 6, 250 m resolution, 16-day intervals). For more details, use `sits_list_collections(source = "BDC")`.
-
-The BDC uses three hierarchical grids based on the Albers Equal Area projection and SIRGAS 2000 datum. The large grid has tiles of 4224.4 $\times4$ 224.4 km^2^ and is used for CBERS-4 AWFI collections at 64 m resolution; each CBERS-4 AWFI tile contains images of 6600 $\times$ 6600 pixels. The medium grid is used for Landsat-8 OLI collections at 30 m resolution; tiles have an extension of 211.2 $\times$ 211.2 km^2^, and each image has 7040 $\times$ 7040 pixels. The small grid covers 105.6 $\times$ 105.6 km^2^ and is used for Sentinel-2 MSI collections at 10 m resolutions; each image has 10560 $\times$ 10560 pixels. The data cubes in the BDC are regularly spaced in time and cloud-corrected [@Ferreira2020a]. 
-
-
-```{r}
-#| echo: false
-#| label: fig-bdc-datacubes
-#| out-width: 80%
-#| fig-cap: |
-#|   Hierarchical BDC tiling system showing (a) large BDC grid overlayed on Brazilian biomes, (b) one learge tile from the grid used for CBERS-4 AWFI data, (c) four medium tiles from the grid used for LANDSAT data; and (d) sixteen small tiles from the grid used for SENTINEL-2 data. Tiles in (b), (c), and (d) are nested.
-#| fig-align: center
-knitr::include_graphics("./images/bdc_grid.png")
-```
-
-To access the BDC, users must provide their credentials using environment variables, as shown below. Obtaining a BDC access key is free. Users must register at the [BDC site](https://brazildatacube.dpi.inpe.br/portal/explore) to obtain a key. Please include your BDC access key in your ".Rprofile". 
-
-```{r}
-#| eval: false
-Sys.setenv(BDC_ACCESS_KEY = "<your_bdc_access_key>")
-```
-
-In the example below, the data cube is defined as one tile ("005004") of `CBERS-WFI-16D` collection, which holds CBERS AWFI images at 16 days resolution.
-
-::: {.panel-tabset}
-## R
-```{r}
-#| eval: false
-# Define a tile from the CBERS-4/4A AWFI collection
-cbers_tile <- sits_cube(
-    source = "BDC",
-    collection = "CBERS-WFI-16D",
-    tiles = "005004",
-    bands = c("B13", "B14", "B15", "B16", "CLOUD"),
-    start_date = "2021-05-01",
-    end_date = "2021-09-01")
-# Plot one time instance
-plot(cbers_tile, 
-     red = "B15", 
-     green = "B16", 
-     blue = "B13", 
-     date = "2021-05-09")
-```
-## Python
-```{python}
-#| eval: false
-# Define a tile from the CBERS-4/4A AWFI collection
-cbers_tile = sits_cube(
-    source = "BDC",
-    collection = "CBERS-WFI-16D",
-    tiles = "005004",
-    bands = ["B13", "B14", "B15", "B16", "CLOUD"],
-    start_date = "2021-05-01",
-    end_date = "2021-09-01")
-# Plot one time instance
-plot(cbers_tile, 
-     red = "B15", 
-     green = "B16", 
-     blue = "B13", 
-     date = "2021-05-09")
-```
-:::
-
-```{r}
-#| echo: false
-#| label: fig-awfibdc-datacubes
-#| out-width: 100%
-#| fig-cap: |
-#|   CBERS-4 WFI image in a Cerrado area in Brazil.
-#| fig-align: center
-knitr::include_graphics("./images/bdc_cbers4.png")
+knitr::include_graphics("./images/th_data_sources/mpc4.png")
 ```
 
 
@@ -544,7 +469,7 @@ plot(lena_cube, date = "2023-07-06", red = "B12", green = "B8A", blue = "B04")
 #| fig-cap: |
 #|   Sentinel-2 image of the Lena river delta in summertime.
 #| fig-align: center
-knitr::include_graphics("./images/s2_lena_delta.png")
+knitr::include_graphics("./images/th_data_sources/s2_lena_delta.png")
 ```
 
 ### SENTINEL-1-RTC images in CDSE
@@ -596,7 +521,7 @@ plot(s1_cube, band = "VV", date = c("2023-03-03"), palette = "Greys")
 #| fig-cap: |
 #|   Sentinel-1-RTC image of the Rift Valley in Ethiopia.
 #| fig-align: center
-knitr::include_graphics("./images/s1_rtc_cdse.png")
+knitr::include_graphics("./images/th_data_sources/s1_rtc_cdse.png")
 ```
 
 
@@ -660,7 +585,7 @@ plot(dea_s2_cube, red = "B04", blue = "B02", green = "B08")
 #| fig-cap: |
 #|   Sentinel-2 image in an area over Madagascar.
 #| fig-align: center
-knitr::include_graphics("./images/deafrica_s2.png")
+knitr::include_graphics("./images/th_data_sources/deafrica_s2.png")
 ```
 
 The next example retrieves a set of ARD Landsat-9 data, covering the Serengeti plain in Tanzania. 
@@ -709,7 +634,7 @@ plot(dea_l9_cube, date = "2023-06-26",
 #| fig-cap: |
 #|   Landsat-9 image in an area over the Serengeti in Tanzania.
 #| fig-align: center
-knitr::include_graphics("./images/landsat9_serengeti.png")
+knitr::include_graphics("./images/th_data_sources/landsat9_serengeti.png")
 ```
 
 The following example shows how to retrieve a subset of the ALOS-PALSAR mosaic for year 2020, for an area near the border between Congo and Rwanda. 
@@ -756,73 +681,8 @@ plot(dea_alos_cube, band = "HH")
 #| fig-cap: |
 #|   ALOS-PALSAR mosaic in the Congo forest area.
 #| fig-align: center
-knitr::include_graphics("./images/alos_palsar_hh_lake_kivu.png")
+knitr::include_graphics("./images/th_data_sources/alos_palsar_hh_lake_kivu.png")
 ```
-
-
-## Digital Earth Australia
-
-Digital Earth Australia (DEAUSTRALIA) is an initiative by Geoscience Australia that uses satellite data to monitor and analyze environmental changes and resources across the Australian continent. It provides many datasets that offer detailed information on phenomena such as droughts, agriculture, water availability, floods, coastal erosion, and urban development. The DEAUSTRALIA image collections in `sits` are:
-
-- GA_LS5T_ARD_3: ARD images from Landsat-5 satellite, with bands "BLUE", "GREEN", "RED", "NIR", "SWIR-1", "SWIR-2", and "CLOUD".
-- GA_LS7E_ARD_3: ARD images from Landsat-7 satellite, with the same bands as Landsat-5.
-- GA_LS8C_ARD_3: ARD images from Landsat-8 satellite, with bands "COASTAL-AEROSOL", "BLUE", "GREEN", "RED", "NIR", "SWIR-1", "SWIR-2", "PANCHROMATIC", and "CLOUD".
-- GA_LS9C_ARD_3: ARD images from Landsat-9 satellite, with the same bands as Landsat-8.
-- GA_S2AM_ARD_3: ARD images from Sentinel-2A satellite, with bands "COASTAL-AEROSOL", "BLUE", "GREEN", "RED", "RED-EDGE-1", "RED-EDGE-2", "RED-EDGE-3", "NIR-1", "NIR-2", "SWIR-2", "SWIR-3", and "CLOUD".
-- GA_S2BM_ARD_3: ARD images from Sentinel-2B satellite, with the same bands as Sentinel-2A.
-- GA_LS5T_GM_CYEAR_3: Landsat-5 geomedian images, with bands "BLUE", "GREEN", "RED", "NIR", "SWIR1", "SWIR2", "EDEV", "SDEV", "BCDEV". 
-- GA_LS7E_GM_CYEAR_3: Landsat-7 geomedian images, with the same bands as Landsat-5 geomedian.
-- GA_LS8CLS9C_GM_CYEAR_3: Landsat-8/9 geomedian images, with the same bands as Landsat-5 geomedian.
-- GA_LS_FC_3: Landsat fractional land cover, with bands "BS", "PV", "NPV". 
-- GA_S2LS_INTERTIDAL_CYEAR_3: Landsat/Sentinel intertidal data, with bands "ELEVATION",  "ELEVATION-UNCERTAINTY", "EXPOSURE", "TA-HAT", "TA-HOT", "TA-LOT", "TA-LAT" "TA-OFFSET-HIGH", "TA-OFFSET-LOW", "TA-SPREAD", "QA-NDWI-CORR"and "QA-NDWI-FREQ". 
-
-The following code retrieves an image from Sentinel-2A.
-
-:::{.panel-tabset}
-## R
-```{r}
-#| eval: false
-# get roi for an MGRS tile
-bbox_55KGR <- sits_mgrs_to_roi("55KGR")
-# retrieve the world cover map for the chosen roi
-s2_56KKV <- sits_cube(
-  source = "DEAUSTRALIA",
-  collection = "GA_S2AM_ARD_3",
-  tiles = "56KKV",
-  bands = c("BLUE", "GREEN", "RED", "NIR-2", "SWIR-2", "CLOUD"),
-  start_date = "2023-09-01",
-  end_date = "2023-11-30"
-)
-# plot the resulting map
-plot(s2_56KKV, green = "NIR-2", blue = "BLUE", red = "SWIR-2", date = "2023-10-14")
-```
-## Python
-```{python}
-#| eval: false
-# retrieve the world cover map for the chosen tile
-s2_56KKV = sits_cube(
-  source = "DEAUSTRALIA",
-  collection = "GA_S2AM_ARD_3",
-  tiles = "56KKV",
-  bands = ["BLUE", "GREEN", "RED", "NIR-2", "SWIR-2", "CLOUD"],
-  start_date = "2023-09-01",
-  end_date = "2023-11-30"
-)
-# plot the resulting map
-plot(s2_56KKV, green = "NIR-2", blue = "BLUE", red = "SWIR-2", date = "2023-10-14")
-```
-:::
-
-```{r}
-#| echo: false
-#| label: fig-s2deau-datacubes
-#| out-width: 100%
-#| fig-cap: |
-#|   Sentinel-2A image from the DEAUSTRALIA collection showing MGRS tile 56KKV.
-#| fig-align: center
-knitr::include_graphics("./images/s2_56KKV.png") 
-```
-
 
 ## Harmonized Landsat-Sentinel
 
@@ -910,7 +770,7 @@ plot(hls_cube_s2, red = "RED", green = "GREEN", blue = "BLUE", date = "2020-06-2
 #| fig-cap: |
 #|   Sentinel-2 image from NASA HLSS30 collection showing the island of Ilhabela in the coast of Brazil.
 #| fig-align: center
-knitr::include_graphics("./images/hls_ilhabela_s2.png") 
+knitr::include_graphics("./images/th_data_sources/hls_ilhabela_s2.png") 
 ```
 
 ## EO products from TERRASCOPE
@@ -969,7 +829,7 @@ plot(world_cover_2021_20LBL)
 #| fig-cap: |
 #|   World Cover 2021 map covering MGRS tile 22LBL.
 #| fig-align: center
-knitr::include_graphics("./images/world_cover_2021.png") 
+knitr::include_graphics("./images/th_data_sources/world_cover_2021.png") 
 ```
 
 ## References{-}

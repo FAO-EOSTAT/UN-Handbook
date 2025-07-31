@@ -75,7 +75,7 @@ The first three criteria of the EO-based quality control concern the technical s
 #| fig-cap: |
 #|   Quality control of geospatial features and their coordinates. Examples acquired during the FAO EOStat project in Senegal from left to right: polygon recorded as points sequence instead of a closed polygon, polygon overlap detected and solved, and benchmarking of various protocols and devices (tablet with integrated GPS versus Garmin receiver) to record field boundaries.
 #| fig-align: center
-knitr::include_graphics("./images/QC_polygon_Senegal.png")
+knitr::include_graphics("./images/th_design_frames/QC_polygon_Senegal.png")
 ```
 
 ## Measuring spatial precision of field plot boundaries
@@ -91,7 +91,7 @@ From an EO perspective, assessing sample quality requires time series from satel
 #| fig-cap: |
 #|   Cloud-free Planet monthly base map images (left) and very high-resolution imagery (middle) overlaid with point observation expected to be representative of a circle area (radius of 20 m), as reported by the 2020 wheat rust survey in Ethiopia (Blasch et al., 2022).  Plots highlight expected and unexpected NDVI profiles and the associated standard deviation for a homogeneous wheat field derived from the Sentinel-2 time series during the surveyed season..
 #| fig-align: center
-knitr::include_graphics("./images/QC_circle profile_Ethiopia.png")
+knitr::include_graphics("./images//th_design_frames/QC_circle profile_Ethiopia.png")
 ```
 
 ## Using NDVI temporal profiles to assess crop phenology
@@ -101,13 +101,12 @@ The last EO-based requirement is the most difficult to address. We assume that c
 Consider Ethiopia’s diverse crop cycles in @fig-design-frames-ethiopia2. Temporal profiles for barley, fava beans, and teff show outliers indicating marginal sample quality. The different NDVI profiles for maize samples reveal that a significant portion underwent a double cropping cycle within the observation period. Since the first crop cycle delayed planting, the sample population needs to be divided appropriately using clustering methods. The complexity of the wheat cropping cycle is heightened by sowing dates and varietal differences affecting cycle length. Thus, EO quality control aims to reject unsuitable samples for model calibration and output validation. Subsequent EO-derived results, like crop type maps, area estimates, and yield forecasts, critically depended on this quality control process.
 
 ```{r}
-#| echo: FALSE
 #| label: fig-design-frames-ethiopia2
 #| out-width: 80%
 #| fig-cap: |
 #|   NDVI temporal profiles interpolated from cloud-free Sentinel-2 multispectral images acquired along the observation period. Each colour curve corresponds to a sample for a given crop, while the black curve is the average NDVI value of all samples for this crop. Teff is blue, wheat is red, barley is light green, peas are pink, fava beans are orange, and maise is dark green. The CIMMYT provided these samples in the framework of the ESA Sen4Rust partnership.
 #| fig-align: center
-knitr::include_graphics("./images/QA_plot_Ethiopia.png")
+knitr::include_graphics("./images//th_design_frames/QA_plot_Ethiopia.png")
 ```
 
 ## Summary

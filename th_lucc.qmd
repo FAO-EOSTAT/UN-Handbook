@@ -58,7 +58,7 @@ Since remote sensing satellites revisit the same place, we can calibrate their i
 #| fig-cap: |
 #|   Time series measures (EVI index) of a pixel location $(x,y)$ (source:[@Picoli2018]).
 #| fig-align: center
-knitr::include_graphics("./images/sits_a.png")
+knitr::include_graphics("./images/th_lucc/sits_a.png")
 ```
 
 ```{r}
@@ -68,7 +68,7 @@ knitr::include_graphics("./images/sits_a.png")
 #| fig-cap: |
 #|   Land change events associated to a pixel location $(x,y)$ (source:[@Picoli2018]).
 #| fig-align: center
-knitr::include_graphics("./images/sits_b.png")
+knitr::include_graphics("./images/th_lucc/sits_b.png")
 ```
 
 References{-}
