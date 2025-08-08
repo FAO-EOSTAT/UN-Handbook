@@ -4,6 +4,22 @@ author: "Gilberto Camara"
 format: html
 ---
 
+### Configurations to run the chapter{-}
+
+```{r}
+#| echo: true
+#| eval: true
+#| output: false
+# load package "tibble"
+library(tibble)
+# load packages "sits" and "sitsdata"
+library(sits)
+library(sitsdata)
+# set tempdir if it does not exist 
+tempdir_r <- "~/UN-Handbook/tempdir/R/dc_ardcollections"
+dir.create(tempdir_r, showWarnings = FALSE)
+```
+
 ## ARD Image Collections
 
 Analysis Ready Data (CEOS-ARD) are satellite data that have been processed to meet the [ARD standards](https://ceos.org/ard/) defined by the Committee on Earth Observation Satellites (CEOS). ARD data simplify and accelerate the analysis of Earth observation data by providing consistent and high-quality data that are standardized across different sensors and platforms. ARD images processing includes geometric corrections, radiometric corrections, and sometimes atmospheric corrections. Images are georeferenced, meaning they are accurately aligned with a coordinate system. Optical ARD images include cloud and shadow masking information. These masks indicate which pixels affected by clouds or cloud shadows. For optical sensors, CEOS-ARD images have to be converted to surface reflectance values, which represent the fraction of light that is reflected by the surface. This makes the data more comparable across different times and locations. For SAR images, CEOS-ARD specification require images to undergo Radiometric Terrain Correction (RTC) and are provided in the GammaNought ($\gamma_0$) backscatter values. This value which mitigates the variations from diverse observation geometries and is recommended for most land applications.
@@ -93,8 +109,6 @@ The result of `sits_cube()` is a tibble with a description of the selected image
 
 Amazon Web Services (AWS) holds two kinds of collections: *open-data* and *requester-pays*. Open data collections can be accessed without cost. Requester-pays collections require payment from an AWS account. Currently, `sits` supports collection `SENTINEL-2-L2A` which is open data.  The bands in 10 m resolution are B02, B03, B04, and B08. The  20 m bands are B05, B06, B07, B8A, B11, and B12. Bands B01 and B09 are available at 60 m resolution. A CLOUD band is also available. The example below shows how to access one tile of the open data `SENTINEL-2-L2A` collection.  The `tiles` parameter allows selecting the desired area according to the MGRS reference system. 
 
-::: {.panel-tabset}
-## R
 ```{r}
 #| eval: false
 #| echo: true
@@ -114,27 +128,6 @@ plot(s2_23MMU_cube,
      date = "2018-10-05"
 )
 ```
-## Python
-```{python}
-#| eval: false
-#| echo: true
-# Create a data cube covering an area in Brazil
-s2_23MMU_cube = sits_cube(
-    source = "AWS",
-    collection = "SENTINEL-2-L2A",
-    tiles = "23MMU",
-    bands = ["B02", "B8A", "B11", "CLOUD"],
-    start_date = "2018-07-12",
-    end_date = "2019-07-28"
-)
-plot(s2_23MMU_cube, 
-     red = "B11", 
-     blue = "B02", 
-     green = "B8A", 
-     date = "2018-10-05"
-)
-```
-:::
 
 ```{r}
 #| echo: FALSE
@@ -156,7 +149,6 @@ The `sits` package supports access to open data collection from Microsoft's Plan
 
 The SENTINEL-2/2A ARD images available in MPC have the same bands and resolutions as those available in AWS (see above). The example below shows how to access the `SENTINEL-2-L2A` collection. 
 
-::: {.panel-tabset}
 ## R
 ```{r}
 #| eval: false
@@ -174,24 +166,6 @@ plot(s2_20LKP_cube_MPC, red = "B11", blue = "B02", green = "B8A",
      date = "2019-07-18"
 )
 ```
-## Python
-```{python}
-#| eval: false
-# Create a data cube covering an area in the Brazilian Amazon
-s2_20LKP_cube_MPC = sits_cube(
-      source = "MPC",
-      collection = "SENTINEL-2-L2A",
-      tiles = "20LKP",
-      bands = ["B02", "B8A", "B11", "CLOUD"],
-      start_date = "2019-07-01",
-      end_date = "2019-07-28"
-)
-# Plot a color composite of one date of the cube
-plot(s2_20LKP_cube_MPC, red = "B11", blue = "B02", green = "B8A", 
-     date = "2019-07-18"
-)
-```
-:::
 
 ```{r}
 #| echo: FALSE
@@ -208,7 +182,6 @@ knitr::include_graphics("./images/th_data_sources/mpc_s2.png")
 
 The `LANDSAT-C2-L2` collection provides access to data from Landsat-4/5/7/8/9 satellites. Images from these satellites have been intercalibrated to ensure data consistency. For compatibility between the different Landsat sensors, the band names are BLUE, GREEN, RED,  NIR08,  SWIR16, and SWIR22. All images have 30 m resolution. For this collection,  tile search is not supported; the `roi` parameter should be used. The example below shows how to retrieve data from a region of interest covering the city of Brasilia in Brazil. 
 
-::: {.panel-tabset}
 ## R
 ```{r}
 #| eval: false
@@ -227,25 +200,7 @@ s2_L8_cube_MPC <- sits_cube(
 # Plot the tile that covers the Lencois Maranhenses
 plot(s2_L8_cube_MPC)
 ```
-## Python
-```{python}
-#| eval: false
-# Read a ROI that covers part of the Northeastern coast of Brazil
-roi = {"lon_min" : -43.5526, "lat_min" : -2.9644, 
-         "lon_max" : -42.5124, "lat_max" : -2.1671}
-# Select the cube
-s2_L8_cube_MPC = sits_cube(
-        source = "MPC",
-        collection = "LANDSAT-C2-L2",
-        bands = ["BLUE", "RED", "GREEN", "NIR08", "SWIR16", "CLOUD"],
-        roi = roi,
-        start_date = "2019-06-01",
-        end_date = "2019-09-01"
-)
-# Plot the tile that covers the Lencois Maranhenses
-plot(s2_L8_cube_MPC)
-```
-:::
+
 
 ```{r}
 #| echo: false
@@ -267,7 +222,6 @@ Access to Sentinel-1 GRD images can be done either by MGRS tiles (`tiles`) or by
 
 The following example shows how to create a data cube of S1 GRD images over a region in Mato Grosso Brazil that is an area of the Amazon forest that has been deforested. The resulting cube will not follow any specific projection and its coordinates will be stated as EPSG 4326 (latitude/longitude). Its geometry is derived from the SAR slant-range perspective; thus, it will appear included in relation to the Earth's longitude. 
 
-::: {.panel-tabset}
 ## R
 ```{r}
 #| eval: false
@@ -282,22 +236,6 @@ cube_s1_grd <-  sits_cube(
 )
 plot(cube_s1_grd, band = "VV", palette = "Greys")
 ```
-## Python
-```{python}
-#| eval: false
-cube_s1_grd =  sits_cube(
-  source = "MPC",
-  collection = "SENTINEL-1-GRD",
-  bands = ["VV"],
-  orbit = "descending",
-  tiles = ["21LUJ","21LVJ"],
-  start_date = "2021-08-01",
-  end_date = "2021-09-30"
-)
-plot(cube_s1_grd, band = "VV", palette = "Greys")
-
-```
-:::
 
 ```{r}
 #| echo: false
@@ -318,8 +256,7 @@ An RTC SAR image has undergone corrections for both geometric distortions and ra
 
 The terrain correction addresses geometric distortions caused by the side-looking geometry of SAR imaging, such as foreshortening, layover, and shadowing. It uses a Digital Elevation Model (DEM) to model the terrain and re-project the SAR image from the slant range (radar line-of-sight) to the ground range (true geographic coordinates). This process aligns the SAR image with the actual topography, providing a more accurate spatial representation.
 
-::: {.panel-tabset}
-## R
+
 ```{r}
 #| eval: false
 cube_s1_rtc <-  sits_cube(
@@ -333,21 +270,7 @@ cube_s1_rtc <-  sits_cube(
 )
 plot(cube_s1_rtc, band = "VV", palette = "Greys")
 ```
-## Python
-```{python}
-#| eval: false
-cube_s1_rtc =  sits_cube(
-  source = "MPC",
-  collection = "SENTINEL-1-RTC",
-  bands = ["VV", "VH"],
-  orbit = "descending",
-  tiles = "18NZM",
-  start_date = "2021-08-01",
-  end_date = "2021-09-30"
-)
-plot(cube_s1_rtc, band = "VV", palette = "Greys")
-```
-:::
+
 
 ```{r}
 #| echo: false
@@ -368,8 +291,6 @@ The Copernicus digital elevation model 30-meter global dataset (COP-DEM-GLO-30) 
 
 The Copernicus DEM 30 meter is organized in a 1$^\circ$ by 1$^\circ$ grid. In `sits`, access to COP-DEM-GLO-30 images can be done either by MGRS tiles (`tiles`) or by region of interest (`roi`). In both case, the cube is retrieved based on the parts of the grid that intersect the region of interest or the chosen tiles.
 
-::: {.panel-tabset}
-## R
 ```{r}
 #| eval: false
 cube_dem_30 <-  sits_cube(
@@ -380,18 +301,7 @@ cube_dem_30 <-  sits_cube(
 )
 plot(cube_dem_30, band = "ELEVATION", palette = "RdYlGn", rev = TRUE)
 ```
-## Python
-```{r}
-#| eval: false
-cube_dem_30 <-  sits_cube(
-  source = "MPC",
-  collection = "COP-DEM-GLO-30",
-  tiles = "20LMR",
-  band = "ELEVATION"
-)
-plot(cube_dem_30, band = "ELEVATION", palette = "RdYlGn", rev = TRUE)
-```
-:::
+
 
 ```{r}
 #| echo: false
@@ -428,8 +338,6 @@ After including these lines in your .Rprofile, restart `R` for the changes to ta
 
 CDSE hosts a global collection of Sentinel-2 Level-2A images, which are processed according to the [CEOS Analysis-Ready Data](https://ceos.org/ard/) specifications. One example is provided below, where we present a Sentinel-2 image of the Lena river delta in Siberia in summertime.
 
-::: {.panel-tabset}
-## R
 ```{r}
 #| eval: false
 # obtain a collection of images of a tile covering part of Lena delta
@@ -444,22 +352,6 @@ lena_cube <- sits_cube(
 # plot an image from summertime
 plot(lena_cube, date = "2023-07-06", red = "B12", green = "B8A", blue = "B04")
 ```
-## Python
-```{python}
-#| eval: false
-# obtain a collection of images of a tile covering part of Lena delta
-lena_cube = sits_cube(
-    source = "CDSE",
-    collection = "SENTINEL-2-L2A",
-    bands = ["B02", "B04", "B8A", "B11", "B12"],
-    start_date = "2023-05-01",
-    end_date = "2023-09-01",
-    tiles = "52XDF"
-)
-# plot an image from summertime
-plot(lena_cube, date = "2023-07-06", red = "B12", green = "B8A", blue = "B04")
-```
-:::
 
 
 ```{r}
@@ -480,8 +372,6 @@ All images are projected and gridded into the United States Military Grid Refere
 
 For more details, please refer to the [S1-NRB product website](https://sentinels.copernicus.eu/web/sentinel/sentinel-1-ard-normalised-radar-backscatter-nrb-product). Global coverage is expected to grow as ESA expands the S1-RTC archive. The following example shows an S1-RTC image for the Rift valley in Ethiopia.
 
-::: {.panel-tabset}
-## R
 ```{r}
 #| eval: false
 # retrieve a S1-RTC cube and plot
@@ -496,22 +386,6 @@ s1_cube <- sits_cube(
 )
 plot(s1_cube, band = "VV", date = c("2023-03-03"), palette = "Greys")
 ```
-## Python
-```{python}
-#| eval: false
-# retrieve a S1-RTC cube and plot
-s1_cube = sits_cube(
-    source = "CDSE",
-    collection = "SENTINEL-1-RTC",
-    bands = ["VV", "VH"],
-    orbit = "descending",
-    start_date = "2023-01-01",
-    end_date = "2023-12-31",
-    tiles = "37NCH"
-)
-plot(s1_cube, band = "VV", date = c("2023-03-03"), palette = "Greys")
-```
-:::
 
 
 ```{r}
@@ -543,8 +417,6 @@ Digital Earth Africa (DEAFRICA) is a cloud service that provides open-access Ear
 
 Access to DEAFRICA Sentinel-2 images can be done wither using `tiles` or `roi` parameter. In this example, the requested `roi` produces a cube that contains one MGRS tiles (“35LPH”) covering an area of Madagascar that includes the Betsiboka Estuary.
 
-:::{.panel-tabset}
-## R
 ```{r}
 #| eval: false
 dea_s2_cube <- sits_cube(
@@ -560,23 +432,7 @@ dea_s2_cube <- sits_cube(
 )
 plot(dea_s2_cube, red = "B04", blue = "B02", green = "B08")
 ```
-## Python
-```{python}
-#| eval: false
-dea_s2_cube = sits_cube(
-    source = "DEAFRICA",
-    collection = "SENTINEL-2-L2A",
-    roi = {
-    "lon_min" : 46.1, "lat_min" : -15.6,
-    "lon_max" : 46.6, "lat_max" : -16.1
-  },
-    bands = ["B02", "B04", "B08"],
-    start_date = "2019-04-01",
-    end_date = "2019-05-30"
-)
-plot(dea_s2_cube, red = "B04", blue = "B02", green = "B08")
-```
-:::
+
 
 ```{r}
 #| echo: false
@@ -590,8 +446,6 @@ knitr::include_graphics("./images/th_data_sources/deafrica_s2.png")
 
 The next example retrieves a set of ARD Landsat-9 data, covering the Serengeti plain in Tanzania. 
 
-:::{.panel-tabset}
-## R
 ```{r}
 #| eval: false
 dea_l9_cube <- sits_cube(
@@ -608,24 +462,6 @@ dea_l9_cube <- sits_cube(
 plot(dea_l9_cube, date = "2023-06-26", 
      red = "B06", green = "B05", blue = "B04")
 ```
-## Python
-```{python}
-#| eval: false
-dea_l9_cube = sits_cube(
-    source = "DEAFRICA",
-    collection = "LS9-SR",
-    roi = {
-        "lon_min" : 33.0, "lat_min" : -3.60, 
-        "lon_max" : 33.6, "lat_max" : -3.00
-    },
-    bands = ["B04", "B05", "B06"],
-    start_date = "2023-05-01",
-    end_date = "2023-08-30"
-)
-plot(dea_l9_cube, date = "2023-06-26", 
-     red = "B06", green = "B05", blue = "B04")
-```
-:::
 
 ```{r}
 #| echo: false
@@ -639,8 +475,6 @@ knitr::include_graphics("./images/th_data_sources/landsat9_serengeti.png")
 
 The following example shows how to retrieve a subset of the ALOS-PALSAR mosaic for year 2020, for an area near the border between Congo and Rwanda. 
 
-:::{.panel-tabset}
-## R
 ```{r}
 #| eval: false
 dea_alos_cube = sits_cube(
@@ -656,23 +490,7 @@ dea_alos_cube = sits_cube(
 )
 plot(dea_alos_cube, band = "HH")
 ```
-## Python
-```{python}
-#| eval: false
-dea_alos_cube = sits_cube(
-    source = "DEAFRICA",
-    collection = "ALOS-PALSAR-MOSAIC",
-    roi = {
-       "lon_min" : 28.69, "lat_min" : -2.35, 
-       "lon_max" : 29.35, "lat_max" : -1.56
-    },
-    bands = ["HH", "HV"],
-    start_date = "2020-01-01",
-    end_date = "2020-12-31"
-)
-plot(dea_alos_cube, band = "HH")
-```
-:::
+
 
 ```{r}
 #| echo: false
@@ -719,8 +537,6 @@ password = "<your password>"
 
 Access to images in NASA HLS is done by region of interest or by tiles. The following example shows an HLS Sentinel-2 image over the Brazilian coast. 
 
-:::{.panel-tabset}
-## R
 ```{r}
 #| eval: false
 # define a region of interest
@@ -740,27 +556,6 @@ hls_cube_s2 <- sits_cube(
 # plot the cube
 plot(hls_cube_s2, red = "RED", green = "GREEN", blue = "BLUE", date = "2020-06-20")
 ```
-## Python
-```{python}
-#| eval: false
-# define a region of interest
-roi = { "lon_min" : -45.6422, "lat_min" : -24.0335,
-        "lon_max" : -45.0840, "lat_max" : -23.6178 }
-
-# create a cube from the HLSS30 collection
-hls_cube_s2 = sits_cube(
-  source = "HLS",
-  collection = "HLSS30",
-  roi = roi,
-  bands = ["BLUE", "GREEN", "RED", "CLOUD"],
-  start_date = as.Date("2020-06-01"),
-  end_date = as.Date("2020-09-01"),
-  progress = FALSE
-)
-# plot the cube
-plot(hls_cube_s2, red = "RED", green = "GREEN", blue = "BLUE", date = "2020-06-20")
-```
-:::
 
 
 ```{r}
@@ -777,8 +572,6 @@ knitr::include_graphics("./images/th_data_sources/hls_ilhabela_s2.png")
 
 Terrascope is online platform for accessing open-source satellite images. This service, operated by VITO, offers a range of Earth observation data and processing services that are accessible free of charge. Currently, `sits` supports the World Cover 2021 maps, produced by VITO with support form the European Commission and ESA. The following code shows how to access the World Cover 2021 convering tile "22LBL". The first step is to use `sits_mgrs_to_roi()` to get the region of interest expressed as a bounding box; this box is then entered as the `roi` parameter in the `sits_cube()` function. Since the World Cover data is available as a 3$^\circ$ by 3$^\circ$ grid, it is necessary to use `sits_cube_copy()` to extract the exact MGRS tile.
 
-:::{.panel-tabset}
-## R
 ```{r}
 #| eval: false
 # get roi for an MGRS tile
@@ -799,28 +592,7 @@ world_cover_2021_20LBL <- sits_cube_copy(
 # plot the resulting map
 plot(world_cover_2021_20LBL)
 ```
-## Python
-```{python}
-#| eval: false
-# get roi for an MGRS tile
-bbox_22LBL = sits_mgrs_to_roi("22LBL")
-# retrieve the world cover map for the chosen roi
-world_cover_2021 = sits_cube(
-  source = "TERRASCOPE",
-  collection = "WORLD-COVER-2021",
-  roi = bbox_22LBL
-)
-# cut the 3 x 3 degree grid to match the MGRS tile 22LBL
-world_cover_2021_20LBL = sits_cube_copy(
-  cube = world_cover_2021,
-  roi = bbox_22LBL,
-  multicores = 6,
-  output_dir = tempdir_py
-)
-# plot the resulting map
-plot(world_cover_2021_20LBL)
-```
-:::
+
 
 ```{r}
 #| echo: false

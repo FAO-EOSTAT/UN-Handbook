@@ -5,8 +5,6 @@ format: html
 
 ### Configurations to run this chapter{-}
 
-:::{.panel-tabset}
-## R
 ```{r}
 #| echo: true
 #| eval: true
@@ -20,22 +18,6 @@ library(sitsdata)
 tempdir_r <- "~/sitsbook/tempdir/R/cl_machinelearning"
 dir.create(tempdir_r, showWarnings = FALSE)
 ```
-## Python
-```{python}
-#| echo: true
-#| eval: true
-#| output: false
-# load "pysits" library
-from pysits import *
-from pathlib import Path
-# set tempdir if it does not exist 
-tempdir_py = Path.home() / "sitsbook/tempdir/Python/cl_machinelearning"
-tempdir_py.mkdir(parents=True, exist_ok=True)
-```
-:::
-
-<a href="https://www.kaggle.com/code/esensing/machine-learning-for-data-cubes" target="_blank"><img src="https://kaggle.com/static/images/open-in-kaggle.svg"/></a>
-
 
 ## Data used in this chapter
 
@@ -64,7 +46,6 @@ knitr::include_graphics("./images/th_machine_learning/random_forest.png")
 
 `sits` provides `sits_rfor()`, which uses the R `randomForest` package [@Wright2017]; its main parameter is `num_trees`, which is the number of trees to grow with a default value of 100. The model can be visualized using `plot()`.
 
-:::{.panel-tabset}
 ## R
 ```{r}
 #| eval: false
@@ -78,26 +59,7 @@ rfor_model <- sits_train(
 # Plot the most important variables of the model
 plot(rfor_model)
 ```
-## Python
-```{python}
-#| eval: false
-r_set_seed(290356)
 
-# Load samples
-samples_matogrosso_mod13q1 = load_samples_dataset(
-    name = "samples_matogrosso_mod13q1", 
-    package = "sitsdata"
-)
-
-# Train the Mato Grosso samples with Random Forest algorithm
-rfor_model = sits_train(
-    samples = samples_matogrosso_mod13q1, 
-    ml_method = sits_rfor(num_trees = 100))
-
-# Plot the most important variables of the model
-plot(rfor_model)
-```
-:::
 
 ```{r}
 #| label: fig-ml-rfimp
@@ -110,7 +72,6 @@ knitr::include_graphics("./images/th_machine_learning/mlrformodel.png")
 
 The model plot shows the most important explanatory variables, which are the NIR (near infrared) band on date 17 (2007-05-25) and the MIR (middle infrared) band on date 22 (2007-08-13). The NIR value at the end of May captures the growth of the second crop for double cropping classes.  Values of the MIR band at the end of the period (late July to late August) capture bare soil signatures to distinguish between agricultural and natural classes. This corresponds to summertime when the ground is drier after harvesting crops.
 
-:::{.panel-tabset}
 ## R
 ```{r}
 #| eval: false
@@ -121,23 +82,6 @@ point_class <- sits_classify(
 
 plot(point_class, bands = c("NDVI", "EVI"))
 ```
-## Python
-```{python}
-#| eval: false
-# Load samples
-point_mt_mod13q1 = load_samples_dataset(
-    name = "point_mt_mod13q1", 
-    package = "sitsdata"
-)
-
-# Classify using Random Forest model and plot the result
-point_class = sits_classify(
-    data = point_mt_mod13q1, 
-    ml_model  = rfor_model)
-
-plot(point_class, bands = ("NDVI", "EVI"))
-```
-:::
 
 ```{r}
 #| label: fig-ml-rfplot
@@ -174,8 +118,7 @@ In `sits`, the XGBoost method is implemented by the `sits_xbgoost()` function, b
 
 The learning rate `eta` varies from 0.0 to 1.0 and should be kept small (default is 0.3) to avoid overfitting. The minimum loss value `gamma` specifies the minimum reduction required to make a split. Its default is 0; increasing it makes the algorithm more conservative. The `max_depth` value controls the maximum depth of the trees. Increasing this value will make the model more complex and likely to overfit (default is 6). The `subsample` parameter controls the percentage of samples supplied to a tree. Its default is 1 (maximum). Setting it to lower values means that xgboost randomly collects only part of the data instances to grow trees, thus preventing overfitting. The `nrounds` parameter controls the maximum number of boosting interactions; its default is 100, which has proven to be enough in most cases. To follow the convergence of the algorithm, users can turn the `verbose` parameter on. In general, the results using the extreme gradient boosting algorithm are similar to the Random Forest method.
 
-:::{.panel-tabset}
-## R
+
 ```{r}
 #| eval: false
 set.seed(290356)
@@ -193,25 +136,7 @@ point_class_xgb <- sits_classify(
 # View classification
 plot(point_class_xgb, bands = c("NDVI", "EVI"))
 ```
-## Python
-```{python}
-#| eval: false
-r_set_seed(290356)
 
-# Train using  XGBoost
-xgb_model = sits_train(
-    samples = samples_matogrosso_mod13q1, 
-    ml_method = sits_xgboost(verbose = False))
-
-# Classify using SVM model and plot the result
-point_class_xgb = sits_classify(
-    data = point_mt_mod13q1, 
-    ml_model = xgb_model)
-
-# View classification
-plot(point_class_xgb, bands = ("NDVI", "EVI"))
-```
-:::
 
 ```{r}
 #| label: fig-ml-xgbplot
@@ -241,9 +166,6 @@ The following example shows how to use `sits_mlp()`. The default parameters have
 
 To simplify the output, the `verbose` option has been turned off. After the model has been generated, we plot its training history.
 
-:::{.panel-tabset}
-
-## R
 ```{r}
 #| eval: false
 set.seed(290356)
@@ -266,29 +188,7 @@ mlp_model <- sits_train(
 plot(mlp_model)
 ```
 
-## Python
-```{python}
-#| eval: false
-r_set_seed(290356)
 
-# Train using an MLP model
-# This is an example of how to set parameters
-# First-time users should test default options first
-mlp_model = sits_train(
-    samples = samples_matogrosso_mod13q1,
-    ml_method = sits_mlp(
-        optimizer        = "torch::optim_adamw",
-        layers           = (512, 512, 512),
-        dropout_rates    = (0.40, 0.30, 0.20),
-        epochs           = 80,
-        batch_size       = 64,
-        verbose          = False,
-        validation_split = 0.2))
-
-# Show training evolution
-plot(mlp_model)
-```
-:::
 
 ```{r}
 #| label: fig-ml-mlp
@@ -301,8 +201,6 @@ knitr::include_graphics("./images/th_machine_learning/mlmlpmodel.png")
 
 Then, we classify a 16-year time series using the multilayer perceptron model.
 
-:::{.panel-tabset}
-## R
 ```{r}
 #| eval: false
 # Classify using MLP model and plot the result
@@ -310,18 +208,7 @@ point_mt_mod13q1 |>
     sits_classify(mlp_model) |>  
     plot(bands = c("NDVI", "EVI"))
 ```
-## Python
-```{python}
-#| eval: false
-# Classify using MLP model
-point_class = sits_classify(point_mt_mod13q1, mlp_model)
 
-# Plot
-plot(
-    point_class, bands = ("NDVI", "EVI")
-)
-```
-:::
 
 ```{r}
 #| label: fig-ml-mlplot
@@ -352,8 +239,6 @@ knitr::include_graphics("./images/th_machine_learning/tempcnn.png")
 
 The function `sits_tempcnn()` implements the model. The first parameter is the `optimizer` used in the backpropagation phase for gradient descent. The default is `adamw` which is considered as a stable and reliable optimization function. The parameter `cnn_layers` controls the number of 1D-CNN layers and the size of the filters applied at each layer; the default values are three CNNs with 128 units. The parameter `cnn_kernels` indicates the size of the convolution kernels; the default is kernels of size 7. Activation for all 1D-CNN layers uses the "relu" function. The dropout rates for each 1D-CNN layer are controlled individually by the parameter `cnn_dropout_rates`. The `validation_split` controls the size of the test set relative to the full dataset. We recommend setting aside at least 20% of the samples for validation.
 
-:::{.panel-tabset}
-## R
 ```{r}
 #| eval: false
 set.seed(290356)
@@ -375,28 +260,7 @@ tempcnn_model <- sits_train(
 # Show training evolution
 plot(tempcnn_model)
 ```
-## Python
-```{python}
-#| eval: false
-r_set_seed(290356)
 
-# Train using tempCNN
-tempcnn_model = sits_train(
-    samples_matogrosso_mod13q1, 
-    sits_tempcnn(
-        optimizer            = "torch::optim_adamw",
-        cnn_layers           = (256, 256, 256),
-        cnn_kernels          = (7, 7, 7),
-        cnn_dropout_rates    = (0.2, 0.2, 0.2),
-        epochs               = 80,
-        batch_size           = 64,
-        validation_split     = 0.2,
-        verbose              = False))
-
-# Show training evolution
-plot(tempcnn_model)
-```
-:::
 
 ```{r}
 #| label: fig-ml-tcnnmodel
@@ -410,8 +274,6 @@ knitr::include_graphics("./images/th_machine_learning/mltcnnmodel.png")
 
 Using the TempCNN model, we classify a 16-year time series.
 
-:::{.panel-tabset}
-## R
 ```{r}
 #| eval: false
 # Classify using TempCNN model and plot the result
@@ -419,18 +281,6 @@ point_mt_mod13q1 |>
     sits_classify(tempcnn_model) |>  
     plot(bands = c("NDVI", "EVI"))
 ```
-## Python
-```{python}
-#| eval: false
-# Classify using TempCNN model
-point_class = sits_classify(point_mt_mod13q1, tempcnn_model)
-
-# Plot
-plot(
-    point_class, bands = ("NDVI", "EVI")
-)
-```
-:::
 
 ```{r}
 #| label: fig-ml-tcnnplot
@@ -527,8 +377,6 @@ The first model proposed by Garnot et al. is a full transformer-based model [@Ga
 
 In `sits`, the full transformer-based model proposed by Garnot et al. [@Garnot2020a]   is implemented using `sits_tae()`. The default parameters are those proposed by the authors. The default optimizer is `optim_adamw`, as also used in the `sits_tempcnn()` function.
 
-:::{.panel-tabset}
-## R
 ```{r}
 #| eval: false
 # Train a machine learning model using TAE
@@ -543,22 +391,6 @@ tae_model <- sits_train(samples_matogrosso_mod13q1,
 # Show training evolution
 plot(tae_model)
 ```
-## Python
-```{python}
-#| eval: false
-# Train a machine learning model using TAE
-tae_model = sits_train(samples_matogrosso_mod13q1, 
-                       sits_tae(
-                          epochs               = 80,
-                          batch_size           = 64,
-                          optimizer            = "torch::optim_adamw",
-                          validation_split     = 0.2,
-                          verbose              = False))
-
-# Show training evolution
-plot(tae_model)
-```
-:::
 
 ```{r}
 #| label: fig-ml-taemodel
@@ -572,8 +404,7 @@ knitr::include_graphics("./images/th_machine_learning/mltaemodel.png")
 
 Then, we classify a 16-year time series using the TAE model. 
 
-:::{.panel-tabset}
-## R
+
 ```{r}
 #| eval: false
 # Classify using DL model and plot the result
@@ -581,18 +412,7 @@ point_mt_mod13q1 |>
     sits_classify(tae_model) |>  
     plot(bands = c("NDVI", "EVI"))
 ```
-## Python
-```{python}
-#| eval: false
-# Classify using DL model
-point_class = sits_classify(point_mt_mod13q1, tae_model)
 
-# Plot
-plot(
-    point_class, bands = ("NDVI", "EVI")
-)
-```
-:::
 
 ```{r}
 #| label: fig-ml-taeplot
@@ -607,8 +427,6 @@ knitr::include_graphics("./images/th_machine_learning/mltaeplot.png")
 
 Garnot and co-authors also proposed the Lightweight Temporal Self-Attention Encoder (LTAE) [@Garnot2020], which the authors claim can achieve high classification accuracy with fewer parameters compared to other neural network models. It is a good choice for applications where computational resources are limited. The `sits_lighttae()` function implements this algorithm. The most important parameter to be set is the learning rate `lr`. Values ranging from 0.001 to 0.005 should produce good results. See also the section below on model tuning. 
 
-:::{.panel-tabset}
-## R
 ```{r}
 #| eval: false
 # Train a machine learning model using TAE
@@ -623,22 +441,7 @@ ltae_model <- sits_train(samples_matogrosso_mod13q1,
 # Show training evolution
 plot(ltae_model)
 ```
-## Python
-```{python}
-#| eval: false
-# Train a machine learning model using TAE
-ltae_model = sits_train(samples_matogrosso_mod13q1, 
-                       sits_lighttae(
-                          epochs               = 80,
-                          batch_size           = 64,
-                          optimizer            = "torch::optim_adamw",
-                          opt_hparams = dict(lr = 0.001),
-                          validation_split      = 0.2))
 
-# Show training evolution
-plot(ltae_model)
-```
-:::
 
 ```{r}
 #| label: fig-ml-ltaemodel
@@ -652,8 +455,6 @@ knitr::include_graphics("./images/th_machine_learning/mlltaemodel.png")
 
 Then, we classify a 16-year time series using the LightTAE model. 
 
-:::{.panel-tabset}
-## R
 ```{r}
 #| eval: false
 # Classify using DL model and plot the result
@@ -661,18 +462,7 @@ point_mt_mod13q1 |>
     sits_classify(ltae_model) |>  
     plot(bands = c("NDVI", "EVI"))
 ```
-## Python
-```{python}
-#| eval: false
-# Classify using DL model
-point_class = sits_classify(point_mt_mod13q1, ltae_model)
 
-# Plot
-plot(
-    point_class, bands = ("NDVI", "EVI")
-)
-```
-:::
 
 ```{r}
 #| label: fig-ml-ltaeplot
