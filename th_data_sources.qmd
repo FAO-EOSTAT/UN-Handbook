@@ -15,6 +15,7 @@ library(tibble)
 # load packages "sits" and "sitsdata"
 library(sits)
 library(sitsdata)
+library(earthdatalogin)
 # set tempdir if it does not exist 
 tempdir_r <- "~/UN-Handbook/tempdir/R/dc_ardcollections"
 dir.create(tempdir_r, showWarnings = FALSE)

@@ -75,5 +75,5 @@ ro_cube_20LMR_dem <- sits_add_base_cube(ro_cube_20LMR, dem_cube_reg)
 
 sits_bands(ro_cube_20LMR_dem)
 
-samples_dem <-
+# samples_dem <-
 

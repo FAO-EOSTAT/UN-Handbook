@@ -41,6 +41,7 @@ book:
         - ct_zimbabwe.qmd
         - ct_chile.qmd
         - ct_digital_earth_africa.qmd
+        - ct_indonesia.qmd
     - part: crop_yield_estimation.qmd
       chapters:
         - cy_finland.qmd
@@ -63,5 +64,10 @@ format:
     code-link: true
     author-meta: "Gilberto Camara, Lorenzo de Simone, Ronald Jansen"
     callout-appearance: simple
-bibliography: e-sensing.bib
+
+bibliography:
+    - bibliography/e-sensing.bib
+    - bibliography/indonesia.bib
+    - bibliography/mexico.bib
+
 csl: ieee.csl
