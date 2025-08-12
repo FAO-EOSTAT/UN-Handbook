@@ -41,7 +41,6 @@ book:
         - ct_zimbabwe.qmd
         - ct_chile.qmd
         - ct_digital_earth_africa.qmd
-        - ct_indonesia.qmd
     - part: crop_yield_estimation.qmd
       chapters:
         - cy_finland.qmd
