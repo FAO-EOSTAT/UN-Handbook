@@ -19,7 +19,7 @@ The task was carried out in the following stages:
 5. Development of a validation procedure,
 6. Creating procedures for reporting and creating statistics at all administrative levels of the country (voivodships, districts, communes). 
 
-The classification was carried out separately for each orbit based on the following three steps: 1) construction of the main database; 2) classifier development; and 3) crop map extraction (Fig. 1).
+The classification was carried out separately for each orbit based on the following three steps: 1) construction of the main database; 2) classifier development; and 3) crop map extraction (see @fig-ndvi-poland).
 
 ```{r}
 #| echo: FALSE
@@ -138,9 +138,7 @@ Validation of the classification results is carried out using in-situ  data (the
 
 ## Crop map publishing
 
-Area statistics are created based on the resulting classification raster. The areas are added up to all administrative levels of the country (voivodeships, districts, communes). The identification number of individual units allows for the integration of this data with the Statistics Poland reporting system. The results of the classification are published on geostatistical portal (https://portal.geo.stat.gov.pl/ ).
+Area statistics are created based on the resulting classification raster. The areas are added up to all administrative levels of the country (voivodeships, districts, communes). The identification number of individual units allows for the integration of this data with the Statistics Poland reporting system. The results of the classification are published on [geostatistical portal] (https://portal.geo.stat.gov.pl/). The refence paper for this work has been published in a leading journal [@Wozniak2022].
 
 ## References{-}
-
-Woźniak, E., Rybicki, M., Kofman, W., Aleksandrowicz, S., Wojtkowski, C., Lewiński, S., Bojanowski, J., Musiał, J., Milewski, T., Slesiński, P., & Łączyński, A. (2022). Multi-temporal phenological indices derived from time series Sentinel-1 images to country-wide crop classification. International Journal of Applied Earth Observation and Geoinformation, 107, 102683. https://doi.org/10.1016/j.jag.2022.102683
 

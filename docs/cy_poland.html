@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
-
+<meta name="generator" content="quarto-1.3.361">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Gilberto Camara, Lorenzo de Simone, Ronald Jansen">
-
-<title>21&nbsp; Yield Forecasting in Poland – UN Handbook on Remote Sensing for Agricultural Statistics</title>
+<title>UN Handbook on Remote Sensing for Agricultural Statistics - 21&nbsp; Yield Forecasting in Poland</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,8 +18,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
-
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -33,29 +48,21 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <link href="./cy_colombia.html" rel="next">
 <link href="./cy_indonesia.html" rel="prev">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-931bd9de4a2e97c797357f31cd37fa94.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
+  "limit": 20,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -64,39 +71,29 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-
-
+}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 </head>
-
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./crop_yield_estimation.html">Crop yield estimation</a></li><li class="breadcrumb-item"><a href="./cy_poland.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Yield Forecasting in Poland</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./crop_yield_estimation.html">Crop yield estimation</a></li><li class="breadcrumb-item"><a href="./cy_poland.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Yield Forecasting in Poland</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">UN Handbook on Remote Sensing for Agricultural Statistics</a> 
         <div class="sidebar-tools-main">
@@ -116,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome</span></span></a>
@@ -138,12 +135,12 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="./theory.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Foundations</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./th_remote_sensing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remote Sensing images: optical, SAR</span></span></a>
@@ -164,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./th_machine_learning.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Machine learning classification of remote sensing images</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Machine learning algorithms for image time series</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -198,17 +195,17 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./crop_type_mapping.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Use Cases in Crop Type Mapping</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ct_poland.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Crop monitoring with SAR images in Poland</span></span></a>
@@ -245,17 +242,17 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./crop_yield_estimation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Crop yield estimation</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cy_finland.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Early-season crop yield mapping in Finland</span></span></a>
@@ -286,17 +283,17 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./additional.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Additional Topics</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ad_geoglam.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Extraction of crop statistics from crop type and crop yield maps</span></span></a>
@@ -327,27 +324,45 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">21.1</span> Overview</a></li>
+<li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">21.1</span> Introduction</a></li>
+  <li>
+<a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data"><span class="header-section-number">21.2</span> Data</a>
+  <ul class="collapse">
+<li><a href="#sentinel-3-data" id="toc-sentinel-3-data" class="nav-link" data-scroll-target="#sentinel-3-data"><span class="header-section-number">21.2.1</span> Sentinel-3 data</a></li>
+  <li><a href="#modis-data" id="toc-modis-data" class="nav-link" data-scroll-target="#modis-data"><span class="header-section-number">21.2.2</span> MODIS data</a></li>
+  <li><a href="#agro-meteorological-data" id="toc-agro-meteorological-data" class="nav-link" data-scroll-target="#agro-meteorological-data"><span class="header-section-number">21.2.3</span> Agro-meteorological data</a></li>
+  <li><a href="#crop-masks" id="toc-crop-masks" class="nav-link" data-scroll-target="#crop-masks"><span class="header-section-number">21.2.4</span> Crop masks</a></li>
+  <li><a href="#crop-yield-statistics" id="toc-crop-yield-statistics" class="nav-link" data-scroll-target="#crop-yield-statistics"><span class="header-section-number">21.2.5</span> Crop yield statistics</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/edit/quarto/cy_poland.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+</li>
+  <li>
+<a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods"><span class="header-section-number">21.3</span> Methods</a>
+  <ul class="collapse">
+<li><a href="#ndvi-smoothing" id="toc-ndvi-smoothing" class="nav-link" data-scroll-target="#ndvi-smoothing"><span class="header-section-number">21.3.1</span> NDVI smoothing</a></li>
+  <li><a href="#calibration-of-modis-data" id="toc-calibration-of-modis-data" class="nav-link" data-scroll-target="#calibration-of-modis-data"><span class="header-section-number">21.3.2</span> Calibration of MODIS data</a></li>
+  <li><a href="#resampling-of-explanatory-variables-from-calendar-time-to-thermal-time" id="toc-resampling-of-explanatory-variables-from-calendar-time-to-thermal-time" class="nav-link" data-scroll-target="#resampling-of-explanatory-variables-from-calendar-time-to-thermal-time"><span class="header-section-number">21.3.3</span> Resampling of Explanatory Variables from Calendar Time to Thermal Time</a></li>
+  <li><a href="#crop-yield-forecasting" id="toc-crop-yield-forecasting" class="nav-link" data-scroll-target="#crop-yield-forecasting"><span class="header-section-number">21.3.4</span> Crop yield forecasting</a></li>
+  </ul>
+</li>
+  <li><a href="#validation" id="toc-validation" class="nav-link" data-scroll-target="#validation"><span class="header-section-number">21.4</span> Validation</a></li>
+  <li><a href="#presentation-of-results" id="toc-presentation-of-results" class="nav-link" data-scroll-target="#presentation-of-results"><span class="header-section-number">21.5</span> Presentation of results</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/FAO-EOSTAT/UN-Handbook/edit/quarto/cy_poland.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/FAO-EOSTAT/UN-Handbook/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./crop_yield_estimation.html">Crop yield estimation</a></li><li class="breadcrumb-item"><a href="./cy_poland.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Yield Forecasting in Poland</span></a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Yield Forecasting in Poland</span></h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">
+<span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Yield Forecasting in Poland</span>
+</h1>
 </div>
 
 
@@ -357,7 +372,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Artur Laczynski, Przemysław Slesiński, Natlia Kotulak </p>
+             <p>Artur Laczynski, Przemysław Slesiński, Natalia Kotulak </p>
           </div>
   </div>
     
@@ -366,445 +381,410 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+</header><section id="introduction" class="level2" data-number="21.1"><h2 data-number="21.1" class="anchored" data-anchor-id="introduction">
+<span class="header-section-number">21.1</span> Introduction</h2>
+<p>Remote sensing technologies have increasingly become vital tools in modern agriculture for crop health monitoring and yield estimation. Open access to satellite imagery allows for the capture of spatial and temporal changes in crop growth, and in consequence more timely and accurate yield forecasting. The ultimate aim of this study is to provide a methodology to estimate crop yields on a country scale during the growing season. This responds to the need of statistical offices (in this case Statistics Poland) that are obliged to provide statistical information on agricultural production.</p>
+<p>In this context, this study aims to evaluate with what accuracy yield forecasts can be produced using an automated system running on publicly available data. Therefore, within this study, a novel system for an operational crop yield forecasting at Nomenclature des Unités Territoriales Statistiques level 2 (NUTS-2) and Local Administrative Units (LAU) is proposed.</p>
+<p>The system exploits Copernicus data sets and climate reanalysis at a global scale, and thus can be applied at any location. The system is dedicated for predicting yields of several crops, namely, winter wheat, winter rapeseed, or maize. Although, the particular software solutions have been developed for yield predictions in Poland, the concept of the model can be successfully used in any country. Obviously, other data bases, reference information or different settings of parameters should be then included.</p>
+</section><section id="data" class="level2" data-number="21.2"><h2 data-number="21.2" class="anchored" data-anchor-id="data">
+<span class="header-section-number">21.2</span> Data</h2>
+<p>The yield estimation methods applied in this study integrate multiple sources of publicly available data, including satellite-derived vegetation indices, agro-meteorological indicators, and thermal-based crop development metrics. The yield forecasting model is shown in <a href="#fig-model-cy-poland">Figure&nbsp;<span>21.1</span></a>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-model-cy-poland" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="./images/cy_poland/yield_forecasting_model.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;21.1: Yield Forecasting Model.</figcaption></figure>
+</div>
+</div>
+</div>
+<section id="sentinel-3-data" class="level3" data-number="21.2.1"><h3 data-number="21.2.1" class="anchored" data-anchor-id="sentinel-3-data">
+<span class="header-section-number">21.2.1</span> Sentinel-3 data</h3>
+<p>Sentinel-3 Level-2 Near Real Time (NRT) products (i.e., surface reflectance, vegetation indices, land surface temperature) acquired by the Ocean and Land Colour Imager (OLCI) and the Sea and Land Surface Temperature Radiometer (SLSTR) are freely available from the Copernicus Space Data Ecosystem https://dataspace.copernicus.eu/) with a delay up to 3 h after satellite acquisition. The following daily products from the Sentinel-3A and Sentinel-3B satellites for 2018–2020 were used to estimate crop yielding in Poland:</p>
+<ol type="1">
+<li><p>Land Full Resolution (LFR) product derived from OLCI imagery at a 300-m resolution consisting of Global Vegetation Index (OGVI) and Terrestrial Chlorophyll Index (OTCI) indices accompanied with rectified reflectances at 681 nm (RED) and 865 nm (NIR) channels used in this study to calculate the Normalized Difference Vegetation Index (NDVI).</p></li>
+<li><p>Land Surface Temperature (LST) from the SLSTR sensor at a 1-km resolution.</p></li>
+</ol>
+<p>The acquired products were further mosaicked, cloud masked using associated quality flags and reprojected to the Poland CS92 coordinate system (EPSG:2180) using ESA SNAP software.</p>
+<p>The above mentioned satellite data provide information related to vegetation vigour and biomass (from NDVI) and evapotranspiration (from LST derivatives). The NDVI and LST indicators provide complementary information on the vegetation physical status and access to water in the root zone (through evapotranspiration related to LST).</p>
+<p>To guarantee universality of the method these particular Sentinel-3 products were selected in line with the overall system design to be based on Copernicus’ ready-to-use products, i.e., not requiring pre-processing of raw data. This ensures that the system will use the data generated by the latest processing methods provided by Copernicus.</p>
+</section><section id="modis-data" class="level3" data-number="21.2.2"><h3 data-number="21.2.2" class="anchored" data-anchor-id="modis-data">
+<span class="header-section-number">21.2.2</span> MODIS data</h3>
+<p>We used MODIS data for providing long time series of observations more than 20 years. The MOD09Q1, MOD11A2 collection 6 products generated from the Moderate-Resolution Imaging Spectroradiometer (MODIS) imagery are freely available from the <a href="https://lpdaac.usgs.gov">Land Processes Distributed Active Archive Center (LP DAAC) of the U.S. Geological Survey</a>. The acquired products covered Poland during the period 2000–2019. The MOD09Q1 product contains 8-day composites of land surface spectral reflectance acquired in 620–670-nm (RED) and 841–876-nm (NIR) channels at a 250-m resolution, which were used to calculate NDVI. Information on the presence of clouds, cloud shadows, and snow was derived from the associated quality flags. The MOD11A2 product provides 8-day composites of daytime and night-time LST and emissivity calculated from the 11.03 μμm and 12.02 μμm channels at a spatial resolution of 1 km. The MODIS NDVI and LST products were mosaicked and reprojected to the Poland CS92 coordinate system (EPSG:2180).</p>
+<p>These MODIS products were chosen for a backward projection of Sentinel-3 products due to a similar processing stage and spatial resolution. They serve as a long term average for calculation of anomaly-derived indices from Sentinel-3. With this in mind, the data can be at a certain level of generality, as only the average course of the product along the vegetation season is needed. For this reason, it was decided to use 8-day composites, because in the aggregation process the observations with the highest quality are selected taking into account cloud contamination and the sun zenith angle.</p>
+</section><section id="agro-meteorological-data" class="level3" data-number="21.2.3"><h3 data-number="21.2.3" class="anchored" data-anchor-id="agro-meteorological-data">
+<span class="header-section-number">21.2.3</span> Agro-meteorological data</h3>
+<p>We derived agro-meteorological data for the period 2000–2019 at a resolution of 0.25<span class="math inline">\(^\circ\)</span> by 0.25<span class="math inline">\(^\circ\)</span> from the ERA-5 reanalysis generated by the European Centre for Medium-Range Weather Forecasts and freely distributed through the Copernicus Climate Data Store. They included hourly data at surface level consisting of: 2-m air temperature, total precipitation, surface incoming solar radiation, and volumetric soil water at 0–7-cm and 7–28-cm depths. These parameters were aggregated into daily means and/or sums using <a href="https://code.mpimet.mpg.de/projects/cdo/wiki/Cite">Climate Data Operators (CDO)</a>. Additionally, daily minimum and maximum air temperatures were derived to capture thermal variability more precisely.</p>
+</section><section id="crop-masks" class="level3" data-number="21.2.4"><h3 data-number="21.2.4" class="anchored" data-anchor-id="crop-masks">
+<span class="header-section-number">21.2.4</span> Crop masks</h3>
+<p>A binary crop mask was derived from the Corine Land Cover version 2018 classification, freely distributed by the <a href="https://land.copernicus.eu/pan-european/corine-land-cover/clc2018">European Environmental Agency</a>, by extracting 2.1.1 (non-irrigated arable land) and 2.4.2 (complex cultivation patterns) classes as arable land. Further, the binary mask was used to generate fractional arable land products at spatial resolutions matching the Sentinel-3, MODIS, and ERA-5 products. These fractional estimates served as weights to spatially aggregate satellite and agro-meteorological variables for the administrative units. An example of the extent of arable land represented as fractions is visualized for Poland in <a href="#fig-arable-land-cy-poland">Figure&nbsp;<span>21.2</span></a>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-arable-land-cy-poland" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="./images/cy_poland/arable_land.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;21.2: Arable land mask expressed as a fraction of arable land within 0.05 x 0.05 degree grid.</figcaption></figure>
+</div>
+</div>
+</div>
+</section><section id="crop-yield-statistics" class="level3" data-number="21.2.5"><h3 data-number="21.2.5" class="anchored" data-anchor-id="crop-yield-statistics">
+<span class="header-section-number">21.2.5</span> Crop yield statistics</h3>
+<p>The reference data for the crop yield forecasting model consisted of official yield statistics provided by Statistics Poland at NUTS-2 and LAU (local administrative units) levels (<a href="#fig-adm-units-cy-poland">Figure&nbsp;<span>21.3</span></a>). The NUTS-2 data included winter wheat, winter rapeseed, and maize yields expressed in decitons [dt] for the period 1997–2019. At the LAU level, the length of the time series was shorter, and also inconsistent among administrative units (<a href="#fig-yield-lau-cy-poland">Figure&nbsp;<span>21.4</span></a>).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-adm-units-cy-poland" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="./images/cy_poland/arable_land.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;21.3: Administrative divisions of Poland for which crop yields were predicted: Nomenclature des Unités Territoriales Statistiques level 2 (NUTS-2)—red lines, and Local Administrative Units (LAU)—gray lines.</figcaption></figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-yield-lau-cy-poland" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="./images/cy_poland/yield_lau.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;21.4: Time span of official crop yield statistics at the LAU level. Black signifies no data.</figcaption></figure>
+</div>
+</div>
+</div>
+<p>The yield statistics for each NUTS-2 and LAU region were transformed into temporal yield residuals (<a href="#fig-yield-residuals-cy-poland">Figure&nbsp;<span>21.5</span></a>) from the Theil–Sen monotonic trend in annual yields estimates covering the period 1997–2019 <span class="citation" data-cites="Bojanowski2022"><a href="#ref-Bojanowski2022" role="doc-biblioref">[1]</a></span>. These yield residuals were used as response variables in crop yield forecasting. The final absolute yield forecast is the sum of the monotonic trend and the forecasted yield residual for a particular year (<a href="#fig-annual-yields-cy-poland">Figure&nbsp;<span>21.6</span></a>).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-yield-residuals-cy-poland" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="./images/cy_poland/yield_residuals.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;21.5: Temporal yield residuals from Theil–Sen monotonic trend used as a response variable in crop yield forecasting for NUTS-2. Please mind different limits of Y-axes.</figcaption></figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-annual-yields-cy-poland" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="./images/cy_poland/annual_yields.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;21.6: Absolute annual crop yields for NUTS-2 units reported by Statistics Poland with a fitted Theil–Sen monotonic trend. Please mind different limits of Y-axes.</figcaption></figure>
+</div>
+</div>
+</div>
+</section></section><section id="methods" class="level2" data-number="21.3"><h2 data-number="21.3" class="anchored" data-anchor-id="methods">
+<span class="header-section-number">21.3</span> Methods</h2>
+<section id="ndvi-smoothing" class="level3" data-number="21.3.1"><h3 data-number="21.3.1" class="anchored" data-anchor-id="ndvi-smoothing">
+<span class="header-section-number">21.3.1</span> NDVI smoothing</h3>
+<p>A 2-iterative spline smoothing technique was applied to filter NDVI values (derived from both MODIS and S3), mostly to minimize the effect of residual cloud cover. This technique assumes that residual cloud cover decreases NDVI values. Therefore, at the beginning the smoothing method fits the spline to the original data. Then, the distance (difference) between the fit and the original values creates weights so that the original values above the spline fit receive high weights and the values below receive weights equal to 0. Then, the final smoothed NDVI is generated by the second spline fit that uses these weights.</p>
+</section><section id="calibration-of-modis-data" class="level3" data-number="21.3.2"><h3 data-number="21.3.2" class="anchored" data-anchor-id="calibration-of-modis-data">
+<span class="header-section-number">21.3.2</span> Calibration of MODIS data</h3>
+<p>MODIS NDVI and LST values were recalibrated to form a homogenous time series with indices derived from Sentinel-3. Calibration was defined as an adjustment (transformation) of MODIS-derived indices to make them homogeneous with data obtained from Sentinel-3. Based on the analysis performed at large agricultural fields, for which the spectrally homogenous satellite signal could have been derived, it was decided to use Random Forest (RF) and K - Nearest Neighbor (kNN) to calibrate NDVI and LST, respectively, using the following explanatory variables describing the MODIS-Sentinel-3 differences:</p>
+<ol type="1">
+<li><p>time: due to the apparent variability of crop development (and thus the variability of NDVI) along a vegetation season, and also due to the existence of a distinct annual vegetation cycle;</p></li>
+<li><p>growing degree days: indicating the amount of thermal energy supplied at a given time and the amount of energy needed to reach a given stage of crop development.</p></li>
+</ol></section><section id="resampling-of-explanatory-variables-from-calendar-time-to-thermal-time" class="level3" data-number="21.3.3"><h3 data-number="21.3.3" class="anchored" data-anchor-id="resampling-of-explanatory-variables-from-calendar-time-to-thermal-time">
+<span class="header-section-number">21.3.3</span> Resampling of Explanatory Variables from Calendar Time to Thermal Time</h3>
+<p>To ensure year-to-year comparability of vegetation conditions, the explanatory variables were resampled from calendar time (day of year) to thermal time, which denotes cumulated mean daily air temperatures at 2 m at ground level above a crop-specific threshold. Thus, a thermal time is a good proxy for the crop development stage. Analysis of vegetation indices in respect to thermal time allows derivation of temporal anomalies by referring instantaneous values of an index to a multiannual average calculated for the same thermal time (i.e., the same crop development stage). If the calendar time was used instead of the thermal time, the temporal anomalies could be related to the shift in a vegetation season (e.g., a delay in biomass accumulation), however not to the actual crop conditions that are to be used to forecast crop yields.</p>
+<p>Thermal time was calculated for a day <span class="math inline">\(d\)</span> of the year as so-called Growing Degree Days (GDD) from daily maximum (<span class="math inline">\(T_max\)</span>) and minimum (<span class="math inline">\(T_min\)</span>) air temperatures using a formula:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-gdd-cy-poland" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="./images/cy_poland/gdd.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;21.7: Calculation of growing degree days based on air temperature.</figcaption></figure>
+</div>
+</div>
+</div>
+<p>where <span class="math inline">\(T_b\)</span> stands for base temperature: 5°C for winter wheat and winter rapeseed, and 10°C for maize. In addition, <span class="math inline">\(T_{n,i}\)</span> is replaced by <span class="math inline">\(T_b\)</span> if <span class="math inline">\(T_{n,i}\)</span> &lt; <span class="math inline">\(T_b\)</span>, and <span class="math inline">\(T_{x,i}\)</span> is replaced by 30°C if <span class="math inline">\(T_{x,i}\)</span> &gt; 30 °C. The conditional part of the equation equals 1 if the condition is met, and 0 otherwise, which causes that only positive values (of mean temperature reduced by the base temperature) to be summarized.</p>
+<p>Based on daily GDD values, all yield predictors were resampled for eight GDD values ranging from 150 °C to 1200 °C with a step of 150 °C. Since GDD were calculated at a daily time step, all predictors had to have the same 1-day temporal resolution prior resampling. Therefore, the 8-day MODIS NDVI and LST products were converted to 1-day resolution using the spline function.</p>
+</section><section id="crop-yield-forecasting" class="level3" data-number="21.3.4"><h3 data-number="21.3.4" class="anchored" data-anchor-id="crop-yield-forecasting">
+<span class="header-section-number">21.3.4</span> Crop yield forecasting</h3>
+<p>For crop yield forecasting proposed, we employ a machine learning technique, the eXtreme Gradient Boosting (XGBoost) algorithm. It is implemented in R environment to predict crop yield residuals from the Theil–Sen monotonic trend using a variety of predictors derived from satellite and agrometeorological data. To train the XGBoost method, we built an extensive input table for each administrative unit (LAU or NUTS-2) consisting of r rows and c columns, where r denotes a number of years for which predictors and reference crop yields were available, and c indicates a number of predictors. The following predictors were calculated for each of eight GDD levels (150 °C, 300 °C, 450 °C, …, 1200 °C):</p>
+<ol type="1">
+<li>Minimum, maximum and mean air temperature;</li>
+<li>Surface radiation;</li>
+<li>Accumulated surface radiation since 1 April;</li>
+<li>Soil moisture at 0–7 cm and 7–28 cm levels;</li>
+<li>Precipitation;</li>
+<li>Accumulated precipitation since 1 April;</li>
+<li>
+<span class="math inline">\(NDVI_{GDD}\)</span>;</li>
+<li>
+<span class="math inline">\(VCI_{GDD}\)</span>;</li>
+<li>$LST_{GDD};</li>
+<li>$TCI_{GDD};</li>
+<li>Annual maximum NDVI (which does not correspond to the GDD levels).</li>
+</ol>
+<p>In total, there were 170 predictors (c) but the number of years (r) varied between crop types and administrative units due to the reference data availability. For LAUs, the number of years is presented in <a href="#fig-yield-lau-cy-poland">Figure&nbsp;<span>21.4</span></a>, whereas for NUTS-2, it equaled 17 for winter wheat and 22 for winter rapeseed and maize.</p>
+<p>All predictors were linearly scaled to the range between zero and one. Then, highly correlated predictors (above 0.75) were removed. Further, the feature selection procedure was applied based on the recursive feature elimination employing the XGBoost method. The optimized XGBoost algorithm was ultimately trained based on selected predictors and crop yield residuals as a dependent variable. The application of the prediction model resulted in the forecasted crop yield residuals. The final absolute yield forecast was then calculated as a sum of this value and the crop yield estimated from the Theil–Sen monotonic trend.</p>
+</section></section><section id="validation" class="level2" data-number="21.4"><h2 data-number="21.4" class="anchored" data-anchor-id="validation">
+<span class="header-section-number">21.4</span> Validation</h2>
+<p>Validation of forecasting models involved the comparison of predicted yields and reference official statistics that were not used for the model training. For each administrative unit, crop type, and GDD level, a cross-validation was performed. It followed the leave-one-year-out procedure, which is a special case of the k-fold cross validation where k equals a number of years in a time series. It must be noted that the selection of predictors was repeated at each iteration to avoid the predictor selection procedure to benefit from ‘knowing’ the data from the year that was used for validation.</p>
+<p>Three metrics were used to describe the model performance: Mean Bias Error (MBE, Equation), Root Mean Square Error (RMSE, Equation), and Modeling Efficiency (EF, Equation) as follows:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-validation-cy-poland" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="./images/cy_poland/validation.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;21.8: Calculation of growing degree days based on air temperature.</figcaption></figure>
+</div>
+</div>
+</div>
+<p>where <span class="math inline">\(E_k\)</span> represents predicted crop yield value; <span class="math inline">\(M_k\)</span> is the reference crop yield value; <span class="math inline">\(\overline{M}\)</span> is the average value of reference crop yield value; <span class="math inline">\(k\)</span> is step of the time series (i.e.&nbsp;1 year); and <span class="math inline">\(n\)</span> is the length of the time series.</p>
+<p>The RMSE and MBE were expressed in relative values (0–100%) denoted as the RRMSE and RMBE, respectively, by dividing these quality metrics by the mean of a reference data (<span class="math inline">\(\overline{M}\)</span>̅). The MBE, RMSE, and EF were also used to evaluate the accuracy of cross-calibration between MODIS and Sentinel-3 products. However, in this situation the <span class="math inline">\(E_k\)</span> denotes re-calibrated MODIS NDVI/LST and <span class="math inline">\(M_k\)</span> is the original Sentinel-3 NDVI/LST time series.</p>
+<p>Additionally, the information generated by the model are presented to field experts engaged by Statistics Poland to provide estimates of yields as support for providing final decisions.</p>
+</section><section id="presentation-of-results" class="level2" data-number="21.5"><h2 data-number="21.5" class="anchored" data-anchor-id="presentation-of-results">
+<span class="header-section-number">21.5</span> Presentation of results</h2>
+<p>We presented yields for all administrative levels of the country (voivodships, counties, communes). The estimates are derived on the basis of the expected yield. The results of yielding as well as GDD, NDVI are published in <a href="https://portal.geo.stat.gov.pl/">Statistics Poland geostatistical portal</a>. Currently, Statistics Poland present estimates based on satellite imagery for 10 crops: winter barley, winter rye, winter triticale, winter wheat, spring cereals, winter rapeseed, maize, sugar beet, pastures, and permanent grasses.</p>
+</section><section id="references" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
 
-</header>
 
-
-<section id="overview" class="level2" data-number="21.1">
-<h2 data-number="21.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">21.1</span> Overview</h2>
-<p>Integration of Sentinel-3 and MODIS Vegetation Indices with ERA-5 Agro-Meteorological Indicators for Operational Crop Yield Forecasting.</p>
-
-
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
-    const isCodeAnnotation = (el) => {
-      for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
-          return true;
-        }
-      }
-      return false;
+<div id="refs" class="references csl-bib-body" role="list">
+<div id="ref-Bojanowski2022" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div>
+<div class="csl-right-inline">J. S. Bojanowski <em>et al.</em>, <span>“Integration of <span>Sentinel-3</span> and <span>MODIS Vegetation Indices</span> with <span>ERA-5 Agro-Meteorological Indicators</span> for <span>Operational Crop Yield Forecasting</span>,”</span> <em>Remote Sensing</em>, vol. 14, no. 5, p. 1238, 2022, doi: <a href="https://doi.org/10.3390/rs14051238">10.3390/rs14051238</a>.</div>
+</div>
+</div>
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
     }
-    const onCopySuccess = function(e) {
-      // button target
-      const button = e.trigger;
-      // don't keep focus
-      button.blur();
-      // flash "checked"
-      button.classList.add('code-copy-button-checked');
-      var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
-      let tooltip;
-      if (window.bootstrap) {
-        button.setAttribute("data-bs-toggle", "tooltip");
-        button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
-            customClass: "code-copy-button-tooltip",
-            offset: [0, -8]});
-        tooltip.show();    
-      }
-      setTimeout(function() {
-        if (tooltip) {
-          tooltip.hide();
-          button.removeAttribute("data-bs-title");
-          button.removeAttribute("data-bs-toggle");
-          button.removeAttribute("data-bs-placement");
-        }
-        button.setAttribute("title", currentTitle);
-        button.classList.remove('code-copy-button-checked');
-      }, 1000);
-      // clear code selection
-      e.clearSelection();
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
     }
-    const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
-        }
-        return codeEl.innerText;
-    }
-    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-      text: getTextToCopy
-    });
-    clipboard.on('success', onCopySuccess);
-    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-        text: getTextToCopy,
-        container: window.document.getElementById('quarto-embedded-source-code-modal')
-      });
-      clipboardModal.on('success', onCopySuccess);
-    }
-      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/FAO-EOSTAT\.github\.io\/UN-Handbook\/");
-      var isInternal = (href) => {
-          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-      }
-      // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-      for (var i=0; i<links.length; i++) {
-        const link = links[i];
-        if (!isInternal(link.href)) {
-          // undo the damage that might have been done by quarto-nav.js in the case of
-          // links that we want to consider external
-          if (link.dataset.originalHref !== undefined) {
-            link.href = link.dataset.originalHref;
-          }
-        }
-      }
-    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-      const config = {
-        allowHTML: true,
-        maxWidth: 500,
-        delay: 100,
-        arrow: false,
-        appendTo: function(el) {
-            return el.parentElement;
-        },
-        interactive: true,
-        interactiveBorder: 10,
-        theme: 'quarto',
-        placement: 'bottom-start',
-      };
-      if (contentFn) {
-        config.content = contentFn;
-      }
-      if (onTriggerFn) {
-        config.onTrigger = onTriggerFn;
-      }
-      if (onUntriggerFn) {
-        config.onUntrigger = onUntriggerFn;
-      }
-      window.tippy(el, config); 
-    }
-    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-    for (var i=0; i<noterefs.length; i++) {
-      const ref = noterefs[i];
-      tippyHover(ref, function() {
-        // use id or data attribute instead here
-        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-        try { href = new URL(href).hash; } catch {}
-        const id = href.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note) {
-          return note.innerHTML;
-        } else {
-          return "";
-        }
-      });
-    }
-    const xrefs = window.document.querySelectorAll('a.quarto-xref');
-    const processXRef = (id, note) => {
-      // Strip column container classes
-      const stripColumnClz = (el) => {
-        el.classList.remove("page-full", "page-columns");
-        if (el.children) {
-          for (const child of el.children) {
-            stripColumnClz(child);
-          }
-        }
-      }
-      stripColumnClz(note)
-      if (id === null || id.startsWith('sec-')) {
-        // Special case sections, only their first couple elements
-        const container = document.createElement("div");
-        if (note.children && note.children.length > 2) {
-          container.appendChild(note.children[0].cloneNode(true));
-          for (let i = 1; i < note.children.length; i++) {
-            const child = note.children[i];
-            if (child.tagName === "P" && child.innerText === "") {
-              continue;
-            } else {
-              container.appendChild(child.cloneNode(true));
-              break;
-            }
-          }
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(container);
-          }
-          return container.innerHTML
-        } else {
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(note);
-          }
-          return note.innerHTML;
-        }
-      } else {
-        // Remove any anchor links if they are present
-        const anchorLink = note.querySelector('a.anchorjs-link');
-        if (anchorLink) {
-          anchorLink.remove();
-        }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
-        }
-        if (note.classList.contains("callout")) {
-          return note.outerHTML;
-        } else {
-          return note.innerHTML;
-        }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
       }
     }
-    for (var i=0; i<xrefs.length; i++) {
-      const xref = xrefs[i];
-      tippyHover(xref, undefined, function(instance) {
-        instance.disable();
-        let url = xref.getAttribute('href');
-        let hash = undefined; 
-        if (url.startsWith('#')) {
-          hash = url;
-        } else {
-          try { hash = new URL(url).hash; } catch {}
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        if (hash) {
-          const id = hash.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          if (note !== null) {
-            try {
-              const html = processXRef(id, note.cloneNode(true));
-              instance.setContent(html);
-            } finally {
-              instance.enable();
-              instance.show();
-            }
-          } else {
-            // See if we can fetch this
-            fetch(url.split('#')[0])
-            .then(res => res.text())
-            .then(html => {
-              const parser = new DOMParser();
-              const htmlDoc = parser.parseFromString(html, "text/html");
-              const note = htmlDoc.getElementById(id);
-              if (note !== null) {
-                const html = processXRef(id, note);
-                instance.setContent(html);
-              } 
-            }).finally(() => {
-              instance.enable();
-              instance.show();
-            });
-          }
-        } else {
-          // See if we can fetch a full url (with no hash to target)
-          // This is a special case and we should probably do some content thinning / targeting
-          fetch(url)
-          .then(res => res.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.querySelector('main.content');
-            if (note !== null) {
-              // This should only happen for chapter cross references
-              // (since there is no id in the URL)
-              // remove the first header
-              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-                note.children[0].remove();
-              }
-              const html = processXRef(null, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
-          });
-        }
-      }, function(instance) {
-      });
-    }
-        let selectedAnnoteEl;
-        const selectorForAnnotation = ( cell, annotation) => {
-          let cellAttr = 'data-code-cell="' + cell + '"';
-          let lineAttr = 'data-code-annotation="' +  annotation + '"';
-          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-          return selector;
-        }
-        const selectCodeLines = (annoteEl) => {
-          const doc = window.document;
-          const targetCell = annoteEl.getAttribute("data-target-cell");
-          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-          const lineIds = lines.map((line) => {
-            return targetCell + "-" + line;
-          })
-          let top = null;
-          let height = null;
-          let parent = null;
-          if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
-            }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
-            }
-            selectedAnnoteEl = annoteEl;
-          }
-        };
-        const unselectCodeLines = () => {
-          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-          elementsIds.forEach((elId) => {
-            const div = window.document.getElementById(elId);
-            if (div) {
-              div.remove();
-            }
-          });
-          selectedAnnoteEl = undefined;
-        };
-          // Handle positioning of the toggle
-      window.addEventListener(
-        "resize",
-        throttle(() => {
-          elRect = undefined;
-          if (selectedAnnoteEl) {
-            selectCodeLines(selectedAnnoteEl);
-          }
-        }, 10)
-      );
-      function throttle(fn, ms) {
-      let throttle = false;
-      let timer;
-        return (...args) => {
-          if(!throttle) { // first call gets through
-              fn.apply(this, args);
-              throttle = true;
-          } else { // all the others get throttled
-              if(timer) clearTimeout(timer); // cancel #2
-              timer = setTimeout(() => {
-                fn.apply(this, args);
-                timer = throttle = false;
-              }, ms);
-          }
-        };
       }
-        // Attach click handler to the DT
-        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-        for (const annoteDlNode of annoteDls) {
-          annoteDlNode.addEventListener('click', (event) => {
-            const clickedEl = event.target;
-            if (clickedEl !== selectedAnnoteEl) {
-              unselectCodeLines();
-              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-              if (activeEl) {
-                activeEl.classList.remove('code-annotation-active');
-              }
-              selectCodeLines(clickedEl);
-              clickedEl.classList.add('code-annotation-active');
-            } else {
-              // Unselect the line
-              unselectCodeLines();
-              clickedEl.classList.remove('code-annotation-active');
-            }
-          });
-        }
-    const findCites = (el) => {
-      const parentEl = el.parentElement;
-      if (parentEl) {
-        const cites = parentEl.dataset.cites;
-        if (cites) {
-          return {
-            el,
-            cites: cites.split(' ')
-          };
-        } else {
-          return findCites(el.parentElement)
-        }
-      } else {
-        return undefined;
-      }
-    };
-    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-    for (var i=0; i<bibliorefs.length; i++) {
-      const ref = bibliorefs[i];
-      const citeInfo = findCites(ref);
-      if (citeInfo) {
-        tippyHover(citeInfo.el, function() {
-          var popup = window.document.createElement('div');
-          citeInfo.cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
-            }
-            popup.appendChild(citeDiv);
-          });
-          return popup.innerHTML;
-        });
-      }
+      return codeEl.innerText;
     }
   });
-  </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./cy_indonesia.html" class="pagination-link" aria-label="Mapping crop phenology in Indonesia">
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./cy_indonesia.html" class="pagination-link">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Mapping crop phenology in Indonesia</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./cy_colombia.html" class="pagination-link" aria-label="Rice Phenology in Colombia">
+      <a href="./cy_colombia.html" class="pagination-link">
         <span class="nav-page-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Rice Phenology in Colombia</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
-<p>Edited by Gilberto Camara, Lorenzo de Simone and Ronald Jansen.</p>
-</div>   
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">Edited by Gilberto Camara, Lorenzo de Simone and Ronald Jansen.</div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/edit/quarto/cy_poland.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
-    <div class="nav-footer-right">
-<p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
-</div>
+    </div>
+    <div class="nav-footer-right">This book was built with <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>
-
-
 
 
 </body></html>
