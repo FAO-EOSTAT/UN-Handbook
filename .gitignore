@@ -4,3 +4,4 @@
 .Ruserdata
 .DS_Store
 /.quarto/
+data/ct_digital_earth_africa/**/*.tif
