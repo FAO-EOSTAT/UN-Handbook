@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.33">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Gilberto Camara, Lorenzo de Simone, Ronald Jansen">
-
-<title>21&nbsp; Rice Paddy Phenology in Indonesia – UN Handbook on Remote Sensing for Agricultural Statistics</title>
+<title>20&nbsp; Classifying phenology in Indonesia – UN Handbook on Remote Sensing for Agricultural Statistics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,8 +18,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
-
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -42,8 +93,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-931bd9de4a2e97c797357f31cd37fa94.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-931bd9de4a2e97c797357f31cd37fa94.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -69,34 +119,50 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-
-
+}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 </head>
-
 <body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./crop_yield_estimation.html">Crop yield estimation</a></li><li class="breadcrumb-item"><a href="./cy_indonesia.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Rice Paddy Phenology in Indonesia</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./crop_yield_estimation.html">Crop yield estimation</a></li><li class="breadcrumb-item"><a href="./cy_indonesia.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Classifying phenology in Indonesia</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">UN Handbook on Remote Sensing for Agricultural Statistics</a> 
         <div class="sidebar-tools-main">
@@ -116,7 +182,7 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome</span></span></a>
@@ -142,8 +208,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./th_remote_sensing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remote Sensing images: optical, SAR</span></span></a>
@@ -198,7 +264,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./crop_type_mapping.html" class="sidebar-item-text sidebar-link">
@@ -207,8 +273,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ct_poland.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Crop monitoring with SAR images in Poland</span></span></a>
@@ -244,14 +310,8 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Crop classification using Digital Earth Africa</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./ct_indonesia.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Implementing Machine Learning Approach on Satellite Imagery Time Series Data for Classifying the Paddy Phenology Phase</span></span></a>
-  </div>
-</li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./crop_yield_estimation.html" class="sidebar-item-text sidebar-link">
@@ -260,39 +320,39 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cy_finland.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Early-season crop yield mapping in Finland</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Early-season crop yield mapping in Finland</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cy_indonesia.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Rice Paddy Phenology in Indonesia</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Classifying phenology in Indonesia</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cy_poland.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Yield Forecasting in Poland</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Yield Forecasting in Poland</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cy_colombia.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Rice Phenology in Colombia</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Rice Phenology in Colombia</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cy_china.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Crop type classification and crop yield estimation in China</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Crop type classification and crop yield estimation in China</span></span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./additional.html" class="sidebar-item-text sidebar-link">
@@ -301,59 +361,66 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ad_geoglam.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Extraction of crop statistics from crop type and crop yield maps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Extraction of crop statistics from crop type and crop yield maps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ad_world_cereal.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">WorldCereal - A Global Effort for Crop Mapping</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">WorldCereal - A Global Effort for Crop Mapping</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ad_uav_applications.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">UAV use in Agricultural Statistics</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">UAV use in Agricultural Statistics</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ad_disaster_response.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Remote Sensing for Agricultural Disaster Response</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Remote Sensing for Agricultural Disaster Response</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ad_governance.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Data Governance for Agricultural Statistics</span></span></a>
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Data Governance for Agricultural Statistics</span></span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#outline" id="toc-outline" class="nav-link active" data-scroll-target="#outline"><span class="header-section-number">21.1</span> Outline</a></li>
+<li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background"><span class="header-section-number">20.1</span> Background</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data"><span class="header-section-number">20.2</span> Data</a></li>
+  <li>
+<a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">20.3</span> Results</a>
+  <ul class="collapse">
+<li><a href="#preprocessing" id="toc-preprocessing" class="nav-link" data-scroll-target="#preprocessing"><span class="header-section-number">20.3.1</span> Preprocessing</a></li>
+  <li><a href="#model-development" id="toc-model-development" class="nav-link" data-scroll-target="#model-development"><span class="header-section-number">20.3.2</span> Model Development</a></li>
+  <li><a href="#c.-bayes-post-classification" id="toc-c.-bayes-post-classification" class="nav-link" data-scroll-target="#c.-bayes-post-classification"><span class="header-section-number">20.3.3</span> C. Bayes Post-Classification</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/edit/quarto/cy_indonesia.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+</li>
+  <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions"><span class="header-section-number">20.4</span> Conclusions</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/edit/quarto/cy_indonesia.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./crop_yield_estimation.html">Crop yield estimation</a></li><li class="breadcrumb-item"><a href="./cy_indonesia.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Rice Paddy Phenology in Indonesia</span></a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Rice Paddy Phenology in Indonesia</span></h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./crop_yield_estimation.html">Crop yield estimation</a></li><li class="breadcrumb-item"><a href="./cy_indonesia.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Classifying phenology in Indonesia</span></a></li></ol></nav><div class="quarto-title">
+<h1 class="title">
+<span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Classifying phenology in Indonesia</span>
+</h1>
 </div>
 
 
@@ -363,7 +430,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Wida Widiastuti, Achmad Fauzi Bagus Firmansyah, Fawcet Jenusdy Makay, Novia Permatasari, Nasiya Alifah Utami </p>
+             <p>Achmad Fauzi Bagus Firmansyah </p>
           </div>
   </div>
     
@@ -373,20 +440,670 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header>
+</header><section id="background" class="level2" data-number="20.1"><h2 data-number="20.1" class="anchored" data-anchor-id="background">
+<span class="header-section-number">20.1</span> Background</h2>
+<p>Paddy data plays a crucial role in shaping national food security policies in Indonesia. The National Long-Term Development Plan 2025–2045 prioritizes the modernization of agricultural data collection, including paddy production <span class="citation" data-cites="Faoziyah2024"><a href="#ref-Faoziyah2024" role="doc-biblioref">[1]</a></span>. Currently, Statistics Indonesia (BPS) relies on the Area Sampling Frame (ASF) for estimating harvested area and the Crop Cutting Survey for measuring productivity, with final production figures derived from these two sources. However, ASF’s monthly ground-truthing is costly and faces challenges such as remote area access and high surveyor workload.</p>
+<p>Satellite imagery presents a more efficient alternative for estimating crop phenology without ground verification, allowing for accurate and cost-effective harvest area estimation. Machine learning models can classify growth stages using satellite data, and Sentinel-1, a radar-based satellite, is particularly effective for agricultural monitoring in cloud-prone regions like Indonesia <span class="citation" data-cites="Muradi2024"><a href="#ref-Muradi2024" role="doc-biblioref">[2]</a></span>. Furthermore, Satellite Imagery Time Series (SITS) data enables deeper pattern recognition and temporal analysis compared to traditional cross-sectional approaches <span class="citation" data-cites="Simoes2021"><a href="#ref-Simoes2021" role="doc-biblioref">[3]</a></span>.</p>
+</section><section id="data" class="level2" data-number="20.2"><h2 data-number="20.2" class="anchored" data-anchor-id="data">
+<span class="header-section-number">20.2</span> Data</h2>
+<p>In this research, Statistics Indonesia-BPS collaborate with the National Research and Innovation Agencies-BRIN for acquiring the Sentinel 1. BRIN give the access of Analysis Ready Data (ARD) data of the Sentinel 1 in 12 days intervals and acquired since 2023 until 2024. The data is further composed into time series data and filtered to the aligned ASF sampling plot, as shown in <a href="#fig-integration-indonesia" class="quarto-xref">Figure&nbsp;<span>20.1</span></a>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-integration-indonesia" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-integration-indonesia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_indonesia/asf_and_integration_of_sits.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-integration-indonesia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;20.1: Integration of SITS (Sentinel 1) and the ASF plot.
+</figcaption></figure>
+</div>
+</div>
+</div>
+<p>The ASF sampling plots is a segment with size 300 x 300 meter and divided into 9 subsegments, each has size 100x100 meter. Each sampling plots is monitorized on last week in everymonth by surveyor. They collect the in-situ paddy phenological phase in centroid of the grid. <a href="#fig-phenophase-indonesia" class="quarto-xref">Figure&nbsp;<span>20.2</span></a> represents the paddy phase monitorized monthly.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-phenophase-indonesia" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-phenophase-indonesia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_indonesia/fase_tumbuh.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-phenophase-indonesia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;20.2: Paddy Phenological Phase.
+</figcaption></figure>
+</div>
+</div>
+</div>
+<p>However, in this study, those classes are modified into several classes detailing the sub-paddy phase compared to the original ASF classes. The following <a href="#tbl-classes-indonesia" class="quarto-xref">Table&nbsp;<span>20.1</span></a> present the differences of the classes used in the study.</p>
+<div id="tbl-classes-indonesia" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-classes-indonesia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;20.1: Mapping of ASF Labels and Study Labels
+</figcaption><div aria-describedby="tbl-classes-indonesia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 28%">
+<col style="width: 12%">
+<col style="width: 48%">
+</colgroup>
+<thead><tr class="header">
+<th>ASF Label</th>
+<th>Description</th>
+<th>Study Label</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>First Vegetative</td>
+<td>1</td>
+<td>First Vegetative</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Late Vegetative</td>
+<td>2</td>
+<td>Late Vegetative</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Generatif</td>
+<td>3</td>
+<td>Generatif</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Harvest</td>
+<td>4</td>
+<td>Harvest</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>5</td>
+<td>Bera, which indicated by consecutive harvest</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Land Preparation/Tillage</td>
+<td>6</td>
+<td>Fallow Land, which indicated by the consecutive tillage</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>0</td>
+<td>Land Preparation/Tillage</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Non-Paddy</td>
+<td>7</td>
+<td>Non-Paddy</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Non-Vegetation</td>
+<td>8</td>
+<td>Non-Vegetation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>In addition to the Sentinel 1 data, several data are also leveraged for enhancing the quality, such as the elevation for capturing the different pattern of plantation in different elevation level. In details, <a href="#tbl-variables-indonesia" class="quarto-xref">Table&nbsp;<span>20.2</span></a> present all of the data used in modelling.</p>
+<div id="tbl-variables-indonesia" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-variables-indonesia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;20.2: Details of variable
+</figcaption><div aria-describedby="tbl-variables-indonesia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead><tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Bulan</td>
+<td>Month of observation (1–12)</td>
+</tr>
+<tr class="even">
+<td>elevation</td>
+<td>Elevation of the observation point (meters)</td>
+</tr>
+<tr class="odd">
+<td>VH_0</td>
+<td>VH band (Sentinel-1) at time t (current biweekly)</td>
+</tr>
+<tr class="even">
+<td>VH_1</td>
+<td>VH band at t-1 (previous biweekly)</td>
+</tr>
+<tr class="odd">
+<td>VH_2</td>
+<td>VH band at t-2 (second previous biweekly)</td>
+</tr>
+<tr class="even">
+<td>VH_3</td>
+<td>VH band at t-3 (third previous biweekly)</td>
+</tr>
+<tr class="odd">
+<td>VH_4</td>
+<td>VH band at t-4 (fourth previous biweekly)</td>
+</tr>
+<tr class="even">
+<td>VH_5</td>
+<td>VH band at t-5 (fifth previous biweekly)</td>
+</tr>
+<tr class="odd">
+<td>VH_6</td>
+<td>VH band at t-6 (sixth previous biweekly)</td>
+</tr>
+<tr class="even">
+<td>VH_7</td>
+<td>VH band at t-7 (seventh previous biweekly)</td>
+</tr>
+<tr class="odd">
+<td>VH_8</td>
+<td>VH band at t-8 (eighth previous biweekly)</td>
+</tr>
+<tr class="even">
+<td>VH_9</td>
+<td>VH band at t-9 (ninth previous biweekly)</td>
+</tr>
+<tr class="odd">
+<td>VH_10</td>
+<td>VH band at t-10 (tenth previous biweekly)</td>
+</tr>
+<tr class="even">
+<td>VV_0</td>
+<td>VV band (Sentinel-1) at time t (current biweekly)</td>
+</tr>
+<tr class="odd">
+<td>VV_1</td>
+<td>VV band at t-1 (previous biweekly)</td>
+</tr>
+<tr class="even">
+<td>VV_2</td>
+<td>VV band at t-2 (second previous biweekly)</td>
+</tr>
+<tr class="odd">
+<td>VV_3</td>
+<td>VV band at t-3 (third previous biweekly)</td>
+</tr>
+<tr class="even">
+<td>VV_4</td>
+<td>VV band at t-4 (fourth previous biweekly)</td>
+</tr>
+<tr class="odd">
+<td>VV_5</td>
+<td>VV band at t-5 (fifth previous biweekly)</td>
+</tr>
+<tr class="even">
+<td>VV_6</td>
+<td>VV band at t-6 (sixth previous biweekly)</td>
+</tr>
+<tr class="odd">
+<td>VV_7</td>
+<td>VV band at t-7 (seventh previous biweekly)</td>
+</tr>
+<tr class="even">
+<td>VV_8</td>
+<td>VV band at t-8 (eighth previous biweekly)</td>
+</tr>
+<tr class="odd">
+<td>VV_9</td>
+<td>VV band at t-9 (ninth previous biweekly)</td>
+</tr>
+<tr class="even">
+<td>VV_10</td>
+<td>VV band at t-10 (tenth previous biweekly)</td>
+</tr>
+<tr class="odd">
+<td>idkab</td>
+<td>Regency identifier code</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section><section id="results" class="level2" data-number="20.3"><h2 data-number="20.3" class="anchored" data-anchor-id="results">
+<span class="header-section-number">20.3</span> Results</h2>
+<p>To produce the model for delivering the paddy phenological classification, several procedures are conducted sequentially as depicted in <a href="#fig-workflow-indonesia" class="quarto-xref">Figure&nbsp;<span>20.3</span></a>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-workflow-indonesia" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-workflow-indonesia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_indonesia/workflow_data.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-workflow-indonesia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;20.3: Processing Workflow
+</figcaption></figure>
+</div>
+</div>
+</div>
+<p>Here, the steps and corresponding results are explained on following subsection.</p>
+<section id="preprocessing" class="level3" data-number="20.3.1"><h3 data-number="20.3.1" class="anchored" data-anchor-id="preprocessing">
+<span class="header-section-number">20.3.1</span> Preprocessing</h3>
+<p><strong>Noise Filtering</strong></p>
+<p>As we know, the Satellite Image Time Series (SITS) data is inherently messy, often affected by noise, atmospheric disturbances, sensor inconsistencies, etc. Those aspect contributes to the mislabeled or ambiguous observations. If not carefully filtered, these issues can reduce the performance and reliability of machine learning models. One effective approach to address this challenge is to use Self-Organizing Maps (SOM) as a filtering procedure.</p>
+<p>SOM can organize complex, high-dimensional time series data into coherent clusters by identifying consistent temporal patterns while exposing anomalies and noisy samples. This enables the construction of a cleaner, higher-quality training dataset. SOM <span class="citation" data-cites="Kohonen2013"><a href="#ref-Kohonen2013" role="doc-biblioref">[4]</a></span> is an unsupervised neural network model that projects multi-dimensional data onto a lower-dimensional (typically two-dimensional) grid, preserving topological relationships and facilitating pattern discovery.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> SOMPipeline <span class="im">import</span> SOMPipeline</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>som_pipeline <span class="op">=</span> SOMPipeline(som_x<span class="op">=</span><span class="dv">100</span>, som_y<span class="op">=</span><span class="dv">100</span>, sigma<span class="op">=</span><span class="fl">5.0</span>, learning_rate<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>som_pipeline.load_data(pulau<span class="op">=</span><span class="st">'SUMATERA'</span>, kdprov<span class="op">=</span><span class="st">'16'</span>, base_path<span class="op">=</span><span class="st">'/data/raw'</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>som_pipeline.train()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>In this study, the SOM pipeline (SOMPipeline) is implemented with several configuration, as follows: - grid of 100 x 100 neurons, - neighborhood function width (sigma) of 5.0, and - learning rate of 0.5.</p>
+<p>After training the SOM, the SOM model achieved a small quantization error of 1.35, indicating good fidelity in mapping the high-dimensional SITS data into the SOM grid, with lower quantization error reflecting better representation of the original input patterns.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>som_pipeline.visualize()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="fig-somresults-indonesia" class="quarto-figure quarto-float quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-somresults-indonesia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-panel" data-layout-ncol="1" data-fig-align="center">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p><img src="./images/ct_indonesia/som_results_output_1.png" class="img-fluid figure-img" style="width:80.0%" data-fig-subcap="BMU Class distribution"><img src="./images/ct_indonesia/som_results_output_2.png" class="img-fluid figure-img" style="width:80.0%" data-fig-subcap="Reverse cumulative affected rows"></p>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-somresults-indonesia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;20.4: SOM results (above: BMU Class distribution, bottom: Reverse cumulative affected rows for each dominant neuron class).
+</figcaption></figure>
+</div>
+<p>The Best Matching Unit (BMU) plot is a diagnostic tool for assessing the quality and structure of Self-Organizing Map (SOM) training. Each point represents a neuron, where the circle size indicates how frequently it was selected as the best match, and the color shows its dominant class. Larger circles suggest neurons that represent more input samples, while smaller ones may indicate less representative or noisy data. <strong>As depicted, many neurons likely correspond to noise and should be filtered out to produce cleaner training data.</strong></p>
+<p>To filter the data, we select neurons with the most homogeneous class composition—indicated by a high dominance of a single class within the neuron. The cumulative density graph helps determine how many data points are affected at each purity level. <strong>In this case, we set a 50% threshold for class dominance and remove neurons with a lower value.</strong> From the remaining neurons, we retain only the data points that belong to the dominant class of each neuron.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_image_compare(df_all, df_filtered):</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    fig, axs <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">20</span>, <span class="dv">8</span>))</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># First plot — All Data</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    heatmap_data_all <span class="op">=</span> df_all.pivot_table(index<span class="op">=</span><span class="st">'idkab'</span>, columns<span class="op">=</span><span class="st">'recode'</span>, aggfunc<span class="op">=</span><span class="st">'size'</span>, fill_value<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    sns.heatmap(heatmap_data_all, annot<span class="op">=</span><span class="va">True</span>, fmt<span class="op">=</span><span class="st">'d'</span>, cmap<span class="op">=</span><span class="st">'viridis'</span>, cbar_kws<span class="op">=</span>{<span class="st">'label'</span>: <span class="st">'Count'</span>}, ax<span class="op">=</span>axs[<span class="dv">0</span>])</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    axs[<span class="dv">0</span>].set_title(<span class="st">'All Data: Heatmap of Count per idkab'</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    axs[<span class="dv">0</span>].set_xlabel(<span class="st">'Classes'</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    axs[<span class="dv">0</span>].set_ylabel(<span class="st">'idkab'</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Second plot — Filtered Data</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    heatmap_data_filtered <span class="op">=</span> df_filtered.pivot_table(index<span class="op">=</span><span class="st">'idkab'</span>, columns<span class="op">=</span><span class="st">'recode'</span>, aggfunc<span class="op">=</span><span class="st">'size'</span>, fill_value<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    sns.heatmap(heatmap_data_filtered, annot<span class="op">=</span><span class="va">True</span>, fmt<span class="op">=</span><span class="st">'d'</span>, cmap<span class="op">=</span><span class="st">'viridis'</span>, cbar_kws<span class="op">=</span>{<span class="st">'label'</span>: <span class="st">'Count'</span>}, ax<span class="op">=</span>axs[<span class="dv">1</span>])</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    axs[<span class="dv">1</span>].set_title(<span class="st">'Filtered Data (after SOM): Heatmap of Count per idkab'</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    axs[<span class="dv">1</span>].set_xlabel(<span class="st">'Classes'</span>)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    axs[<span class="dv">1</span>].set_ylabel(<span class="st">'idkab'</span>)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    plt.tight_layout()</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    plt.show()</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>df_all, df_filtered <span class="op">=</span> som_pipeline.export(dominant_threshold<span class="op">=</span><span class="dv">50</span>)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>df_filtered.to_csv(<span class="st">'data_for_modelling.csv'</span>,index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>plot_image_compare(df_all, df_filtered)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-somcomparison-indonesia" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-somcomparison-indonesia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_indonesia/som_results_output_3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-somcomparison-indonesia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;20.5: Comparison of data count (left: before SOM is performed, right: after SOM is performed)
+</figcaption></figure>
+</div>
+</div>
+</div>
+<p>The <a href="#fig-somcomparison-indonesia" class="quarto-xref">Figure&nbsp;<span>20.5</span></a> compares the data before (left) and after (right) SOM filtering. <strong>It shows that the filtering process reduces the dataset</strong>, likely by removing noisy data. <strong>Class 6 appears to be the most affected</strong>, with only around 102 rows remaining after the SOM filtering.</p>
+<p><strong>Resampling Approach</strong></p>
+<p>To address class imbalance in Satellite Image Time Series (SITS), we employed an adaptive resampling strategy based on class size.</p>
+<p><strong>For minority classes (&lt;1000 samples), we applied Borderline-SMOTE</strong> to generate synthetic samples near class boundaries, improving model sensitivity in ambiguous regions. This was repeated until each class reached 1000 samples, ensuring balanced representation. Borderline-SMOTE was chosen over standard SMOTE for its effectiveness in handling class overlap common in SITS-based remote sensing data.</p>
+<p><strong>For overrepresented classes, Neighbourhood Cleaning Rule (NCL) was applied</strong> to remove noisy or ambiguous majority instances, reducing bias and sharpening class boundaries. NCL addresses issues like mislabeled or inconsistent samples caused by mixed pixels, clouds, or seasonal changes in SITS.</p>
+<p>Combined with Borderline-SMOTE, this adaptive resampling creates a balanced, cleaner training set, improving model generalization and robustness in imbalanced, high-dimensional remote sensing data.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_resampling_comparison(y_train_original, y_resampled):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Force both to categorical with same order</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    classes <span class="op">=</span> <span class="bu">sorted</span>(<span class="bu">set</span>(y_train_original) <span class="op">|</span> <span class="bu">set</span>(y_resampled))</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    y_train_original_cat <span class="op">=</span> pd.Categorical(y_train_original, categories<span class="op">=</span>classes, ordered<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    y_resampled_cat <span class="op">=</span> pd.Categorical(y_resampled, categories<span class="op">=</span>classes, ordered<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Use your palette</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    palette <span class="op">=</span> sns.color_palette(<span class="st">"Set2"</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    fig, axs <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">4</span>), sharey<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Original y_train</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    sns.countplot(x<span class="op">=</span>y_train_original_cat, ax<span class="op">=</span>axs[<span class="dv">0</span>], palette<span class="op">=</span>palette)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    axs[<span class="dv">0</span>].set_title(<span class="st">"Before Resampling"</span>)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    axs[<span class="dv">0</span>].set_xlabel(<span class="st">"Class"</span>)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    axs[<span class="dv">0</span>].set_ylabel(<span class="st">"Count"</span>)</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Resampled y_train</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    sns.countplot(x<span class="op">=</span>y_resampled_cat, ax<span class="op">=</span>axs[<span class="dv">1</span>], palette<span class="op">=</span>palette)</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    axs[<span class="dv">1</span>].set_title(<span class="st">"After Resampling"</span>)</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    axs[<span class="dv">1</span>].set_xlabel(<span class="st">"Class"</span>)</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    plt.tight_layout()</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> AdaptiveResampler <span class="im">import</span> AdaptiveResampler</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> XGBMultiClassPipeline <span class="im">import</span> XGBMultiClassPipeline</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>df_filtered <span class="op">=</span> pd.read_csv(<span class="st">'data_for_modelling.csv'</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> df_filtered[<span class="st">'recode'</span>]</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> df_filtered[[<span class="st">'Bulan'</span>, <span class="st">'elevation'</span>, <span class="st">'VH_10'</span>, <span class="st">'VH_9'</span>, <span class="st">'VH_8'</span>,</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>       <span class="st">'VH_7'</span>, <span class="st">'VH_6'</span>, <span class="st">'VH_5'</span>, <span class="st">'VH_4'</span>, <span class="st">'VH_3'</span>, <span class="st">'VH_2'</span>, <span class="st">'VH_1'</span>, <span class="st">'VH_0'</span>, <span class="st">'VV_10'</span>,</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>       <span class="st">'VV_9'</span>, <span class="st">'VV_8'</span>, <span class="st">'VV_7'</span>, <span class="st">'VV_6'</span>, <span class="st">'VV_5'</span>, <span class="st">'VV_4'</span>, <span class="st">'VV_3'</span>, <span class="st">'VV_2'</span>, <span class="st">'VV_1'</span>,</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>       <span class="st">'VV_0'</span>, <span class="st">'idkab'</span>]]</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Define pipeline</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>pipeline <span class="op">=</span> XGBMultiClassPipeline(num_class<span class="op">=</span><span class="bu">len</span>(np.unique(y)))</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Split data in train / test / validation</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>X_train, X_val, y_train, y_val <span class="op">=</span> pipeline.get_train_validation_split(X, y, test_size<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Define resampler</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>resampler <span class="op">=</span> AdaptiveResampler(minority_thresh<span class="op">=</span><span class="dv">1000</span>, majority_thresh<span class="op">=</span><span class="dv">5000</span>)</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit resample</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>X_resampled, y_resampled <span class="op">=</span> resampler.fit_resample(X_train, y_train)</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot results</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>plot_resampling_comparison(y_train, y_resampled)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-resamplingresampling-indonesia" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-resamplingresampling-indonesia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_indonesia/som_results_output_4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-resamplingresampling-indonesia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;20.6: Comparison of data count (left: before Adaptive Resampling is performed, right: after Adaptive Resampling is performed)
+</figcaption></figure>
+</div>
+</div>
+</div>
+<p>The <a href="#fig-resamplingresampling-indonesia" class="quarto-xref">Figure&nbsp;<span>20.6</span></a> compares class distributions <strong>before and after applying the adaptive resampling strategy</strong>. In the original (<em>Before Resampling</em>) distribution, <strong>substantial class imbalance is evident—with classes 5 and 7 heavily overrepresented, and classes 0, 6, and 8 severely underrepresented</strong>. After resampling, <strong>minority classes (especially class 0 and class 8) show significant increases, while class 6 is slightly improved</strong>, reflecting the impact of Borderline-SMOTE for classes with fewer than 1000 samples. At the same time, <strong>overrepresented classes (5 and 7) are reduced but not fully equalized</strong>, indicating that Neighbourhood Cleaning Rule (NCL) has effectively filtered out noisy or borderline instances without distorting the overall class structure.</p>
+</section><section id="model-development" class="level3" data-number="20.3.2"><h3 data-number="20.3.2" class="anchored" data-anchor-id="model-development">
+<span class="header-section-number">20.3.2</span> Model Development</h3>
+<p>After the preprocessing steps are conducted, the next step is produce the model for classification. In this study, <strong>XGBoost is selected as the classification algorithm.</strong> XGBoost (Extreme Gradient Boosting) is a scalable, high-performance gradient boosting framework based on decision trees, designed to optimize both speed and predictive accuracy <span class="citation" data-cites="Chen2016"><a href="#ref-Chen2016" role="doc-biblioref">[5]</a></span>. It builds an ensemble of trees in a sequential manner, where each new tree corrects the errors of the previous ones, and leverages advanced regularization techniques (L1 and L2), shrinkage, and sparsity-aware algorithms to prevent overfitting. Compared to traditional methods such as Random Forest, which builds multiple independent trees in parallel, XGBoost typically achieves superior performance with fewer trees and lower computational cost, especially on high-dimensional, noisy, or imbalanced data.</p>
+<p><strong>Hyperparameter Tuning</strong></p>
+<p>To produce reliable, accurate, and robust model, selecting the hyperparameter is crucial steps. Here, <strong>the hyperparameter tuning is performed using Optuna</strong> <span class="citation" data-cites="Akiba2019"><a href="#ref-Akiba2019" role="doc-biblioref">[6]</a></span>, which optimizes key XGBoost parameters (e.g., max_depth, learning_rate, reg_lambda, min_child_weight, and gamma—by sampling) from predefined ranges via the TPE (Tree-structured Parzen Estimator) algorithm <span class="citation" data-cites="Bouthillier2021"><a href="#ref-Bouthillier2021" role="doc-biblioref">[7]</a></span>. Each trial is evaluated using Stratified K-Fold cross-validation and macro F1-score to ensure bala)nced class performance <span class="citation" data-cites="Fernandez2018"><a href="#ref-Fernandez2018" role="doc-biblioref">[8]</a></span>. Early stopping is applied during model training and across trials (with a 10-trial patience) to prevent overfitting and improve efficiency.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> optuna</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>study <span class="op">=</span> optuna.create_study(direction<span class="op">=</span><span class="st">'maximize'</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Attach early stopping callback</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>early_stop <span class="op">=</span> pipeline.EarlyStoppingCallback(patience <span class="op">=</span> <span class="dv">10</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Run optimization</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>study.optimize(</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">lambda</span> trial: pipeline.objective(trial, X_resampled, y_resampled),</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    n_trials<span class="op">=</span><span class="dv">50</span>,</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    callbacks<span class="op">=</span>[early_stop]</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Based on the trials, <strong>the best hyperparameters</strong> are shown in <a href="#tbl-bestparams-indonesia" class="quarto-xref">Table&nbsp;<span>20.3</span></a>:</p>
+<div id="tbl-bestparams-indonesia" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-bestparams-indonesia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;20.3: Table 3. Best Parameter
+</figcaption><div aria-describedby="tbl-bestparams-indonesia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 11%">
+<col style="width: 69%">
+</colgroup>
+<thead><tr class="header">
+<th>Hyperparameter</th>
+<th>Value</th>
+<th>Description / Effect</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>max_depth</td>
+<td>9</td>
+<td>Controls the maximum depth of trees; deeper trees can capture more complex patterns but risk overfitting.</td>
+</tr>
+<tr class="even">
+<td>learning_rate</td>
+<td>0.0752</td>
+<td>Shrinks the contribution of each tree; lower values require more trees but improve generalization.</td>
+</tr>
+<tr class="odd">
+<td>reg_lambda</td>
+<td>3.472</td>
+<td>L2 regularization term on weights; higher values increase regularization to prevent overfitting.</td>
+</tr>
+<tr class="even">
+<td>min_child_weight</td>
+<td>72</td>
+<td>Minimum sum of instance weight (hessian) needed in a child; higher values make the model more conservative.</td>
+</tr>
+<tr class="odd">
+<td>gamma</td>
+<td>0.1028</td>
+<td>Minimum loss reduction required to make a further partition; larger values make the tree pruning more conservative.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pickle</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"best_params_fin.pkl"</span>, <span class="st">"wb"</span>) <span class="im">as</span> f:</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    pickle.dump(study.best_params, f)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Modelling</strong></p>
+<p>After the hyperparameter tuned, the next part is train the model, evaluating the results. <strong>The model is trained using the best hyperparameters with early stopping to prevent overfitting and ensure efficient learning.</strong> It uses multi-class classification and is optimized to handle class imbalances in the data. The training process evaluates performance at each step and stops automatically when improvements plateau. After training, the model is assessed on the test set using a several validation index. Additionally, to refine predictions, optimal thresholds are applied based on precision-recall performance. <strong>Final evaluation includes accuracy, F1-scores, and AUC metrics, offering a balanced view of model performance across all classes.</strong>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pickle</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"best_params_fin.pkl"</span>, <span class="st">"rb"</span>) <span class="im">as</span> f:</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    best_params <span class="op">=</span> pickle.load(f)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>pipeline.train(X_resampled, y_resampled, best_params<span class="op">=</span>best_params)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> pipeline.evaluate(X_val, y_val, output_file<span class="op">=</span><span class="st">'confusion_matrix'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-confusionmatrix-indonesia" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-confusionmatrix-indonesia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_indonesia/som_results_output_5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-confusionmatrix-indonesia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;20.7: Confusion matrix on validation data
+</figcaption></figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>results[<span class="st">'metrics'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre><code>{'val_accuracy': 0.8247489471979268,
+ 'val_f1_macro': np.float64(0.7492888552439827),
+ 'val_f1_micro': np.float64(0.8247489471979268),
+ 'val_auc': np.float64(0.9695775603130876),
+ 'val_pr_auc': np.float64(0.8048938208240811)}</code></pre>
+<p>The model achieved strong overall performance on the validation set, with an <strong>accuracy of 82.4%</strong> and a matching micro F1-score of 82.4%, indicating high correctness across all classes. The <strong>macro F1-score of 74.9%</strong> further demonstrates balanced performance between majority and minority classes, suggesting that class imbalance was effectively addressed. The <strong>high AUC of 0.9695</strong> reflects excellent ability to distinguish between classes, while the <strong>PR-AUC of 0.8048</strong> indicates strong precision-recall trade-offs.</p>
+<p><strong>The best-performing classes include “Non-Paddy” (class 7) and “Non-Vegetation” (class 8), both with precision and recall exceeding 0.85, demonstrating clear spectral and temporal separability in the Satellite Image Time Series (SITS) data.</strong> Additionally, “Harvest” (class 4) and “Bera” (class 5) phases exhibit strong classification performance, likely due to their distinctive phenological signatures. <strong>In contrast, the model shows relatively lower recall for “Land Preparation/Tillage” (class 0, recall 0.58) and “Fallow Land” (class 6, recall 0.43)</strong>, with common misclassifications occurring toward vegetative stages. This is consistent with known challenges in SITS-based crop monitoring, where transitional phases exhibit spectral ambiguity and temporal overlap (e.g., tillage may coincide with early vegetation stages). The confusion matrix further shows that most misclassifications occur between adjacent or phenologically related classes (e.g., “First Vegetative” to “Late Vegetative”), which may be acceptable in practical applications where approximate phase tracking is sufficient. Overall, these results confirm that the combination of adaptive resampling and tuned XGBoost modeling provides a robust framework for multi-class land cover classification from SITS data, with strong performance on dominant classes and reasonable accuracy across minority and transitional phases.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"best_pipeline_fin.pkl"</span>, <span class="st">"wb"</span>) <span class="im">as</span> f:</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    pickle.dump(results, f)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="c.-bayes-post-classification" class="level3" data-number="20.3.3"><h3 data-number="20.3.3" class="anchored" data-anchor-id="c.-bayes-post-classification">
+<span class="header-section-number">20.3.3</span> C. Bayes Post-Classification</h3>
+<p>Given the natural characteristics of phenologycal phase, sequential rule is emeged to ensure coherency. For instance, the Late Vegetative phase can not be emerged unless the previous month observation is First Vegetative. This implies that <strong>the Current Month Phase is influeced by Previous Month Phase.</strong> Based on this idea, a Bayes Post-Classification can be formulated for enhancing the quality of modelling with following procedure:</p>
+<p><span class="math display">\[
+\begin{aligned}
+P(\text{Current Class} \mid \text{XGB Proba}, \text{Previous Class})
+&amp;\propto P(\text{XGB Proba} \mid \text{Current Class}) \\
+&amp;\times P(\text{Current Class} \mid \text{Previous Class})
+\end{aligned}
+\]</span></p>
+<p><strong>Likelihood:</strong><br><span class="math inline">\(P(\text{XGB Proba} \mid \text{Current Class})\)</span><br>
+This represents the probability of observing the XGBoost predicted probabilities given the current class. It is derived directly from the XGBoost classifier’s output (<code>predict_proba</code>).</p>
+<p><strong>Prior:</strong><br><span class="math inline">\(P(\text{Current Class} \mid \text{Previous Class})\)</span><br>
+This is the probability of the current class conditioned on the previous class, estimated from historical data (e.g., frequencies computed over the last 3 years).</p>
+<p><strong>Posterior:</strong><br><span class="math inline">\(P(\text{Current Class} \mid \text{XGB Proba}, \text{Previous Class})\)</span><br>
+This is the updated belief about the current class combining the likelihood (model evidence) and the prior (historical transitions).<br>
+In other words,<br><span class="math display">\[
+  \text{Posterior} \propto \text{Likelihood} \times \text{Prior}
+  \]</span></p>
+<p><strong>Summary:</strong><br>
+- The <strong>likelihood</strong> comes from the XGBoost model’s predicted probabilities.<br>
+- The <strong>prior</strong> captures temporal dependencies from historical class transitions.<br>
+- The <strong>posterior</strong> combines both to provide an improved class prediction.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_prev_recode(df, id_col<span class="op">=</span><span class="st">'idsubsegmen'</span>, time_col_month<span class="op">=</span><span class="st">'Bulan'</span>, time_col_year<span class="op">=</span><span class="st">'Tahun'</span>, target_col<span class="op">=</span><span class="st">'recode'</span>):</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> df.copy()</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    df.sort_values(by<span class="op">=</span>[id_col, time_col_year, time_col_month], inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Shift recode per group (idsubsegmen)</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    df[<span class="st">'prev_recode'</span>] <span class="op">=</span> (</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>        df.groupby(id_col)[target_col]</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>        .shift(<span class="dv">1</span>)</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Shift also Tahun and Bulan per group to compare whether prev record is in previous month-year</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>    df[<span class="st">'prev_year'</span>] <span class="op">=</span> df.groupby(id_col)[time_col_year].shift(<span class="dv">1</span>)</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>    df[<span class="st">'prev_month'</span>] <span class="op">=</span> df.groupby(id_col)[time_col_month].shift(<span class="dv">1</span>)</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Compute expected previous month and year</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>    df[<span class="st">'expected_prev_month'</span>] <span class="op">=</span> df[time_col_month] <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>    df[<span class="st">'expected_prev_year'</span>] <span class="op">=</span> df[time_col_year]</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># If current month is January → previous month should be December of previous year</span></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>    jan_mask <span class="op">=</span> df[<span class="st">'expected_prev_month'</span>] <span class="op">==</span> <span class="dv">0</span></span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>    df.loc[jan_mask, <span class="st">'expected_prev_month'</span>] <span class="op">=</span> <span class="dv">12</span></span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>    df.loc[jan_mask, <span class="st">'expected_prev_year'</span>] <span class="op">-=</span> <span class="dv">1</span></span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Keep only valid previous recode (when prev month and year match expected)</span></span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>    valid_prev <span class="op">=</span> (df[<span class="st">'prev_month'</span>] <span class="op">==</span> df[<span class="st">'expected_prev_month'</span>]) <span class="op">&amp;</span> (df[<span class="st">'prev_year'</span>] <span class="op">==</span> df[<span class="st">'expected_prev_year'</span>])</span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>    df.loc[<span class="op">~</span>valid_prev, <span class="st">'prev_recode'</span>] <span class="op">=</span> np.nan</span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Optional: clean temp columns</span></span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a>    df.drop(columns<span class="op">=</span>[<span class="st">'prev_year'</span>, <span class="st">'prev_month'</span>, <span class="st">'expected_prev_month'</span>, <span class="st">'expected_prev_year'</span>], inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> xgboost <span class="im">as</span> xgb</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> (</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    confusion_matrix, ConfusionMatrixDisplay, classification_report)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>full_data <span class="op">=</span> pd.read_csv(<span class="ss">f'/data/ksa/00_Code_2025/data_16_WO_cluster.csv'</span>, delimiter<span class="op">=</span><span class="st">';'</span>)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>full_data <span class="op">=</span> add_prev_recode(full_data)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>df_validation <span class="op">=</span> X_val.copy()</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>df_validation[<span class="st">'Recode'</span>] <span class="op">=</span> y_val</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>df_validation <span class="op">=</span> df_validation.merge(full_data)</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"results_conditional_probs.pkl"</span>, <span class="st">"rb"</span>) <span class="im">as</span> f:</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    conditional_probs <span class="op">=</span> pickle.load(f)</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>df_recode_given_prev<span class="op">=</span>conditional_probs[<span class="st">'16'</span>][<span class="st">'prob'</span>][<span class="st">'P_cond_prev_transaction'</span>]</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>df_recode_given_prev_long <span class="op">=</span> (</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>    df_recode_given_prev</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>    .reset_index()  <span class="co"># makes idkab and prev_recode columns instead of index</span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>    .melt(id_vars<span class="op">=</span>[<span class="st">"idkab"</span>, <span class="st">"prev_recode"</span>], </span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>          var_name<span class="op">=</span><span class="st">"recode"</span>, </span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>          value_name<span class="op">=</span><span class="st">"P_given_prev"</span>)</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>df_recode_given_prev_long[<span class="st">'idkab'</span>] <span class="op">=</span> df_recode_given_prev_long[<span class="st">'idkab'</span>].astype(<span class="st">"int"</span>)</span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>dfm_predict <span class="op">=</span> xgb.DMatrix(df_validation[X_val.columns], label<span class="op">=</span>df_validation[<span class="st">"recode"</span>], enable_categorical<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>dfm_predict_proba <span class="op">=</span> pipeline.model.predict(dfm_predict)</span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>df_validation[[<span class="ss">f'Class_</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">'</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>,<span class="dv">9</span>)]] <span class="op">=</span> dfm_predict_proba</span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>df_validation[<span class="st">'recode_pred'</span>] <span class="op">=</span> dfm_predict_proba.argmax(axis<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> BayesPostClassificationPipeline <span class="im">import</span> BayesPostClassificationPipeline</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1: Create pipeline</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>bpost_pipeline <span class="op">=</span> BayesPostClassificationPipeline(</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    df_prior <span class="op">=</span> df_recode_given_prev_long,</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    id_col <span class="op">=</span> <span class="st">'idkab'</span>,</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    prev_recode_col <span class="op">=</span> <span class="st">'prev_recode'</span>,</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    recode_col <span class="op">=</span> <span class="st">'recode'</span>,</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    prior_col <span class="op">=</span> <span class="st">'P_given_prev'</span>,</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    num_classes <span class="op">=</span> <span class="dv">9</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 2: Apply the prior/posterior logic</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>df_val_with_prior_posterior <span class="op">=</span> bpost_pipeline.incorporate_prior_and_posterior(df_validation)</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Evaluate the result</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>df_val_with_prior_posterior <span class="op">=</span> bpost_pipeline.evaluate(df_val_with_prior_posterior)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-confusionmatrixbayes-indonesia" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-confusionmatrixbayes-indonesia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_indonesia/som_results_output_6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-confusionmatrixbayes-indonesia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;20.8: Confusion matrix on validation data after Bayes Classification performed
+</figcaption></figure>
+</div>
+</div>
+</div>
+<p>The application of Bayes PostClassification significantly improved both overall model performance and class-level consistency. Before post-processing, the classifier achieved an accuracy of 82% and a macro F1-score of 74.9%. <strong>After refinement, the accuracy increased to 90% and the macro F1-score rose to 83.0%</strong>, indicating a substantial reduction in misclassifications—particularly in ambiguous or transitional growth phases.</p>
+<p>Notable improvements were observed across several classes. For Class 0 (Land Preparation/Tillage), recall increased from 0.58 to 0.70. For Classes 1 (First Vegetative), 2 (Late Vegetative), and 3 (Generatif), accuracy improved from below 80% to 83%, suggesting that the Bayes filter effectively reduced over-smoothing between neighboring growth stages. The most significant gain was seen in Class 4 (Harvest), where recall jumped from 0.82 to 0.93 and precision improved from 0.79 to 0.90. This greatly reduced false positives being assigned to similar phases such as “Bera” or “Late Vegetative”.</p>
+<p>Overall, the Bayes-based post-processing acted as a temporal prior filter, correcting model uncertainty and aligning predictions more closely with realistic crop growth transitions—an essential enhancement for fine-grained agricultural monitoring.</p>
+</section></section><section id="conclusions" class="level2" data-number="20.4"><h2 data-number="20.4" class="anchored" data-anchor-id="conclusions">
+<span class="header-section-number">20.4</span> Conclusions</h2>
+<p>In this study, we presented a complete workflow for analyzing paddy phenological phases using satellite imagery and machine learning. The process is structured into three main stages: <strong>preprocessing</strong>, <strong>modeling</strong>, and <strong>refinement</strong>. The <strong>preprocessing</strong> phase includes noise filtering using Self-Organizing Maps (SOM) and adaptive resampling. The <strong>modeling</strong> phase involves hyperparameter tuning, model development, and performance evaluation. Finally, the <strong>refinement</strong> phase applies Bayesian post-processing to improve classification accuracy.</p>
+<p>The results demonstrate that a modernized approach to monitoring paddy phenology—integrating remote sensing and machine learning—can be effectively implemented to enhance accuracy and reliability in capturing crop growth dynamics.</p>
+</section><section id="references" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
 
 
-<section id="outline" class="level2" data-number="21.1">
-<h2 data-number="21.1" class="anchored" data-anchor-id="outline"><span class="header-section-number">21.1</span> Outline</h2>
-<p>Combination of multi-year area sampling frame with Sentinel-1 imagery to predict rice phenology and estimate harvest areas.</p>
-<p>Rice data plays a vital role in shaping national food security policies, especially in a country like Indonesia, where rice is both a staple and a strategic commodity. At present, the paddy harvested area is estimated through a monthly ground survey known as the Area Sampling Frames (ASF), conducted by Statistics Indonesia. While this method has long served as the official approach, the high cost of data collection and recurring challenges in field implementation underscore the urgent need for more efficient and scalable alternatives. Satellite Imagery Time Series (SITS) data, particularly from the historical archives of Sentinel-1, emerges as a promising solution. By leveraging the power of the XGBoost algorithm — a state-of-the-art machine learning model — it becomes possible to detect phenological stages of paddy growth remotely and with remarkable precision.</p>
-<p>Building on this, the study in 2024 introduces an alternative approach implemented in selected 10 provinces across Indonesia based on the harvest and productivity data. The study outlines a carefully designed workflow that enhances model accuracy through a combination of clustering techniques, missing data imputation, noise reduction, and region-specific model calibration. The results show that most cluster regions achieve high accuracy in classifying paddy phenological stages, while the estimated harvested area patterns align closely with the official statistics. These outcomes not only confirm the reliability of the proposed method but also highlight its strong potential to complement or even streamline the existing survey-based system in the future.</p>
-
-
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="ref-Faoziyah2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div>
+<div class="csl-right-inline">U. Faoziyah, M. F. Rosyaridho, and R. Panggabean, <span>“Unearthing agricultural land use dynamics in indonesia: Between food security and policy interventions,”</span> <em>Land</em>, vol. 13, no. 12, p. 2030, 2024, doi: <a href="https://doi.org/10.3390/land13122030">10.3390/land13122030</a>.</div>
+</div>
+<div id="ref-Muradi2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div>
+<div class="csl-right-inline">H. Muradi <em>et al.</em>, <span>“Rice phenology classification model based on sentinel-1 using machine learning method on google earth engine,”</span> <em>Canadian Journal of Remote Sensing</em>, vol. 50, no. 1, 2024, doi: <a href="https://doi.org/10.1080/07038992.2024.2293843">10.1080/07038992.2024.2293843</a>.</div>
+</div>
+<div id="ref-Simoes2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div>
+<div class="csl-right-inline">R. Simoes <em>et al.</em>, <span>“Satellite image time series analysis for big earth observation data,”</span> <em>Remote Sensing</em>, vol. 13, no. 13, p. 2428, 2021, doi: <a href="https://doi.org/10.3390/rs13132428">10.3390/rs13132428</a>.</div>
+</div>
+<div id="ref-Kohonen2013" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[4] </div>
+<div class="csl-right-inline">T. Kohonen, <span>“Essentials of the self-organizing map,”</span> <em>Neural Networks</em>, vol. 37, pp. 52–65, 2013, doi: <a href="https://doi.org/10.1016/j.neunet.2012.09.018">10.1016/j.neunet.2012.09.018</a>.</div>
+</div>
+<div id="ref-Chen2016" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div>
+<div class="csl-right-inline">T. Chen and C. Guestrin, <span>“<span>XGBoost</span>: <span>A Scalable Tree Boosting System</span>,”</span> in <em>Proceedings of the 22nd <span>ACM SIGKDD International Conference</span> on <span>Knowledge Discovery</span> and <span>Data Mining</span></em>, 2016, pp. 785–794, doi: <a href="https://doi.org/10.1145/2939672.2939785">10.1145/2939672.2939785</a>.</div>
+</div>
+<div id="ref-Akiba2019" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[6] </div>
+<div class="csl-right-inline">T. Akiba, S. Sano, T. Yanase, T. Ohta, and M. Koyama, <span>“Optuna: A next-generation hyperparameter optimization framework,”</span> <em>Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining</em>, pp. 2623–2631, 2019.</div>
+</div>
+<div id="ref-Bouthillier2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[7] </div>
+<div class="csl-right-inline">X. Bouthillier, P. Vincent, and A. Drouin, <span>“Accounting for variance in machine learning benchmarks,”</span> <em>Journal of Machine Learning Research</em>, vol. 22, pp. 1–62, 2021.</div>
+</div>
+<div id="ref-Fernandez2018" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[8] </div>
+<div class="csl-right-inline">A. Fernández, S. García, M. Galar, R. C. Prati, B. Krawczyk, and F. Herrera, <span>“Learning from imbalanced data sets,”</span> <em>Springer</em>, 2018.</div>
+</div>
+</div>
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -784,22 +1501,19 @@ ul.task-list li input[type="checkbox"] {
       }
     }
   });
-  </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./cy_finland.html" class="pagination-link" aria-label="Early-season crop yield mapping in Finland">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Early-season crop yield mapping in Finland</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Early-season crop yield mapping in Finland</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./cy_poland.html" class="pagination-link" aria-label="Yield Forecasting in Poland">
-        <span class="nav-page-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Yield Forecasting in Poland</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Yield Forecasting in Poland</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>Edited by Gilberto Camara, Lorenzo de Simone and Ronald Jansen.</p>
 </div>   
@@ -811,8 +1525,6 @@ ul.task-list li input[type="checkbox"] {
 </div>
   </div>
 </footer>
-
-
 
 
 </body></html>
