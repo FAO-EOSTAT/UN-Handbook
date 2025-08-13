@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
-
+<meta name="generator" content="quarto-1.6.42">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Gilberto Camara, Lorenzo de Simone, Ronald Jansen">
-
-<title>18&nbsp; Crop classification using Digital Earth Africa – UN Handbook on Remote Sensing for Agricultural Statistics</title>
+<title>18&nbsp; Agricultural Mapping with Digital Earth Africa – UN Handbook on Remote Sensing for Agricultural Statistics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,8 +18,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
-
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -33,17 +83,15 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <link href="./crop_yield_estimation.html" rel="next">
 <link href="./ct_chile.html" rel="prev">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-931bd9de4a2e97c797357f31cd37fa94.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-222f02173ab23c0a3d521b74fa0b846e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -70,33 +118,24 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-
-
 </head>
-
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./crop_type_mapping.html">Use Cases in Crop Type Mapping</a></li><li class="breadcrumb-item"><a href="./ct_digital_earth_africa.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Crop classification using Digital Earth Africa</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./crop_type_mapping.html">Use Cases in Crop Type Mapping</a></li><li class="breadcrumb-item"><a href="./ct_digital_earth_africa.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Agricultural Mapping with Digital Earth Africa</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">UN Handbook on Remote Sensing for Agricultural Statistics</a> 
         <div class="sidebar-tools-main">
@@ -116,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome</span></span></a>
@@ -142,8 +181,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./th_remote_sensing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remote Sensing images: optical, SAR</span></span></a>
@@ -164,7 +203,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./th_machine_learning.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Machine learning classification of remote sensing images</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Machine learning algorithms for image time series</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -198,7 +237,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./crop_type_mapping.html" class="sidebar-item-text sidebar-link">
@@ -207,8 +246,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ct_poland.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Crop monitoring with SAR images in Poland</span></span></a>
@@ -241,11 +280,11 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ct_digital_earth_africa.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Crop classification using Digital Earth Africa</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Agricultural Mapping with Digital Earth Africa</span></span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./crop_yield_estimation.html" class="sidebar-item-text sidebar-link">
@@ -254,8 +293,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cy_finland.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Early-season crop yield mapping in Finland</span></span></a>
@@ -286,7 +325,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./additional.html" class="sidebar-item-text sidebar-link">
@@ -295,8 +334,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ad_geoglam.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Extraction of crop statistics from crop type and crop yield maps</span></span></a>
@@ -327,27 +366,59 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#outline" id="toc-outline" class="nav-link active" data-scroll-target="#outline"><span class="header-section-number">18.1</span> Outline</a></li>
+<li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">18.1</span> Overview</a></li>
+  <li><a href="#digital-earth-africa-products-and-services" id="toc-digital-earth-africa-products-and-services" class="nav-link" data-scroll-target="#digital-earth-africa-products-and-services"><span class="header-section-number">18.2</span> Digital Earth Africa products and services</a></li>
+  <li><a href="#r-sits-and-digital-earth-africa" id="toc-r-sits-and-digital-earth-africa" class="nav-link" data-scroll-target="#r-sits-and-digital-earth-africa"><span class="header-section-number">18.3</span> R sits and Digital Earth Africa</a></li>
+  <li><a href="#digital-earth-africa-geomedians-geomads" id="toc-digital-earth-africa-geomedians-geomads" class="nav-link" data-scroll-target="#digital-earth-africa-geomedians-geomads"><span class="header-section-number">18.4</span> Digital Earth Africa Geomedians (GeoMADs)</a></li>
+  <li>
+<a href="#crop-type-mapping-training-data" id="toc-crop-type-mapping-training-data" class="nav-link" data-scroll-target="#crop-type-mapping-training-data"><span class="header-section-number">18.5</span> Crop type mapping training data</a>
+  <ul class="collapse">
+<li><a href="#load-training-data" id="toc-load-training-data" class="nav-link" data-scroll-target="#load-training-data"><span class="header-section-number">18.5.1</span> Load training data</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/edit/quarto/ct_digital_earth_africa.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+</li>
+  <li>
+<a href="#digital-earth-africa-data" id="toc-digital-earth-africa-data" class="nav-link" data-scroll-target="#digital-earth-africa-data"><span class="header-section-number">18.6</span> Digital Earth Africa data</a>
+  <ul class="collapse">
+<li><a href="#create-a-mosaic" id="toc-create-a-mosaic" class="nav-link" data-scroll-target="#create-a-mosaic"><span class="header-section-number">18.6.1</span> Create a mosaic</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#cropland-extent-map" id="toc-cropland-extent-map" class="nav-link" data-scroll-target="#cropland-extent-map"><span class="header-section-number">18.7</span> Cropland Extent Map</a>
+  <ul class="collapse">
+<li><a href="#cropland-extent-loading-with-rstac" id="toc-cropland-extent-loading-with-rstac" class="nav-link" data-scroll-target="#cropland-extent-loading-with-rstac"><span class="header-section-number">18.7.1</span> Cropland extent loading with rstac</a></li>
+  <li><a href="#mask-the-geomad-to-cropland" id="toc-mask-the-geomad-to-cropland" class="nav-link" data-scroll-target="#mask-the-geomad-to-cropland"><span class="header-section-number">18.7.2</span> Mask the GeoMAD to cropland</a></li>
+  <li><a href="#create-a-new-data-cube" id="toc-create-a-new-data-cube" class="nav-link" data-scroll-target="#create-a-new-data-cube"><span class="header-section-number">18.7.3</span> Create a new data cube</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#train-classification-model" id="toc-train-classification-model" class="nav-link" data-scroll-target="#train-classification-model"><span class="header-section-number">18.8</span> Train classification model</a>
+  <ul class="collapse">
+<li><a href="#reduce-class-imbalance" id="toc-reduce-class-imbalance" class="nav-link" data-scroll-target="#reduce-class-imbalance"><span class="header-section-number">18.8.1</span> Reduce class imbalance</a></li>
+  <li><a href="#train-random-forest-model" id="toc-train-random-forest-model" class="nav-link" data-scroll-target="#train-random-forest-model"><span class="header-section-number">18.8.2</span> Train random forest model</a></li>
+  <li><a href="#perform-a-cross-validation" id="toc-perform-a-cross-validation" class="nav-link" data-scroll-target="#perform-a-cross-validation"><span class="header-section-number">18.8.3</span> Perform a cross-validation</a></li>
+  <li><a href="#combine-crop-types-into-groups" id="toc-combine-crop-types-into-groups" class="nav-link" data-scroll-target="#combine-crop-types-into-groups"><span class="header-section-number">18.8.4</span> Combine crop types into groups</a></li>
+  <li><a href="#perform-a-cross-validation-on-crop-groups" id="toc-perform-a-cross-validation-on-crop-groups" class="nav-link" data-scroll-target="#perform-a-cross-validation-on-crop-groups"><span class="header-section-number">18.8.5</span> Perform a cross-validation on crop groups</a></li>
+  </ul>
+</li>
+  <li><a href="#create-a-classified-map" id="toc-create-a-classified-map" class="nav-link" data-scroll-target="#create-a-classified-map"><span class="header-section-number">18.9</span> Create a classified map</a></li>
+  <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions"><span class="header-section-number">18.10</span> Conclusions</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/edit/quarto/ct_digital_earth_africa.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./crop_type_mapping.html">Use Cases in Crop Type Mapping</a></li><li class="breadcrumb-item"><a href="./ct_digital_earth_africa.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Crop classification using Digital Earth Africa</span></a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Crop classification using Digital Earth Africa</span></h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./crop_type_mapping.html">Use Cases in Crop Type Mapping</a></li><li class="breadcrumb-item"><a href="./ct_digital_earth_africa.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Agricultural Mapping with Digital Earth Africa</span></a></li></ol></nav><div class="quarto-title">
+<h1 class="title">
+<span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Agricultural Mapping with Digital Earth Africa</span>
+</h1>
 </div>
 
 
@@ -357,7 +428,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Lisa Rebello </p>
+             <p>Michael Wellington </p>
           </div>
   </div>
     
@@ -367,255 +438,973 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header>
+</header><section id="overview" class="level2" data-number="18.1"><h2 data-number="18.1" class="anchored" data-anchor-id="overview">
+<span class="header-section-number">18.1</span> Overview</h2>
+<p>Digital Earth Africa offers continental-scale satellite-derived data products and provides guidance on their application in analytical workflows. This chapter demonstrates the use of high quality, cloud-free, geomedian composite images with median absolute deviations (GeoMADs) for crop type mapping. Digital Earth Africa’s GeoMADs are applied to a classification framework in the satellite image time series (<code>sits</code>) package in the R language.</p>
+<p>The chapter demonstrates how high-quality, ‘off-the-shelf’ satellite image composites can overcome common challenges in classification workflows, such as the ‘curse of dimensionality’ and computational demand. It also introduces readers and users to Digital Earth Africa products and services, and modes of access, especially through the <code>sits</code> R package.</p>
+<p>The chapter covers the following steps:</p>
+<ol type="1">
+<li>Background to Digital Earth Africa data products and services.</li>
+<li>The <code>sits</code> package and interaction with Digital Earth Africa.</li>
+<li>Geomedian composite images and their application in classification workflows.</li>
+<li>Sourcing, loading, and inspecting reference data for crop type mapping.</li>
+<li>Loading Digital Earth Africa data with both <code>sits</code> and <code>rstac</code>.</li>
+<li>Masking satellite data to cropland.</li>
+<li>Dealing with class imbalance in reference data.</li>
+<li>Training and evaluating machine learning models for crop type mapping.</li>
+<li>Producing a crop type map.</li>
+</ol></section><section id="digital-earth-africa-products-and-services" class="level2" data-number="18.2"><h2 data-number="18.2" class="anchored" data-anchor-id="digital-earth-africa-products-and-services">
+<span class="header-section-number">18.2</span> Digital Earth Africa products and services</h2>
+<p>Digital Earth Africa provides open access to over 80 spatial datasets covering the African continent. They cover thematics including land cover, coasts, agriculture, topography, water, and vegetation. These datasets can be explored in several platforms. The <a href="https://explorer.digitalearth.africa/products">Digital Earth Africa Explorer</a> displays metadata for each dataset, including availability in space and time. It also enables download of single band .tif files.</p>
+<p>Digital Earth Africa data can be visualised in the Digital Earth Africa Maps platform. This platform also supports basic visual analysis including differencing and comparison.</p>
+<p>The Digital Earth Africa Sandbox is a JupyterHub computing environment where users can interact with Digital Earth Africa data using Python. The Sandbox provides a direct connection to the Digital Earth Africa implementation of the Open Data Cube, so datasets can easily be queried.</p>
+<p>Digital Earth Africa data is also retrievable using the STAC library through packages such as <code>odc-stac</code> (Python) and <code>rstac</code> (R). Digital Earth Africa maintains a repository of odc-stac examples. This chapter uses the <code>sits</code> R package to access and analyse Digital Earth Africa data for the purposes of agricultural mapping and monitoring.</p>
+</section><section id="r-sits-and-digital-earth-africa" class="level2" data-number="18.3"><h2 data-number="18.3" class="anchored" data-anchor-id="r-sits-and-digital-earth-africa">
+<span class="header-section-number">18.3</span> R sits and Digital Earth Africa</h2>
+<p>The Satellite Image Time Series Analysis on Earth Observation Data Cubes (<code>sits</code>) package enables workflows to be conducted on Earth Observation data cubes, such as data available from Digital Earth Africa.</p>
+<p>Digital Earth Africa datasets available in the sits package are:</p>
+<ul>
+<li><p><a href="https://docs.digitalearthafrica.org/en/latest/data_specs/Sentinel-2_Level-2A_specs.html">Sentinel-2 Level 2A Surface Reflectance</a> (<code>SENTINEL-2-L2A</code>)</p></li>
+<li><p><a href="https://docs.digitalearthafrica.org/en/latest/data_specs/Landsat_C2_SR_specs.html">Landsat 5, 7, 8 and 9 Surface Reflectance</a> (<code>LS5-SR</code>, <code>LS7-SR</code>, <code>LS8-SR</code> &amp; <code>LS9-SR</code>)</p></li>
+<li><p><a href="https://docs.digitalearthafrica.org/en/latest/data_specs/ALOS_PALSAR_annual_mosaic_specs.html">ALOS-PALSAR</a> SAR L-band images from 2007-2010 and 2015-2022 (<code>ALOS-PALSAR-MOSAIC</code>)</p></li>
+<li><p>Monthly <a href="https://docs.digitalearthafrica.org/en/latest/data_specs/NDVI_Anomaly_specs.html">NDVI mean and anomalies</a> (<code>NDVI-ANOMALY</code>)</p></li>
+<li><p><a href="https://docs.digitalearthafrica.org/en/latest/data_specs/CHIRPS_specs.html">Monthly and daily rainfall data</a> from the Climate Hazards Group InfraRed Precipitation with Station (CHIRPS) data initiative (<code>RAINFALL-CHIRPS-MONTHLY</code> &amp; <code>RAINFALL-CHIRPS-DAILY</code>)</p></li>
+<li><p>Copernicus <a href="https://docs.digitalearthafrica.org/en/latest/data_specs/COP_DEM_specs.html">digital elevation model</a> in 30-m resolution (<code>COP-DEM-30</code>)</p></li>
+<li><p>Annual <a href="https://docs.digitalearthafrica.org/en/latest/data_specs/GeoMAD_specs.html">geomedian composite images</a> for Landsat-8 and Landsat-9 combined] (<code>GM-LS8-LS9-ANNUAL</code>)</p></li>
+<li><p>Annual <a href="https://docs.digitalearthafrica.org/en/latest/data_specs/GeoMAD_specs.html">geomedian composite images</a> for Sentinel-2 (<code>GM-S2-ANNUAL</code>)</p></li>
+<li><p>Rolling three-month <a href="https://docs.digitalearthafrica.org/en/latest/data_specs/GeoMAD_specs.html">geomedian composite images</a> for Sentinel-2 (<code>GM-S2-ROLLING</code>)</p></li>
+<li><p>Semi-annual (six monthly) <a href="https://docs.digitalearthafrica.org/en/latest/data_specs/GeoMAD_specs.html">geomedian composite images</a> for Sentinel-2 (<code>GM-S2-SEMIANNUAL</code>)</p></li>
+</ul>
+<p>Digital Earth Africa platforms are built on the Open Data Cube which uses Python for many applications. However, the <code>sits</code> package builds upon the <code>rstac</code> package which integrates with Digital Earth Africa through Spatio-Temporal Asset Catalogs (STAC). Digital Earth Africa data can therefore be loaded into cubes and other forms amenable to analysis in R.</p>
+<p>The analytical component of the chapter begins with loading packages required for the crop type mapping workflow.</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/e-sensing/sits/">sits</a></span><span class="op">)</span>           <span class="co"># satellite image time series package</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/">sf</a></span><span class="op">)</span>             <span class="co"># simple features package for spatial data</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/apache/arrow/">arrow</a></span><span class="op">)</span>          <span class="co"># back-end C++ integration</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://brazil-data-cube.github.io/rstac/">rstac</a></span><span class="op">)</span>          <span class="co"># load spatial data with STAC </span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/stars/">stars</a></span><span class="op">)</span>          <span class="co"># spatiotemporal arrays, raster and vector data </span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://rspatial.org/">terra</a></span><span class="op">)</span>          <span class="co"># spatial data analysis</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/r-tmap/tmap">tmap</a></span><span class="op">)</span>           <span class="co"># thematic maps</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span>      <span class="co"># collection of data management packages</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="digital-earth-africa-geomedians-geomads" class="level2" data-number="18.4"><h2 data-number="18.4" class="anchored" data-anchor-id="digital-earth-africa-geomedians-geomads">
+<span class="header-section-number">18.4</span> Digital Earth Africa Geomedians (GeoMADs)</h2>
+<p>This chapter will focus on the application of cloud-free geometric median (geomedian) composite images as input data for agricultural mapping. Surface reflectance data collected at regular intervals are often used as input data in machine learning workflows for agricultural mapping such as cropland extent mapping and crop-type mapping. However, single observations can be affected by cloud or other interferences, and are subject to noise. Cloud-free geomedian composite images preserve the high-dimensional relationships between spectral bands and provide a single, high-quality observation for each band over a given period <span class="citation" data-cites="Dale2017"><a href="#ref-Dale2017" role="doc-biblioref">[1]</a></span>. This reduces the dimensionality of the data and therefore the computational burden of running classification algorithms.</p>
+<p><a href="https://docs.digitalearthafrica.org/en/latest/data_specs/GeoMAD_specs.html">Digital Earth Africa’s geomedian products</a> include measures of temporal variation as median absolute deviations (MADs) <span class="citation" data-cites="Dale2018"><a href="#ref-Dale2018" role="doc-biblioref">[2]</a></span>. They are effectively a measure of temporal variation over the period covered by the geomedian. The MADs are therefore useful for change detection, or highlighting land classes undergoing frequent change, such as cropland subjected to patterns of cultivation, intense crop growth, and harvest. The combination of the geomedian and MADs is called the GeoMAD. MADs available in the Digital Earth Africa GeoMADs are the:</p>
+<ul>
+<li>Spectral Median Absolute Deviation (SMAD)</li>
+<li>Euclidean Median Absolute Deviation (EMAD)</li>
+<li>Bray-Curtis Median Absolute Deviation (BCMAD)</li>
+</ul>
+<p>Geomedians have been a popular input dataset for machine learning classification workflows. For example, Digital Earth Africa’s <a href="https://docs.digitalearthafrica.org/en/latest/data_specs/Cropland_extent_specs.html">cropland extent map</a> is derived from the Sentinel-2 semiannual Geomedians <span class="citation" data-cites="Burton2022"><a href="#ref-Burton2022" role="doc-biblioref">[3]</a></span>. The Digital Earth Africa geomedians have also been used for crop type mapping, irrigated area mapping, and monitoring vegetation dynamics <span class="citation" data-cites="Liu2024 Wellington2021 Weitkamp2023a Weitkamp2023b Wardle2022"><a href="#ref-Liu2024" role="doc-biblioref">[4]</a>–<a href="#ref-Wardle2022" role="doc-biblioref">[8]</a></span>.</p>
+</section><section id="crop-type-mapping-training-data" class="level2" data-number="18.5"><h2 data-number="18.5" class="anchored" data-anchor-id="crop-type-mapping-training-data">
+<span class="header-section-number">18.5</span> Crop type mapping training data</h2>
+<p>Supervised classification requires reference data to train and validate models. For crop type mapping, this generally means spatial information collected from agricultural surveys is used. Field surveys are resource intensive and any field collected data is valuable, though may need manipulation before it is used in classification and mapping workflows.</p>
+<p>There are several principles and guidelines that should be followed when collecting reference data for crop type mapping or assessing its value. The Group on Earth Observations, through the Joint Assessment for Crop Assessment and Monitoring, have published <a href="https://jecam.org/wp-content/uploads/2018/10/JECAM_Guidelines_for_Field_Data_Collection_v1_0.pdf">guidelines for cropland and crop type definition and field data collection</a> <span class="citation" data-cites="Defourny2014"><a href="#ref-Defourny2014" role="doc-biblioref">[9]</a></span>. The TetraTech Enabling Crop Analytics At Scale initiative have <a href="https://cropanalytics.net/wp-content/uploads/2021/09/ODK-Agriculture-User-Guide-v0.4-1.pdf">published guidelines for the collection of reference crop type data using ODK software</a>. There are also numerous academic materials exploring various sampling techniques for crop type mapping field data collection <span class="citation" data-cites="Fowler2020 Chenxi2022"><a href="#ref-Fowler2020" role="doc-biblioref">[10]</a>, <a href="#ref-Chenxi2022" role="doc-biblioref">[11]</a></span>.</p>
+<p>This chapter demonstrates the use of open-source reference data. In this case, data has been identified from the ESA World Cereal Reference Data Module <span class="citation" data-cites="Karanam2024"><a href="#ref-Karanam2024" role="doc-biblioref">[12]</a></span>. Specifically, a collection of field data from the Muvumba River district of Rwanda in 2020 has been used. The field data was collected as part of the <a href="https://www.fao.org/in-action/remote-sensing-for-water-productivity/en/">FAO WaPOR</a> program. Alternative sources of field data include <a href="https://source.coop/">Source Cooperative</a>, the <a href="https://cmr.earthdata.nasa.gov/search/">EarthData Common Metadata Repository</a>, and the <a href="https://collections.eurodatacube.com/">Euro Data Cube</a>. Institutions and users may also have their own reference datasets.</p>
+<section id="load-training-data" class="level3" data-number="18.5.1"><h3 data-number="18.5.1" class="anchored" data-anchor-id="load-training-data">
+<span class="header-section-number">18.5.1</span> Load training data</h3>
+<p>The Muvumba data used in this workflow is stored as a <code>.geoparquet</code> file. The code chunk below downloads the file into a folder called ‘data’, stored within the local directory.</p>
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/files2.html">dir.create</a></span><span class="op">(</span><span class="st">'data/ct_digital_earth_africa'</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/download.file.html">download.file</a></span><span class="op">(</span></span>
+<span>    url <span class="op">=</span> <span class="st">"https://ewocstorage.blob.core.windows.net/public/2020_rw_wapor_1_point_111/2020_RWA_FAO-WAPOR-1_POINT_111.geoparquet"</span>, </span>
+<span>    method <span class="op">=</span> <span class="st">"curl"</span>, </span>
+<span>    destfile <span class="op">=</span> <span class="st">'data/ct_digital_earth_africa/2020_rwa.geoparquet'</span></span>
+<span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Following the download of the the <code>.geoparquet</code> file, the data must be read into R to allow further analysis. The <code>arrow</code> package is used to handle the <code>.geoparquet</code> and the data is read as a simple features object.</p>
+<p>The data can then be inspected. It contains 1,143 observations and 31 variables which include the spatial location, crop type, irrigation status and type, and comments on crop condition.</p>
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">rwa_2020</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_as_sf.html">st_as_sf</a></span><span class="op">(</span></span>
+<span>    <span class="fu"><a href="https://arrow.apache.org/docs/r/reference/read_parquet.html">read_parquet</a></span><span class="op">(</span><span class="st">'data/ct_digital_earth_africa/2020_rwa.geoparquet'</span><span class="op">)</span>,</span>
+<span>    coords <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"X (Longitu"</span>, <span class="st">"Y (Latitud"</span><span class="op">)</span>,</span>
+<span>    crs <span class="op">=</span> <span class="fl">4326</span></span>
+<span><span class="op">)</span></span>
+<span><span class="va">rwa_2020</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Simple feature collection with 1143 features and 30 fields
+Geometry type: POINT
+Dimension:     XY
+Bounding box:  xmin: 30.22792 ymin: -1.650888 xmax: 30.46668 ymax: -1.051955
+Geodetic CRS:  WGS 84
+# A tibble: 1,143 × 31
+   Id    Date   `Z (Altitud` `Location A` `Pictures L` `Land cover` `Type of Cr`
+ * &lt;chr&gt; &lt;chr&gt;         &lt;dbl&gt;        &lt;dbl&gt; &lt;chr&gt;        &lt;chr&gt;        &lt;chr&gt;       
+ 1 3022  2023-…        1367.          3.6 https://dri… cropland     maize       
+ 2 3106  2024-…        1296.          4.5 https://dri… cropland     vegetables  
+ 3 3106  2024-…        1293           4.7 https://dri… cropland     vegetables  
+ 4 3107  2024-…        1355.          2.9 https://dri… cropland     maize       
+ 5 3107  2024-…        1358.          2.1 https://dri… cropland     maize       
+ 6 3107  2024-…        1355.          2.9 https://dri… cropland     maize       
+ 7 3107  2024-…        1358.          2.1 https://dri… cropland     maize       
+ 8 3114  2025-…        1350           2.3 https://dri… cropland     rice        
+ 9 3114  2025-…        1350           2.3 https://dri… cropland     rice        
+10 3115  2025-…        1326.          3   https://dri… cropland     rice        
+# ℹ 1,133 more rows
+# ℹ 24 more variables: `Water sour` &lt;chr&gt;, Irrigation &lt;chr&gt;,
+#   `Field size` &lt;chr&gt;, `Canopy cov` &lt;chr&gt;, Note &lt;chr&gt;, PARENT_KEY &lt;chr&gt;,
+#   KEY &lt;chr&gt;, ValidityTi &lt;chr&gt;, layer &lt;chr&gt;, sampleID &lt;chr&gt;,
+#   ewoc_code &lt;int64&gt;, valid_time &lt;dttm&gt;, sample_id &lt;chr&gt;,
+#   irrigation_status &lt;int&gt;, extract &lt;int&gt;, quality_score_lc &lt;int&gt;,
+#   quality_score_ct &lt;int&gt;, ` h3_l3_cell` &lt;chr&gt;, …</code></pre>
+</div>
+</div>
+<p>The reference data can be plotted in space using <code>ggplot</code>. This provides an indication of the spatial distribution of different crop types. Several lines or transects are easily observable in the data, which could be assumed to relate to access points such as roads or rivers.</p>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">rwa_2020</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html">geom_sf</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>col<span class="op">=</span><span class="va">`Type of Cr`</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="ct_digital_earth_africa_files/figure-html/plotrwa-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The distribution of crop types can also be quickly assessed. This shows that a very large proportion of observations are maize, with rice, bananas, and vegetables also well represented. There are very few samples for some classes such as sugarcane and sweet potatoes, which will be dealt with later. This step also confirms that the classes look acceptable for now with no duplicates or any other concerns.</p>
+<div class="cell">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rspatial.github.io/terra/reference/summary.html">summary</a></span><span class="op">(</span><span class="fu"><a href="https://rspatial.github.io/terra/reference/is.bool.html">as.factor</a></span><span class="op">(</span><span class="va">rwa_2020</span><span class="op">$</span><span class="va">`Type of Cr`</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>        banana          beans        cassava          fruit  irishpotatoes 
+           126             35             15             27             13 
+         maize         Others           rice        sorghum       soybeans 
+           490             10            172             56             34 
+     sugarcane sweet_potatoes     vegetables           NA's 
+             4              7            119             35 </code></pre>
+</div>
+</div>
+</section></section><section id="digital-earth-africa-data" class="level2" data-number="18.6"><h2 data-number="18.6" class="anchored" data-anchor-id="digital-earth-africa-data">
+<span class="header-section-number">18.6</span> Digital Earth Africa data</h2>
+<p>Now that the reference data has been loaded and inspected, satellite data can be loaded to serve as input data in the classification. The code chunk below loads the Digital Earth Africa Sentinel-2 GeoMAD including all surface reflectance bands and the SMAD band. Measurements and further product information can be found the in <a href="https://explorer.digitalearth.africa/products/gm_s2_annual#measurements">DE Africa Explorer</a> and the <a href="https://docs.digitalearthafrica.org/en/latest/data_specs/GeoMAD_specs.html">product specifications</a>.</p>
+<p>The GeoMAD is loaded for the year 2020 because that’s when the reference data was collected. The region of interest (roi) is set as the bounding box of the reference data collection. <code>EPSG:6933</code> is the native coordinate reference system for the GeoMADs and most Digital Earth Africa products, so it’s used for loading the cube.</p>
+<div class="cell">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dea_s2_cube</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/sits/man/sits_cube.html">sits_cube</a></span><span class="op">(</span></span>
+<span>    source <span class="op">=</span> <span class="st">"DEAFRICA"</span>,</span>
+<span>    collection <span class="op">=</span> <span class="st">"GM-S2-ANNUAL"</span>,</span>
+<span>    roi <span class="op">=</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_transform.html">st_transform</a></span><span class="op">(</span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_as_sfc.html">st_as_sfc</a></span><span class="op">(</span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_bbox.html">st_bbox</a></span><span class="op">(</span><span class="va">rwa_2020</span><span class="op">)</span><span class="op">)</span>, <span class="st">"EPSG:6933"</span><span class="op">)</span>,</span>
+<span>    bands <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"SMAD"</span>, <span class="st">"B02"</span>, <span class="st">"B03"</span>, <span class="st">"B04"</span>, <span class="st">"B05"</span>, <span class="st">"B06"</span>, <span class="st">"B07"</span>, <span class="st">"B08"</span>, <span class="st">"B11"</span><span class="op">)</span>,</span>
+<span>    start_date <span class="op">=</span> <span class="st">"2020-01-01"</span>,</span>
+<span>    end_date <span class="op">=</span> <span class="st">"2020-12-30"</span>,</span>
+<span>    crs <span class="op">=</span> <span class="st">"EPSG:6933"</span>,</span>
+<span>    progress <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Plotting the Sentinel-2 GeoMAD in false colour shows the high-quality, cloud-free nature of the composite image. Plotting the near infrared band (<code>B08</code>) in the red channel means that areas covered with vegetation appear deep red and water appears blue or black.</p>
+<p>Data cubes loaded with the <code>sits</code> package are stored in tiles. In this case, the region of interest has resulted in two tiles being loaded, and the second tile is plotted.</p>
+<div class="cell">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rspatial.github.io/terra/reference/plot.html">plot</a></span><span class="op">(</span><span class="va">dea_s2_cube</span>, red <span class="op">=</span> <span class="st">"B08"</span>, blue <span class="op">=</span> <span class="st">"B04"</span>, green <span class="op">=</span> <span class="st">"B03"</span>, tile <span class="op">=</span> <span class="va">dea_s2_cube</span><span class="op">$</span><span class="va">tile</span><span class="op">[[</span><span class="fl">2</span><span class="op">]</span><span class="op">]</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/ct_digital_earth_africa/falsecol.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>False colour image of Digital Earth Africa Sentinel-2 Geomedian over Rwanda.</figcaption></figure>
+</div>
+</div>
+</div>
+<section id="create-a-mosaic" class="level3" data-number="18.6.1"><h3 data-number="18.6.1" class="anchored" data-anchor-id="create-a-mosaic">
+<span class="header-section-number">18.6.1</span> Create a mosaic</h3>
+<p>As this workflow is producing a crop type map, the surface reflectance data will be masked to cropland areas only. There are numerous ways this can be achieved. In this case, the masking will be conducted with functions from the <code>terra</code> package.</p>
+<p>First, a mosaic is created by fusing the tiles in the geomedian data cube. This is plotted in true colour and provides an indication of the spatial extent of the analysis.</p>
+<div class="cell">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">mosaic</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/sits/man/sits_mosaic.html">sits_mosaic</a></span><span class="op">(</span></span>
+<span>  cube <span class="op">=</span> <span class="va">dea_s2_cube</span>,</span>
+<span>  crs <span class="op">=</span> <span class="st">"EPSG:6933"</span>,</span>
+<span>  output_dir <span class="op">=</span> <span class="st">"data/ct_digital_earth_africa"</span>,</span>
+<span>  multicores <span class="op">=</span> <span class="fl">2</span>,</span>
+<span>  progress <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rspatial.github.io/terra/reference/plot.html">plot</a></span><span class="op">(</span><span class="va">mosaic</span>, red <span class="op">=</span> <span class="st">"B04"</span>, blue <span class="op">=</span> <span class="st">"B03"</span>, green <span class="op">=</span> <span class="st">"B02"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/ct_digital_earth_africa/sits_mosaic.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>True-colour image of Digital Earth Africa Sentinel-2 Geomedian for an area of Rwanda</figcaption></figure>
+</div>
+</div>
+</div>
+<p>Since the mosaic images are stored as <code>.tif</code> files in the data directory, they can be loaded as raster objects for application in the <code>terra</code> package.</p>
+<div class="cell">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">mosaic_files</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.files.html">list.files</a></span><span class="op">(</span><span class="st">'data/ct_digital_earth_africa'</span>, pattern<span class="op">=</span><span class="st">"*MOSAIC*"</span>, full.names <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">rast_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">mosaic_files</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">rast_list</span><span class="op">[</span><span class="va">i</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rspatial.github.io/terra/reference/rast.html">rast</a></span><span class="op">(</span><span class="va">mosaic_files</span><span class="op">[</span><span class="va">i</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="va">mosaic_rast</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rspatial.github.io/terra/reference/rast.html">rast</a></span><span class="op">(</span><span class="va">rast_list</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section></section><section id="cropland-extent-map" class="level2" data-number="18.7"><h2 data-number="18.7" class="anchored" data-anchor-id="cropland-extent-map">
+<span class="header-section-number">18.7</span> Cropland Extent Map</h2>
+<section id="cropland-extent-loading-with-rstac" class="level3" data-number="18.7.1"><h3 data-number="18.7.1" class="anchored" data-anchor-id="cropland-extent-loading-with-rstac">
+<span class="header-section-number">18.7.1</span> Cropland extent loading with rstac</h3>
+<p>The surface reflectance data in the Sentinel-2 GeoMAD will be masked to cropland using the <a href="https://docs.digitalearthafrica.org/en/latest/data_specs/Cropland_extent_specs.html">Digital Earth Africa cropland extent map</a>. This map itself was produced using GeoMADs. In a study comparing the accuracy of 11 open source land cover maps for identifying cropland in Sub-Saharan Africa, the Digital Earth Africa cropland extent maps was “the map that most frequently has the highest score across all metrics and countries” <span class="citation" data-cites="Kerner2024"><a href="#ref-Kerner2024" role="doc-biblioref">[13]</a></span>. However, it was noted that there was low recall in some locations. The <a href="https://docs.digitalearthafrica.org/en/latest/data_specs/Cropland_extent_specs.html">product documentation</a> provides further information on accuracy assessment. In this workflow, it’s also convenient that the geometric specifications of the cropland extent map match the GeoMAD given its derivation from that product.</p>
+<p>The code chunk below uses <code>rstac</code> functions (on which the <code>sits</code> package is built) to load the Digital Earth Africa cropland extent map. Search the spatiotemporal asset catalog (STAC) returns two items in this case. They are tiles which match the original tiles in the GeoMAD data cube.</p>
+<div class="cell">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">s_obj</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://brazil-data-cube.github.io/rstac/reference/stac.html">stac</a></span><span class="op">(</span><span class="st">"https://explorer.digitalearth.africa/stac"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">bbox</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_bbox.html">st_bbox</a></span><span class="op">(</span><span class="va">rwa_2020</span><span class="op">)</span></span>
+<span><span class="va">area_of_interest</span> <span class="op">=</span> <span class="fu"><a href="https://brazil-data-cube.github.io/rstac/reference/cql2_helpers.html">cql2_bbox_as_geojson</a></span><span class="op">(</span><span class="va">bbox</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">time_range</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://brazil-data-cube.github.io/rstac/reference/cql2_helpers.html">cql2_interval</a></span><span class="op">(</span><span class="st">"2019-01-01"</span>, <span class="st">"2020-01-01"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">stac_items</span> <span class="op">&lt;-</span> <span class="va">s_obj</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://brazil-data-cube.github.io/rstac/reference/ext_filter.html">ext_filter</a></span><span class="op">(</span></span>
+<span>    <span class="va">collection</span> <span class="op">==</span> <span class="st">"crop_mask"</span> <span class="op">&amp;&amp;</span></span>
+<span>      <span class="fu">t_intersects</span><span class="op">(</span><span class="va">datetime</span>, <span class="op">{</span><span class="op">{</span><span class="va">time_range</span><span class="op">}</span><span class="op">}</span><span class="op">)</span> <span class="op">&amp;&amp;</span></span>
+<span>      <span class="fu">s_intersects</span><span class="op">(</span><span class="va">geometry</span>, <span class="op">{</span><span class="op">{</span><span class="va">area_of_interest</span><span class="op">}</span><span class="op">}</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://brazil-data-cube.github.io/rstac/reference/request.html">post_request</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">stac_items</span> <span class="op">&lt;-</span> <span class="va">stac_items</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://brazil-data-cube.github.io/rstac/reference/assets_functions.html">assets_select</a></span><span class="op">(</span>asset_names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"mask"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">sf</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://brazil-data-cube.github.io/rstac/reference/items_functions.html">items_as_sf</a></span><span class="op">(</span><span class="va">stac_items</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">stac_items</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>###Items
+- matched feature(s): 2
+- features (2 item(s) / 0 not fetched):
+  - 98d720c0-4c72-5f0e-8dda-4bf11a216296
+  - db1bbdcb-039b-5158-b7d5-b1f55271b1b8
+- assets: mask
+- item's fields: 
+assets, bbox, collection, geometry, id, links, properties, stac_extensions, stac_version, type</code></pre>
+</div>
+</div>
+<p>The STAC items can be loaded easily as <code>stars</code> objects then the tiles can be merged into a mosaic and plotted. The output shows that excluded areas are coded <code>NA</code>, non-crop is coded <code>0</code>, and crop areas are coded <code>1</code>, as per the product definition. A large portion of the region of interest is cropland.</p>
+<div class="cell">
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">crop_mask</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">stac_items</span><span class="op">$</span><span class="va">features</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">crop_mask</span><span class="op">[[</span><span class="va">i</span><span class="op">]</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">stac_items</span><span class="op">$</span><span class="va">features</span><span class="op">[[</span><span class="va">i</span><span class="op">]</span><span class="op">]</span> <span class="op">|&gt;</span> </span>
+<span>      <span class="fu"><a href="https://brazil-data-cube.github.io/rstac/reference/assets_functions.html">assets_url</a></span><span class="op">(</span>append_gdalvsi <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>      <span class="fu"><a href="https://r-spatial.github.io/stars/reference/read_stars.html">read_stars</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>      <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_crs.html">st_set_crs</a></span><span class="op">(</span><span class="st">'+proj=cea +lat_ts=30 +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs +type=crs'</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="va">crop_mask_mos</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/stars/reference/st_mosaic.html">st_mosaic</a></span><span class="op">(</span><span class="va">crop_mask</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span>, <span class="va">crop_mask</span><span class="op">[[</span><span class="fl">2</span><span class="op">]</span><span class="op">]</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rspatial.github.io/terra/reference/plot.html">plot</a></span><span class="op">(</span><span class="va">crop_mask_mos</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/ct_digital_earth_africa/loadstac.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Cropland extent map from Digital Earth Africa for an area of Rwanda</figcaption></figure>
+</div>
+</div>
+</div>
+</section><section id="mask-the-geomad-to-cropland" class="level3" data-number="18.7.2"><h3 data-number="18.7.2" class="anchored" data-anchor-id="mask-the-geomad-to-cropland">
+<span class="header-section-number">18.7.2</span> Mask the GeoMAD to cropland</h3>
+<p>The crop mask mosaic is written to a local directory so it can then be loaded as a <code>terra</code> object and used to mask the GeoMAD mosaic. This is achieved using the <code>terra</code> function <code>mask</code>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">crop_mask_local</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/stars/reference/write_stars.html">write_stars</a></span><span class="op">(</span></span>
+<span>    <span class="va">crop_mask_mos</span>, </span>
+<span>    <span class="st">"data/ct_digital_earth_africa/crop_mask_20190101.tif"</span>, </span>
+<span>    overwrite<span class="op">=</span><span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">cm_rast</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rspatial.github.io/terra/reference/rast.html">rast</a></span><span class="op">(</span><span class="st">"data/ct_digital_earth_africa/crop_mask_20190101.tif"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">mosaic_rast_masked</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rspatial.github.io/terra/reference/mask.html">mask</a></span><span class="op">(</span><span class="va">mosaic_rast</span>, <span class="va">cm_rast</span>, maskvalues <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="cn">NA</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The masked surface reflectance data is exported to a local directory so a data cube can be built from it. A <code>sits</code> cube requires single band <code>.tifs</code>. Arranging the data in tiles is also helpful for parallel computing and efficiency when conducting classification. For these reasons, the <code>makeTiles</code> function from <code>terra</code> is used to revert the mosaic into original tile configuration. A nested for loop is then used to export <code>.tif</code> files for each band of each tile.</p>
+<p>These masking steps can be considered a ‘work around’, and there are several other ways the masking could be conducted including by maintaining the tiled structure of both the GeoMAD and cropland extent data. In this case, the steps used help to visualise the process undertaken for the purposes of demonstration, and understand how data is stored and transferred between different objects.</p>
+<div class="cell">
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/files2.html">dir.create</a></span><span class="op">(</span><span class="st">'data/ct_digital_earth_africa/tiles'</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/files2.html">dir.create</a></span><span class="op">(</span><span class="st">'data/ct_digital_earth_africa/masked'</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rspatial.github.io/terra/reference/makeTiles.html">makeTiles</a></span><span class="op">(</span></span>
+<span>    <span class="va">mosaic_rast_masked</span>, </span>
+<span>    <span class="fu"><a href="https://rspatial.github.io/terra/reference/project.html">project</a></span><span class="op">(</span></span>
+<span>        <span class="fu"><a href="https://rspatial.github.io/terra/reference/vect.html">vect</a></span><span class="op">(</span><span class="va">sf</span><span class="op">)</span>, <span class="st">'+proj=cea +lat_ts=30 +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs +type=crs'</span></span>
+<span>    <span class="op">)</span>, </span>
+<span>    filename <span class="op">=</span> <span class="st">"data/ct_digital_earth_africa/tiles/mosaic_rast_tile_.tif"</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">x</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.files.html">list.files</a></span><span class="op">(</span><span class="st">'data/ct_digital_earth_africa/tiles'</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rspatial.github.io/terra/reference/dimensions.html">nlyr</a></span><span class="op">(</span><span class="va">mosaic_rast_masked</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>        <span class="fu"><a href="https://rspatial.github.io/terra/reference/writeRaster.html">writeRaster</a></span><span class="op">(</span></span>
+<span>            <span class="fu"><a href="https://rspatial.github.io/terra/reference/as.list.html">as.list</a></span><span class="op">(</span><span class="fu"><a href="https://rspatial.github.io/terra/reference/rast.html">rast</a></span><span class="op">(</span></span>
+<span>                <span class="fu"><a href="https://rdrr.io/r/base/list.files.html">list.files</a></span><span class="op">(</span><span class="st">'data/ct_digital_earth_africa/tiles'</span>, full.names <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">[</span><span class="va">x</span><span class="op">]</span></span>
+<span>            <span class="op">)</span><span class="op">)</span><span class="op">[[</span><span class="va">i</span><span class="op">]</span><span class="op">]</span>,</span>
+<span>            <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span></span>
+<span>                <span class="st">"data/ct_digital_earth_africa/masked/"</span>,</span>
+<span>                <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_sub.html">str_sub</a></span><span class="op">(</span><span class="fu"><a href="https://rspatial.github.io/terra/reference/names.html">names</a></span><span class="op">(</span><span class="va">mosaic_rast_masked</span><span class="op">)</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, <span class="fl">1</span>, <span class="fl">15</span><span class="op">)</span>,</span>
+<span>                <span class="va">dea_s2_cube</span><span class="op">$</span><span class="va">tile</span><span class="op">[</span><span class="va">x</span><span class="op">]</span>,</span>
+<span>                <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_sub.html">str_sub</a></span><span class="op">(</span><span class="fu"><a href="https://rspatial.github.io/terra/reference/names.html">names</a></span><span class="op">(</span><span class="va">mosaic_rast_masked</span><span class="op">)</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, <span class="fl">22</span><span class="op">)</span>,</span>
+<span>                <span class="st">".tif"</span>,</span>
+<span>                sep <span class="op">=</span> <span class="st">""</span></span>
+<span>            <span class="op">)</span>,</span>
+<span>            overwrite <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span>        <span class="op">)</span></span>
+<span>    <span class="op">}</span></span>
+<span><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="create-a-new-data-cube" class="level3" data-number="18.7.3"><h3 data-number="18.7.3" class="anchored" data-anchor-id="create-a-new-data-cube">
+<span class="header-section-number">18.7.3</span> Create a new data cube</h3>
+<p>A new data cube needs to be created which refers to the masked surface reflectance data. This cube will be created from local files, so the relevant directory is specified in the <code>sits_cube</code> function. The <code>parse_info</code> argument specifies how the filenames can be read. Other parameters like the period and region of interest are the same as the original GeoMAD data cube.</p>
+<div class="cell">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dea_s2_masked</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/sits/man/sits_cube.html">sits_cube</a></span><span class="op">(</span></span>
+<span>  source <span class="op">=</span> <span class="st">"DEAFRICA"</span>,</span>
+<span>  collection <span class="op">=</span> <span class="st">"GM-S2-ANNUAL"</span>,</span>
+<span>  data_dir <span class="op">=</span> <span class="st">"data/ct_digital_earth_africa/masked"</span>,</span>
+<span>  bands <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"SMAD"</span>, <span class="st">"B02"</span>, <span class="st">"B03"</span>, <span class="st">"B04"</span>, <span class="st">"B05"</span>, <span class="st">"B06"</span>, <span class="st">"B07"</span>, <span class="st">"B08"</span>, <span class="st">"B11"</span><span class="op">)</span>,</span>
+<span>  start_date <span class="op">=</span> <span class="st">"2020-01-01"</span>,</span>
+<span>  end_date <span class="op">=</span> <span class="st">"2020-12-30"</span>,</span>
+<span>  roi <span class="op">=</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_transform.html">st_transform</a></span><span class="op">(</span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_as_sfc.html">st_as_sfc</a></span><span class="op">(</span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_bbox.html">st_bbox</a></span><span class="op">(</span><span class="va">rwa_2020</span><span class="op">)</span><span class="op">)</span>, <span class="st">"EPSG:6933"</span><span class="op">)</span>,</span>
+<span>  crs <span class="op">=</span> <span class="st">"EPSG:6933"</span>,</span>
+<span>  parse_info <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"satellite"</span>, <span class="st">"sensor"</span>, <span class="st">"tile"</span>, <span class="st">"date"</span>, <span class="st">"band"</span><span class="op">)</span>,</span>
+<span>  progress <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Plotting the masked data cube in true colour shows the effect of masking. Now, the surface reflectance data relates only to cropland (in accordance with the Digital Earth Africa cropland extent map), and crop type mapping can proceed.</p>
+<div class="cell">
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rspatial.github.io/terra/reference/plot.html">plot</a></span><span class="op">(</span><span class="va">dea_s2_masked</span>, red <span class="op">=</span> <span class="st">"B04"</span>, blue <span class="op">=</span> <span class="st">"B03"</span>, green <span class="op">=</span> <span class="st">"B02"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/ct_digital_earth_africa/sitscube_masked_plot.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section></section><section id="train-classification-model" class="level2" data-number="18.8"><h2 data-number="18.8" class="anchored" data-anchor-id="train-classification-model">
+<span class="header-section-number">18.8</span> Train classification model</h2>
+<section id="reduce-class-imbalance" class="level3" data-number="18.8.1"><h3 data-number="18.8.1" class="anchored" data-anchor-id="reduce-class-imbalance">
+<span class="header-section-number">18.8.1</span> Reduce class imbalance</h3>
+<p>Both the reference data and input data are now in place, so model training can proceed. However, some further cleaning and balancing of data may be required. This includes dropping <code>NA</code> values from the reference data, completed in the code chunk below. The <code>sits_get_data</code> function is used to collect values from the GeoMAD that relate to each observation from the reference data.</p>
+<p>This case is a bit unusual because there is only one time step, the year of 2020, in the ‘time series’. This is because one of the purposes of the GeoMAD composite is to preserve high-dimensional information in a composite image through the use of geometric median values and the MAD bands. This reduces the volume of data and computational burden necessary for classification. Beyond this example, users may consider the three-month rolling or semiannual <a href="https://docs.digitalearthafrica.org/en/latest/data_specs/GeoMAD_specs.html">GeoMADs</a> if a richer time series is desired.</p>
+<p>The code chunk below removes some masking objects that are no longer required from memory with the <code><a href="https://rdrr.io/r/base/rm.html">rm()</a></code> function.</p>
+<p>Once <code>NA</code> values are removed, there are 13 crop type classes of which 47% are maize. The reference data is quite unbalanced with numerous classes each accounting for less than 5% of the total data volume.</p>
+<div class="cell">
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/rm.html">rm</a></span><span class="op">(</span><span class="va">crop_class</span>, <span class="va">crop_mask_local</span>, <span class="va">crop_mask</span>, <span class="va">crop_mask_mos</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">rwa_2020_crops</span> <span class="op">&lt;-</span> <span class="va">rwa_2020</span> <span class="op">|&gt;</span> </span>
+<span>                    <span class="fu"><a href="https://tidyr.tidyverse.org/reference/drop_na.html">drop_na</a></span><span class="op">(</span><span class="st">"Type of Cr"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">tseries</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/sits/man/sits_get_data.html">sits_get_data</a></span><span class="op">(</span></span>
+<span>  cube <span class="op">=</span> <span class="va">dea_s2_masked</span>,</span>
+<span>  label_attr <span class="op">=</span> <span class="st">"Type of Cr"</span>,</span>
+<span>  samples <span class="op">=</span> <span class="va">rwa_2020_crops</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rspatial.github.io/terra/reference/summary.html">summary</a></span><span class="op">(</span><span class="va">tseries</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 13 × 3
+   label          count    prop
+   &lt;chr&gt;          &lt;int&gt;   &lt;dbl&gt;
+ 1 banana           107 0.128  
+ 2 beans             22 0.0264 
+ 3 cassava           14 0.0168 
+ 4 fruit             27 0.0324 
+ 5 irishpotatoes      7 0.00839
+ 6 maize            392 0.470  
+ 7 Others             8 0.00959
+ 8 rice              81 0.0971 
+ 9 sorghum           52 0.0624 
+10 soybeans          18 0.0216 
+11 sugarcane          3 0.00360
+12 sweet_potatoes     6 0.00719
+13 vegetables        97 0.116  </code></pre>
+</div>
+</div>
+<p>The <code>sits</code> function <a href="https://rdrr.io/cran/sits/man/sits_reduce_imbalance.html"><code>reduce_imbalance</code></a> makes corrections to imbalanced training data by over and under sampling. Self organised mapping (SOM) is used for under sampling and synthetic minority oversampling technique (SMOTE) is used for over sampling <span class="citation" data-cites="Chawla2002"><a href="#ref-Santos2021a" role="doc-biblioref">[15]</a></span>. Values are entered for the number of samples to over and under sample.</p>
+<p>The result of the imbalance reduction is returned in the output and shows that each class accounts for at least 5% of the observations. If there was a particular interest in mapping uncommon crops, there could be further balance correction undertaken. Several methods have been proposed and investigated for dealing with class imbalance problems in crop type mapping <span class="citation" data-cites="Waldner2019"><a href="#ref-Waldner2019" role="doc-biblioref">[16]</a></span>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">balanced_samples</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/sits/man/sits_reduce_imbalance.html">sits_reduce_imbalance</a></span><span class="op">(</span></span>
+<span>    samples <span class="op">=</span> <span class="va">tseries</span>,</span>
+<span>    n_samples_over <span class="op">=</span> <span class="fl">50</span>,</span>
+<span>    n_samples_under <span class="op">=</span> <span class="fl">150</span>,</span>
+<span>    multicores <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Show summary of balanced samples</span></span>
+<span><span class="fu"><a href="https://rspatial.github.io/terra/reference/summary.html">summary</a></span><span class="op">(</span><span class="va">balanced_samples</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 13 × 3
+   label          count   prop
+   &lt;chr&gt;          &lt;int&gt;  &lt;dbl&gt;
+ 1 banana           107 0.115 
+ 2 beans             50 0.0536
+ 3 cassava           50 0.0536
+ 4 fruit             50 0.0536
+ 5 irishpotatoes     50 0.0536
+ 6 maize            196 0.210 
+ 7 Others            50 0.0536
+ 8 rice              81 0.0868
+ 9 sorghum           52 0.0557
+10 soybeans          50 0.0536
+11 sugarcane         50 0.0536
+12 sweet_potatoes    50 0.0536
+13 vegetables        97 0.104 </code></pre>
+</div>
+</div>
+</section><section id="train-random-forest-model" class="level3" data-number="18.8.2"><h3 data-number="18.8.2" class="anchored" data-anchor-id="train-random-forest-model">
+<span class="header-section-number">18.8.2</span> Train random forest model</h3>
+<p>Following correction of unbalanced samples, the training data can be used to prepare a classification model. The <a href="https://rdrr.io/cran/sits/man/sits_train.html"><code>sits_train</code></a> function supports several machine learning algorithms. In this case, random forest is used. Random forest is a non-parametric ensemble learning method that, while often outperformed by deep learning models in very large or complex data, offers greater interpretability through tools such as variable importance metrics and partial dependence plots.</p>
+<p>Prior to model training, the time series data itself is cleaned. This removes <code>NA</code> values from the <code>tibble</code> objects nested within the <code>balanced_samples</code> tibble that may arise from missing pixels or other issues.</p>
+<p>Plotting the model object shows the distribution of minimal depth and its mean. Minimal depth refers to the earliest point at which a variable is used in the decision tree. That is, the shortest path from the root of the tree to the first node where the variable is used for splitting. The bars in the plot show the distribution of minimal depth among the 100 trees in the random forest, and the mean minimal depth value is plotted and annotated. A lower minimal depth value means the variable is used earlier in the tree and can therefore be interpreted as being more important for distinguishing between classes. Variables with high minimal depth values could be omitted from the model.</p>
+<div class="cell">
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">balanced_samples</span> <span class="op">&lt;-</span> <span class="va">balanced_samples</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>time_series <span class="op">=</span> <span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="va">time_series</span>, <span class="op">~</span> <span class="fu"><a href="https://tidyr.tidyverse.org/reference/drop_na.html">drop_na</a></span><span class="op">(</span><span class="va">.x</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_lgl</a></span><span class="op">(</span><span class="va">time_series</span>, <span class="op">~</span> <span class="fu"><a href="https://rspatial.github.io/terra/reference/dimensions.html">nrow</a></span><span class="op">(</span><span class="va">.x</span><span class="op">)</span> <span class="op">&gt;</span> <span class="fl">0</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">rfor_model</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/sits/man/sits_train.html">sits_train</a></span><span class="op">(</span></span>
+<span>  <span class="va">balanced_samples</span>,</span>
+<span>  ml_method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/sits/man/sits_rfor.html">sits_rfor</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rspatial.github.io/terra/reference/plot.html">plot</a></span><span class="op">(</span><span class="va">rfor_model</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="ct_digital_earth_africa_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="perform-a-cross-validation" class="level3" data-number="18.8.3"><h3 data-number="18.8.3" class="anchored" data-anchor-id="perform-a-cross-validation">
+<span class="header-section-number">18.8.3</span> Perform a cross-validation</h3>
+<p>The <code>sits</code> package provides a function for performing cross-validation as an accuracy assessment for classification models. The k-fold cross validation method splits the data into k-subsets. For each subset, a sample of data is withheld while the model is trained on all other subsets and then validated on the subset that was withheld. This process returns a confusion matrix and accuracy statistics.</p>
+<p>The overall accuracy statistic of 61.4% might be considered acceptable, especially given the large number (13) of classes and class imbalance. However, some classes, such as beans and sorghum, have quite low precision, recall and F1 values, which indicate how accurately individual classes are classified. If there was a particular interest in mapping these specific crop types, further class imbalance treatments or other approaches, such as introducing further predictor variables, might be considered. In this case, the next step will be combining classes to reduce issues associated with class imbalance.</p>
+<div class="cell">
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">rfor_validate_rwa</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/sits/man/sits_kfold_validate.html">sits_kfold_validate</a></span><span class="op">(</span></span>
+<span>    samples <span class="op">=</span> <span class="va">balanced_samples</span>,</span>
+<span>    folds <span class="op">=</span> <span class="fl">5</span>,</span>
+<span>    ml_method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/sits/man/sits_rfor.html">sits_rfor</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    multicores <span class="op">=</span> <span class="fl">2</span>,</span>
+<span>    progress <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">rfor_validate_rwa</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Confusion Matrix and Statistics
+
+                Reference
+Prediction       maize beans cassava fruit irishpotatoes Others soybeans
+  maize            127     8       4     4             2      7       11
+  beans              0    17       0     5             2      2        1
+  cassava            6     4      38     0             1      9        0
+  fruit              0     1       0    26             0      1        1
+  irishpotatoes      2     4       0     2            37      4        3
+  Others             0     4       5     0             1     21        2
+  soybeans          11     5       0     2             2      1       31
+  sweet_potatoes     2     1       0     1             0      0        0
+  banana            14     1       3     5             0      4        0
+  vegetables        20     3       0     2             5      1        0
+  rice               6     0       0     2             0      0        1
+  sorghum            8     2       0     1             0      0        0
+  sugarcane          0     0       0     0             0      0        0
+                Reference
+Prediction       sweet_potatoes banana vegetables rice sorghum sugarcane
+  maize                       1     18         33   11      37         0
+  beans                       0      0          1    0       0         0
+  cassava                     0      2          0    1       1         0
+  fruit                       0      0          0    0       0         1
+  irishpotatoes               0      0          0    0       0         0
+  Others                      0      0          0    0       0         0
+  soybeans                    0      0          1    0       1         0
+  sweet_potatoes             45      2          3    6       0         0
+  banana                      2     78          8    2       6         0
+  vegetables                  0      4         49    3       3         1
+  rice                        2      0          2   57       1         1
+  sorghum                     0      3          0    1       3         0
+  sugarcane                   0      0          0    0       0         0
+
+Overall Statistics
+                              
+ Accuracy : 0.5971            
+   95% CI : ( 0.5639, 0.6296 )
+                              
+    Kappa : 0.5408            
+
+Statistics by Class:
+
+                     Class: maize Class: beans Class: cassava Class: fruit
+Prod Acc (Recall)          0.6480       0.3400         0.7600       0.5200
+User Acc (Precision)       0.4829       0.6071         0.6129       0.8667
+F1 score                   0.5534       0.4359         0.6786       0.6500
+                     Class: irishpotatoes Class: Others Class: soybeans
+Prod Acc (Recall)                  0.7400        0.4200          0.6200
+User Acc (Precision)               0.7115        0.6364          0.5741
+F1 score                           0.7255        0.5060          0.5962
+                     Class: sweet_potatoes Class: banana Class: vegetables
+Prod Acc (Recall)                   0.9000        0.7290            0.5052
+User Acc (Precision)                0.7500        0.6341            0.5385
+F1 score                            0.8182        0.6783            0.5213
+                     Class: rice Class: sorghum Class: sugarcane
+Prod Acc (Recall)         0.7037        0.05769                0
+User Acc (Precision)      0.7917        0.16667              NaN
+F1 score                  0.7451        0.08571               NA</code></pre>
+</div>
+</div>
+</section><section id="combine-crop-types-into-groups" class="level3" data-number="18.8.4"><h3 data-number="18.8.4" class="anchored" data-anchor-id="combine-crop-types-into-groups">
+<span class="header-section-number">18.8.4</span> Combine crop types into groups</h3>
+<p>African agriculture is often characterised by great diversity of crop types and varieties, and heterogeneity of crop types and farming practices in space. This can make mapping exercises more challenging than in more uniform and homogenous agricultural landscapes with large field sizes. Sometimes, the large number of crop types can mean that an aggregated approach can produce more useful outputs. In this case, crop classes are combined into their ‘crop groups’ based on the Indicative Crop Classification (ICC) developed by FAO in the <a href="https://www.fao.org/4/a0135e/a0135e00.htm">guidelines for agricultural censuses</a>. This approach is also adopted in the Joint Assessment for Crop Assessment and Monitoring <a href="https://jecam.org/wp-content/uploads/2018/10/JECAM_Guidelines_for_Field_Data_Collection_v1_0.pdf">guidelines for cropland and crop type definition and field data collection</a> <span class="citation" data-cites="Defourny2014"><a href="#ref-Defourny2014" role="doc-biblioref">[9]</a></span>.</p>
+<p>In this workflow, crop types are aggregated into six crop groups.</p>
+<div class="cell">
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tseries_comb</span> <span class="op">&lt;-</span> <span class="va">tseries</span></span>
+<span></span>
+<span><span class="va">tseries_comb</span><span class="op">$</span><span class="va">label</span><span class="op">[</span><span class="va">tseries_comb</span><span class="op">$</span><span class="va">label</span> <span class="op"><a href="https://rspatial.github.io/terra/reference/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"irishpotatoes"</span>, <span class="st">"sweet_potatoes"</span>, <span class="st">"cassava"</span><span class="op">)</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="st">"Roots &amp; tubers"</span></span>
+<span></span>
+<span><span class="va">tseries_comb</span><span class="op">$</span><span class="va">label</span><span class="op">[</span><span class="va">tseries_comb</span><span class="op">$</span><span class="va">label</span> <span class="op"><a href="https://rspatial.github.io/terra/reference/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"sorghum"</span>, <span class="st">"rice"</span>, <span class="st">"maize"</span><span class="op">)</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="st">"Cereals"</span></span>
+<span></span>
+<span><span class="va">tseries_comb</span><span class="op">$</span><span class="va">label</span><span class="op">[</span><span class="va">tseries_comb</span><span class="op">$</span><span class="va">label</span> <span class="op"><a href="https://rspatial.github.io/terra/reference/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"fruit"</span>, <span class="st">"banana"</span><span class="op">)</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="st">"Perennials"</span></span>
+<span></span>
+<span><span class="va">tseries_comb</span><span class="op">$</span><span class="va">label</span><span class="op">[</span><span class="va">tseries_comb</span><span class="op">$</span><span class="va">label</span> <span class="op"><a href="https://rspatial.github.io/terra/reference/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"beans"</span>, <span class="st">"soybeans"</span><span class="op">)</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="st">"Legumes"</span></span>
+<span></span>
+<span><span class="va">tseries_comb</span><span class="op">$</span><span class="va">label</span><span class="op">[</span><span class="va">tseries_comb</span><span class="op">$</span><span class="va">label</span> <span class="op"><a href="https://rspatial.github.io/terra/reference/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"sugarcane"</span><span class="op">)</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="st">"Others"</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rspatial.github.io/terra/reference/summary.html">summary</a></span><span class="op">(</span><span class="va">tseries_comb</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+  label          count   prop
+  &lt;chr&gt;          &lt;int&gt;  &lt;dbl&gt;
+1 Cereals          525 0.629 
+2 Legumes           40 0.0480
+3 Others            11 0.0132
+4 Perennials       134 0.161 
+5 Roots &amp; tubers    27 0.0324
+6 vegetables        97 0.116 </code></pre>
+</div>
+</div>
+<p>The <code>sits_reduce_imbalance</code> function is again used to produce a dataset where each class represents at least 10% of total observations.</p>
+<div class="cell">
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">balanced_samples_comb</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/sits/man/sits_reduce_imbalance.html">sits_reduce_imbalance</a></span><span class="op">(</span></span>
+<span>    samples <span class="op">=</span> <span class="va">tseries_comb</span>,</span>
+<span>    n_samples_over <span class="op">=</span> <span class="fl">80</span>,</span>
+<span>    n_samples_under <span class="op">=</span> <span class="fl">150</span>,</span>
+<span>    multicores <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Show summary of balanced samples</span></span>
+<span><span class="fu"><a href="https://rspatial.github.io/terra/reference/summary.html">summary</a></span><span class="op">(</span><span class="va">balanced_samples_comb</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+  label          count  prop
+  &lt;chr&gt;          &lt;int&gt; &lt;dbl&gt;
+1 Cereals          196 0.294
+2 Legumes           80 0.120
+3 Others            80 0.120
+4 Perennials       134 0.201
+5 Roots &amp; tubers    80 0.120
+6 vegetables        97 0.145</code></pre>
+</div>
+</div>
+</section><section id="perform-a-cross-validation-on-crop-groups" class="level3" data-number="18.8.5"><h3 data-number="18.8.5" class="anchored" data-anchor-id="perform-a-cross-validation-on-crop-groups">
+<span class="header-section-number">18.8.5</span> Perform a cross-validation on crop groups</h3>
+<p>The confusion matrix and accuracy statistics for the classification on crop groups show an overall accuracy value of 65%, and improvement over the individual crop type classification. Furthermore, each group has an F1 score greater than 0.5. Perennials (the majority of which could be assumed to be bananas based on the original reference data) and cereals are most accurately classified.</p>
+<div class="cell">
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">balanced_samples_comb</span> <span class="op">&lt;-</span> <span class="va">balanced_samples_comb</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>time_series <span class="op">=</span> <span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="va">time_series</span>, <span class="op">~</span> <span class="fu"><a href="https://tidyr.tidyverse.org/reference/drop_na.html">drop_na</a></span><span class="op">(</span><span class="va">.x</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_lgl</a></span><span class="op">(</span><span class="va">time_series</span>, <span class="op">~</span> <span class="fu"><a href="https://rspatial.github.io/terra/reference/dimensions.html">nrow</a></span><span class="op">(</span><span class="va">.x</span><span class="op">)</span> <span class="op">&gt;</span> <span class="fl">0</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">rfor_model_comb</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/sits/man/sits_train.html">sits_train</a></span><span class="op">(</span></span>
+<span>  <span class="va">balanced_samples_comb</span>,</span>
+<span>  ml_method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/sits/man/sits_rfor.html">sits_rfor</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">rfor_comb_validate_rwa</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/sits/man/sits_kfold_validate.html">sits_kfold_validate</a></span><span class="op">(</span></span>
+<span>    samples <span class="op">=</span> <span class="va">balanced_samples_comb</span>,</span>
+<span>    folds <span class="op">=</span> <span class="fl">5</span>,</span>
+<span>    progress <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>    ml_method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/sits/man/sits_rfor.html">sits_rfor</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    multicores <span class="op">=</span> <span class="fl">2</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">rfor_comb_validate_rwa</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Confusion Matrix and Statistics
+
+                Reference
+Prediction       Cereals Legumes Others Roots &amp; tubers Perennials vegetables
+  Cereals            155      10     12             10         33         32
+  Legumes              8      54      8              7          0          4
+  Others               1       8     42             16          0          0
+  Roots &amp; tubers       0       8     14             43          2          1
+  Perennials          22       0      2              3         89         11
+  vegetables          10       0      2              1         10         49
+
+Overall Statistics
+                             
+ Accuracy : 0.6477           
+   95% CI : ( 0.6101, 0.684 )
+                             
+    Kappa : 0.5575           
+
+Statistics by Class:
+
+                     Class: Cereals Class: Legumes Class: Others
+Prod Acc (Recall)            0.7908         0.6750        0.5250
+User Acc (Precision)         0.6151         0.6667        0.6269
+F1 score                     0.6920         0.6708        0.5714
+                     Class: Roots &amp; tubers Class: Perennials Class: vegetables
+Prod Acc (Recall)                   0.5375            0.6642            0.5052
+User Acc (Precision)                0.6324            0.7008            0.6806
+F1 score                            0.5811            0.6820            0.5799</code></pre>
+</div>
+</div>
+</section></section><section id="create-a-classified-map" class="level2" data-number="18.9"><h2 data-number="18.9" class="anchored" data-anchor-id="create-a-classified-map">
+<span class="header-section-number">18.9</span> Create a classified map</h2>
+<p>Finally, a classified map can be produced based on the trained classification model. This process is memory hungry so the number of cores has been limited to 1. A garbage collect process is also initiated prior to classification by calling the <code><a href="https://rdrr.io/r/base/gc.html">gc()</a></code> command. This maximises the volume of memory available for the classification process.</p>
+<p>The output of the <code>sits_classify</code> function is a <code>.tif</code> file of classification probabilities stored in the output directory provided to the function.</p>
+<div class="cell">
+<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/gc.html">gc</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">crop_probs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/sits/man/sits_classify.html">sits_classify</a></span><span class="op">(</span></span>
+<span>  data <span class="op">=</span> <span class="va">dea_s2_masked</span>,</span>
+<span>  ml_model <span class="op">=</span> <span class="va">rfor_model_comb</span>,</span>
+<span>  output_dir <span class="op">=</span> <span class="st">"data/ct_digital_earth_africa"</span>,</span>
+<span>  version <span class="op">=</span> <span class="st">"rf-raster_comb"</span>,</span>
+<span>  multicores <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  memsize <span class="op">=</span> <span class="fl">16</span>,</span>
+<span>  progress <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The probability layers can be used to generate a classified map with labels showing the distribution of predicted crop groups in space.</p>
+<div class="cell">
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">crop_class</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/sits/man/sits_label_classification.html">sits_label_classification</a></span><span class="op">(</span></span>
+<span>  cube <span class="op">=</span> <span class="va">crop_probs</span>,</span>
+<span>  multicores <span class="op">=</span> <span class="fl">4</span>,</span>
+<span>  memsize <span class="op">=</span> <span class="fl">12</span>,</span>
+<span>  output_dir <span class="op">=</span> <span class="st">"data/ct_digital_earth_africa"</span>,</span>
+<span>  version <span class="op">=</span> <span class="st">"rf-raster_comb"</span>,</span>
+<span>  progress <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Plot the thematic map</span></span>
+<span><span class="fu"><a href="https://rspatial.github.io/terra/reference/plot.html">plot</a></span><span class="op">(</span><span class="va">crop_class</span>, legend_position<span class="op">=</span><span class="st">"outside"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/ct_digital_earth_africa/classifymap.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Labelled crop groups from a classification over a region of Rwanda</figcaption></figure>
+</div>
+</div>
+</div>
+</section><section id="conclusions" class="level2" data-number="18.10"><h2 data-number="18.10" class="anchored" data-anchor-id="conclusions">
+<span class="header-section-number">18.10</span> Conclusions</h2>
+<p>This chapter has presented a workflow which draws on open access data sources to produce a crop type and crop group map for an area of Rwanda. The workflow showcases how GeoMAD composite images can be a useful data source and produce reasonably accurate classifications, considering unbalanced training data and a challenging agricultural landscape characterised by heterogeneity and small fields. In this context, the workflow is representative of real-world crop type mapping challenges. However, this workflow should be considered as an introduction and starting point for development of more refined agricultural mapping. The accuracy of the classification could be improved by further refinement of training samples and the introduction of more predictor variables in the classification models. Furthermore, post-processing, such as spatial smoothing or object-based image analysis—may also enhance map quality by reducing noise and improving thematic coherence, including in the cropland extent map.</p>
+</section><section id="references" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
 
 
-<section id="outline" class="level2" data-number="18.1">
-<h2 data-number="18.1" class="anchored" data-anchor-id="outline"><span class="header-section-number">18.1</span> Outline</h2>
-<p>Digital Earth Africa offers continental-scale satellite-derived data products and provides guidance on their application in analytical workflows. This chapter demonstrates the use of high quality, cloud-free, geomedian composite images with median absolute deviations (GeoMADs) for crop type mapping. Digital Earth Africa’s GeoMADs are applied to a classification framework in the satellite image time series (SITS) package in the R language.</p>
-<p>The chapter demonstrates how high-quality, ‘off-the-shelf’ satellite image composites can overcome common challenges in classification workflows, such as the ‘curse of dimensionality’ and computational demand. It also introduces readers and users to Digital Earth Africa products and services, and modes of access, especially through the SITS R package.</p>
-
-
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
-    const isCodeAnnotation = (el) => {
-      for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
-          return true;
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="ref-Dale2017" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div>
+<div class="csl-right-inline">D. Roberts, N. Mueller, and A. Mcintyre, <span>“High-dimensional pixel composites from earth observation time series,”</span> <em>IEEE Transactions on Geoscience and Remote Sensing</em>, vol. 55, no. 11, pp. 6254–6264, 2017, doi: <a href="https://doi.org/10.1109/TGRS.2017.2723896">10.1109/TGRS.2017.2723896</a>.</div>
+</div>
+<div id="ref-Dale2018" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div>
+<div class="csl-right-inline">D. Roberts, B. Dunn, and N. Mueller, <span>“Open data cube products using high-dimensional statistics of time series,”</span> in <em>IGARSS 2018 - 2018 IEEE international geoscience and remote sensing symposium</em>, 2018, pp. 8647–8650, doi: <a href="https://doi.org/10.1109/IGARSS.2018.8518312">10.1109/IGARSS.2018.8518312</a>.</div>
+</div>
+<div id="ref-Burton2022" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div>
+<div class="csl-right-inline">C. Burton <em>et al.</em>, <span>“Co-production of a 10-m cropland extent map for continental africa using sentinel-2, cloud computing, and the open-data-cube,”</span> Jan. 2022, doi: <a href="https://doi.org/10.1002/essoar.10510081.1">10.1002/essoar.10510081.1</a>.</div>
+</div>
+<div id="ref-Liu2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[4] </div>
+<div class="csl-right-inline">L. Liu <em>et al.</em>, <span>“National land cover and crop mapping through the digital earth africa platform,”</span> in <em>Space and geospatial technologies for the africa we want</em>, 2024, pp. 353–362.</div>
+</div>
+<div id="ref-Wellington2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div>
+<div class="csl-right-inline">M. J. Wellington and L. J. Renzullo, <span>“High-dimensional satellite image compositing and statistics for enhanced irrigated crop mapping,”</span> <em>Remote Sensing</em>, vol. 13, no. 7, 2021, doi: <a href="https://doi.org/10.3390/rs13071300">10.3390/rs13071300</a>.</div>
+</div>
+<div id="ref-Weitkamp2023a" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[6] </div>
+<div class="csl-right-inline">T. Weitkamp, G. Jan Veldwisch, P. Karimi, and C. de Fraiture, <span>“Mapping irrigated agriculture in fragmented landscapes of sub-saharan africa: An examination of algorithm and composite length effectiveness,”</span> <em>International Journal of Applied Earth Observation and Geoinformation</em>, vol. 122, p. 103418, 2023, doi: <a href="https://doi.org/10.1016/j.jag.2023.103418">https://doi.org/10.1016/j.jag.2023.103418</a>.</div>
+</div>
+<div id="ref-Weitkamp2023b" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[7] </div>
+<div class="csl-right-inline">T. Weitkamp and P. Karimi, <span>“Evaluating the effect of training data size and composition on the accuracy of smallholder irrigated agriculture mapping in mozambique using remote sensing and machine learning algorithms,”</span> <em>Remote Sensing</em>, vol. 15, no. 12, 2023, doi: <a href="https://doi.org/10.3390/rs15123017">10.3390/rs15123017</a>.</div>
+</div>
+<div id="ref-Wardle2022" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[8] </div>
+<div class="csl-right-inline">J. A. Wardle, V. Sagan, and F. Mohammed, <span>“USING OPEN DATA CUBE ON THE CLOUD TO INVESTIGATE FOOD SECURITY BY MEANS OF CROPLAND CHANGES IN DJIBOUTI,”</span> <em>The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences</em>, vol. XLIII–B3–2022, pp. 1039–1044, 2022, doi: <a href="https://doi.org/10.5194/isprs-archives-XLIII-B3-2022-1039-2022">10.5194/isprs-archives-XLIII-B3-2022-1039-2022</a>.</div>
+</div>
+<div id="ref-Defourny2014" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[9] </div>
+<div class="csl-right-inline">P. Defourny, I. Jarvis, and X. Blaes, <span>“JECAM guidelines for cropland and crop type definition and field data collection, JECAM,”</span> <em>JECAM Guidelines for cropland and crop type definition and field data collection, JECAM</em>, 2014.</div>
+</div>
+<div id="ref-Fowler2020" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[10] </div>
+<div class="csl-right-inline">J. Fowler, F. Waldner, and Z. Hochman, <span>“All pixels are useful, but some are more useful: <span>Efficient</span> <span><em>in Situ</em></span> data collection for crop-type mapping using sequential exploration methods,”</span> <em>International Journal of Applied Earth Observation and Geoinformation</em>, vol. 91, p. 102114, 2020, doi: <a href="https://doi.org/10.1016/j.jag.2020.102114">10.1016/j.jag.2020.102114</a>.</div>
+</div>
+<div id="ref-Chenxi2022" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[11] </div>
+<div class="csl-right-inline">C. Lin, L. Zhong, X.-P. Song, J. Dong, D. B. Lobell, and Z. Jin, <span>“Early- and in-season crop type mapping without current-year ground truth: Generating labels from historical information via a topology-based approach,”</span> <em>Remote Sensing of Environment</em>, vol. 274, p. 112994, 2022, doi: <a href="https://doi.org/10.1016/j.rse.2022.112994">https://doi.org/10.1016/j.rse.2022.112994</a>.</div>
+</div>
+<div id="ref-Karanam2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[12] </div>
+<div class="csl-right-inline">S. Karanam <em>et al.</em>, <span>“WorldCereal reference data module (RDM),”</span> 2024.</div>
+</div>
+<div id="ref-Kerner2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[13] </div>
+<div class="csl-right-inline">H. Kerner <em>et al.</em>, <span>“How accurate are existing land cover maps for agriculture in <span>Sub-Saharan Africa</span>?”</span> <em>Scientific Data</em>, vol. 11, no. 1, p. 486, 2024, doi: <a href="https://doi.org/10.1038/s41597-024-03306-z">10.1038/s41597-024-03306-z</a>.</div>
+</div>
+<div id="ref-Chawla2002" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[14] </div>
+<div class="csl-right-inline">N. V. Chawla, K. W. Bowyer, L. O. Hall, and W. P. Kegelmeyer, <span>“<span>SMOTE</span>: Synthetic minority over-sampling technique,”</span> <em>Journal of Artificial Intelligence Research</em>, vol. 16, no. 1, pp. 321–357, 2002.</div>
+</div>
+<div id="ref-Santos2021a" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[15] </div>
+<div class="csl-right-inline">L. A. Santos, K. R. Ferreira, G. Camara, M. C. A. Picoli, and R. E. Simoes, <span>“Quality control and class noise reduction of satellite image time series,”</span> <em>ISPRS Journal of Photogrammetry and Remote Sensing</em>, vol. 177, pp. 75–88, 2021, doi: <a href="https://doi.org/10.1016/j.isprsjprs.2021.04.014">10.1016/j.isprsjprs.2021.04.014</a>.</div>
+</div>
+<div id="ref-Waldner2019" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[16] </div>
+<div class="csl-right-inline">F. Waldner, Y. Chen, R. Lawes, and Z. Hochman, <span>“Needle in a haystack: <span>Mapping</span> rare and infrequent crops using satellite imagery and data balancing methods,”</span> <em>Remote Sensing of Environment</em>, vol. 233, p. 111375, 2019, doi: <a href="https://doi.org/10.1016/j.rse.2019.111375">10.1016/j.rse.2019.111375</a>.</div>
+</div>
+</div>
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
       }
-      return false;
-    }
-    const onCopySuccess = function(e) {
-      // button target
-      const button = e.trigger;
-      // don't keep focus
-      button.blur();
-      // flash "checked"
-      button.classList.add('code-copy-button-checked');
-      var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
-      let tooltip;
-      if (window.bootstrap) {
-        button.setAttribute("data-bs-toggle", "tooltip");
-        button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
-            customClass: "code-copy-button-tooltip",
-            offset: [0, -8]});
-        tooltip.show();    
-      }
-      setTimeout(function() {
-        if (tooltip) {
-          tooltip.hide();
-          button.removeAttribute("data-bs-title");
-          button.removeAttribute("data-bs-toggle");
-          button.removeAttribute("data-bs-placement");
-        }
-        button.setAttribute("title", currentTitle);
-        button.classList.remove('code-copy-button-checked');
-      }, 1000);
-      // clear code selection
-      e.clearSelection();
-    }
-    const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
-        }
-        return codeEl.innerText;
-    }
-    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-      text: getTextToCopy
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
     });
-    clipboard.on('success', onCopySuccess);
-    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-        text: getTextToCopy,
-        container: window.document.getElementById('quarto-embedded-source-code-modal')
-      });
-      clipboardModal.on('success', onCopySuccess);
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/FAO-EOSTAT\.github\.io\/UN-Handbook\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
-      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/FAO-EOSTAT\.github\.io\/UN-Handbook\/");
-      var isInternal = (href) => {
-          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-      }
-      // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-      for (var i=0; i<links.length; i++) {
-        const link = links[i];
-        if (!isInternal(link.href)) {
-          // undo the damage that might have been done by quarto-nav.js in the case of
-          // links that we want to consider external
-          if (link.dataset.originalHref !== undefined) {
-            link.href = link.dataset.originalHref;
-          }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
         }
       }
-    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-      const config = {
-        allowHTML: true,
-        maxWidth: 500,
-        delay: 100,
-        arrow: false,
-        appendTo: function(el) {
-            return el.parentElement;
-        },
-        interactive: true,
-        interactiveBorder: 10,
-        theme: 'quarto',
-        placement: 'bottom-start',
-      };
-      if (contentFn) {
-        config.content = contentFn;
-      }
-      if (onTriggerFn) {
-        config.onTrigger = onTriggerFn;
-      }
-      if (onUntriggerFn) {
-        config.onUntrigger = onUntriggerFn;
-      }
-      window.tippy(el, config); 
     }
-    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-    for (var i=0; i<noterefs.length; i++) {
-      const ref = noterefs[i];
-      tippyHover(ref, function() {
-        // use id or data attribute instead here
-        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-        try { href = new URL(href).hash; } catch {}
-        const id = href.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note) {
-          return note.innerHTML;
-        } else {
-          return "";
-        }
-      });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
     }
-    const xrefs = window.document.querySelectorAll('a.quarto-xref');
-    const processXRef = (id, note) => {
-      // Strip column container classes
-      const stripColumnClz = (el) => {
-        el.classList.remove("page-full", "page-columns");
-        if (el.children) {
-          for (const child of el.children) {
-            stripColumnClz(child);
-          }
-        }
-      }
-      stripColumnClz(note)
-      if (id === null || id.startsWith('sec-')) {
-        // Special case sections, only their first couple elements
-        const container = document.createElement("div");
-        if (note.children && note.children.length > 2) {
-          container.appendChild(note.children[0].cloneNode(true));
-          for (let i = 1; i < note.children.length; i++) {
-            const child = note.children[i];
-            if (child.tagName === "P" && child.innerText === "") {
-              continue;
-            } else {
-              container.appendChild(child.cloneNode(true));
-              break;
-            }
-          }
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(container);
-          }
-          return container.innerHTML
-        } else {
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(note);
-          }
-          return note.innerHTML;
-        }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
       } else {
-        // Remove any anchor links if they are present
-        const anchorLink = note.querySelector('a.anchorjs-link');
-        if (anchorLink) {
-          anchorLink.remove();
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
         }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        if (note.classList.contains("callout")) {
-          return note.outerHTML;
-        } else {
-          return note.innerHTML;
-        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
       }
     }
-    for (var i=0; i<xrefs.length; i++) {
-      const xref = xrefs[i];
-      tippyHover(xref, undefined, function(instance) {
-        instance.disable();
-        let url = xref.getAttribute('href');
-        let hash = undefined; 
-        if (url.startsWith('#')) {
-          hash = url;
-        } else {
-          try { hash = new URL(url).hash; } catch {}
-        }
-        if (hash) {
-          const id = hash.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          if (note !== null) {
-            try {
-              const html = processXRef(id, note.cloneNode(true));
-              instance.setContent(html);
-            } finally {
-              instance.enable();
-              instance.show();
-            }
-          } else {
-            // See if we can fetch this
-            fetch(url.split('#')[0])
-            .then(res => res.text())
-            .then(html => {
-              const parser = new DOMParser();
-              const htmlDoc = parser.parseFromString(html, "text/html");
-              const note = htmlDoc.getElementById(id);
-              if (note !== null) {
-                const html = processXRef(id, note);
-                instance.setContent(html);
-              } 
-            }).finally(() => {
-              instance.enable();
-              instance.show();
-            });
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
           }
         } else {
-          // See if we can fetch a full url (with no hash to target)
-          // This is a special case and we should probably do some content thinning / targeting
-          fetch(url)
+          // See if we can fetch this
+          fetch(url.split('#')[0])
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.querySelector('main.content');
+            const note = htmlDoc.getElementById(id);
             if (note !== null) {
-              // This should only happen for chapter cross references
-              // (since there is no id in the URL)
-              // remove the first header
-              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-                note.children[0].remove();
-              }
-              const html = processXRef(null, note);
+              const html = processXRef(id, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -623,163 +1412,185 @@ ul.task-list li input[type="checkbox"] {
             instance.show();
           });
         }
-      }, function(instance) {
-      });
-    }
-        let selectedAnnoteEl;
-        const selectorForAnnotation = ( cell, annotation) => {
-          let cellAttr = 'data-code-cell="' + cell + '"';
-          let lineAttr = 'data-code-annotation="' +  annotation + '"';
-          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-          return selector;
-        }
-        const selectCodeLines = (annoteEl) => {
-          const doc = window.document;
-          const targetCell = annoteEl.getAttribute("data-target-cell");
-          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-          const lineIds = lines.map((line) => {
-            return targetCell + "-" + line;
-          })
-          let top = null;
-          let height = null;
-          let parent = null;
-          if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
-            }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
-            }
-            selectedAnnoteEl = annoteEl;
-          }
-        };
-        const unselectCodeLines = () => {
-          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-          elementsIds.forEach((elId) => {
-            const div = window.document.getElementById(elId);
-            if (div) {
-              div.remove();
-            }
-          });
-          selectedAnnoteEl = undefined;
-        };
-          // Handle positioning of the toggle
-      window.addEventListener(
-        "resize",
-        throttle(() => {
-          elRect = undefined;
-          if (selectedAnnoteEl) {
-            selectCodeLines(selectedAnnoteEl);
-          }
-        }, 10)
-      );
-      function throttle(fn, ms) {
-      let throttle = false;
-      let timer;
-        return (...args) => {
-          if(!throttle) { // first call gets through
-              fn.apply(this, args);
-              throttle = true;
-          } else { // all the others get throttled
-              if(timer) clearTimeout(timer); // cancel #2
-              timer = setTimeout(() => {
-                fn.apply(this, args);
-                timer = throttle = false;
-              }, ms);
-          }
-        };
-      }
-        // Attach click handler to the DT
-        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-        for (const annoteDlNode of annoteDls) {
-          annoteDlNode.addEventListener('click', (event) => {
-            const clickedEl = event.target;
-            if (clickedEl !== selectedAnnoteEl) {
-              unselectCodeLines();
-              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-              if (activeEl) {
-                activeEl.classList.remove('code-annotation-active');
-              }
-              selectCodeLines(clickedEl);
-              clickedEl.classList.add('code-annotation-active');
-            } else {
-              // Unselect the line
-              unselectCodeLines();
-              clickedEl.classList.remove('code-annotation-active');
-            }
-          });
-        }
-    const findCites = (el) => {
-      const parentEl = el.parentElement;
-      if (parentEl) {
-        const cites = parentEl.dataset.cites;
-        if (cites) {
-          return {
-            el,
-            cites: cites.split(' ')
-          };
-        } else {
-          return findCites(el.parentElement)
-        }
       } else {
-        return undefined;
-      }
-    };
-    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-    for (var i=0; i<bibliorefs.length; i++) {
-      const ref = bibliorefs[i];
-      const citeInfo = findCites(ref);
-      if (citeInfo) {
-        tippyHover(citeInfo.el, function() {
-          var popup = window.document.createElement('div');
-          citeInfo.cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
             }
-            popup.appendChild(citeDiv);
-          });
-          return popup.innerHTML;
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
         });
       }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
     }
-  });
-  </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./ct_chile.html" class="pagination-link" aria-label="Crop classification and land use mapping in Chile">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Crop classification and land use mapping in Chile</span></span>
       </a>          
@@ -791,8 +1602,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>Edited by Gilberto Camara, Lorenzo de Simone and Ronald Jansen.</p>
 </div>   
@@ -804,8 +1614,6 @@ ul.task-list li input[type="checkbox"] {
 </div>
   </div>
 </footer>
-
-
 
 
 </body></html>
