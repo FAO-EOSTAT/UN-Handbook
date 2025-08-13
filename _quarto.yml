@@ -25,12 +25,12 @@ book:
     - part: theory.qmd
       chapters: 
         - th_remote_sensing.qmd
+        - th_data_sources.qmd
         - th_lucc.qmd
         - th_quality_control.qmd
         - th_machine_learning.qmd
         - th_uncertainty.qmd
         - th_validation.qmd
-        - th_data_sources.qmd
         - th_design_frames.qmd
         - th_parcel_extraction.qmd
     - part: crop_type_mapping.qmd

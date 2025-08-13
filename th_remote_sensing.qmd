@@ -1,10 +1,41 @@
 ---
 title: "Remote Sensing images: optical, SAR"
-author: "Gilberto Camara, Pan Yaozhong"
+author: "Pan Yaozhong"
 format: html
 ---
 
 ## Outline
 
-This chapter provides a general introduction to remote sensing imagery. The authors discuss different types of remote sensing satellites  (optical, SAR,  hyperspectral) and include examples of satellite constellations (e.g, Landsat,  Sentinel-1, CHEOS). 
+This chapter provides a general introduction to remote sensing imagery. The authors discuss different types of remote sensing satellites  (optical, SAR,  hyperspectral) and include examples of satellite constellations (e.g, Landsat,  Copernicus, CHEOS). The chapter describes the main characteristics of various Earth observation satellites. For a description of how to access satellites from the Copernicus and Landsat programmes, please refer to chapter on [Earth Observation Data Sources](https://fao-eostat.github.io/UN-Handbook/th_data_sources.html).
+
+## Introduction of remote sensing imagery
+
+Remote sensing imagery refers to data collected by sensors mounted on satellite platforms, used to observe and analyze the Earth's surface and its atmosphere from a distance. These images capture information about various phenomena and play an important role in the study of the surface of the Earth. These images are usually comprised of multiple bands and important for the study of agriculture statistics, land cover/land use and other different tasks. In agriculture statistics, remote sensing applications are based on the interaction of electromagnetic radiation with soil or plant material. The advantage of remote sensing in agriculture is its ability to provide detailed information about crop characteristics. For example, spectral, textural, phenological features can be used to create a map showing plant distribution. Indicators such as Normalized Difference Vegetation Index (NDVI), Leaf Area Index (LAI), biomass, crop density can be used to assess vegetation growth.
+
+Remote sensing imagery is broadly classified into two main categories based on the type of sensors used: optical remote sensing imagery and radar remote sensing imagery. Optical sensors (e.g., cameras or imaging spectrometers) primarily capture electromagnetic radiation in spectral bands such as visible light, near-infrared, or short-wave infrared. Radar remote sensing imagery, especially in the context of Earth observation, is predominantly associated with Synthetic Aperture Radar (SAR).
+
+**Table** **1 The class and applications of remote sensing**
+
++-----------+-----------------+---------------------------+
+| **Class** | **Bands**       | **Wavelength**            |
+|           |                 |                           |
++-----------+-----------------+---------------------------+
+| Optical   | visible light   | violet (0.380 - 0.450 µm) |
+|           |                 | blue (0.450 - 0.485 µm)   |
+|           |                 | cyan (0.485 - 0.500 µm)   |
+|           |                 | green (0.500 - 0.565 µm)  | 
+|           |                 | yellow (0.565 - 0.590 µm) | 
+|           |                 | orange (0.590 - 0.625 µm) |
+|           |                 | red (0.625 - 0.750 µm)    |                  |
++-----------+-----------------+---------------------------+
+|           | near-infrared   | 0.750 - 1.00 µm           |
++-----------+-----------------+---------------------------+
+|           | short-wave      | 1.0 - 3.0 µm              |
+|           | infrared        |                           | 
++-----------+-----------------+---------------------------+
+|           | thermal         | 3 - 14.5 µm               |  
++-----------+-----------------+---------------------------+
+| Microwave | SAR             | 1 mm -- 1 m               |  
++-----------+-----------------+---------------------------+
+
 

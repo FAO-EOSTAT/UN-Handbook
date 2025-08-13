@@ -5,7 +5,7 @@
 <meta name="generator" content="quarto-1.3.361">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Gilberto Camara, Lorenzo de Simone, Ronald Jansen">
-<title>UN Handbook on Remote Sensing for Agricultural Statistics - 10&nbsp; EO Big Data Sources</title>
+<title>UN Handbook on Remote Sensing for Agricultural Statistics - 5&nbsp; Earth Observation Big Data Sources</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -61,8 +61,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./th_design_frames.html" rel="next">
-<link href="./th_validation.html" rel="prev">
+<link href="./th_lucc.html" rel="next">
+<link href="./th_remote_sensing.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -99,7 +99,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./theory.html">Foundations</a></li><li class="breadcrumb-item"><a href="./th_data_sources.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">EO Big Data Sources</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./theory.html">Foundations</a></li><li class="breadcrumb-item"><a href="./th_data_sources.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Earth Observation Big Data Sources</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -163,38 +163,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./th_data_sources.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Earth Observation Big Data Sources</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./th_lucc.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Land cover and crop classification schemas</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Land cover and crop classification schemas</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./th_quality_control.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Quality control of training sets for agricultural statistics</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Quality control of training sets for agricultural statistics</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./th_machine_learning.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Machine learning algorithms for image time series</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Machine learning algorithms for image time series</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./th_uncertainty.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Spatial map uncertainty estimation and active learning in crop classification</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Spatial map uncertainty estimation and active learning in crop classification</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./th_validation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Map validation and use of maps for area estimation</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./th_data_sources.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">EO Big Data Sources</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Map validation and use of maps for area estimation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -349,54 +349,54 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
 <li><a href="#configurations-to-run-the-chapter" id="toc-configurations-to-run-the-chapter" class="nav-link active" data-scroll-target="#configurations-to-run-the-chapter">Configurations to run the chapter</a></li>
-  <li><a href="#ard-image-collections" id="toc-ard-image-collections" class="nav-link" data-scroll-target="#ard-image-collections"><span class="header-section-number">10.1</span> ARD Image Collections</a></li>
-  <li><a href="#cloud-platforms-providing-ard-data" id="toc-cloud-platforms-providing-ard-data" class="nav-link" data-scroll-target="#cloud-platforms-providing-ard-data"><span class="header-section-number">10.2</span> Cloud platforms providing ARD data</a></li>
-  <li><a href="#tiling-systems-used-by-ard-collections" id="toc-tiling-systems-used-by-ard-collections" class="nav-link" data-scroll-target="#tiling-systems-used-by-ard-collections"><span class="header-section-number">10.3</span> Tiling systems used by ARD collections</a></li>
-  <li><a href="#major-global-or-large-regional-cloud-provides" id="toc-major-global-or-large-regional-cloud-provides" class="nav-link" data-scroll-target="#major-global-or-large-regional-cloud-provides"><span class="header-section-number">10.4</span> Major global or large regional cloud provides</a></li>
-  <li><a href="#accessing-ard-image-collections-in-cloud-providers" id="toc-accessing-ard-image-collections-in-cloud-providers" class="nav-link" data-scroll-target="#accessing-ard-image-collections-in-cloud-providers"><span class="header-section-number">10.5</span> Accessing ARD image collections in cloud providers</a></li>
-  <li><a href="#amazon-web-services" id="toc-amazon-web-services" class="nav-link" data-scroll-target="#amazon-web-services"><span class="header-section-number">10.6</span> Amazon Web Services</a></li>
+  <li><a href="#ard-image-collections" id="toc-ard-image-collections" class="nav-link" data-scroll-target="#ard-image-collections"><span class="header-section-number">5.1</span> ARD Image Collections</a></li>
+  <li><a href="#cloud-platforms-providing-ard-data" id="toc-cloud-platforms-providing-ard-data" class="nav-link" data-scroll-target="#cloud-platforms-providing-ard-data"><span class="header-section-number">5.2</span> Cloud platforms providing ARD data</a></li>
+  <li><a href="#tiling-systems-used-by-ard-collections" id="toc-tiling-systems-used-by-ard-collections" class="nav-link" data-scroll-target="#tiling-systems-used-by-ard-collections"><span class="header-section-number">5.3</span> Tiling systems used by ARD collections</a></li>
+  <li><a href="#major-global-or-large-regional-cloud-provides" id="toc-major-global-or-large-regional-cloud-provides" class="nav-link" data-scroll-target="#major-global-or-large-regional-cloud-provides"><span class="header-section-number">5.4</span> Major global or large regional cloud provides</a></li>
+  <li><a href="#accessing-ard-image-collections-in-cloud-providers" id="toc-accessing-ard-image-collections-in-cloud-providers" class="nav-link" data-scroll-target="#accessing-ard-image-collections-in-cloud-providers"><span class="header-section-number">5.5</span> Accessing ARD image collections in cloud providers</a></li>
+  <li><a href="#amazon-web-services" id="toc-amazon-web-services" class="nav-link" data-scroll-target="#amazon-web-services"><span class="header-section-number">5.6</span> Amazon Web Services</a></li>
   <li>
-<a href="#microsoft-planetary-computer" id="toc-microsoft-planetary-computer" class="nav-link" data-scroll-target="#microsoft-planetary-computer"><span class="header-section-number">10.7</span> Microsoft Planetary Computer</a>
+<a href="#microsoft-planetary-computer" id="toc-microsoft-planetary-computer" class="nav-link" data-scroll-target="#microsoft-planetary-computer"><span class="header-section-number">5.7</span> Microsoft Planetary Computer</a>
   <ul class="collapse">
-<li><a href="#sentinel-22a-images-in-mpc" id="toc-sentinel-22a-images-in-mpc" class="nav-link" data-scroll-target="#sentinel-22a-images-in-mpc"><span class="header-section-number">10.7.1</span> SENTINEL-2/2A images in MPC</a></li>
+<li><a href="#sentinel-22a-images-in-mpc" id="toc-sentinel-22a-images-in-mpc" class="nav-link" data-scroll-target="#sentinel-22a-images-in-mpc"><span class="header-section-number">5.7.1</span> SENTINEL-2/2A images in MPC</a></li>
   </ul>
 </li>
   <li>
-<a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r"><span class="header-section-number">10.8</span> R</a>
+<a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r"><span class="header-section-number">5.8</span> R</a>
   <ul class="collapse">
-<li><a href="#landsat-c2-l2-images-in-mpc" id="toc-landsat-c2-l2-images-in-mpc" class="nav-link" data-scroll-target="#landsat-c2-l2-images-in-mpc"><span class="header-section-number">10.8.1</span> LANDSAT-C2-L2 images in MPC</a></li>
+<li><a href="#landsat-c2-l2-images-in-mpc" id="toc-landsat-c2-l2-images-in-mpc" class="nav-link" data-scroll-target="#landsat-c2-l2-images-in-mpc"><span class="header-section-number">5.8.1</span> LANDSAT-C2-L2 images in MPC</a></li>
   </ul>
 </li>
   <li>
-<a href="#r-1" id="toc-r-1" class="nav-link" data-scroll-target="#r-1"><span class="header-section-number">10.9</span> R</a>
+<a href="#r-1" id="toc-r-1" class="nav-link" data-scroll-target="#r-1"><span class="header-section-number">5.9</span> R</a>
   <ul class="collapse">
-<li><a href="#sentinel-1-grd-images-in-mpc" id="toc-sentinel-1-grd-images-in-mpc" class="nav-link" data-scroll-target="#sentinel-1-grd-images-in-mpc"><span class="header-section-number">10.9.1</span> SENTINEL-1-GRD images in MPC</a></li>
+<li><a href="#sentinel-1-grd-images-in-mpc" id="toc-sentinel-1-grd-images-in-mpc" class="nav-link" data-scroll-target="#sentinel-1-grd-images-in-mpc"><span class="header-section-number">5.9.1</span> SENTINEL-1-GRD images in MPC</a></li>
   </ul>
 </li>
   <li>
-<a href="#r-2" id="toc-r-2" class="nav-link" data-scroll-target="#r-2"><span class="header-section-number">10.10</span> R</a>
+<a href="#r-2" id="toc-r-2" class="nav-link" data-scroll-target="#r-2"><span class="header-section-number">5.10</span> R</a>
   <ul class="collapse">
-<li><a href="#sentinel-1-rtc-images-in-mpc" id="toc-sentinel-1-rtc-images-in-mpc" class="nav-link" data-scroll-target="#sentinel-1-rtc-images-in-mpc"><span class="header-section-number">10.10.1</span> SENTINEL-1-RTC images in MPC</a></li>
-  <li><a href="#copernicus-dem-30-meter-images-in-mpc" id="toc-copernicus-dem-30-meter-images-in-mpc" class="nav-link" data-scroll-target="#copernicus-dem-30-meter-images-in-mpc"><span class="header-section-number">10.10.2</span> Copernicus DEM 30 meter images in MPC</a></li>
+<li><a href="#sentinel-1-rtc-images-in-mpc" id="toc-sentinel-1-rtc-images-in-mpc" class="nav-link" data-scroll-target="#sentinel-1-rtc-images-in-mpc"><span class="header-section-number">5.10.1</span> SENTINEL-1-RTC images in MPC</a></li>
+  <li><a href="#copernicus-dem-30-meter-images-in-mpc" id="toc-copernicus-dem-30-meter-images-in-mpc" class="nav-link" data-scroll-target="#copernicus-dem-30-meter-images-in-mpc"><span class="header-section-number">5.10.2</span> Copernicus DEM 30 meter images in MPC</a></li>
   </ul>
 </li>
   <li>
-<a href="#copernicus-data-space-ecosystem-cdse" id="toc-copernicus-data-space-ecosystem-cdse" class="nav-link" data-scroll-target="#copernicus-data-space-ecosystem-cdse"><span class="header-section-number">10.11</span> Copernicus Data Space Ecosystem (CDSE)</a>
+<a href="#copernicus-data-space-ecosystem-cdse" id="toc-copernicus-data-space-ecosystem-cdse" class="nav-link" data-scroll-target="#copernicus-data-space-ecosystem-cdse"><span class="header-section-number">5.11</span> Copernicus Data Space Ecosystem (CDSE)</a>
   <ul class="collapse">
-<li><a href="#sentinel-22a-images-in-cdse" id="toc-sentinel-22a-images-in-cdse" class="nav-link" data-scroll-target="#sentinel-22a-images-in-cdse"><span class="header-section-number">10.11.1</span> SENTINEL-2/2A images in CDSE</a></li>
-  <li><a href="#sentinel-1-rtc-images-in-cdse" id="toc-sentinel-1-rtc-images-in-cdse" class="nav-link" data-scroll-target="#sentinel-1-rtc-images-in-cdse"><span class="header-section-number">10.11.2</span> SENTINEL-1-RTC images in CDSE</a></li>
+<li><a href="#sentinel-22a-images-in-cdse" id="toc-sentinel-22a-images-in-cdse" class="nav-link" data-scroll-target="#sentinel-22a-images-in-cdse"><span class="header-section-number">5.11.1</span> SENTINEL-2/2A images in CDSE</a></li>
+  <li><a href="#sentinel-1-rtc-images-in-cdse" id="toc-sentinel-1-rtc-images-in-cdse" class="nav-link" data-scroll-target="#sentinel-1-rtc-images-in-cdse"><span class="header-section-number">5.11.2</span> SENTINEL-1-RTC images in CDSE</a></li>
   </ul>
 </li>
-  <li><a href="#digital-earth-africa" id="toc-digital-earth-africa" class="nav-link" data-scroll-target="#digital-earth-africa"><span class="header-section-number">10.12</span> Digital Earth Africa</a></li>
-  <li><a href="#harmonized-landsat-sentinel" id="toc-harmonized-landsat-sentinel" class="nav-link" data-scroll-target="#harmonized-landsat-sentinel"><span class="header-section-number">10.13</span> Harmonized Landsat-Sentinel</a></li>
-  <li><a href="#eo-products-from-terrascope" id="toc-eo-products-from-terrascope" class="nav-link" data-scroll-target="#eo-products-from-terrascope"><span class="header-section-number">10.14</span> EO products from TERRASCOPE</a></li>
+  <li><a href="#digital-earth-africa" id="toc-digital-earth-africa" class="nav-link" data-scroll-target="#digital-earth-africa"><span class="header-section-number">5.12</span> Digital Earth Africa</a></li>
+  <li><a href="#harmonized-landsat-sentinel" id="toc-harmonized-landsat-sentinel" class="nav-link" data-scroll-target="#harmonized-landsat-sentinel"><span class="header-section-number">5.13</span> Harmonized Landsat-Sentinel</a></li>
+  <li><a href="#eo-products-from-terrascope" id="toc-eo-products-from-terrascope" class="nav-link" data-scroll-target="#eo-products-from-terrascope"><span class="header-section-number">5.14</span> EO products from TERRASCOPE</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/FAO-EOSTAT/UN-Handbook/edit/quarto/th_data_sources.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/FAO-EOSTAT/UN-Handbook/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title">
-<span class="chapter-number">10</span>&nbsp; <span class="chapter-title">EO Big Data Sources</span>
+<span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Earth Observation Big Data Sources</span>
 </h1>
 </div>
 
@@ -428,31 +428,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span><span class="va">tempdir_r</span> <span class="op">&lt;-</span> <span class="st">"~/UN-Handbook/tempdir/R/dc_ardcollections"</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/files2.html">dir.create</a></span><span class="op">(</span><span class="va">tempdir_r</span>, showWarnings <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section><section id="ard-image-collections" class="level2" data-number="10.1"><h2 data-number="10.1" class="anchored" data-anchor-id="ard-image-collections">
-<span class="header-section-number">10.1</span> ARD Image Collections</h2>
+</section><section id="ard-image-collections" class="level2" data-number="5.1"><h2 data-number="5.1" class="anchored" data-anchor-id="ard-image-collections">
+<span class="header-section-number">5.1</span> ARD Image Collections</h2>
 <p>Analysis Ready Data (CEOS-ARD) are satellite data that have been processed to meet the <a href="https://ceos.org/ard/">ARD standards</a> defined by the Committee on Earth Observation Satellites (CEOS). ARD data simplify and accelerate the analysis of Earth observation data by providing consistent and high-quality data that are standardized across different sensors and platforms. ARD images processing includes geometric corrections, radiometric corrections, and sometimes atmospheric corrections. Images are georeferenced, meaning they are accurately aligned with a coordinate system. Optical ARD images include cloud and shadow masking information. These masks indicate which pixels affected by clouds or cloud shadows. For optical sensors, CEOS-ARD images have to be converted to surface reflectance values, which represent the fraction of light that is reflected by the surface. This makes the data more comparable across different times and locations. For SAR images, CEOS-ARD specification require images to undergo Radiometric Terrain Correction (RTC) and are provided in the GammaNought (<span class="math inline">\(\gamma_0\)</span>) backscatter values. This value which mitigates the variations from diverse observation geometries and is recommended for most land applications.</p>
-<p>ARD images are available from various satellite platforms, including Landsat, Sentinel, and commercial satellites. This provides a wide range of spatial, spectral, and temporal resolutions to suit different applications. They are organised as a collection of files, where each pixel contains a single value for each spectral band for a given date. These collections are available in cloud services such as Brazil Data Cube, Digital Earth Africa, and Microsoft’s Planetary Computer. In general, the timelines of the images of an ARD collection are different. Images still contain cloudy or missing pixels; bands for the images in the collection may have different resolutions. <a href="#fig-ard-datacubes">Figure&nbsp;<span>10.1</span></a> shows an example of the Landsat ARD image collection.</p>
+<p>ARD images are available from various satellite platforms, including Landsat, Sentinel, and commercial satellites. This provides a wide range of spatial, spectral, and temporal resolutions to suit different applications. They are organised as a collection of files, where each pixel contains a single value for each spectral band for a given date. These collections are available in cloud services such as Brazil Data Cube, Digital Earth Africa, and Microsoft’s Planetary Computer. In general, the timelines of the images of an ARD collection are different. Images still contain cloudy or missing pixels; bands for the images in the collection may have different resolutions. <a href="#fig-ard-datacubes">Figure&nbsp;<span>5.1</span></a> shows an example of the Landsat ARD image collection.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-ard-datacubes" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="./images/th_data_sources/usgs_ard_tile.png" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;10.1: ARD image collection (source: USGS).</figcaption></figure>
+<figcaption class="figure-caption">Figure&nbsp;5.1: ARD image collection (source: USGS).</figcaption></figure>
 </div>
 </div>
 </div>
-</section><section id="cloud-platforms-providing-ard-data" class="level2" data-number="10.2"><h2 data-number="10.2" class="anchored" data-anchor-id="cloud-platforms-providing-ard-data">
-<span class="header-section-number">10.2</span> Cloud platforms providing ARD data</h2>
+</section><section id="cloud-platforms-providing-ard-data" class="level2" data-number="5.2"><h2 data-number="5.2" class="anchored" data-anchor-id="cloud-platforms-providing-ard-data">
+<span class="header-section-number">5.2</span> Cloud platforms providing ARD data</h2>
 <p>Machine learning and deep learning (ML/DL) classification algorithms require the input data to be consistent. The dimensionality of the data used for training the model has to be the same as that of the data to be classified. There should be no gaps and no missing values. Thus, to use ML/DL algorithms for remote sensing data, ARD image collections should be converted to regular data cubes.</p>
 <p>There are a large number of cloud platforms providing open data organized as Analysis-Ready Data, including: Amazon Web Services (AWS), Brazil Data Cube (BDC), Copernicus Data Space Ecosystem (CDSE), Digital Earth Africa (DEAFRICA), Digital Earth Australia (DEAUSTRALIA), Microsoft Planetary Computer (MPC), and Nasa Harmonized Landsat/Sentinel (HLS),</p>
 <p>This chapter describes how to access these collections and transform ARD images into regular data cubes. A data cube is a set of images organized in tiles of a grid system (e.g., MGRS). Each tile contains single-band images in a unique zone of the coordinate system (e.g, tile 20LMR in MGRS grid) covering the period between start_date and end_date. All tiles share the same set of regular temporal intervals and the same spectral bands and indices. All images have the same spatial resolution.</p>
-</section><section id="tiling-systems-used-by-ard-collections" class="level2" data-number="10.3"><h2 data-number="10.3" class="anchored" data-anchor-id="tiling-systems-used-by-ard-collections">
-<span class="header-section-number">10.3</span> Tiling systems used by ARD collections</h2>
-<p>ARD image collections are organized in spatial partitions. Sentinel-2/2A images follow the Military Grid Reference System (MGRS) tiling system, which divides the world into 60 UTM zones of 8 degrees of longitude. Each zone has blocks of 6 degrees of latitude. Blocks are split into tiles of 110 <span class="math inline">\(\times\)</span> 110 km<span class="math inline">\(^2\)</span> with a 10 km overlap. Figure <a href="#fig-mgrs-datacubes">Figure&nbsp;<span>10.2</span></a> shows the MGRS tiling system for a part of the Northeastern coast of Brazil, contained in UTM zone 24, block M.</p>
+</section><section id="tiling-systems-used-by-ard-collections" class="level2" data-number="5.3"><h2 data-number="5.3" class="anchored" data-anchor-id="tiling-systems-used-by-ard-collections">
+<span class="header-section-number">5.3</span> Tiling systems used by ARD collections</h2>
+<p>ARD image collections are organized in spatial partitions. Sentinel-2/2A images follow the Military Grid Reference System (MGRS) tiling system, which divides the world into 60 UTM zones of 8 degrees of longitude. Each zone has blocks of 6 degrees of latitude. Blocks are split into tiles of 110 <span class="math inline">\(\times\)</span> 110 km<span class="math inline">\(^2\)</span> with a 10 km overlap. Figure <a href="#fig-mgrs-datacubes">Figure&nbsp;<span>5.2</span></a> shows the MGRS tiling system for a part of the Northeastern coast of Brazil, contained in UTM zone 24, block M.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-mgrs-datacubes" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="./images/th_data_sources/s2_mgrs_grid.png" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;10.2: MGRS tiling system used by Sentinel-2 images (source: US Army).</figcaption></figure>
+<figcaption class="figure-caption">Figure&nbsp;5.2: MGRS tiling system used by Sentinel-2 images (source: US Army).</figcaption></figure>
 </div>
 </div>
 </div>
@@ -461,12 +461,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div id="fig-wrs-datacubes" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="./images/th_data_sources/landsat_wrs_grid.png" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;10.3: MGRS tiling system used by Sentinel-2 images (source: US Army).</figcaption></figure>
+<figcaption class="figure-caption">Figure&nbsp;5.3: MGRS tiling system used by Sentinel-2 images (source: US Army).</figcaption></figure>
 </div>
 </div>
 </div>
-</section><section id="major-global-or-large-regional-cloud-provides" class="level2" data-number="10.4"><h2 data-number="10.4" class="anchored" data-anchor-id="major-global-or-large-regional-cloud-provides">
-<span class="header-section-number">10.4</span> Major global or large regional cloud provides</h2>
+</section><section id="major-global-or-large-regional-cloud-provides" class="level2" data-number="5.4"><h2 data-number="5.4" class="anchored" data-anchor-id="major-global-or-large-regional-cloud-provides">
+<span class="header-section-number">5.4</span> Major global or large regional cloud provides</h2>
 <p>The following ARD image cloud providers provide global or large regional data:</p>
 <ul>
 <li>Amazon Web Services (AWS): Open data Sentinel-2/2A level 2A collections for the Earth’s land surface.</li>
@@ -476,8 +476,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Digital Earth Australia (DEAUSTRALIA): Open data ARD collections of Sentinel-2A/2B and Landsat-5/7/8/9 images, yearly geomedian of Landsat 5/7/8 images; yearly fractional land cover from 1986 to 2024.</li>
 <li>Harmonized Landsat-Sentinel (HLS): HLS, provided by NASA, is an open data collection that processes Landsat 8 and Sentinel-2 imagery to a common standard.</li>
 <li>Microsoft Planetary Computer (MPC): Open data collections of Sentinel-1 GRD, Sentinel-1 RTC, Sentinel-2/2A, Landsat-4/5/7/8/9 images for the Earth’s land areas. Also supported are Copernicus DEM-30 and MOD13Q1, MOD10A1 and MOD09A1 products, and the Harmonized Landsat-Sentinel collections (HLSL30 and HLSS30).</li>
-</ul></section><section id="accessing-ard-image-collections-in-cloud-providers" class="level2" data-number="10.5"><h2 data-number="10.5" class="anchored" data-anchor-id="accessing-ard-image-collections-in-cloud-providers">
-<span class="header-section-number">10.5</span> Accessing ARD image collections in cloud providers</h2>
+</ul></section><section id="accessing-ard-image-collections-in-cloud-providers" class="level2" data-number="5.5"><h2 data-number="5.5" class="anchored" data-anchor-id="accessing-ard-image-collections-in-cloud-providers">
+<span class="header-section-number">5.5</span> Accessing ARD image collections in cloud providers</h2>
 <p><a href="https://www.kaggle.com/esensing/creating-data-cubes-in-sits" target="_blank"><img src="https://kaggle.com/static/images/open-in-kaggle.svg"></a></p>
 <p>We now present the use of the <code>sits</code> R package to obtain information on ARD image collection from cloud providers, using the <a href="https://stacspec.org/en">SpatioTemporal Asset Catalogue</a> (STAC) protocol, a specification of geospatial information which many large image collection providers have adopted. A ‘spatiotemporal asset’ is any file that represents information about the Earth captured in a specific space and time. To access STAC endpoints, <code>sits</code> uses the <a href="http://github.com/brazil-data-cube/rstac">rstac</a> R package.</p>
 <p>The function <code><a href="https://rdrr.io/pkg/sits/man/sits_cube.html">sits_cube()</a></code> supports access to image collections in cloud services; it has the following parameters:</p>
@@ -502,8 +502,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <code>end_date</code>: The final date for the temporal interval containing the time series of images.</li>
 </ul>
 <p>The result of <code><a href="https://rdrr.io/pkg/sits/man/sits_cube.html">sits_cube()</a></code> is a tibble with a description of the selected images required for further processing. It does not contain the actual data, but only pointers to the images. The attributes of individual image files can be assessed by listing the <code>file_info</code> column of the tibble.</p>
-</section><section id="amazon-web-services" class="level2" data-number="10.6"><h2 data-number="10.6" class="anchored" data-anchor-id="amazon-web-services">
-<span class="header-section-number">10.6</span> Amazon Web Services</h2>
+</section><section id="amazon-web-services" class="level2" data-number="5.6"><h2 data-number="5.6" class="anchored" data-anchor-id="amazon-web-services">
+<span class="header-section-number">5.6</span> Amazon Web Services</h2>
 <p>Amazon Web Services (AWS) holds two kinds of collections: <em>open-data</em> and <em>requester-pays</em>. Open data collections can be accessed without cost. Requester-pays collections require payment from an AWS account. Currently, <code>sits</code> supports collection <code>SENTINEL-2-L2A</code> which is open data. The bands in 10 m resolution are B02, B03, B04, and B08. The 20 m bands are B05, B06, B07, B8A, B11, and B12. Bands B01 and B09 are available at 60 m resolution. A CLOUD band is also available. The example below shows how to access one tile of the open data <code>SENTINEL-2-L2A</code> collection. The <code>tiles</code> parameter allows selecting the desired area according to the MGRS reference system.</p>
 <div class="cell">
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a data cube covering an area in Brazil</span></span>
@@ -526,18 +526,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div id="fig-aws-datacubes" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="./images/th_data_sources/aws_s2.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;10.4: Sentinel-2 image in an area of the Northeastern coast of Brazil.</figcaption></figure>
+<figcaption class="figure-caption">Figure&nbsp;5.4: Sentinel-2 image in an area of the Northeastern coast of Brazil.</figcaption></figure>
 </div>
 </div>
 </div>
-</section><section id="microsoft-planetary-computer" class="level2" data-number="10.7"><h2 data-number="10.7" class="anchored" data-anchor-id="microsoft-planetary-computer">
-<span class="header-section-number">10.7</span> Microsoft Planetary Computer</h2>
+</section><section id="microsoft-planetary-computer" class="level2" data-number="5.7"><h2 data-number="5.7" class="anchored" data-anchor-id="microsoft-planetary-computer">
+<span class="header-section-number">5.7</span> Microsoft Planetary Computer</h2>
 <p>The <code>sits</code> package supports access to open data collection from Microsoft’s Planetary Computer (MPC), including <code>SENTINEL-1-GRD</code>, <code>SENTINEL-1-RTC</code>, <code>SENTINEL-2-L2A</code>, <code>LANDSAT-C2-L2</code>, <code>COP-DEM-GLO-30</code> (Copernicus Global DEM at 30 meter resolution) and <code>MOD13Q1-6.1</code>(version 6.1 of the MODIS MOD13Q1 product). Access to the non-open data collection is available for users that have registration in MPC.</p>
-<section id="sentinel-22a-images-in-mpc" class="level3" data-number="10.7.1"><h3 data-number="10.7.1" class="anchored" data-anchor-id="sentinel-22a-images-in-mpc">
-<span class="header-section-number">10.7.1</span> SENTINEL-2/2A images in MPC</h3>
+<section id="sentinel-22a-images-in-mpc" class="level3" data-number="5.7.1"><h3 data-number="5.7.1" class="anchored" data-anchor-id="sentinel-22a-images-in-mpc">
+<span class="header-section-number">5.7.1</span> SENTINEL-2/2A images in MPC</h3>
 <p>The SENTINEL-2/2A ARD images available in MPC have the same bands and resolutions as those available in AWS (see above). The example below shows how to access the <code>SENTINEL-2-L2A</code> collection.</p>
-</section></section><section id="r" class="level2" data-number="10.8"><h2 data-number="10.8" class="anchored" data-anchor-id="r">
-<span class="header-section-number">10.8</span> R</h2>
+</section></section><section id="r" class="level2" data-number="5.8"><h2 data-number="5.8" class="anchored" data-anchor-id="r">
+<span class="header-section-number">5.8</span> R</h2>
 <div class="cell">
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a data cube covering an area in the Brazilian Amazon</span></span>
 <span><span class="va">s2_20LKP_cube_MPC</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/sits/man/sits_cube.html">sits_cube</a></span><span class="op">(</span></span>
@@ -557,15 +557,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div id="fig-s2mpc-datacubes" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="./images/th_data_sources/mpc_s2.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;10.5: Sentinel-2 image in an area of the state of Rondonia, Brazil.</figcaption></figure>
+<figcaption class="figure-caption">Figure&nbsp;5.5: Sentinel-2 image in an area of the state of Rondonia, Brazil.</figcaption></figure>
 </div>
 </div>
 </div>
-<section id="landsat-c2-l2-images-in-mpc" class="level3" data-number="10.8.1"><h3 data-number="10.8.1" class="anchored" data-anchor-id="landsat-c2-l2-images-in-mpc">
-<span class="header-section-number">10.8.1</span> LANDSAT-C2-L2 images in MPC</h3>
+<section id="landsat-c2-l2-images-in-mpc" class="level3" data-number="5.8.1"><h3 data-number="5.8.1" class="anchored" data-anchor-id="landsat-c2-l2-images-in-mpc">
+<span class="header-section-number">5.8.1</span> LANDSAT-C2-L2 images in MPC</h3>
 <p>The <code>LANDSAT-C2-L2</code> collection provides access to data from Landsat-4/5/7/8/9 satellites. Images from these satellites have been intercalibrated to ensure data consistency. For compatibility between the different Landsat sensors, the band names are BLUE, GREEN, RED, NIR08, SWIR16, and SWIR22. All images have 30 m resolution. For this collection, tile search is not supported; the <code>roi</code> parameter should be used. The example below shows how to retrieve data from a region of interest covering the city of Brasilia in Brazil.</p>
-</section></section><section id="r-1" class="level2" data-number="10.9"><h2 data-number="10.9" class="anchored" data-anchor-id="r-1">
-<span class="header-section-number">10.9</span> R</h2>
+</section></section><section id="r-1" class="level2" data-number="5.9"><h2 data-number="5.9" class="anchored" data-anchor-id="r-1">
+<span class="header-section-number">5.9</span> R</h2>
 <div class="cell">
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Read a ROI that covers part of the Northeastern coast of Brazil</span></span>
 <span><span class="va">roi</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>lon_min <span class="op">=</span> <span class="op">-</span><span class="fl">43.5526</span>, lat_min <span class="op">=</span> <span class="op">-</span><span class="fl">2.9644</span>, </span>
@@ -586,18 +586,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div id="fig-l8mpc-datacubes" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="./images/th_data_sources/mpc_l8.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;10.6: Landsat-8 image in an area in Northeast Brazil.</figcaption></figure>
+<figcaption class="figure-caption">Figure&nbsp;5.6: Landsat-8 image in an area in Northeast Brazil.</figcaption></figure>
 </div>
 </div>
 </div>
-<section id="sentinel-1-grd-images-in-mpc" class="level3" data-number="10.9.1"><h3 data-number="10.9.1" class="anchored" data-anchor-id="sentinel-1-grd-images-in-mpc">
-<span class="header-section-number">10.9.1</span> SENTINEL-1-GRD images in MPC</h3>
+<section id="sentinel-1-grd-images-in-mpc" class="level3" data-number="5.9.1"><h3 data-number="5.9.1" class="anchored" data-anchor-id="sentinel-1-grd-images-in-mpc">
+<span class="header-section-number">5.9.1</span> SENTINEL-1-GRD images in MPC</h3>
 <p>Sentinel-1 GRD products consist of focused SAR data that has been detected, multi-looked and projected to ground range using the WGS84 Earth ellipsoid model. GRD images are subject for variations in the radar signal’s intensity due to topographic effects, antenna pattern, range spreading loss, and other radiometric distortions. The most common types of distortions include foreshortening, layover and shadowing.</p>
 <p>Foreshortening occurs when the radar signal strikes a steep terrain slope facing the radar, causing the slope to appear compressed in the image. Features like mountains can appear much steeper than they are, and their true heights can be difficult to interpret. Layover happens when the radar signal reaches the top of a tall feature (like a mountain or building) before it reaches the base. As a result, the top of the feature is displaced towards the radar and appears in front of its base. This results in a reversal of the order of features along the radar line-of-sight, making the image interpretation challenging. Shadowing occurs when a radar signal is obstructed by a tall object, casting a shadow on the area behind it that the radar cannot illuminate. The shadowed areas appear dark in SAR images, and no information is available from these regions, similar to optical shadows.</p>
 <p>Access to Sentinel-1 GRD images can be done either by MGRS tiles (<code>tiles</code>) or by region of interest (<code>roi</code>). We recommend using the MGRS tiling system for specifying the area of interest, since when these images are regularized, they will be re-projected into MGRS tiles. By default, only images in descending orbit are selected.</p>
 <p>The following example shows how to create a data cube of S1 GRD images over a region in Mato Grosso Brazil that is an area of the Amazon forest that has been deforested. The resulting cube will not follow any specific projection and its coordinates will be stated as EPSG 4326 (latitude/longitude). Its geometry is derived from the SAR slant-range perspective; thus, it will appear included in relation to the Earth’s longitude.</p>
-</section></section><section id="r-2" class="level2" data-number="10.10"><h2 data-number="10.10" class="anchored" data-anchor-id="r-2">
-<span class="header-section-number">10.10</span> R</h2>
+</section></section><section id="r-2" class="level2" data-number="5.10"><h2 data-number="5.10" class="anchored" data-anchor-id="r-2">
+<span class="header-section-number">5.10</span> R</h2>
 <div class="cell">
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cube_s1_grd</span> <span class="op">&lt;-</span>  <span class="fu"><a href="https://rdrr.io/pkg/sits/man/sits_cube.html">sits_cube</a></span><span class="op">(</span></span>
 <span>  source <span class="op">=</span> <span class="st">"MPC"</span>,</span>
@@ -614,13 +614,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div id="fig-s1grdmpc-datacubes" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="./images/th_data_sources/mpc3.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;10.7: Sentinel-1 image in an area in Mato Grosso, Brazil.</figcaption></figure>
+<figcaption class="figure-caption">Figure&nbsp;5.7: Sentinel-1 image in an area in Mato Grosso, Brazil.</figcaption></figure>
 </div>
 </div>
 </div>
 <p>As explained earlier in this chapter, in areas with areas with large elevation differences, Sentinel-1 GRD images will have geometric distortions. For this reason, whenever possible, we recommend the use of RTC (radiometrically terrain corrected) images as described in the next session.</p>
-<section id="sentinel-1-rtc-images-in-mpc" class="level3" data-number="10.10.1"><h3 data-number="10.10.1" class="anchored" data-anchor-id="sentinel-1-rtc-images-in-mpc">
-<span class="header-section-number">10.10.1</span> SENTINEL-1-RTC images in MPC</h3>
+<section id="sentinel-1-rtc-images-in-mpc" class="level3" data-number="5.10.1"><h3 data-number="5.10.1" class="anchored" data-anchor-id="sentinel-1-rtc-images-in-mpc">
+<span class="header-section-number">5.10.1</span> SENTINEL-1-RTC images in MPC</h3>
 <p>An RTC SAR image has undergone corrections for both geometric distortions and radiometric distortions caused by the terrain. The purpose of RTC processing is to enhance the interpretability and usability of SAR images for various applications by providing a more accurate representation of the Earth’s surface. The radar backscatter values are normalized to account for these variations, ensuring that the image accurately represents the reflectivity of the surface features.</p>
 <p>The terrain correction addresses geometric distortions caused by the side-looking geometry of SAR imaging, such as foreshortening, layover, and shadowing. It uses a Digital Elevation Model (DEM) to model the terrain and re-project the SAR image from the slant range (radar line-of-sight) to the ground range (true geographic coordinates). This process aligns the SAR image with the actual topography, providing a more accurate spatial representation.</p>
 <div class="cell">
@@ -639,13 +639,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div id="fig-s1rtcmpc-datacubes" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="./images/th_data_sources/mpcrtcol.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;10.8: Sentinel-1-RTC image of an area in Colombia.</figcaption></figure>
+<figcaption class="figure-caption">Figure&nbsp;5.8: Sentinel-1-RTC image of an area in Colombia.</figcaption></figure>
 </div>
 </div>
 </div>
 <p>The above image is from the central region of Colombia, a country with large variations in altitude due to the Andes mountains. Users are invited to compare this images with the one from the <code>SENTINEL-1-GRD</code> collection and see the significant geometrical distortions of the GRD image compared with the RTC one.</p>
-</section><section id="copernicus-dem-30-meter-images-in-mpc" class="level3" data-number="10.10.2"><h3 data-number="10.10.2" class="anchored" data-anchor-id="copernicus-dem-30-meter-images-in-mpc">
-<span class="header-section-number">10.10.2</span> Copernicus DEM 30 meter images in MPC</h3>
+</section><section id="copernicus-dem-30-meter-images-in-mpc" class="level3" data-number="5.10.2"><h3 data-number="5.10.2" class="anchored" data-anchor-id="copernicus-dem-30-meter-images-in-mpc">
+<span class="header-section-number">5.10.2</span> Copernicus DEM 30 meter images in MPC</h3>
 <p>The Copernicus digital elevation model 30-meter global dataset (COP-DEM-GLO-30) is a high-resolution topographic data product provided by the European Space Agency (ESA) under the Copernicus Program. The vertical accuracy of the Copernicus DEM 30-meter dataset is typically within a few meters, but this can vary depending on the region and the original data sources. The primary data source for the Copernicus DEM is data from the TanDEM-X mission, designed by the German Aerospace Center (DLR). TanDEM-X provides high-resolution radar data through interferometric synthetic aperture radar (InSAR) techniques.</p>
 <p>The Copernicus DEM 30 meter is organized in a 1<span class="math inline">\(^\circ\)</span> by 1<span class="math inline">\(^\circ\)</span> grid. In <code>sits</code>, access to COP-DEM-GLO-30 images can be done either by MGRS tiles (<code>tiles</code>) or by region of interest (<code>roi</code>). In both case, the cube is retrieved based on the parts of the grid that intersect the region of interest or the chosen tiles.</p>
 <div class="cell">
@@ -661,12 +661,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div id="fig-demmpc-datacubes" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="./images/th_data_sources/mpc4.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;10.9: Copernicus 30-meter DEM of an area in Brazil.</figcaption></figure>
+<figcaption class="figure-caption">Figure&nbsp;5.9: Copernicus 30-meter DEM of an area in Brazil.</figcaption></figure>
 </div>
 </div>
 </div>
-</section></section><section id="copernicus-data-space-ecosystem-cdse" class="level2" data-number="10.11"><h2 data-number="10.11" class="anchored" data-anchor-id="copernicus-data-space-ecosystem-cdse">
-<span class="header-section-number">10.11</span> Copernicus Data Space Ecosystem (CDSE)</h2>
+</section></section><section id="copernicus-data-space-ecosystem-cdse" class="level2" data-number="5.11"><h2 data-number="5.11" class="anchored" data-anchor-id="copernicus-data-space-ecosystem-cdse">
+<span class="header-section-number">5.11</span> Copernicus Data Space Ecosystem (CDSE)</h2>
 <p>The Copernicus Data Space Ecosystem (CDSE) is a cloud service designed to support access to Earth observation data from the Copernicus Sentinel missions and other sources. It is designed and maintained by the European Space Agency (ESA) with support from the European Commission.</p>
 <p>Configuring user access to CDSE involves several steps to ensure proper registration, access to data, and utilization of the platform’s tools and services. Visit the Copernicus Data Space Ecosystem <a href="https://dataspace.copernicus.eu">registration page</a>. Complete the registration form with your details, including name, email address, organization, and sector. Confirm your email address through the verification link sent to your inbox.</p>
 <p>After registration, you will need to obtain access credentials to the S3 service implemented by CDSE, which can be obtained using the <a href="https://eodata-s3keysmanager.dataspace.copernicus.eu/panel/s3-credentials">CSDE S3 credentials site</a>. The site will request you to add a new credential. You will receive two keys: an an S3 access key and a secret access key. Take note of both and include the following lines in your <code>.Rprofile</code>.</p>
@@ -679,8 +679,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>After including these lines in your .Rprofile, restart <code>R</code> for the changes to take effect. By following these steps, users will have access to the Copernicus Data Space Ecosystem.</p>
-<section id="sentinel-22a-images-in-cdse" class="level3" data-number="10.11.1"><h3 data-number="10.11.1" class="anchored" data-anchor-id="sentinel-22a-images-in-cdse">
-<span class="header-section-number">10.11.1</span> SENTINEL-2/2A images in CDSE</h3>
+<section id="sentinel-22a-images-in-cdse" class="level3" data-number="5.11.1"><h3 data-number="5.11.1" class="anchored" data-anchor-id="sentinel-22a-images-in-cdse">
+<span class="header-section-number">5.11.1</span> SENTINEL-2/2A images in CDSE</h3>
 <p>CDSE hosts a global collection of Sentinel-2 Level-2A images, which are processed according to the <a href="https://ceos.org/ard/">CEOS Analysis-Ready Data</a> specifications. One example is provided below, where we present a Sentinel-2 image of the Lena river delta in Siberia in summertime.</p>
 <div class="cell">
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># obtain a collection of images of a tile covering part of Lena delta</span></span>
@@ -699,12 +699,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div id="fig-lena-datacubes" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="./images/th_data_sources/s2_lena_delta.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;10.10: Sentinel-2 image of the Lena river delta in summertime.</figcaption></figure>
+<figcaption class="figure-caption">Figure&nbsp;5.10: Sentinel-2 image of the Lena river delta in summertime.</figcaption></figure>
 </div>
 </div>
 </div>
-</section><section id="sentinel-1-rtc-images-in-cdse" class="level3" data-number="10.11.2"><h3 data-number="10.11.2" class="anchored" data-anchor-id="sentinel-1-rtc-images-in-cdse">
-<span class="header-section-number">10.11.2</span> SENTINEL-1-RTC images in CDSE</h3>
+</section><section id="sentinel-1-rtc-images-in-cdse" class="level3" data-number="5.11.2"><h3 data-number="5.11.2" class="anchored" data-anchor-id="sentinel-1-rtc-images-in-cdse">
+<span class="header-section-number">5.11.2</span> SENTINEL-1-RTC images in CDSE</h3>
 <p>An important product under development at CDSE are the radiometric terrain corrected (RTC) Sentinel-1 images. in CDSE, this product is referred to as normalized terrain backscater (NRB). The S1-NRB product contains radiometrically terrain corrected (RTC) gamma nought backscatter (γ0) processed from Single Look Complex (SLC) Level-1A data. Each acquired polarization is stored in an individual binary image file.</p>
 <p>All images are projected and gridded into the United States Military Grid Reference System (US-MGRS). The use of the US-MGRS tile grid ensures a very high level of interoperability with Sentinel-2 Level-2A ARD products making it easy to also set-up complex analysis systems that exploit both SAR and optical data. While speckle is inherent in SAR acquisitions, speckle filtering is not applied to the S1-NRB product in order to preserve spatial resolution. Some applications (or processing methods) may require spatial or temporal filtering for stationary backscatter estimates.</p>
 <p>For more details, please refer to the <a href="https://sentinels.copernicus.eu/web/sentinel/sentinel-1-ard-normalised-radar-backscatter-nrb-product">S1-NRB product website</a>. Global coverage is expected to grow as ESA expands the S1-RTC archive. The following example shows an S1-RTC image for the Rift valley in Ethiopia.</p>
@@ -725,12 +725,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div id="fig-rtccdse-datacubes" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="./images/th_data_sources/s1_rtc_cdse.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;10.11: Sentinel-1-RTC image of the Rift Valley in Ethiopia.</figcaption></figure>
+<figcaption class="figure-caption">Figure&nbsp;5.11: Sentinel-1-RTC image of the Rift Valley in Ethiopia.</figcaption></figure>
 </div>
 </div>
 </div>
-</section></section><section id="digital-earth-africa" class="level2" data-number="10.12"><h2 data-number="10.12" class="anchored" data-anchor-id="digital-earth-africa">
-<span class="header-section-number">10.12</span> Digital Earth Africa</h2>
+</section></section><section id="digital-earth-africa" class="level2" data-number="5.12"><h2 data-number="5.12" class="anchored" data-anchor-id="digital-earth-africa">
+<span class="header-section-number">5.12</span> Digital Earth Africa</h2>
 <p>Digital Earth Africa (DEAFRICA) is a cloud service that provides open-access Earth observation data for the African continent. The ARD image collections in <code>sits</code> are:</p>
 <ul>
 <li>Sentinel-2 level 2A (<code>SENTINEL-2-L2A</code>), organised as MGRS tiles.</li>
@@ -764,7 +764,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div id="fig-s2deaf-datacubes" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="./images/th_data_sources/deafrica_s2.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;10.12: Sentinel-2 image in an area over Madagascar.</figcaption></figure>
+<figcaption class="figure-caption">Figure&nbsp;5.12: Sentinel-2 image in an area over Madagascar.</figcaption></figure>
 </div>
 </div>
 </div>
@@ -788,7 +788,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div id="fig-l9deaf-datacubes" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="./images/th_data_sources/landsat9_serengeti.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;10.13: Landsat-9 image in an area over the Serengeti in Tanzania.</figcaption></figure>
+<figcaption class="figure-caption">Figure&nbsp;5.13: Landsat-9 image in an area over the Serengeti in Tanzania.</figcaption></figure>
 </div>
 </div>
 </div>
@@ -811,12 +811,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div id="fig-sarhhdeaf-datacubes" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="./images/th_data_sources/alos_palsar_hh_lake_kivu.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;10.14: ALOS-PALSAR mosaic in the Congo forest area.</figcaption></figure>
+<figcaption class="figure-caption">Figure&nbsp;5.14: ALOS-PALSAR mosaic in the Congo forest area.</figcaption></figure>
 </div>
 </div>
 </div>
-</section><section id="harmonized-landsat-sentinel" class="level2" data-number="10.13"><h2 data-number="10.13" class="anchored" data-anchor-id="harmonized-landsat-sentinel">
-<span class="header-section-number">10.13</span> Harmonized Landsat-Sentinel</h2>
+</section><section id="harmonized-landsat-sentinel" class="level2" data-number="5.13"><h2 data-number="5.13" class="anchored" data-anchor-id="harmonized-landsat-sentinel">
+<span class="header-section-number">5.13</span> Harmonized Landsat-Sentinel</h2>
 <p>Harmonized Landsat Sentinel (HLS) is a NASA initiative that processes and harmonizes Landsat 8 and Sentinel-2 imagery to a common standard, including atmospheric correction, alignment, resampling, and corrections for BRDF (bidirectional reflectance distribution function). The purpose of the HLS project is to create a unified and consistent dataset that integrates the advantages of both systems, making it easier to work with the data.</p>
 <p>The NASA Harmonized Landsat and Sentinel (HLS) service provides two image collections:</p>
 <ul>
@@ -862,12 +862,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div id="fig-s2hls-datacubes" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="./images/th_data_sources/hls_ilhabela_s2.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;10.15: Sentinel-2 image from NASA HLSS30 collection showing the island of Ilhabela in the coast of Brazil.</figcaption></figure>
+<figcaption class="figure-caption">Figure&nbsp;5.15: Sentinel-2 image from NASA HLSS30 collection showing the island of Ilhabela in the coast of Brazil.</figcaption></figure>
 </div>
 </div>
 </div>
-</section><section id="eo-products-from-terrascope" class="level2" data-number="10.14"><h2 data-number="10.14" class="anchored" data-anchor-id="eo-products-from-terrascope">
-<span class="header-section-number">10.14</span> EO products from TERRASCOPE</h2>
+</section><section id="eo-products-from-terrascope" class="level2" data-number="5.14"><h2 data-number="5.14" class="anchored" data-anchor-id="eo-products-from-terrascope">
+<span class="header-section-number">5.14</span> EO products from TERRASCOPE</h2>
 <p>Terrascope is online platform for accessing open-source satellite images. This service, operated by VITO, offers a range of Earth observation data and processing services that are accessible free of charge. Currently, <code>sits</code> supports the World Cover 2021 maps, produced by VITO with support form the European Commission and ESA. The following code shows how to access the World Cover 2021 convering tile “22LBL”. The first step is to use <code><a href="https://rdrr.io/pkg/sits/man/sits_mgrs_to_roi.html">sits_mgrs_to_roi()</a></code> to get the region of interest expressed as a bounding box; this box is then entered as the <code>roi</code> parameter in the <code><a href="https://rdrr.io/pkg/sits/man/sits_cube.html">sits_cube()</a></code> function. Since the World Cover data is available as a 3<span class="math inline">\(^\circ\)</span> by 3<span class="math inline">\(^\circ\)</span> grid, it is necessary to use <code><a href="https://rdrr.io/pkg/sits/man/sits_cube_copy.html">sits_cube_copy()</a></code> to extract the exact MGRS tile.</p>
 <div class="cell">
 <div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># get roi for an MGRS tile</span></span>
@@ -892,7 +892,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div id="fig-wc-datacubes" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="./images/th_data_sources/world_cover_2021.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;10.16: World Cover 2021 map covering MGRS tile 22LBL.</figcaption></figure>
+<figcaption class="figure-caption">Figure&nbsp;5.16: World Cover 2021 map covering MGRS tile 22LBL.</figcaption></figure>
 </div>
 </div>
 </div>
@@ -1132,13 +1132,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./th_validation.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Map validation and use of maps for area estimation</span></span>
+      <a href="./th_remote_sensing.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remote Sensing images: optical, SAR</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./th_design_frames.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Remote Sensing in the Design of Sampling Frames</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./th_lucc.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Land cover and crop classification schemas</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -1,5 +1,5 @@
 ---
-title: "EO Big Data Sources"
+title: "Earth Observation Big Data Sources"
 author: "Gilberto Camara"
 format: html
 ---
