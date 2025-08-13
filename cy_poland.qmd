@@ -6,7 +6,6 @@ format: html
 
 ## Introduction
 
-
 Remote sensing technologies have increasingly become vital tools in modern agriculture for crop health monitoring and yield estimation. Open access to satellite imagery allows for the capture of spatial and temporal changes in crop growth, and in consequence more timely and accurate yield forecasting. The ultimate aim of this study is to provide a methodology to estimate crop yields on a country scale during the growing season. This responds to the need of statistical offices (in this case Statistics Poland) that are obliged to provide statistical information on agricultural production. 
 
 In this context, this study aims to evaluate with what accuracy yield forecasts can be produced using an automated system running on publicly available data. Therefore, within this study, a novel system for an operational crop yield forecasting at Nomenclature des Unités Territoriales Statistiques level 2 (NUTS-2) and Local Administrative Units (LAU) is proposed.
@@ -137,15 +136,14 @@ To ensure year-to-year comparability of vegetation conditions, the explanatory v
 
 Thermal time was calculated for a day $d$ of the year as so-called Growing Degree Days (GDD) from daily maximum ($T_max$) and minimum ($T_min$) air temperatures using a formula:
 
-```{r}
-#| echo: FALSE
-#| label: fig-gdd-cy-poland
-#| out-width: 80%
-#| fig-cap: |
-#|   Calculation of growing degree days based on air temperature.
-#| fig-align: center
-knitr::include_graphics("./images/cy_poland/gdd.png")
-```
+$$
+GDD_d = \sum_{i=0}^{d} \left[ 
+\left( \frac{T_{x,i} + T_{n,i}}{2} - T_b \right) 
+\times 
+\underbrace{\left[ \left( \frac{T_{x,i} + T_{n,i}}{2} - T_b \right) > 0 \right]}_{\text{conditional}}
+\right]
+$$
+Calculation of growing degree days based on air temperature
 
 where $T_b$ stands for base temperature: 5°C for winter wheat and winter
 rapeseed, and 10°C for maize. In addition, $T_{n,i}$ is replaced by $T_b$
@@ -168,8 +166,8 @@ For crop yield forecasting proposed, we  employ a machine learning technique, th
 6. Accumulated precipitation since 1 April;
 7. $NDVI_{GDD}$;
 8. $VCI_{GDD}$;
-9. $LST_{GDD};
-10. $TCI_{GDD};
+9. $LST_{GDD}$;
+10. $TCI_{GDD}$;
 11. Annual maximum NDVI (which does not correspond to the GDD levels).
 
 In total, there were 170 predictors (c) but the number of years (r) varied between crop types and administrative units due to the reference data availability. For LAUs, the number of years is presented in @fig-yield-lau-cy-poland, whereas for NUTS-2, it equaled 17 for winter wheat and 22 for winter rapeseed and maize.
@@ -184,15 +182,19 @@ Three metrics were used to describe the model performance: Mean Bias
 Error (MBE, Equation), Root Mean Square Error (RMSE, Equation), and
 Modeling Efficiency (EF, Equation) as follows:
 
-```{r}
-#| echo: FALSE
-#| label: fig-validation-cy-poland
-#| out-width: 80%
-#| fig-cap: |
-#|   Calculation of growing degree days based on air temperature.
-#| fig-align: center
-knitr::include_graphics("./images/cy_poland/validation.png")
-```
+$$
+MBE = \frac{1}{n} \sum_{k=1}^{n} \left( E_k - M_k \right)
+$$
+
+$$
+RMSE = \sqrt{ \frac{1}{n} \sum_{k=1}^{n} \left( E_k - M_k \right)^{2} }
+$$
+
+$$
+EF = 1 - \frac{\sum_{k=1}^{n} \left( E_k - M_k \right)^{2}}
+{\sum_{k=1}^{n} \left( E_k - \overline{M} \right)^{2}}
+$$
+
 
 where $E_k$ represents predicted crop yield value; $M_k$ is the reference crop yield value; $\overline{M}$ is the average value of reference crop yield value; $k$ is step of the time series (i.e. 1 year); and $n$ is the length of the time series.
 
