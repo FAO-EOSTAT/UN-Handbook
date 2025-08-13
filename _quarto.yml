@@ -69,5 +69,6 @@ bibliography:
     - bibliography/indonesia.bib
     - bibliography/mexico.bib
     - bibliography/un-handbook.bib
+    - bibliography/deafrica.bib
 
 csl: ieee.csl
