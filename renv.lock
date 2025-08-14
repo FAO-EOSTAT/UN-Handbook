@@ -58,6 +58,44 @@
       "Maintainer": "Kirill Müller <kirill@cynkra.com>",
       "Repository": "RSPM"
     },
+    "DT": {
+      "Package": "DT",
+      "Version": "0.33",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "A Wrapper of the JavaScript Library 'DataTables'",
+      "Authors@R": "c( person(\"Yihui\", \"Xie\", role = \"aut\"), person(\"Joe\", \"Cheng\", email = \"joe@posit.co\", role = c(\"aut\", \"cre\")), person(\"Xianying\", \"Tan\", role = \"aut\"), person(\"JJ\", \"Allaire\", role = \"ctb\"), person(\"Maximilian\", \"Girlich\", role = \"ctb\"), person(\"Greg\", \"Freedman Ellis\", role = \"ctb\"), person(\"Johannes\", \"Rauh\", role = \"ctb\"), person(\"SpryMedia Limited\", role = c(\"ctb\", \"cph\"), comment = \"DataTables in htmlwidgets/lib\"), person(\"Brian\", \"Reavis\", role = c(\"ctb\", \"cph\"), comment = \"selectize.js in htmlwidgets/lib\"), person(\"Leon\", \"Gersen\", role = c(\"ctb\", \"cph\"), comment = \"noUiSlider in htmlwidgets/lib\"), person(\"Bartek\", \"Szopka\", role = c(\"ctb\", \"cph\"), comment = \"jquery.highlight.js in htmlwidgets/lib\"), person(\"Alex\", \"Pickering\", role = c(\"ctb\")), person(\"William\", \"Holmes\", role = c(\"ctb\")), person(\"Mikko\", \"Marttila\", role = c(\"ctb\")), person(\"Andres\", \"Quintero\", role = c(\"ctb\")), person(\"Stéphane\", \"Laurent\", role = c(\"ctb\")), person(given = \"Posit Software, PBC\", role = c(\"cph\", \"fnd\")) )",
+      "Description": "Data objects in R can be rendered as HTML tables using the JavaScript library 'DataTables' (typically via R Markdown or Shiny). The 'DataTables' library has been included in this R package. The package name 'DT' is an abbreviation of 'DataTables'.",
+      "URL": "https://github.com/rstudio/DT",
+      "BugReports": "https://github.com/rstudio/DT/issues",
+      "License": "GPL-3 | file LICENSE",
+      "Imports": [
+        "htmltools (>= 0.3.6)",
+        "htmlwidgets (>= 1.3)",
+        "httpuv",
+        "jsonlite (>= 0.9.16)",
+        "magrittr",
+        "crosstalk",
+        "jquerylib",
+        "promises"
+      ],
+      "Suggests": [
+        "knitr (>= 1.8)",
+        "rmarkdown",
+        "shiny (>= 1.6)",
+        "bslib",
+        "future",
+        "testit",
+        "tibble"
+      ],
+      "VignetteBuilder": "knitr",
+      "RoxygenNote": "7.3.1",
+      "Encoding": "UTF-8",
+      "NeedsCompilation": "no",
+      "Author": "Yihui Xie [aut], Joe Cheng [aut, cre], Xianying Tan [aut], JJ Allaire [ctb], Maximilian Girlich [ctb], Greg Freedman Ellis [ctb], Johannes Rauh [ctb], SpryMedia Limited [ctb, cph] (DataTables in htmlwidgets/lib), Brian Reavis [ctb, cph] (selectize.js in htmlwidgets/lib), Leon Gersen [ctb, cph] (noUiSlider in htmlwidgets/lib), Bartek Szopka [ctb, cph] (jquery.highlight.js in htmlwidgets/lib), Alex Pickering [ctb], William Holmes [ctb], Mikko Marttila [ctb], Andres Quintero [ctb], Stéphane Laurent [ctb], Posit Software, PBC [cph, fnd]",
+      "Maintainer": "Joe Cheng <joe@posit.co>",
+      "Repository": "CRAN"
+    },
     "FNN": {
       "Package": "FNN",
       "Version": "1.1.4.1",
@@ -79,6 +117,78 @@
       "Repository": "CRAN",
       "Author": "Alina Beygelzimer [aut] (cover tree library), Sham Kakadet [aut] (cover tree library), John Langford [aut] (cover tree library), Sunil Arya [aut] (ANN library 1.1.2 for the kd-tree approach), David Mount [aut] (ANN library 1.1.2 for the kd-tree approach), Shengqiao Li [aut, cre]",
       "Maintainer": "Shengqiao Li <lishengqiao@yahoo.com>"
+    },
+    "GGally": {
+      "Package": "GGally",
+      "Version": "2.3.0",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Extension to 'ggplot2'",
+      "Authors@R": "c( person(\"Barret\", \"Schloerke\", , \"schloerke@gmail.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-9986-114X\")), person(\"Di\", \"Cook\", , \"dicook@monash.edu\", role = c(\"aut\", \"ths\"), comment = c(ORCID = \"0000-0002-3813-7155\")), person(\"Joseph\", \"Larmarange\", , \"joseph@larmarange.net\", role = \"aut\", comment = c(ORCID = \"0000-0001-7097-700X\")), person(\"Francois\", \"Briatte\", , \"f.briatte@gmail.com\", role = \"aut\"), person(\"Moritz\", \"Marbach\", , \"mmarbach@mail.uni-mannheim.de\", role = \"aut\"), person(\"Edwin\", \"Thoen\", , \"edwinthoen@gmail.com\", role = \"aut\"), person(\"Amos\", \"Elberg\", , \"amos.elberg@gmail.com\", role = \"aut\"), person(\"Ott\", \"Toomet\", , \"otoomet@gmail.com\", role = \"ctb\"), person(\"Jason\", \"Crowley\", , \"crowley.jason.s@gmail.com\", role = \"aut\"), person(\"Heike\", \"Hofmann\", , \"hhofmann4@unl.edu\", role = \"ths\", comment = c(ORCID = \"0000-0001-6216-5183\")), person(\"Hadley\", \"Wickham\", , \"h.wickham@gmail.com\", role = \"ths\", comment = c(ORCID = \"0000-0003-4757-117X\")) )",
+      "Description": "The R package 'ggplot2' is a plotting system based on the grammar of graphics.  'GGally' extends 'ggplot2' by adding several functions to reduce the complexity of combining geometric objects with transformed data.  Some of these functions include a pairwise plot matrix, a two group pairwise plot matrix, a parallel coordinates plot, a survival plot, and several functions to plot networks.",
+      "License": "GPL (>= 2.0)",
+      "URL": "https://ggobi.github.io/ggally/, https://github.com/ggobi/ggally",
+      "BugReports": "https://github.com/ggobi/ggally/issues",
+      "Depends": [
+        "ggplot2 (>= 3.5.2)",
+        "R (>= 4.3)"
+      ],
+      "Imports": [
+        "dplyr (>= 1.1.0)",
+        "ggstats (>= 0.9.0)",
+        "grDevices",
+        "grid",
+        "gtable (>= 0.2.0)",
+        "lifecycle",
+        "magrittr",
+        "progress",
+        "RColorBrewer",
+        "rlang",
+        "S7 (>= 0.2.0)",
+        "scales (>= 1.3.0)",
+        "tidyr (>= 1.3.0)",
+        "utils"
+      ],
+      "Suggests": [
+        "broom (>= 0.7.0)",
+        "broom.helpers (>= 1.3.0)",
+        "chemometrics",
+        "crosstalk",
+        "emmeans",
+        "geosphere (>= 1.5-1)",
+        "ggforce",
+        "Hmisc",
+        "igraph (>= 1.0.1)",
+        "intergraph (>= 2.0-2)",
+        "knitr",
+        "labelled",
+        "mapproj",
+        "maps (>= 3.1.0)",
+        "network (>= 1.17.1)",
+        "nnet",
+        "rmarkdown",
+        "scagnostics",
+        "sna (>= 2.3-2)",
+        "spelling",
+        "survival",
+        "testthat (>= 3.0.0)",
+        "vdiffr"
+      ],
+      "RdMacros": "lifecycle",
+      "Config/Needs/website": "tidyverse/tidytemplate",
+      "Config/testthat/edition": "3",
+      "Config/usethis/last-upkeep": "2025-06-13",
+      "Encoding": "UTF-8",
+      "Language": "en-US",
+      "LazyData": "true",
+      "LazyLoad": "yes",
+      "RoxygenNote": "7.3.2",
+      "SystemRequirements": "openssl",
+      "Collate": "'GGally-package.R' 'data-australia-pisa-2012.R' 'data-baseball.R' 'data-flea.R' 'data-happy.R' 'data-nasa.R' 'data-pigs.R' 'data-psychademic.R' 'data-tips.R' 'data-twitter_spambots.R' 'deprecated.R' 'find-combo.R' 'gg-plots.R' 'ggally_colbar.R' 'ggally_cross.R' 'ggaly_trends.R' 'ggbivariate.R' 'ggcoef.R' 'ggcorr.R' 'ggfacet.R' 'gglyph.R' 'ggpairs_getput.R' 'ggmatrix.R' 'ggmatrix_gtable.R' 'ggmatrix_gtable_helpers.R' 'ggmatrix_legend.R' 'ggmatrix_make_plot.R' 'ggmatrix_print.R' 'ggmatrix_progress.R' 'ggnet.R' 'ggnet2.R' 'ggnetworkmap.R' 'ggnostic.R' 'ggpairs.R' 'ggpairs_add.R' 'ggpairs_internal_plots.R' 'ggparcoord.R' 'ggsave.R' 'ggscatmat.R' 'ggsurv.R' 'ggtable.R' 'reexports.R' 'utils-pipe.R' 'utils.R' 'vig_ggally.R' 'zzz.R'",
+      "NeedsCompilation": "no",
+      "Author": "Barret Schloerke [aut, cre] (ORCID: <https://orcid.org/0000-0001-9986-114X>), Di Cook [aut, ths] (ORCID: <https://orcid.org/0000-0002-3813-7155>), Joseph Larmarange [aut] (ORCID: <https://orcid.org/0000-0001-7097-700X>), Francois Briatte [aut], Moritz Marbach [aut], Edwin Thoen [aut], Amos Elberg [aut], Ott Toomet [ctb], Jason Crowley [aut], Heike Hofmann [ths] (ORCID: <https://orcid.org/0000-0001-6216-5183>), Hadley Wickham [ths] (ORCID: <https://orcid.org/0000-0003-4757-117X>)",
+      "Maintainer": "Barret Schloerke <schloerke@gmail.com>",
+      "Repository": "CRAN"
     },
     "KernSmooth": {
       "Package": "KernSmooth",
@@ -298,6 +408,43 @@
       "Repository": "RSPM",
       "Encoding": "UTF-8"
     },
+    "RcppEigen": {
+      "Package": "RcppEigen",
+      "Version": "0.3.4.0.2",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "'Rcpp' Integration for the 'Eigen' Templated Linear Algebra Library",
+      "Date": "2024-08-23",
+      "Authors@R": "c(person(\"Doug\", \"Bates\", role = \"aut\", comment = c(ORCID = \"0000-0001-8316-9503\")), person(\"Dirk\", \"Eddelbuettel\", role = c(\"aut\", \"cre\"), email = \"edd@debian.org\", comment = c(ORCID = \"0000-0001-6419-907X\")), person(\"Romain\", \"Francois\", role = \"aut\", comment = c(ORCID = \"0000-0002-2444-4226\")), person(\"Yixuan\", \"Qiu\", role = \"aut\", comment = c(ORCID = \"0000-0003-0109-6692\")), person(\"Authors of\", \"Eigen\", role = \"cph\", comment = \"Authorship and copyright in included Eigen library as detailed in inst/COPYRIGHTS\"))",
+      "Copyright": "See the file COPYRIGHTS for various Eigen copyright details",
+      "Description": "R and 'Eigen' integration using 'Rcpp'. 'Eigen' is a C++ template library for linear algebra: matrices, vectors, numerical solvers and related algorithms.  It supports dense and sparse matrices on integer, floating point and complex numbers, decompositions of such matrices, and solutions of linear systems. Its performance on many algorithms is comparable with some of the best implementations based on 'Lapack' and level-3 'BLAS'. The 'RcppEigen' package includes the header files from the 'Eigen' C++ template library. Thus users do not need to install 'Eigen' itself in order to use 'RcppEigen'. Since version 3.1.1, 'Eigen' is licensed under the Mozilla Public License (version 2); earlier version were licensed under the GNU LGPL version 3 or later. 'RcppEigen' (the 'Rcpp' bindings/bridge to 'Eigen') is licensed under the GNU GPL version 2 or later, as is the rest of 'Rcpp'.",
+      "License": "GPL (>= 2) | file LICENSE",
+      "LazyLoad": "yes",
+      "Depends": [
+        "R (>= 3.6.0)"
+      ],
+      "LinkingTo": [
+        "Rcpp"
+      ],
+      "Imports": [
+        "Rcpp (>= 0.11.0)",
+        "stats",
+        "utils"
+      ],
+      "Suggests": [
+        "Matrix",
+        "inline",
+        "tinytest",
+        "pkgKitten",
+        "microbenchmark"
+      ],
+      "URL": "https://github.com/RcppCore/RcppEigen, https://dirk.eddelbuettel.com/code/rcpp.eigen.html",
+      "BugReports": "https://github.com/RcppCore/RcppEigen/issues",
+      "NeedsCompilation": "yes",
+      "Author": "Doug Bates [aut] (<https://orcid.org/0000-0001-8316-9503>), Dirk Eddelbuettel [aut, cre] (<https://orcid.org/0000-0001-6419-907X>), Romain Francois [aut] (<https://orcid.org/0000-0002-2444-4226>), Yixuan Qiu [aut] (<https://orcid.org/0000-0003-0109-6692>), Authors of Eigen [cph] (Authorship and copyright in included Eigen library as detailed in inst/COPYRIGHTS)",
+      "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
+      "Repository": "CRAN"
+    },
     "RcppTOML": {
       "Package": "RcppTOML",
       "Version": "0.2.3",
@@ -326,6 +473,45 @@
       "NeedsCompilation": "yes",
       "Author": "Dirk Eddelbuettel [aut, cre] (<https://orcid.org/0000-0001-6419-907X>), Mark Gillard [aut] (Author of 'toml++' header library)",
       "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
+      "Repository": "CRAN"
+    },
+    "S7": {
+      "Package": "S7",
+      "Version": "0.2.0",
+      "Source": "Repository",
+      "Title": "An Object Oriented System Meant to Become a Successor to S3 and S4",
+      "Authors@R": "c( person(\"Object-Oriented Programming Working Group\", role = \"cph\"), person(\"Davis\", \"Vaughan\", role = \"aut\"), person(\"Jim\", \"Hester\", role = \"aut\", comment = c(ORCID = \"0000-0002-2739-7082\")), person(\"Tomasz\", \"Kalinowski\", role = \"aut\"), person(\"Will\", \"Landau\", role = \"aut\"), person(\"Michael\", \"Lawrence\", role = \"aut\"), person(\"Martin\", \"Maechler\", role = \"aut\", comment = c(ORCID = \"0000-0002-8685-9910\")), person(\"Luke\", \"Tierney\", role = \"aut\"), person(\"Hadley\", \"Wickham\", , \"hadley@posit.co\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0003-4757-117X\")) )",
+      "Description": "A new object oriented programming system designed to be a successor to S3 and S4. It includes formal class, generic, and method specification, and a limited form of multiple dispatch. It has been designed and implemented collaboratively by the R Consortium Object-Oriented Programming Working Group, which includes representatives from R-Core, 'Bioconductor', 'Posit'/'tidyverse', and the wider R community.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://rconsortium.github.io/S7/, https://github.com/RConsortium/S7",
+      "BugReports": "https://github.com/RConsortium/S7/issues",
+      "Depends": [
+        "R (>= 3.5.0)"
+      ],
+      "Imports": [
+        "utils"
+      ],
+      "Suggests": [
+        "bench",
+        "callr",
+        "covr",
+        "knitr",
+        "methods",
+        "rmarkdown",
+        "testthat (>= 3.2.0)",
+        "tibble"
+      ],
+      "VignetteBuilder": "knitr",
+      "Config/build/compilation-database": "true",
+      "Config/Needs/website": "sloop",
+      "Config/testthat/edition": "3",
+      "Config/testthat/parallel": "TRUE",
+      "Config/testthat/start-first": "external-generic",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.3.2",
+      "NeedsCompilation": "yes",
+      "Author": "Object-Oriented Programming Working Group [cph], Davis Vaughan [aut], Jim Hester [aut] (<https://orcid.org/0000-0002-2739-7082>), Tomasz Kalinowski [aut], Will Landau [aut], Michael Lawrence [aut], Martin Maechler [aut] (<https://orcid.org/0000-0002-8685-9910>), Luke Tierney [aut], Hadley Wickham [aut, cre] (<https://orcid.org/0000-0003-4757-117X>)",
+      "Maintainer": "Hadley Wickham <hadley@posit.co>",
       "Repository": "CRAN"
     },
     "XML": {
@@ -2261,6 +2447,114 @@
       "Maintainer": "Thomas Lin Pedersen <thomas.pedersen@posit.co>",
       "Repository": "https://packagemanager.posit.co/cran/__linux__/jammy/latest"
     },
+    "ggrepel": {
+      "Package": "ggrepel",
+      "Version": "0.9.6",
+      "Source": "Repository",
+      "Authors@R": "c( person(\"Kamil\", \"Slowikowski\", email = \"kslowikowski@gmail.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0002-2843-6370\")), person(\"Alicia\", \"Schep\", role = \"ctb\", comment = c(ORCID = \"0000-0002-3915-0618\")), person(\"Sean\", \"Hughes\", role = \"ctb\", comment = c(ORCID = \"0000-0002-9409-9405\")), person(\"Trung Kien\", \"Dang\", role = \"ctb\", comment = c(ORCID = \"0000-0001-7562-6495\")), person(\"Saulius\", \"Lukauskas\", role = \"ctb\"), person(\"Jean-Olivier\", \"Irisson\", role = \"ctb\", comment = c(ORCID = \"0000-0003-4920-3880\")), person(\"Zhian N\", \"Kamvar\", role = \"ctb\", comment = c(ORCID = \"0000-0003-1458-7108\")), person(\"Thompson\", \"Ryan\", role = \"ctb\", comment = c(ORCID = \"0000-0002-0450-8181\")), person(\"Dervieux\", \"Christophe\", role = \"ctb\", comment = c(ORCID = \"0000-0003-4474-2498\")), person(\"Yutani\", \"Hiroaki\", role = \"ctb\"), person(\"Pierre\", \"Gramme\", role = \"ctb\"), person(\"Amir Masoud\", \"Abdol\", role = \"ctb\"), person(\"Malcolm\", \"Barrett\", role = \"ctb\", comment = c(ORCID = \"0000-0003-0299-5825\")), person(\"Robrecht\", \"Cannoodt\", role = \"ctb\", comment = c(ORCID = \"0000-0003-3641-729X\")), person(\"Michał\", \"Krassowski\", role = \"ctb\", comment = c(ORCID = \"0000-0002-9638-7785\")), person(\"Michael\", \"Chirico\", role = \"ctb\", comment = c(ORCID = \"0000-0003-0787-087X\")), person(\"Pedro\", \"Aphalo\", role = \"ctb\", comment = c(ORCID = \"0000-0003-3385-972X\")), person(\"Francis\", \"Barton\", role = \"ctb\") )",
+      "Title": "Automatically Position Non-Overlapping Text Labels with 'ggplot2'",
+      "Description": "Provides text and label geoms for 'ggplot2' that help to avoid overlapping text labels. Labels repel away from each other and away from the data points.",
+      "Depends": [
+        "R (>= 3.0.0)",
+        "ggplot2 (>= 2.2.0)"
+      ],
+      "Imports": [
+        "grid",
+        "Rcpp",
+        "rlang (>= 0.3.0)",
+        "scales (>= 0.5.0)",
+        "withr (>= 2.5.0)"
+      ],
+      "Suggests": [
+        "knitr",
+        "rmarkdown",
+        "testthat",
+        "svglite",
+        "vdiffr",
+        "gridExtra",
+        "ggpp",
+        "patchwork",
+        "devtools",
+        "prettydoc",
+        "ggbeeswarm",
+        "dplyr",
+        "magrittr",
+        "readr",
+        "stringr"
+      ],
+      "VignetteBuilder": "knitr",
+      "License": "GPL-3 | file LICENSE",
+      "URL": "https://ggrepel.slowkow.com/, https://github.com/slowkow/ggrepel",
+      "BugReports": "https://github.com/slowkow/ggrepel/issues",
+      "RoxygenNote": "7.3.1",
+      "LinkingTo": [
+        "Rcpp"
+      ],
+      "Encoding": "UTF-8",
+      "NeedsCompilation": "yes",
+      "Author": "Kamil Slowikowski [aut, cre] (<https://orcid.org/0000-0002-2843-6370>), Alicia Schep [ctb] (<https://orcid.org/0000-0002-3915-0618>), Sean Hughes [ctb] (<https://orcid.org/0000-0002-9409-9405>), Trung Kien Dang [ctb] (<https://orcid.org/0000-0001-7562-6495>), Saulius Lukauskas [ctb], Jean-Olivier Irisson [ctb] (<https://orcid.org/0000-0003-4920-3880>), Zhian N Kamvar [ctb] (<https://orcid.org/0000-0003-1458-7108>), Thompson Ryan [ctb] (<https://orcid.org/0000-0002-0450-8181>), Dervieux Christophe [ctb] (<https://orcid.org/0000-0003-4474-2498>), Yutani Hiroaki [ctb], Pierre Gramme [ctb], Amir Masoud Abdol [ctb], Malcolm Barrett [ctb] (<https://orcid.org/0000-0003-0299-5825>), Robrecht Cannoodt [ctb] (<https://orcid.org/0000-0003-3641-729X>), Michał Krassowski [ctb] (<https://orcid.org/0000-0002-9638-7785>), Michael Chirico [ctb] (<https://orcid.org/0000-0003-0787-087X>), Pedro Aphalo [ctb] (<https://orcid.org/0000-0003-3385-972X>), Francis Barton [ctb]",
+      "Maintainer": "Kamil Slowikowski <kslowikowski@gmail.com>",
+      "Repository": "CRAN"
+    },
+    "ggstats": {
+      "Package": "ggstats",
+      "Version": "0.10.0",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Extension to 'ggplot2' for Plotting Stats",
+      "Authors@R": "c( person( \"Joseph\", \"Larmarange\", , \"joseph@larmarange.net\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7097-700X\") ) )",
+      "Description": "Provides new statistics, new geometries and new positions for  'ggplot2' and a suite of functions to facilitate the creation of  statistical plots.",
+      "License": "GPL (>= 3)",
+      "URL": "https://larmarange.github.io/ggstats/, https://github.com/larmarange/ggstats",
+      "BugReports": "https://github.com/larmarange/ggstats/issues",
+      "Depends": [
+        "R (>= 4.2)"
+      ],
+      "Imports": [
+        "cli",
+        "dplyr",
+        "forcats",
+        "ggplot2 (>= 3.4.0)",
+        "lifecycle",
+        "patchwork",
+        "purrr",
+        "rlang",
+        "scales",
+        "stats",
+        "stringr",
+        "utils",
+        "tidyr"
+      ],
+      "Suggests": [
+        "betareg",
+        "broom",
+        "broom.helpers (>= 1.20.0)",
+        "emmeans",
+        "glue",
+        "gtsummary",
+        "knitr",
+        "labelled (>= 2.11.0)",
+        "reshape",
+        "rmarkdown",
+        "nnet",
+        "parameters",
+        "pscl",
+        "testthat (>= 3.0.0)",
+        "spelling",
+        "survey",
+        "survival",
+        "vdiffr"
+      ],
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.3.2",
+      "Config/testthat/edition": "3",
+      "Language": "en-US",
+      "VignetteBuilder": "knitr",
+      "NeedsCompilation": "no",
+      "Author": "Joseph Larmarange [aut, cre] (ORCID: <https://orcid.org/0000-0001-7097-700X>)",
+      "Maintainer": "Joseph Larmarange <joseph@larmarange.net>",
+      "Repository": "CRAN"
+    },
     "glue": {
       "Package": "glue",
       "Version": "1.8.0",
@@ -3869,6 +4163,50 @@
       "Maintainer": "Jeroen Ooms <jeroenooms@gmail.com>",
       "Repository": "RSPM"
     },
+    "patchwork": {
+      "Package": "patchwork",
+      "Version": "1.3.1",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "The Composer of Plots",
+      "Authors@R": "person(given = \"Thomas Lin\", family = \"Pedersen\", role = c(\"cre\", \"aut\"), email = \"thomasp85@gmail.com\", comment = c(ORCID = \"0000-0002-5147-4711\"))",
+      "Maintainer": "Thomas Lin Pedersen <thomasp85@gmail.com>",
+      "Description": "The 'ggplot2' package provides a strong API for sequentially  building up a plot, but does not concern itself with composition of multiple plots. 'patchwork' is a package that expands the API to allow for  arbitrarily complex composition of plots by, among others, providing  mathematical operators for combining multiple plots. Other packages that try  to address this need (but with a different approach) are 'gridExtra' and  'cowplot'.",
+      "License": "MIT + file LICENSE",
+      "Encoding": "UTF-8",
+      "Imports": [
+        "ggplot2 (>= 3.0.0)",
+        "gtable (>= 0.3.6)",
+        "grid",
+        "stats",
+        "grDevices",
+        "utils",
+        "graphics",
+        "rlang (>= 1.0.0)",
+        "cli",
+        "farver"
+      ],
+      "RoxygenNote": "7.3.2",
+      "URL": "https://patchwork.data-imaginist.com, https://github.com/thomasp85/patchwork",
+      "BugReports": "https://github.com/thomasp85/patchwork/issues",
+      "Suggests": [
+        "knitr",
+        "rmarkdown",
+        "gridGraphics",
+        "gridExtra",
+        "ragg",
+        "testthat (>= 2.1.0)",
+        "vdiffr",
+        "covr",
+        "png",
+        "gt (>= 0.11.0)"
+      ],
+      "VignetteBuilder": "knitr",
+      "Config/Needs/website": "gifski",
+      "NeedsCompilation": "no",
+      "Author": "Thomas Lin Pedersen [cre, aut] (ORCID: <https://orcid.org/0000-0002-5147-4711>)",
+      "Repository": "CRAN"
+    },
     "pillar": {
       "Package": "pillar",
       "Version": "1.11.0",
@@ -3949,6 +4287,43 @@
       "Encoding": "UTF-8",
       "NeedsCompilation": "no",
       "Repository": "RSPM"
+    },
+    "plyr": {
+      "Package": "plyr",
+      "Version": "1.8.9",
+      "Source": "Repository",
+      "Title": "Tools for Splitting, Applying and Combining Data",
+      "Authors@R": "person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", role = c(\"aut\", \"cre\"))",
+      "Description": "A set of tools that solves a common set of problems: you need to break a big problem down into manageable pieces, operate on each piece and then put all the pieces back together.  For example, you might want to fit a model to each spatial location or time point in your study, summarise data by panels or collapse high-dimensional arrays to simpler summary statistics. The development of 'plyr' has been generously supported by 'Becton Dickinson'.",
+      "License": "MIT + file LICENSE",
+      "URL": "http://had.co.nz/plyr, https://github.com/hadley/plyr",
+      "BugReports": "https://github.com/hadley/plyr/issues",
+      "Depends": [
+        "R (>= 3.1.0)"
+      ],
+      "Imports": [
+        "Rcpp (>= 0.11.0)"
+      ],
+      "Suggests": [
+        "abind",
+        "covr",
+        "doParallel",
+        "foreach",
+        "iterators",
+        "itertools",
+        "tcltk",
+        "testthat"
+      ],
+      "LinkingTo": [
+        "Rcpp"
+      ],
+      "Encoding": "UTF-8",
+      "LazyData": "true",
+      "RoxygenNote": "7.2.3",
+      "NeedsCompilation": "yes",
+      "Author": "Hadley Wickham [aut, cre]",
+      "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
+      "Repository": "CRAN"
     },
     "png": {
       "Package": "png",
@@ -4285,6 +4660,78 @@
       "Maintainer": "Andy Liaw <andy_liaw@merck.com>",
       "Encoding": "UTF-8"
     },
+    "randomForestExplainer": {
+      "Package": "randomForestExplainer",
+      "Version": "0.10.1",
+      "Source": "Repository",
+      "Title": "Explaining and Visualizing Random Forests in Terms of Variable Importance",
+      "Authors@R": "c( person(\"Aleksandra\", \"Paluszynska\", email = \"ola.paluszynska@gmail.com\", role = c(\"aut\")), person(\"Przemyslaw\", \"Biecek\", email = \"przemyslaw.biecek@gmail.com\", role = c(\"aut\",\"ths\")), person(\"Yue\", \"Jiang\", email = \"rivehill@gmail.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0002-9798-5517\")) )",
+      "Description": "A set of tools to help explain which variables are most important in a random forests. Various variable importance measures are calculated and visualized in different settings in order to get an idea on how their importance changes depending on our criteria (Hemant Ishwaran and Udaya B. Kogalur and Eiran Z. Gorodeski and Andy J. Minn and Michael S. Lauer (2010) <doi:10.1198/jasa.2009.tm08622>, Leo Breiman (2001) <doi:10.1023/A:1010933404324>).",
+      "Depends": [
+        "R (>= 3.0)"
+      ],
+      "License": "GPL",
+      "Encoding": "UTF-8",
+      "LazyData": "true",
+      "Imports": [
+        "data.table (>= 1.10.4)",
+        "dplyr (>= 0.7.1)",
+        "DT (>= 0.2)",
+        "GGally (>= 1.3.0)",
+        "ggplot2 (>= 2.2.1)",
+        "ggrepel (>= 0.6.5)",
+        "randomForest (>= 4.6.12)",
+        "ranger(>= 0.9.0)",
+        "reshape2 (>= 1.4.2)",
+        "rmarkdown (>= 1.5)"
+      ],
+      "Suggests": [
+        "knitr",
+        "MASS (>= 7.3.47)",
+        "testthat"
+      ],
+      "VignetteBuilder": "knitr",
+      "RoxygenNote": "7.1.0",
+      "URL": "https://github.com/ModelOriented/randomForestExplainer",
+      "NeedsCompilation": "no",
+      "Author": "Aleksandra Paluszynska [aut], Przemyslaw Biecek [aut, ths], Yue Jiang [aut, cre] (<https://orcid.org/0000-0002-9798-5517>)",
+      "Maintainer": "Yue Jiang <rivehill@gmail.com>",
+      "Repository": "CRAN"
+    },
+    "ranger": {
+      "Package": "ranger",
+      "Version": "0.17.0",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "A Fast Implementation of Random Forests",
+      "Date": "2024-11-08",
+      "Authors@R": "c( person(\"Marvin N.\", \"Wright\", email = \"cran@wrig.de\", role = c(\"aut\", \"cre\")), person(\"Stefan\", \"Wager\", role = \"ctb\"), person(\"Philipp\", \"Probst\", role = \"ctb\"))",
+      "Description": "A fast implementation of Random Forests, particularly suited for high dimensional data. Ensembles of classification, regression, survival and probability prediction trees are supported. Data from genome-wide association studies can be analyzed efficiently. In addition to data frames, datasets of class 'gwaa.data' (R package 'GenABEL') and 'dgCMatrix' (R package 'Matrix')  can be directly analyzed.",
+      "License": "GPL-3",
+      "Imports": [
+        "Rcpp (>= 0.11.2)",
+        "Matrix"
+      ],
+      "LinkingTo": [
+        "Rcpp",
+        "RcppEigen"
+      ],
+      "Depends": [
+        "R (>= 3.1)"
+      ],
+      "Suggests": [
+        "survival",
+        "testthat"
+      ],
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.3.2",
+      "URL": "https://imbs-hl.github.io/ranger/, https://github.com/imbs-hl/ranger",
+      "BugReports": "https://github.com/imbs-hl/ranger/issues",
+      "NeedsCompilation": "yes",
+      "Author": "Marvin N. Wright [aut, cre], Stefan Wager [ctb], Philipp Probst [ctb]",
+      "Maintainer": "Marvin N. Wright <cran@wrig.de>",
+      "Repository": "CRAN"
+    },
     "rapidjsonr": {
       "Package": "rapidjsonr",
       "Version": "1.2.0",
@@ -4620,6 +5067,39 @@
       "NeedsCompilation": "no",
       "Author": "Jennifer Bryan [aut, cre] (<https://orcid.org/0000-0002-6983-2759>), Jim Hester [aut] (<https://orcid.org/0000-0002-2739-7082>), David Robinson [aut], Hadley Wickham [aut] (<https://orcid.org/0000-0003-4757-117X>), Christophe Dervieux [aut] (<https://orcid.org/0000-0003-4474-2498>), Posit Software, PBC [cph, fnd]",
       "Maintainer": "Jennifer Bryan <jenny@posit.co>",
+      "Repository": "CRAN"
+    },
+    "reshape2": {
+      "Package": "reshape2",
+      "Version": "1.4.4",
+      "Source": "Repository",
+      "Title": "Flexibly Reshape Data: A Reboot of the Reshape Package",
+      "Author": "Hadley Wickham <h.wickham@gmail.com>",
+      "Maintainer": "Hadley Wickham <h.wickham@gmail.com>",
+      "Description": "Flexibly restructure and aggregate data using just two functions: melt and 'dcast' (or 'acast').",
+      "License": "MIT + file LICENSE",
+      "URL": "https://github.com/hadley/reshape",
+      "BugReports": "https://github.com/hadley/reshape/issues",
+      "Depends": [
+        "R (>= 3.1)"
+      ],
+      "Imports": [
+        "plyr (>= 1.8.1)",
+        "Rcpp",
+        "stringr"
+      ],
+      "Suggests": [
+        "covr",
+        "lattice",
+        "testthat (>= 0.8.0)"
+      ],
+      "LinkingTo": [
+        "Rcpp"
+      ],
+      "Encoding": "UTF-8",
+      "LazyData": "true",
+      "RoxygenNote": "7.1.0",
+      "NeedsCompilation": "yes",
       "Repository": "CRAN"
     },
     "reticulate": {
