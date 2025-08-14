@@ -12,6 +12,7 @@ library(sits)
 library(sf)
 library(sits)
 library(FNN)
+library(randomForestExplainer)
 ```
 
 ## Overview

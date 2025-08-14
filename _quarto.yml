@@ -70,5 +70,6 @@ bibliography:
     - bibliography/mexico.bib
     - bibliography/un-handbook.bib
     - bibliography/deafrica.bib
+    - bibliography/chile.bib
 
 csl: ieee.csl
