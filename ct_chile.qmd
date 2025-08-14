@@ -964,12 +964,12 @@ mz4 <- rast("data/ct_chile/Extras/SENTINEL-2_MSI_MOSAIC_2020-05-03_2021-05-22_cl
 
 # Level 2 reclassification matrix
 reclass_lv2 <- matrix(c(
-  1,  23,    2, 11,   3, 81,    4, 81,
-  5,  31,    6, 61,   7, 22,    8, 24,
-  9,  71,   10, 31,  11, 71,   12, 61,
-  13, 22,   14, 23,  15, 81,   16, 81,
-  17, 72,   18, 82,  19, 21,   20, 21,
-  21, 41,   22, 51,  23, 21,   24, 31), ncol = 2, byrow = TRUE)
+  1, 81,   2, 81,   3, 81,   4, 24,
+  5, 61,   6, 61,   7, 41,   8, 21,
+  9, 21,   10,21,  11,22,   12, 22,
+  13, 51,  14,72,  15,82,   16, 23,
+  17, 23,  18,31,  19,31,   20, 31,
+  21, 71,  22,71,  23,81,   24, 11), ncol = 2, byrow = TRUE)
 
 # Reclassify
 mz4_reclass_nv2 <- classify(mz4, rcl = reclass_lv2)
@@ -1177,11 +1177,12 @@ To produce adjusted area estimates for classified maps, the `sits_accuracy()` fu
 #| eval: FALSE
 #| message: FALSE
 #| warning: FALSE
-mz4_val_lv2 <- st_read("extdata/Samples/samples_validation_mz4.shp") 
+mz4_val_lv2 <- st_read("data/ct_chile/Samples/samples_validation_mz4.shp") 
 
 area_acc <- sits_accuracy(
   data = mz4_lv2, 
-  validation = mz4_val_lv2)
+  validation = mz4_val_lv2
+)
 
 # Print the area estimated accuracy
 area_acc
