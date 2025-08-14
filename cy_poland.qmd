@@ -78,7 +78,7 @@ The reference data for the crop yield forecasting model consisted of official yi
 #| fig-cap: |
 #|   Administrative divisions of Poland for which crop yields were predicted: Nomenclature des Unités Territoriales Statistiques level 2 (NUTS-2)---red lines, and Local Administrative Units (LAU)---gray lines.
 #| fig-align: center
-knitr::include_graphics("./images/cy_poland/arable_land.png")
+knitr::include_graphics("./images/cy_poland/pl_adm_units.png")
 ```
 
 

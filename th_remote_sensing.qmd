@@ -21,11 +21,17 @@ Remote sensing imagery is broadly classified into two main categories based on t
 |           |                 |                           |
 +-----------+-----------------+---------------------------+
 | Optical   | visible light   | violet (0.380 - 0.450 µm) |
++-----------+-----------------+---------------------------+
 |           |                 | blue (0.450 - 0.485 µm)   |
++-----------+-----------------+---------------------------+
 |           |                 | cyan (0.485 - 0.500 µm)   |
-|           |                 | green (0.500 - 0.565 µm)  | 
++-----------+-----------------+---------------------------+
+|           |                 | green (0.500 - 0.565 µm)  |
++-----------+-----------------+---------------------------+
 |           |                 | yellow (0.565 - 0.590 µm) | 
++-----------+-----------------+---------------------------+
 |           |                 | orange (0.590 - 0.625 µm) |
++-----------+-----------------+---------------------------+
 |           |                 | red (0.625 - 0.750 µm)    |                  |
 +-----------+-----------------+---------------------------+
 |           | near-infrared   | 0.750 - 1.00 µm           |
@@ -38,4 +44,348 @@ Remote sensing imagery is broadly classified into two main categories based on t
 | Microwave | SAR             | 1 mm -- 1 m               |  
 +-----------+-----------------+---------------------------+
 
+: Spectral bands used in remote sensing {#tbl-bands}
+
+Optical remote sensing imagery makes use of visible, near-infrared and short-wave infrared sensors (passive optical sensors) to form images of the Earth's surface by receiving the solar radiation reflected from targets on the ground. Ground objects reflect and absorb radiation differently at each wavelength. Thus, the targets can be distinguished by their spectral reflectance signatures in the remote sensing imagery. Vegetation has a unique spectral signature. This signature enables it to be distinguished readily from other types of land cover in an optical/near-infrared image. For specific crops, due to their spectral and phenological characteristics, the combination of phenological period information with multi-temporal remote sensing imagery can be used to explore a crop area and its status in the growing season.
+
+Radar satellites emit its own microwave signals and analyze the returning echoes. This capability allows radar to penetrate clouds, haze, and even vegetation canopies, providing data regardless of daylight or weather conditions.
+
+```{r}
+#| echo: FALSE
+#| label: fig-optical-sar
+#| out-width: 80%
+#| fig-cap: |
+#|   Comparison of optical and SAR imagery in Taishan City, Jiangmen City, Guangdong Province, China. (a) Google high resolution imagery; (b)optical satellite image of Sentinel-2 satellite, April 23, 2025; (c) SAR satellite image of Sentinel-1 satellite, April 23, 2025.
+#| fig-align: center
+knitr::include_graphics("./images/th_remote_sensing/image_optical_sar.jpeg")
+```
+
+## Chinese Earth observation satellites
+
+Gaofen (GF, "High Resolution") is a series of civilian Earth observation satellites developed and launched for the China High-resolution Earth Observation System (CHEOS), a state-sponsored programme aimed to develop a near-real time, all-weather, global surveillance network consisting of satellite, near-space (stratosphere) airships, and aerial observation platforms. Among these satellites, Gaofen 1 (GF-1), Gaofen 2 (GF-2), Gaofen 4 (GF-4), Gaofen 5 (GF-5), Gaofen 6 (GF-6), Gaofen 7 (GF-7) are optical satellites. They all play an important role in remote sensing for agriculture statistics.
+
+```{r}
+#| echo: FALSE
+#| label: fig-gaofen1
+#| out-width: 80%
+#| fig-cap: |
+#|   Satellite imagery of rice growth stages in Shouxian Country, Huainan City, Anhui Province, China.(a) rice distribution map (b) satellite image of GF-1 PMS, May 23, 2024 (c) satellite image of GF-1 PMS, August 11, 2024.
+#| fig-align: center
+knitr::include_graphics("./images/th_remote_sensing/image_gf1.jpeg")
+```
+
+
+GF-1 and GF-6 are the Earth observation satellites operating in a 650 km Sun-Synchronous Orbit (SSO). The first GF-1 satellite was launched on April 26, 2013 and GF-6 satellite was launched on June 2, 2018. They are equipped with two high-resolution cameras and four medium-resolution wide-field cameras. The Panchromatic/Multispectral Sensor (PMS) can capture Earth imagery with a spatial resolution of 2 m in the panchromatic or black-and-white mode, and 8 m in the multispectral or color imagery. Its nominal revisit cycle is 64 days. Using its onboard pointing capabity, a specific target area can be surveyed every four days. The Wide Field View Sensor (WFV) offer a spatial resolution of 16 m and ground swath width of 800 km, allowing the satellite to collect the imagery of entire globe in only 4 days (@tbl-gaofen-1).
+
+
++---------+---------+---------+---------+---------+---------+---------+
+| Sensor. |   Band  | Spectral| Spatial | Bit     | Swath   | Revisit |
+| ensor   | number  | range   | resol.  | Depth.  | Width   | cycle.  |
++=========+=========+=========+=========+=========+=========+=========+
+| Panch   | B1      | 0.45 -  | 2 m     | 12 bit  | GF-1 \> | 32 days |
+| romatic |         | 0.90 µm |         |         | 60 km   |         |
++---------+---------+---------+---------+---------+---------+---------+
+|         |         |         |         |         | GF-6 \> |         |
+|         |         |         |         |         | 90 km   |         |
++---------+---------+---------+---------+---------+---------+---------+
+| Multis  | B2      | 0.45 -  | 8 m     |         |         |         |
+| pectral |         | 0.52 µm |         |         |         |         |
++---------+---------+---------+---------+---------+---------+---------+
+|         | B3      | 0.52 -  | 8 m     |         |         |         |
+|         |         | 0.59 µm |         |         |         |         |
++---------+---------+---------+---------+---------+---------+---------+
+|         | B4      | 0.63 -  | 8 m     |         |         |         |
+|         |         | 0.69 µm |         |         |         |         |
++---------+---------+---------+---------+---------+---------+---------+
+|         | B5      | 0.77 -  | 8 m     |         |         |         |
+|         |         | 0.89 µm |         |         |         |         |
++---------+---------+---------+---------+---------+---------+---------+
+| Wide    | B6      | 0.45 -  | 16 m    |         | \> 800  | 4 days  |
+| Field   |         | 0.52 µm |         |         | km      |         |
+| Viewer  |         |         |         |         |         |         |
++---------+---------+---------+---------+---------+---------+---------+
+|         | B7      | 0.52 -  | 16 m    |         |         |         |
+|         |         | 0.59 µm |         |         |         |         |
++---------+---------+---------+---------+---------+---------+---------+
+|         | B8      | 0.63 -  | 16 m    |         |         |         |
+|         |         | 0.69 µm |         |         |         |         |
++---------+---------+---------+---------+---------+---------+---------+
+|         | B9      | 0.77 -  | 16 m    |         |         |         |
+|         |         | 0.89 µm |         |         |         |         |
++---------+---------+---------+---------+---------+---------+---------+
+
+: Sensors onboard GF-1 and GF-6 satellites {#tbl-gaofen-1}
+
+
+```{r}
+#| echo: FALSE
+#| label: fig-gaofen6
+#| out-width: 80%
+#| fig-cap: |
+#|   GF-6 WFV image in an area of the Southern part of Goiás, Brazil (red: B9, green: B8, blue: B7).
+#| fig-align: center
+knitr::include_graphics("./images/th_remote_sensing/image_gf6.jpeg")
+```
+
+The GF-2 satellite was launched on August 19, 2014. It was designed and developed by China Academy of Space Technology (CAST). It is capable of collecting satellite imagery with a Ground Sampling Distance (GSD) of 0.8 m panchromatic and 3.2 m multispectral bands on a swath of 45 km. GF-2 supports applications in Geographic Information System (GIS) mapping, engineering and construction, climate change, environmental monitoring, precision agriculture, disaster relief, urban planning, and many other applications. Due to its submeter spatial resolution, it is very important to precision agriculture. Its nominal revisit cycle is 64 days. Using its onboard pointing capabity, a target area can be surveyed every five days.
+
++---------+---------+---------+---------+---------+---------+---------+
+| Sensor  |   Band  | Spectral| Spatial | Bit     | Swath   | Revisit |
+|         | number  | range   | resol.  | Depth.  | Width   | cycle   |
++=========+=========+=========+=========+=========+=========+=========+
+| Panch   | B1      | 0.45 -  | 0.8 m   | 10 bit  | 45 km   | 64 days |
++---------+---------+---------+---------+---------+---------+---------+
+| Multis  | B2      | 0.45 -  | 3.2 m   |         |         |         |
+| pectral |         | 0.52 µm |         |         |         |         |
++---------+---------+---------+---------+---------+---------+---------+
+|         | B3      | 0.52 -  | 3.2 m   |         |         |         |
+|         |         | 0.59 µm |         |         |         |         |
++---------+---------+---------+---------+---------+---------+---------+
+|         | B4      | 0.63 -  | 3.2 m   |         |         |         |
+|         |         | 0.69 µm |         |         |         |         |
++---------+---------+---------+---------+---------+---------+---------+
+|         | B5      | 0.77 -  | 3.2 m   |         |         |         |
+|         |         | 0.89 µm |         |         |         |         |
++---------+---------+---------+---------+---------+---------+---------+
+
+: Sensors onboard GF-2 satellite {#tbl-gaofen-2}
+
+```{r}
+#| echo: FALSE
+#| label: fig-gaofen2
+#| out-width: 80%
+#| fig-cap: |
+#|   GF-2 image in an area of Jiangmen City, Guangdong Province, China, June 9, 2025 (red: B5, green: B4, blue: B3).
+#| fig-align: center
+knitr::include_graphics("./images/th_remote_sensing/image_gf2.jpeg")
+```
+
+
+GF-4 is designed for Earth observation from a geosynchronous orbit and it has different features: high spatial resolution, multiple payload types, strong maneuverability, large swath width and rapid imaging. Its first satellite was launched on December 29, 2015. GF-4 features a visible light and infrared staring optical imager with common optical system. The ground resolution for the visible light imager is 50 m and for the Mid-Wave Infrared (MWIR) payload is 400 m. This payload allows the observation of China and the surrounding areas with a high temporal resolution. GF-4 data application includes disaster monitoring, meteorological observation agriculture and so on.
+
+
++---------+---------+---------+---------+---------+---------+---------+
+| Sensor  |   Band  | Spectral| Spatial | Bit     | Swath   | Revisit |
+|         | number  | range   | resol.  | Depth.  | Width   | cycle   |
++=========+=========+=========+=========+=========+=========+=========+
+| Panch   | B1      | 0.45 -  | 50 m    | 10 bit  | 400 km  | 20      |
+| romatic |         | 0.90 µm |         |         |         | seconds |
++---------+---------+---------+---------+---------+---------+---------+
+| Multis  | B2      | 0.45 -  | 50 m    |         |         |         |
+| pectral |         | 0.52 µm |         |         |         |         |
++---------+---------+---------+---------+---------+---------+---------+
+|         | B3      | 0.52 -  | 50 m    |         |         |         |
+|         |         | 0.59 µm |         |         |         |         |
++---------+---------+---------+---------+---------+---------+---------+
+|         | B4      | 0.63 -  | 50 m    |         |         |         |
+|         |         | 0.69 µm |         |         |         |         |
++---------+---------+---------+---------+---------+---------+---------+
+|         | B5      | 0.76 -  | 50 m    |         |         |         |
+|         |         | 0.90 µm |         |         |         |         |
++---------+---------+---------+---------+---------+---------+---------+
+|         | B6      | 3.50 -  | 400 m   |         |         |         |
+|         |         | 4.10 µm |         |         |         |         |
++---------+---------+---------+---------+---------+---------+---------+
+
+: Sensors onboard GF-4 satellite {#tbl-gaofen-4}
+
+```{r}
+#| echo: FALSE
+#| label: fig-gaofen4
+#| out-width: 80%
+#| fig-cap: |
+#|   GF-4 image in an area of the Formosa Island, March 23, 2025. (a) visible light image (red: B3, green: B5, blue: B4) (b) MWIR image (B6).
+#| fig-align: center
+knitr::include_graphics("./images/th_remote_sensing/image_gf4.jpeg")
+```
+
+
+The GF-5 satellite was launched on May 9, 2018. It simultaneously conduct comprehensive observations of both land and atmosphere. It is configured with six types of payloads, including Advanced Hyperspectral Imager (AHSI), Visual and Infrared Multispectral Sensor (VIMS), Greenhouse-gases Monitoring Instrument (GMI), atmospheric infrared ultraspectral (AIUS), environment monitoring instrument (EMI), directional polarization camera (DPC). GF-5 can acquire 330 spectral bands within the range from visible light to short-wave infrared (400-2500 nm). 
+
++------------+-------------+-------------+-------------+-------------+
+| Sensor.    | Spectral    | Spectral    | Spatial     |   Swath     |
+|            | Range       | resolution  | resolution  | Width.      |
++============+=============+=============+=============+=============+
+| AHSI       | 0.40 - 2.50 | VNIR : 5    | 30 m        | 60 km       |
+|            | µm          | nm,         |             |             |
+|            |             |             |             |             |
+|            |             | SWIR : 10   |             |             |
+|            |             | nm          |             |             |
++------------+-------------+-------------+-------------+-------------+
+| VIMS       | 0.45 - 0.52 | n/a         | 20 m        |             |
+|            | µm          |             |             |             |
++------------+-------------+-------------+-------------+-------------+
+|            | 0.52 - 0.60 |             |             |             |
+|            | µm          |             |             |             |
++------------+-------------+-------------+-------------+-------------+
+|            | 0.60 - 0.68 |             |             |             |
+|            | µm          |             |             |             |
++------------+-------------+-------------+-------------+-------------+
+|            | 0.76 - 0.86 |             |             |             |
+|            | µm          |             |             |             |
++------------+-------------+-------------+-------------+-------------+
+|            | 1.55 - 1.75 |             |             |             |
+|            | µm          |             |             |             |
++------------+-------------+-------------+-------------+-------------+
+|            | 2.08 - 2.35 |             |             |             |
+|            | µm          |             |             |             |
++------------+-------------+-------------+-------------+-------------+
+|            | 3.50 - 3.90 |             | 40 m        |             |
+|            | µm          |             |             |             |
++------------+-------------+-------------+-------------+-------------+
+|            | 4.85 - 5.05 |             |             |             |
+|            | µm          |             |             |             |
++------------+-------------+-------------+-------------+-------------+
+|            | 8.01 - 8.39 |             |             |             |
+|            | µm          |             |             |             |
++------------+-------------+-------------+-------------+-------------+
+|            | 8.42 - 8.83 |             |             |             |
+|            | µm          |             |             |             |
++------------+-------------+-------------+-------------+-------------+
+|            | 10.30 -     |             |             |             |
+|            | 11.30 µm    |             |             |             |
++------------+-------------+-------------+-------------+-------------+
+|            | 11.40 -     |             |             |             |
+|            | 12.50 µm    |             |             |             |
++------------+-------------+-------------+-------------+-------------+
+| GMI        | 0.759 -     | 0.6 cm      | 10.3 km     |             |
+|            | 0.769 µm    | 0.27 cm     |             |             |
++------------+-------------+-------------+-------------+-------------+
+|            | 1.568 -     |             |             |             |
+|            | 1.583 µm    |             |             |             |
++------------+-------------+-------------+-------------+-------------+
+|            | 1.642 -     |             |             |             |
+|            | 1.658 µm    |             |             |             |
++------------+-------------+-------------+-------------+-------------+
+|            | 2.043 -     |             |             |             |
+|            | 2.058 µm    |             |             |             |
++------------+-------------+-------------+-------------+-------------+
+| AIUS       | 750 - 4100  | 0.03 cm     | n/a         |             |
+|            | cm          |             |             |             |
+|            | (2.4 --     |             |             |             |
+|            | 13.3 µm)    |             |             |             |
++------------+-------------+-------------+-------------+-------------+
+| EMI        | 240 - 315   | 0.3 - 0.5   | 48 km       |             |
+|            | nm          | nm          |             |             |
+|            |             |             | 13 km       |             |
++------------+-------------+-------------+-------------+-------------+
+|            | 311 - 403   |             |             |             |
+|            | nm          |             |             |             |
++------------+-------------+-------------+-------------+-------------+
+|            | 401 - 550   |             |             |             |
+|            | nm          |             |             |             |
++------------+-------------+-------------+-------------+-------------+
+|            | 545 - 710   |             |             |             |
+|            | nm          |             |             |             |
++------------+-------------+-------------+-------------+-------------+
+| DPC        | 433 - 453   | n/a         | 3.5 km      |             |
+|            | nm          |             |             |             |
++------------+-------------+-------------+-------------+-------------+
+|            | 480 - 500   |             |             |             |
+|            | nm (P)      |             |             |             |
++------------+-------------+-------------+-------------+-------------+
+|            | 555 - 575   |             |             |             |
+|            | nm          |             |             |             |
++------------+-------------+-------------+-------------+-------------+
+|            | 660 - 680   |             |             |             |
+|            | nm          |             |             |             |
++------------+-------------+-------------+-------------+-------------+
+|            | 758 - 768   |             |             |             |
+|            | nm          |             |             |             |
++------------+-------------+-------------+-------------+-------------+
+|            | 745 - 785   |             |             |             |
+|            | nm          |             |             |             |
++------------+-------------+-------------+-------------+-------------+
+|            | 845 - 885   |             |             |             |
+|            | nm          |             |             |             |
++------------+-------------+-------------+-------------+-------------+
+|            | 900 - 920   |             |             |             |
+|            | nm          |             |             |             |
++------------+-------------+-------------+-------------+-------------+
+: Sensors onboard GF-5 satellite {#tbl-gaofen-5}
+
+
+```{r}
+#| echo: FALSE
+#| label: fig-gaofen5
+#| out-width: 100%
+#| fig-cap: |
+#|   GF-5 image in an area of the Northeastern coast of Guangdong Province, China, November 11, 2024. (a) GF-5 image (b) Point1: Surface Reflectance of crop (c) Point2: Surface Reflectance of buildings (d) Point3: Surface Reflectance of sea.
+#| fig-align: center
+knitr::include_graphics("./images/th_remote_sensing/image_gf5.jpeg")
+```
+
+
+GF-7 was launched on November 3, 2019. It is an optical satellite for mapping purposes for Former National Administration of Surveying, Mapping and Geoinformation of China (NASG) similar, but improved, to the earlier ZY-3. GF-7 is China's first civilian sub-meter resolution optical stereo mapping satellite and it features two camera systems for mapping and surveying and a laser altimeter so that it is capable of acquiring high spatial resolution optical stereo observation data and high-precision laser altimetry data.
+
++---------+---------+---------+---------+---------+---------+---------+
+| Sensor  |   Band  | Spectral| Spatial | Bit     | Swath   | Revisit |
+|         | number  | range   | resol.  | Depth.  | Width   | cycle   |
++=========+=========+=========+=========+=========+=========+=========+
+| Panch   | B1      | 0.45 -  | 0.8     | 11 bit  | 200 km  | 60 days |
+| romatic |         | 0.90 µm |         |         |         |         |
++---------+---------+---------+---------+---------+---------+---------+
+| Multis  | B2      | 0.45 -  | 2.6 m   |         |         |         |
+| pectral |         | 0.52 µm |         |         |         |         |
++---------+---------+---------+---------+---------+---------+---------+
+|         | B3      | 0.52 -  | 2.6 m   |         |         |         |
+|         |         | 0.59 µm |         |         |         |         |
++---------+---------+---------+---------+---------+---------+---------+
+|         | B4      | 0.63 -  | 2.6 m   |         |         |         |
+|         |         | 0.69 µm |         |         |         |         |
++---------+---------+---------+---------+---------+---------+---------+
+|         | B5      | 0.76 -  | 2.6 m   |         |         |         |
+|         |         | 0.89 µm |         |         |         |         |
++---------+---------+---------+---------+---------+---------+---------+
+: Sensors onboard GF-7 satellite {#tbl-gaofen-7}
+
+All GF optical remote sensing imagery can be purchased and downloaded on the website of [China Center For Resources Satellite Data And Application](https://data.cresda.cn/#/2dMap). GF-1 WFV, GF-4, GF-6 WFV are free. After signing up, the data can be downloaded directly without limits. GF-1 PMS、GF-2 PMS、GF-5 and GF-6 PMS require payment.
+
+Among the GF series of satellites, GF-3 is specifically designed as a radar remote sensing. GF-3 was launched on August 10, 2016. It is the first civilian C-band fully polarimetric Synthetic Aperture Radar (SAR) imaging satellite of China National Space Administration (CNSA), equipped with a multi-polarized C-band SAR at meter-level resolution. GF-3's SAR package can operate in 12 different working modes, from high-resolution (1 m) to large-swath (650 km), and operate in all-weather, day/night conditions.
+
++----------------------+--------------+-----------+------------+----------+
+| Observing            | Polarization | Incidence | Resolution | Swath    | 
+| Mode                 |              | angle.    |            |          | 
++======================+==============+===========+============+==========+
+|  Spotlight           | single       | 20\~50°   | 1m         | 10 km    | 
++----------------------+--------------+-----------+------------+----------+
+|  Ultra-fine stripmap | dual         | 20\~50°.  | 3m         | 30 km    | 
++----------------------+--------------+-----------+------------+----------+
+|  Fine stripmap       | dual         | 19\~50°.  | 5m         | 50 km    | 
++----------------------+--------------+-----------+------------+----------+
+|  Wide fine stripmap  | dual.        | 19\~50°.  | 10m        | 100 km   | 
++----------------------+--------------+-----------+------------+----------+
+|  Standard stripmap   | dual.        | 17\~50°.  | 25m        | 250 km   | 
++----------------------+--------------+-----------+------------+----------+
+|  Narrow ScanSAR      | dual         | 17\~50°.  | 50m        | 300 km   | 
++----------------------+--------------+-----------+------------+----------+
+|  Wide   ScanSAR      | dual         | 17\~50°.  | 100m       | 500 km   | 
++----------------------+--------------+-----------+------------+----------+
+|  Global observation  | dual         | 17\~50°.  | 500m       | 650 km   | 
++----------------------+--------------+-----------+------------+----------+
+|  Quad-pol stripmap   | quad         | 20\~41°.  | 8m         | 30  km   | 
++----------------------+--------------+-----------+------------+----------+
+|  Wide quad-pol       | quad         | 20\~38°.  | 25m        | 40 km    | 
++----------------------+--------------+-----------+------------+----------+
+|  Wave                | quad         | 20\~41°.  | 10m        | 5 km     | 
++----------------------+--------------+-----------+------------+----------+
+|  Exp incidence angle | dual         | 10\~20°.  | 25m        | 130 km   | 
++----------------------+--------------+-----------+------------+----------+
+|                      | dual         | 50\~60°.  | 25m        | 80 km    | 
++----------------------+--------------+-----------+------------+----------+
+: Sensors onboard GF-3 SAR satellite {#tbl-gaofen-3}
+
+All the GF-3 SAR remote sensing imagery requires payment and can be
+purchased on the website of China Center For Resources Satellite Data
+And Application ( <https://data.cresda.cn/#/2dMap>).
+
+```{r}
+#| echo: FALSE
+#| label: fig-gaofen3
+#| out-width: 100%
+#| fig-cap: |
+#|  GF-3 fine stripmap image in an area of Jiangmen City, Guangdong Province, China, April 18, 2025: (a) HH: Horizontal-Horizontal (b) HV: Horizontal-Vertical polarizations.
+#| fig-align: center
+knitr::include_graphics("./images/th_remote_sensing/image_gf3.jpeg")
+```
 

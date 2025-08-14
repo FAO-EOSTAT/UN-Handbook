@@ -2,10 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.3.361">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Gilberto Camara, Lorenzo de Simone, Ronald Jansen">
-<title>5&nbsp; Land cover and crop classification schemas – UN Handbook on Remote Sensing for Agricultural Statistics</title>
+<title>UN Handbook on Remote Sensing for Agricultural Statistics - 6&nbsp; Land cover and crop classification schemas</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,7 +22,6 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -48,28 +47,22 @@ div.csl-indent {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./th_quality_control.html" rel="next">
-<link href="./th_remote_sensing.html" rel="prev">
+<link href="./th_data_sources.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-222f02173ab23c0a3d521b74fa0b846e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
+  "limit": 20,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -78,55 +71,29 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
+}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 </head>
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./theory.html">Foundations</a></li><li class="breadcrumb-item"><a href="./th_lucc.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Land cover and crop classification schemas</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./theory.html">Foundations</a></li><li class="breadcrumb-item"><a href="./th_lucc.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Land cover and crop classification schemas</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
   </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">UN Handbook on Remote Sensing for Agricultural Statistics</a> 
         <div class="sidebar-tools-main">
@@ -168,7 +135,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="./theory.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Foundations</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -181,38 +148,38 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./th_data_sources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Earth Observation Big Data Sources</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./th_lucc.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Land cover and crop classification schemas</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Land cover and crop classification schemas</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./th_quality_control.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Quality control of training sets for agricultural statistics</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Quality control of training sets for agricultural statistics</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./th_machine_learning.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Machine learning algorithms for image time series</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Machine learning algorithms for image time series</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./th_uncertainty.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Spatial map uncertainty estimation and active learning in crop classification</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Spatial map uncertainty estimation and active learning in crop classification</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./th_validation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Map validation and use of maps for area estimation</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./th_data_sources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">EO Big Data Sources</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Map validation and use of maps for area estimation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -233,7 +200,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="./crop_type_mapping.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Use Cases in Crop Type Mapping</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -280,7 +247,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="./crop_yield_estimation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Crop yield estimation</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -321,7 +288,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="./additional.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Additional Topics</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -360,22 +327,22 @@ window.Quarto = {
 </li>
     </ul>
 </div>
-</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">5.1</span> Introduction</a></li>
-  <li><a href="#classification-systems-for-earth-observation-data-current-status" id="toc-classification-systems-for-earth-observation-data-current-status" class="nav-link" data-scroll-target="#classification-systems-for-earth-observation-data-current-status"><span class="header-section-number">5.2</span> Classification systems for Earth observation data: current status</a></li>
-  <li><a href="#elements-of-a-phenology-based-classification-schemas" id="toc-elements-of-a-phenology-based-classification-schemas" class="nav-link" data-scroll-target="#elements-of-a-phenology-based-classification-schemas"><span class="header-section-number">5.3</span> Elements of a phenology-based classification schemas</a></li>
-  <li><a href="#the-key-role-of-time-series" id="toc-the-key-role-of-time-series" class="nav-link" data-scroll-target="#the-key-role-of-time-series"><span class="header-section-number">5.4</span> The key role of time series</a></li>
-  </ul><div class="toc-actions"><ul><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/edit/quarto/th_lucc.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">6.1</span> Introduction</a></li>
+  <li><a href="#classification-systems-for-earth-observation-data-current-status" id="toc-classification-systems-for-earth-observation-data-current-status" class="nav-link" data-scroll-target="#classification-systems-for-earth-observation-data-current-status"><span class="header-section-number">6.2</span> Classification systems for Earth observation data: current status</a></li>
+  <li><a href="#elements-of-a-phenology-based-classification-schemas" id="toc-elements-of-a-phenology-based-classification-schemas" class="nav-link" data-scroll-target="#elements-of-a-phenology-based-classification-schemas"><span class="header-section-number">6.3</span> Elements of a phenology-based classification schemas</a></li>
+  <li><a href="#the-key-role-of-time-series" id="toc-the-key-role-of-time-series" class="nav-link" data-scroll-target="#the-key-role-of-time-series"><span class="header-section-number">6.4</span> The key role of time series</a></li>
+  </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/FAO-EOSTAT/UN-Handbook/edit/quarto/th_lucc.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/FAO-EOSTAT/UN-Handbook/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./theory.html">Foundations</a></li><li class="breadcrumb-item"><a href="./th_lucc.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Land cover and crop classification schemas</span></a></li></ol></nav><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title">
-<span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Land cover and crop classification schemas</span>
+<span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Land cover and crop classification schemas</span>
 </h1>
 </div>
 
@@ -395,14 +362,13 @@ window.Quarto = {
   </div>
   
 
-
-</header><section id="introduction" class="level2" data-number="5.1"><h2 data-number="5.1" class="anchored" data-anchor-id="introduction">
-<span class="header-section-number">5.1</span> Introduction</h2>
+</header><section id="introduction" class="level2" data-number="6.1"><h2 data-number="6.1" class="anchored" data-anchor-id="introduction">
+<span class="header-section-number">6.1</span> Introduction</h2>
 <p>Satellite images are the most comprehensive source of data about our environment; they provide essential information on global challenges. Images provide information for measuring deforestation, crop production, food security, urban footprints, water scarcity, land degradation, among other uses. In recent years, space agencies have adopted open distribution policies. Petabytes of Earth observation data are now available. Experts now have access to repeated acquisitions over the same areas; the resulting time series improve our understanding of ecological patterns and processes<span class="citation" data-cites="Pasquarella2016"><a href="#ref-Pasquarella2016" role="doc-biblioref">[1]</a></span>. Instead of selecting individual images from specific dates and comparing them, researchers can track changes continuously<span class="citation" data-cites="Woodcock2020"><a href="#ref-Woodcock2020" role="doc-biblioref">[2]</a></span>. To handle big data, scientists are developing new algorithms for image time series (for recent surveys, see <span class="citation" data-cites="Gomez2016"><a href="#ref-Zeng2020" role="doc-biblioref">[5]</a></span>). These methods are data-driven and theory-limited. However, numbers do not speak for themselves <span class="citation" data-cites="boyd2012"><a href="#ref-boyd2012" role="doc-biblioref">[6]</a></span>. Data-driven approaches without solid theories can lead to results which will not increase our knowledge <span class="citation" data-cites="Kitchin2014"><a href="#ref-Kitchin2014" role="doc-biblioref">[7]</a></span>.</p>
 <p>Consider how experts use Earth observation data. Their input are images with resolution ranging from 5 to 500 meters, produced by satellites such as Landsat, Sentinels-1/2/3, and CBERS-4. To extract information, experts use methods that assign a label to each pixel (e.g., ‘grasslands’). Labels can represent either land cover or land use. Land cover is the observed biophysical cover of the Earth’s surface; land use concepts describe socio-economic activities\cite<span class="citation" data-cites="Comber2008a"><a href="#ref-Comber2008a" role="doc-biblioref">[8]</a></span>. Thus, <code>forest' is a type of land cover, while</code>corn plantation’ is a kind of land use. To support land classification, scientists have proposed ontologies and descriptive schemes <span class="citation" data-cites="Herold2009"><a href="#ref-Herold2009" role="doc-biblioref">[9]</a></span>. We might thus ask: <em>Are the current classification systems suitable to represent land change when working with big data? If not, which concepts are needed and how should they be applied?</em></p>
 <p>In what follows, we present the prevailing consensus on classification systems: FAO’s Land Cover Classification System (LCCS)\cite<span class="citation" data-cites="Herold2006a"><a href="#ref-Herold2006a" role="doc-biblioref">[10]</a></span>. We argue that LCCS does not meet the challenges posed by big data. To support our views, we consider concepts used on image time series analysis; we show these concepys are related to event recognition and are not representable in LCCS. To improve the theory behind big data, we introduce elements of a phenology based approach for land classification.</p>
-</section><section id="classification-systems-for-earth-observation-data-current-status" class="level2" data-number="5.2"><h2 data-number="5.2" class="anchored" data-anchor-id="classification-systems-for-earth-observation-data-current-status">
-<span class="header-section-number">5.2</span> Classification systems for Earth observation data: current status</h2>
+</section><section id="classification-systems-for-earth-observation-data-current-status" class="level2" data-number="6.2"><h2 data-number="6.2" class="anchored" data-anchor-id="classification-systems-for-earth-observation-data-current-status">
+<span class="header-section-number">6.2</span> Classification systems for Earth observation data: current status</h2>
 <p>The act of classification raises philosophical questions dating as far back as Aristotle. We use an a priori conception of reality to classify the world; what we observe has to fit our categories. Words in our language describe elements of the external reality. However, geographical terms such as <code>mountain' and</code>river’ are imprecise and context-dependent<span class="citation" data-cites="Smith2001"><a href="#ref-Mark2003" role="doc-biblioref">[13]</a></span>. These ambiguities have motivated research on geospatial semantics <span class="citation" data-cites="Smith1998"><a href="#ref-Kuhn2005" role="doc-biblioref">[16]</a></span>. However, building such complete ontologies is hard. Janowicz et al. <span class="citation" data-cites="Janowicz2012"><a href="#ref-Janowicz2012" role="doc-biblioref">[17]</a></span> recognize that “geographical concepts are situated and context-dependent, can be described from different, equally valid, points of view, and ontological commitments are arbitrary to a large extent”. Work on classification systems has shifted. Rather than using a single ontology, the current consensus argues for domain ontologies based on a common foundational ontology. These domain ontologies are means of making concepts of specific disciplines explicit and better communicating them <span class="citation" data-cites="Smith2007"><a href="#ref-Buttigieg2013" role="doc-biblioref">[19]</a></span>.</p>
 <p>The semantics of Earth observation data are constrained by classification systems. Experts agree on what are the possible descriptions of the objects in the image (e.g., “forest”, “river”, “pasture”). Each pixel of the image is then labeled using visual or automated interpretation. As an example, for countries reporting greenhouse gas inventories, the International Panel of Climate Change (IPCC) restricts the top-level land classes to ‘forest’, ‘cropland’, ‘grassland’, ‘wetlands’, ‘settlements’, and ‘others’. This approach is too simplistic. Sasaki and Putz <span class="citation" data-cites="Sasaki2009"><a href="#ref-Sasaki2009" role="doc-biblioref">[20]</a></span> criticize the IPCC base classes for inducing wrong assessments for ecological and biodiversity conservation. The IPCC classes are an example where pre-conceived rules collide with the diversity of the world’s ecosystems.</p>
 <p>Since land classification provides essential information about our environment, many GIScience researchers have addressed the subject of land use and land cover semantics <span class="citation" data-cites="Comber2005"><a href="#ref-Ahlqvist2017" role="doc-biblioref">[23]</a></span>. They investigated consistency of classification systems <span class="citation" data-cites="Jansen2008"><a href="#ref-Jansen2008" role="doc-biblioref">[24]</a></span>, semantic similarity between terms used by different systems <span class="citation" data-cites="Feng2004"><a href="#ref-Feng2004" role="doc-biblioref">[25]</a></span>, and disagreements between results <span class="citation" data-cites="Fritz2011"><a href="#ref-Fritz2011" role="doc-biblioref">[26]</a></span>. The current consensus favors ontologies aiming at unambiguous definitions of land cover classes, such as the FAO Land Cover Classification System (LCCS) <span class="citation" data-cites="Herold2006a"><a href="#ref-Herold2006a" role="doc-biblioref">[10]</a></span>. For this reason, it is important to discuss whether LCCS works well with big EO data.</p>
@@ -425,41 +391,33 @@ window.Quarto = {
 <li>Classification in LCCS has no temporal reference. LCCS assumes that subtype properties (e.g., percent of tree cover) are detectable at the moment of classification. These properties do not refer to past or future values. Land use and land cover types whose values require time references (e.g., “forest land cleared in the last decade”) are not representable in LCCS.</li>
 </ul>
 <p>For example, the UNFCCC Reduction of Emissions by Deforestation and Degradation initiative (REDD+) requires representing and measuring forest dynamics <span class="citation" data-cites="Corbera2011"><a href="#ref-Corbera2011" role="doc-biblioref">[31]</a></span>. Static and rigid definitions of “forest” used by LCCS cannot represent concepts such as `forest degradation’ <span class="citation" data-cites="Putz2010"><a href="#ref-Putz2010" role="doc-biblioref">[32]</a></span>. Forest degradation happens when a natural forest loses part of its biodiversity and its tree cover. It is not a stable state but an intermediary situation that can lead to different medium-term outcomes. One can restore a degraded forest; degradation may continue and lead to complete loss of forest cover. Whatever the case, LCCS lacks explicit temporal information to capture forest degradation and thus support initiatives such as REDD+. Therefore, LCCS is thus not fit for many critical applications of EO data.</p>
-</section><section id="elements-of-a-phenology-based-classification-schemas" class="level2" data-number="5.3"><h2 data-number="5.3" class="anchored" data-anchor-id="elements-of-a-phenology-based-classification-schemas">
-<span class="header-section-number">5.3</span> Elements of a phenology-based classification schemas</h2>
+</section><section id="elements-of-a-phenology-based-classification-schemas" class="level2" data-number="6.3"><h2 data-number="6.3" class="anchored" data-anchor-id="elements-of-a-phenology-based-classification-schemas">
+<span class="header-section-number">6.3</span> Elements of a phenology-based classification schemas</h2>
 <p>To represent change in geographical space, GIScience authors distinguish between continuants and occurrents <span class="citation" data-cites="Grenon2004"><a href="#ref-Worboys2005" role="doc-biblioref">[36]</a></span>. Continuants refer to entities that “endure through time even while undergoing different sorts of changes” <span class="citation" data-cites="Grenon2004"><a href="#ref-Grenon2004" role="doc-biblioref">[33]</a></span>. The Amazon Forest and the city of Brasilia are continuants. Occurrents happen in a well-defined period and may have different stages during this time. Cutting down a forest area, cultivating a crop in a season, and building a road are occurrents. Objects are associated to continuants and events to occurrents.</p>
 <p>Atemporal classification systems such as LCCS refer only to properties of continuants. One can state facts such as “this area has 30% forest cover” using LCCS, but cannot assert that “this area lost 70% of its forest in the last two years”. To convey change, classification systems for big data need to include occurrents. In what follows, we discuss concepts used in the analysis of satellite image time series. These time series are extracted from organized collections of Earth observation data covering a geographical area in regular temporal intervals.</p>
-</section><section id="the-key-role-of-time-series" class="level2" data-number="5.4"><h2 data-number="5.4" class="anchored" data-anchor-id="the-key-role-of-time-series">
-<span class="header-section-number">5.4</span> The key role of time series</h2>
+</section><section id="the-key-role-of-time-series" class="level2" data-number="6.4"><h2 data-number="6.4" class="anchored" data-anchor-id="the-key-role-of-time-series">
+<span class="header-section-number">6.4</span> The key role of time series</h2>
 <p>Since remote sensing satellites revisit the same place, we can calibrate their images so that measures of the same place at different times are comparable (Figure <span class="math inline">\(\ref{fig:sits_a}\)</span>). These observations can be organized so that each measure from the sensor maps to a three-dimensional array in space-time. From a data analysis perspective, each pixel location <span class="math inline">\((x, y)\)</span> at consecutive times, <span class="math inline">\(t_1,...,t_m\)</span>, makes up a satellite image time series (SITS), such as the one in Figure <span class="math inline">\(\ref{fig:sits_b}\)</span>. From these time series, we can extract land-use and land-cover change information. In Figure <span class="math inline">\(\ref{fig:sits_b}\)</span>, after the forest was cut in 2002, the area was used for cattle raising (pasture) for three years, during 2002 to 2008, then turned into cropland.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-sits-a" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-sits-a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="./images/th_lucc/sits_a.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sits-a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5.1: Time series measures (EVI index) of a pixel location <span class="math inline">\((x,y)\)</span> (source:<span class="citation" data-cites="Picoli2018"><a href="#ref-Picoli2018" role="doc-biblioref">[37]</a></span>).
-</figcaption></figure>
+<div id="fig-sits-a" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="./images/th_lucc/sits_a.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;6.1: Time series measures (EVI index) of a pixel location <span class="math inline">\((x,y)\)</span> (source:<span class="citation" data-cites="Picoli2018"><a href="#ref-Picoli2018" role="doc-biblioref">[37]</a></span>).</figcaption></figure>
 </div>
 </div>
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-sits-b" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-sits-b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="./images/th_lucc/sits_b.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sits-b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5.2: Land change events associated to a pixel location <span class="math inline">\((x,y)\)</span> (source:<span class="citation" data-cites="Picoli2018"><a href="#ref-Picoli2018" role="doc-biblioref">[37]</a></span>).
-</figcaption></figure>
+<div id="fig-sits-b" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="./images/th_lucc/sits_b.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;6.2: Land change events associated to a pixel location <span class="math inline">\((x,y)\)</span> (source:<span class="citation" data-cites="Picoli2018"><a href="#ref-Picoli2018" role="doc-biblioref">[37]</a></span>).</figcaption></figure>
 </div>
 </div>
 </div>
 <p>References{-}</p>
 
 
-<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="refs" class="references csl-bib-body" role="list">
 <div id="ref-Pasquarella2016" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[1] </div>
 <div class="csl-right-inline">V. J. Pasquarella, C. E. Holden, L. Kaufman, and C. E. Woodcock, <span>“From imagery to ecology: Leveraging time series of all available <span>LANDSAT</span> observations to map and monitor ecosystem state and dynamics,”</span> <em>Remote Sensing in Ecology and Conservation</em>, vol. 2, no. 3, pp. 152–170, 2016, doi: <a href="https://doi.org/10.1002/rse2.24">10.1002/rse2.24</a>.</div>
@@ -644,7 +602,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -676,48 +645,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/FAO-EOSTAT\.github\.io\/UN-Handbook\/");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+  function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
+      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -727,17 +659,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start',
+      placement: 'bottom-start'
     };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -749,129 +672,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
-          }
-        }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
-        }
-        return container.innerHTML
-      } else {
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
-        }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
-      }
-    }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
-          }
-        } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
-          .then(res => res.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
-            if (note !== null) {
-              const html = processXRef(id, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
-          });
-        }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
+      return note.innerHTML;
     });
   }
       let selectedAnnoteEl;
@@ -915,7 +716,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
-            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -941,32 +741,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1026,27 +800,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./th_remote_sensing.html" class="pagination-link" aria-label="Remote Sensing images: optical, SAR">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remote Sensing images: optical, SAR</span></span>
+      <a href="./th_data_sources.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Earth Observation Big Data Sources</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./th_quality_control.html" class="pagination-link" aria-label="Quality control of training sets for agricultural statistics">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Quality control of training sets for agricultural statistics</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./th_quality_control.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Quality control of training sets for agricultural statistics</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
-    <div class="nav-footer-left">
-<p>Edited by Gilberto Camara, Lorenzo de Simone and Ronald Jansen.</p>
-</div>   
+    <div class="nav-footer-left">Edited by Gilberto Camara, Lorenzo de Simone and Ronald Jansen.</div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/edit/quarto/th_lucc.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
-    <div class="nav-footer-right">
-<p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
-</div>
+    </div>
+    <div class="nav-footer-right">This book was built with <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>
 
