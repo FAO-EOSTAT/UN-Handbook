@@ -1,5 +1,5 @@
 ---
-title: "Remote Sensing images: optical, SAR"
+title: "Remote sensing images: optical, SAR"
 author: "Pan Yaozhong"
 format: html
 ---
@@ -80,7 +80,7 @@ GF-1 and GF-6 are the Earth observation satellites operating in a 650 km Sun-Syn
 
 +---------+---------+---------+---------+---------+---------+---------+
 | Sensor. |   Band  | Spectral| Spatial | Bit     | Swath   | Revisit |
-| ensor   | number  | range   | resol.  | Depth.  | Width   | cycle.  |
+| ensor   | number  | range   | resol.  | Depth   | Width   | cycle.  |
 +=========+=========+=========+=========+=========+=========+=========+
 | Panch   | B1      | 0.45 -  | 2 m     | 12 bit  | GF-1 \> | 32 days |
 | romatic |         | 0.90 µm |         |         | 60 km   |         |
@@ -131,7 +131,7 @@ The GF-2 satellite was launched on August 19, 2014. It was designed and develope
 
 +---------+---------+---------+---------+---------+---------+---------+
 | Sensor  |   Band  | Spectral| Spatial | Bit     | Swath   | Revisit |
-|         | number  | range   | resol.  | Depth.  | Width   | cycle   |
+|         | number  | range   | resol.  | Depth   | Width   | cycle   |
 +=========+=========+=========+=========+=========+=========+=========+
 | Panch   | B1      | 0.45 -  | 0.8 m   | 10 bit  | 45 km   | 64 days |
 +---------+---------+---------+---------+---------+---------+---------+
@@ -166,7 +166,7 @@ GF-4 is designed for Earth observation from a geosynchronous orbit and it has di
 
 +---------+---------+---------+---------+---------+---------+---------+
 | Sensor  |   Band  | Spectral| Spatial | Bit     | Swath   | Revisit |
-|         | number  | range   | resol.  | Depth.  | Width   | cycle   |
+|         | number  | range   | resol.  | Depth   | Width   | cycle   |
 +=========+=========+=========+=========+=========+=========+=========+
 | Panch   | B1      | 0.45 -  | 50 m    | 10 bit  | 400 km  | 20      |
 | romatic |         | 0.90 µm |         |         |         | seconds |
@@ -320,7 +320,7 @@ GF-7 was launched on November 3, 2019. It is an optical satellite for mapping pu
 
 +---------+---------+---------+---------+---------+---------+---------+
 | Sensor  |   Band  | Spectral| Spatial | Bit     | Swath   | Revisit |
-|         | number  | range   | resol.  | Depth.  | Width   | cycle   |
+|         | number  | range   | resol.  | Depth   | Width   | cycle   |
 +=========+=========+=========+=========+=========+=========+=========+
 | Panch   | B1      | 0.45 -  | 0.8     | 11 bit  | 200 km  | 60 days |
 | romatic |         | 0.90 µm |         |         |         |         |
@@ -345,39 +345,38 @@ Among the GF series of satellites, GF-3 is specifically designed as a radar remo
 
 +----------------------+--------------+-----------+------------+----------+
 | Observing            | Polarization | Incidence | Resolution | Swath    | 
-| Mode                 |              | angle.    |            |          | 
+| Mode                 |              | angle     |            |          | 
 +======================+==============+===========+============+==========+
 |  Spotlight           | single       | 20\~50°   | 1m         | 10 km    | 
 +----------------------+--------------+-----------+------------+----------+
-|  Ultra-fine stripmap | dual         | 20\~50°.  | 3m         | 30 km    | 
+|  Ultra-fine stripmap | dual         | 20\~50°   | 3m         | 30 km    | 
 +----------------------+--------------+-----------+------------+----------+
-|  Fine stripmap       | dual         | 19\~50°.  | 5m         | 50 km    | 
+|  Fine stripmap       | dual         | 19\~50°   | 5m         | 50 km    | 
 +----------------------+--------------+-----------+------------+----------+
-|  Wide fine stripmap  | dual.        | 19\~50°.  | 10m        | 100 km   | 
+|  Wide fine stripmap  | dual.        | 19\~50°   | 10m        | 100 km   | 
 +----------------------+--------------+-----------+------------+----------+
-|  Standard stripmap   | dual.        | 17\~50°.  | 25m        | 250 km   | 
+|  Standard stripmap   | dual.        | 17\~50°   | 25m        | 250 km   | 
 +----------------------+--------------+-----------+------------+----------+
-|  Narrow ScanSAR      | dual         | 17\~50°.  | 50m        | 300 km   | 
+|  Narrow ScanSAR      | dual         | 17\~50°   | 50m        | 300 km   | 
 +----------------------+--------------+-----------+------------+----------+
-|  Wide   ScanSAR      | dual         | 17\~50°.  | 100m       | 500 km   | 
+|  Wide   ScanSAR      | dual         | 17\~50°   | 100m       | 500 km   | 
 +----------------------+--------------+-----------+------------+----------+
-|  Global observation  | dual         | 17\~50°.  | 500m       | 650 km   | 
+|  Global observation  | dual         | 17\~50°   | 500m       | 650 km   | 
 +----------------------+--------------+-----------+------------+----------+
-|  Quad-pol stripmap   | quad         | 20\~41°.  | 8m         | 30  km   | 
+|  Quad-pol stripmap   | quad         | 20\~41°   | 8m         | 30  km   | 
 +----------------------+--------------+-----------+------------+----------+
-|  Wide quad-pol       | quad         | 20\~38°.  | 25m        | 40 km    | 
+|  Wide quad-pol       | quad         | 20\~38°   | 25m        | 40 km    | 
 +----------------------+--------------+-----------+------------+----------+
-|  Wave                | quad         | 20\~41°.  | 10m        | 5 km     | 
+|  Wave                | quad         | 20\~41°   | 10m        | 5 km     | 
 +----------------------+--------------+-----------+------------+----------+
-|  Exp incidence angle | dual         | 10\~20°.  | 25m        | 130 km   | 
+|  Exp incidence angle | dual         | 10\~20°   | 25m        | 130 km   | 
 +----------------------+--------------+-----------+------------+----------+
-|                      | dual         | 50\~60°.  | 25m        | 80 km    | 
+|                      | dual         | 50\~60°   | 25m        | 80 km    | 
 +----------------------+--------------+-----------+------------+----------+
 : Sensors onboard GF-3 SAR satellite {#tbl-gaofen-3}
 
 All the GF-3 SAR remote sensing imagery requires payment and can be
-purchased on the website of China Center For Resources Satellite Data
-And Application ( <https://data.cresda.cn/#/2dMap>).
+purchased on the website of [China Center For Resources Satellite Data and Applications](https://data.cresda.cn/#/2dMap).
 
 ```{r}
 #| echo: FALSE
@@ -389,3 +388,114 @@ And Application ( <https://data.cresda.cn/#/2dMap>).
 knitr::include_graphics("./images/th_remote_sensing/image_gf3.jpeg")
 ```
 
+## Landsat programme
+
+The Landsat program consists of a series of Earth-observing satellite missions jointly managed by National Aeronautics and Space Administration (NASA) and the U.S. Geological Survey (USGS). Landsat-9
+is the latest satellite in the Landsat series. It was launched in September 27, 2021. Landsat-9 carries two science instruments including the Operational Land Imager2(OLI-2) and Thermal Infrared Sensor2(TIRS-2) and enables informed decision support for many key areas.
+
++---------+---------+------------------+---------+---------+---------+---------+-----------------+
+| Sensor  |   Band  | Spectral         | Spatial | Bit     | Swath   | Revisit | Description     |
+|         | number  | range            | resol.  | Depth   | Width   | cycle   |                 |
++=========+=========+==================+=========+=========+=========+=========+=================+
+| OLI-2   | B1      | 0.43 - 0.45 µm   | 30 m    | 16 bit  | 185 km  | 16 days | Coastal aerosol |
++---------+---------+------------------+---------+---------+---------+---------+-----------------+
+|         | B2      | 0.45 - 0.51 µm   |         |         |         |         | Blue            |
++---------+---------+------------------+---------+---------+---------+---------+-----------------+
+|         | B3      | 0.53 - 0.59 µm   |         |         |         |         | Green           |
++---------+---------+------------------+---------+---------+---------+---------+-----------------+
+|         | B4      | 0.64 - 0.67 µm   |         |         |         |         | Red             |
++---------+---------+------------------+---------+---------+---------+---------+-----------------+
+|         | B5      | 0.85 - 0.88 µm   |         |         |         |         | Near infrared   |
++---------+---------+------------------+---------+---------+---------+---------+-----------------+
+|         | B6      | 1.57 - 1.65 µm   |         |         |         |         | Shortwave IR 1  |
++---------+---------+------------------+---------+---------+---------+---------+-----------------+
+|         | B7      | 2.11 - 2.29 µm   |         |         |         |         | Shortwave IR 2  |
++---------+---------+------------------+---------+---------+---------+---------+-----------------+
+|         | B8      | 0.52 - 0.90 µm   | 15 m    |         |         |         | Panchromatic    |
++---------+---------+------------------+---------+---------+---------+---------+-----------------+
+|         | B9      | 1.36 - 1.38 µm   | 100 m   |         |         |         | Cirrus          |
++---------+---------+------------------+---------+---------+---------+---------+-----------------+
+| TIRS-2  | B10     | 10.60 - 11.19 µm |         |         |         |         | Thermal IR 1    |
++---------+---------+------------------+---------+---------+---------+---------+-----------------+
+|         | B11     | 11.50 - 12.51 µm |         |         |         |         | Thermal IR 2    |
++---------+---------+------------------+---------+---------+---------+---------+-----------------+
+: Sensors onboard Landsat-9 satellite {#tbl-landsat-9} 
+
+
+```{r}
+#| echo: FALSE
+#| label: fig-landsat9
+#| out-width: 100%
+#| fig-cap: |
+#|  Landsat-9 image in an area of the Northeastern Colorado, USA, June 15, 2025 (red: B7, green: B5, blue: B3)
+#| fig-align: center
+knitr::include_graphics("./images/th_remote_sensing/image_landsat.jpeg")
+```
+
+Landsat imagery can be downloaded for free from the [USGS Earth Explorer](https://earthexplorer.usgs.gov) or from cloud providers such as [Microsoft Planetary Computer](https://planetarycomputer.microsoft.com/). Please refer to the chapter [Earth observation big data sources](https://fao-eostat.github.io/UN-Handbook/th_data_sources.html) for a description of how to access remote sensing data in cloud collections.
+
+## Copernicus Programme
+
+The Copernicus Programme is headed by the European Commission in partnership with the European Space Agency (ESA) that implements a constellation of satellites called Sentinels. These satellites include all-weather radar images from Sentinel-1A and 1B, high-resolution optical images from Sentinel-2A and 2B, ocean and land data suitable for environmental and climate monitoring from Sentinel-3, as well as air quality data from Sentinel-5P. 
+
+### Sentinel-1 mission
+
+The Sentinel-1 mission, operated by the European Space Agency (ESA), consists of a constellation of C-band Synthetic Aperture Radar (SAR) satellites designed to provide continuous, all-weather, day-and-night Earth observation capabilities. Operating at a central frequency of approximately 5.405 GHz, corresponding to a wavelength of 5.6 cm, the system offers multiple polarization configurations, including single-polarization modes (HH or VV) and dual-polarization modes (HH+HV or VV+VH). These options allow for flexibility in addressing diverse application requirements, ranging from high-resolution terrestrial monitoring to large-area maritime surveillance.
+
+Sentinel-1 supports four primary imaging modes, each optimized to balance spatial resolution, swath width, and revisit frequency according to the observational context. The Stripmap (SM) mode provides a swath width of approximately 80 km at a spatial resolution of about 5 m in both range and azimuth directions, making it suitable for applications demanding fine spatial detail over relatively narrow swaths, such as scientific investigations and precision mapping. The Interferometric Wide Swath (IW) mode, which constitutes the default operational mode over land, achieves a swath width of roughly 250 km and a spatial resolution of about 5 m (range) by 20 m (azimuth). This mode employs the Terrain Observation by Progressive Scans (TOPS) technique, enabling high interferometric coherence and reduced azimuth scalloping, thereby supporting deformation monitoring, land-cover mapping, and interferometric SAR (InSAR) applications.
+
+The Extra-Wide Swath (EW) mode, predominantly employed for maritime and cryospheric applications, covers a swath of approximately 400 km with a spatial resolution of 20 m (range) by 40 m (azimuth). Its wide coverage facilitates large-scale change detection, sea-ice monitoring, and vessel tracking. Finally, the Wave (WV) mode acquires small image segments, or imagettes, of 20 km swath width at intervals of approximately 100 km along the satellite ground track, with a spatial resolution of about 5 m × 5 m. This mode is specifically designed for the retrieval of ocean wave spectra and sea state parameters.
+
+In summary, the Sentinel-1 mission offers a set of operational modes that balance resolution and coverage to meet the diverse observational requirements of land, ocean, and ice monitoring. Its flexible polarization schemes and consistent revisit capabilities make it a cornerstone in global SAR-based Earth observation programs.
+
+
+
+| Mode | Swath (km)     | Resolution (m) | Typical Use                           | Polarization |
+| ---- | -------------- | -------------- | ------------------------------------- | ------------ |
+| SM   | 80             | 5 × 5          | Detailed mapping, science             | Single/Dual  |
+| IW   | 250            | 5 × 20         | Land, InSAR, deformation              | Single/Dual  |
+| EW   | 400            | 20 × 40        | Maritime, sea ice, large-scale change | Single/Dual  |
+| WV   | 20 (imagettes) | 5 × 5          | Ocean waves, sea state                | Single       |
+: Operational modes for Sentinel-1 satellites {#tbl-sentinel-1} 
+
+Sentinel-1 products are openly available from cloud providers such as [Copernicus Data Space Ecosystem](https://dataspace.copernicus.eu/) and [Microsoft Planetary Computer](https://planetarycomputer.microsoft.com/). Please refer to the chapter [Earth observation big data sources](https://fao-eostat.github.io/UN-Handbook/th_data_sources.html) for a description of how to access remote sensing data in cloud collections.
+
+### Sentinel-2 mission
+
+The Sentinel-2 mission, developed under the European Union’s Copernicus Programme and operated by the European Space Agency (ESA), consists of a constellation of polar-orbiting satellites, Sentinel-2A (launched in June 2015), Sentinel-2B (launched in March 2017), and Sentinel-2C (launched in September 2024). The Sentinel-2 satellites are equipped with the MultiSpectral Instrument (MSI), a push-broom imaging sensor that acquires data in 13 discrete spectral bands spanning the visible, near-infrared (NIR), and shortwave infrared (SWIR) regions of the electromagnetic spectrum. The MSI is designed to provide high spatial resolution (10 m, 20 m, or 60 m depending on the spectral band) over a swath width of 290 km, enabling systematic coverage of terrestrial and coastal ecosystems.
+
+The mission supports a broad range of applications, including vegetation monitoring, agricultural management, forestry assessment, inland and coastal water quality mapping, disaster risk reduction, and land use/land cover classification. The Sentinel-2 satellites are the first civil optical Earth observation mission of its kind to include three bands in the 'red edge', which provides key information on the vegetation state. Sentinel-2 satellite will be able to see very early changes in plant health due to its high temporal, spatial resolution, and 3 red edge bands. This is particularly useful for the end-users and policymakers for agriculture applications and to detect early signs of food shortages in different places.
+
+
+| Band    | Name                | Central Wavelength (nm) | Bandwidth (nm) | Spatial Resolution (m) | Primary Applications                                           |
+| ------- | ------------------- | ----------------------- | -------------- | ---------------------- | -------------------------------------------------------------- |
+| B1  | Coastal aerosol     | 443                     | 20             | 60                     | Aerosol studies, coastal and atmospheric correction            |
+| B2  | Blue                | 490                     | 65             | 10                     | Bathymetry, vegetation, and soil discrimination                |
+| B3  | Green               | 560                     | 35             | 10                     | Vegetation vigor, biomass estimation                           |
+| B4  | Red                 | 665                     | 30             | 10                     | Vegetation monitoring, soil-vegetation discrimination          |
+| B5  | Red Edge 1          | 705                     | 15             | 20                     | Chlorophyll estimation, vegetation stress detection            |
+| B6  | Red Edge 2          | 740                     | 15             | 20                     | Vegetation classification, canopy structure                    |
+| B7 | Red Edge 3          | 783                     | 20             | 20                     | Leaf area index, vegetation biophysical parameters             |
+| B8  | Near Infrared (NIR) | 842                     | 115            | 10                     | Biomass, water body delineation, vegetation vigor              |
+| B8A | Narrow NIR          | 865                     | 20             | 20                     | Canopy chlorophyll content, vegetation structure               |
+| B9  | Water vapour        | 945                     | 20             | 60                     | Atmospheric water vapour retrieval                             |
+| B10 | SWIR – Cirrus       | 1375                    | 30             | 60                     | Cirrus cloud detection                                         |
+| B11 | SWIR 1              | 1610                    | 90             | 20                     | Vegetation moisture, burned area mapping                       |
+| B12 | SWIR 2              | 2190                    | 180            | 20                     | Soil composition, snow/ice discrimination, vegetation moisture |
+: Description of MSI sensor onboard Sentinel-2 satellites {#tbl-sentinel-2} 
+
+```{r}
+#| echo: FALSE
+#| label: fig-s2-rondonia
+#| out-width: 100%
+#| fig-cap: |
+#|  Sentinel-2 image in an area of Rondonia, Brazil, September 16, 2022 (red: B11, green: B8A, blue: B4)
+#| fig-align: center
+knitr::include_graphics("./images/th_remote_sensing/image_s2_rondonia.png")
+```
+
+Sentinel-2 products are openly available from cloud providers such as [Copernicus Data Space Ecosystem](https://dataspace.copernicus.eu/), [Amazon Web Services](https://aws.amazon.com/earth/) and [Microsoft Planetary Computer](https://planetarycomputer.microsoft.com/). Please refer to the chapter [Earth observation big data sources](https://fao-eostat.github.io/UN-Handbook/th_data_sources.html) for a description of how to access remote sensing data in cloud collections.
+
+## Final remarks
+
+Multi-source satellite remote sensing facilitates coordinated global observation through orbital synergy, while the integration of optical imagery and SAR datasets enables multisensor data collection across heterogeneous meteorological regimes. This synergistic complementarity between spectral resolution and all-weather capability holds significant implications for enhancing the spatiotemporal continuity and operational robustness of agricultural statistical monitoring systems.

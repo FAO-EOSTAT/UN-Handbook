@@ -1,5 +1,5 @@
 ---
-title: "Yield Forecasting in Poland"
+title: "Yield forecasting in Poland"
 author: "Artur Laczynski, Przemysław Slesiński, Natalia Kotulak"
 format: html
 ---
