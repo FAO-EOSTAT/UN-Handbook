@@ -3,11 +3,11 @@ title: "Multi-seasonal crop mapping in Senegal"
 author: 
   - "Lorenzo De Simone"
   - "Sophie Bontemps"
-  - "Pierre (?)"
-  - "Boris (?)"
-  - "Luis (?)"
-  - "James (?)"
-  - "director DAPSA (?)"
+  # - "Pierre (?)"
+  # - "Boris (?)"
+  # - "Luis (?)"
+  # - "James (?)"
+  # - "director DAPSA (?)"
 format: html
 ---
 
@@ -129,10 +129,12 @@ Parcels' area is also measured with GPS and this measured area is then reported 
 #| eval: true
 #| label: fig-senegal-2
 #| layout-ncol: 2
-#| fig-cap: Household locations covered by the 2018 agricultural survey.
+#| fig-cap: Visualization of data shared by DAPSA.
 #| out-width: 100%
 #| out-height: 300px
-#| fig-subcap: true
+#| fig-subcap:
+#|  - "GPS tracks location"
+#|  - "Parcels boundaries with GPS point/lines"
 knitr::include_graphics("images/ct_senegal/image2.png")
 knitr::include_graphics("images/ct_senegal/image3.png")
 ```
@@ -143,7 +145,7 @@ To summarize, georeferenced information is available at crop-level, as points (p
 
 The quality of the 16,861 records as GPS points inside the AAS database was assessed through multiple stages.
 
-First, all points located too close to roads and buildings were removed and points located less than 20 meters apart but associated with different crops are removed. The second stage of the quality control addressed the important challenge of working with GPS points (and not polygons), i.e. checking if the point is located in the middle of the parcel. For the sake of illustration, @fig-senegal-3 illustrates two situations where (i) point was taken at the middle of the parcels, thus making the parcels easily identifiable (left) and (ii) point was taken on the path along the parcels which makes almost impossible to know which parcel it refers to (right).
+First, all points located too close to roads and buildings were removed and points located less than 20 meters apart but associated with different crops are removed. The second stage of the quality control addressed the important challenge of working with GPS points (and not polygons), i.e. checking if the point is located in the middle of the parcel. For the sake of illustration, @fig-senegal-3 shows two situations where (i) point was taken at the middle of the parcels, thus making the parcels easily identifiable (left) and (ii) point was taken on the path along the parcels which makes almost impossible to know which parcel it refers to (right).
 
 ```{r}
 #| echo: FALSE
@@ -175,9 +177,12 @@ First, the raw GPS traces were converted into usable polygon shapefiles. This pr
 knitr::include_graphics("./images/ct_senegal/image5.png")
 ```
 
-The GPS traces needed also to be quality controlled and filtered: 
+The GPS traces needed also to be quality controlled and filtered:
+
 - Traces unrelated to valid records in the AAS database (e.g., invalid file name) were discarded
+
 - Traces including non-boundary movements (e.g., travel paths) were removed (@fig-senegal-5)
+
 - Traces with fewer than 3 points were excluded as they could not form polygon
 
 ```{r}
@@ -324,6 +329,8 @@ The Sen4Stat toolbox is a standalone operational processing chain which aims at 
 knitr::include_graphics("./images/ct_senegal/image15.png")
 ```
 
+The system has been tested and demonstrated in various countries around the world, thus addressing a wide diversity of both cropping systems and agricultural data collection protocols. It is available for download on the Sen4Stat website ([esa-sen4stat.org](https://www.esa-sen4stat.org/)).
+
 ##### Nioro crop type map 2021 {.unnumbered}
 
 The crop type map was generated at the end of the season from May 1, 2021, to December 31, 2021, using Sentinel-2 time series. The training dataset used contains the 50 non-crop polygons and the 247 crop polygons obtained after joining and cleaning the ODK and GPS dataset (@fig-senegal-12 – calibration polygons). The distribution of observations is very uneven for the different crops and insufficient for maize. 
@@ -382,7 +389,7 @@ Crop area statistics were derived from the crop type map to support EO-based agr
 #| layout-nrow: 2
 #| layout: "[[80], [100]]"
 #| fig-align: center
-#| fig-cap: Estimation of the crop share (top) and cultivated area (bottom) per municipality in the Nioro du Rip department (in percent), based on remote sensing data 
+#| fig-cap: Estimation of the crop share (a) and cultivated area (b) per municipality in the Nioro du Rip department (in percent), based on remote sensing data 
 #| fig-subcap:
 #|  - "Estimation of the crop share"
 #|  - "Cultivated area"
@@ -407,7 +414,7 @@ Because the sampling design in Senegal is a list frame, the integration of remot
 #| layout-nrow: 2
 #| layout: "[[80], [100]]"
 #| fig-align: center
-#| fig-cap: Crop acreage estimates using EO and ground data in Nioro (top) and efficiency of using the crop type map for crop acreage estimation (bottom)
+#| fig-cap: Crop acreage estimates using EO and ground data in Nioro (a) and efficiency of using the crop type map for crop acreage estimation (b)
 #| fig-subcap:
 #|  - "Crop acreage estimates using EO and ground data in Nioro"
 #|  - "Efficiency of using the crop type map for crop acreage estimation"
@@ -427,7 +434,7 @@ The use of a wall-to-wall map also allows to make acreage estimates available at
 knitr::include_graphics("./images/ct_senegal/image24.png")
 ```
 
-### Lessons learned
+### Conclusions
 
 The alignment of the AAS protocol with FAO's in-situ data quality framework significantly enhanced the compatibility of field data with EO applications. Classification accuracy improved from below 78% (with the original 2018 AAS data) to over 85% following the pilot implementation in 2021–2022. This result has to be confirmed by an implementation at larger scale, but it already nicely illustrates the impact of structured, high-quality, plot-level georeferencing.
 
