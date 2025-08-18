@@ -2,10 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.361">
+<meta name="generator" content="quarto-1.7.33">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Gilberto Camara, Lorenzo de Simone, Ronald Jansen">
-<title>UN Handbook on Remote Sensing for Agricultural Statistics - 4&nbsp; Remote sensing images: optical, SAR</title>
+<title>4&nbsp; Remote sensing images: optical, SAR – UN Handbook on Remote Sensing for Agricultural Statistics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,21 +29,28 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <link href="./th_data_sources.html" rel="next">
 <link href="./theory.html" rel="prev">
-<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-931bd9de4a2e97c797357f31cd37fa94.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -52,29 +59,30 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
 }</script>
 </head>
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./theory.html">Foundations</a></li><li class="breadcrumb-item"><a href="./th_remote_sensing.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remote sensing images: optical, SAR</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./theory.html">Foundations</a></li><li class="breadcrumb-item"><a href="./th_remote_sensing.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remote sensing images: optical, SAR</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
   </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">UN Handbook on Remote Sensing for Agricultural Statistics</a> 
         <div class="sidebar-tools-main">
@@ -116,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="./theory.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Foundations</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -181,7 +189,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="./crop_type_mapping.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Use Cases in Crop Type Mapping</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -228,7 +236,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="./crop_yield_estimation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Crop yield estimation</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -269,7 +277,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="./additional.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Additional Topics</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -308,7 +316,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
     </ul>
 </div>
-</nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
@@ -326,10 +334,10 @@ ul.task-list li input[type="checkbox"] {
   </ul>
 </li>
   <li><a href="#final-remarks" id="toc-final-remarks" class="nav-link" data-scroll-target="#final-remarks"><span class="header-section-number">4.6</span> Final remarks</a></li>
-  </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/FAO-EOSTAT/UN-Handbook/edit/quarto/th_remote_sensing.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/FAO-EOSTAT/UN-Handbook/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/edit/quarto/th_remote_sensing.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./theory.html">Foundations</a></li><li class="breadcrumb-item"><a href="./th_remote_sensing.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remote sensing images: optical, SAR</span></a></li></ol></nav><div class="quarto-title">
 <h1 class="title">
 <span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remote sensing images: optical, SAR</span>
 </h1>
@@ -351,6 +359,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header><section id="outline" class="level2" data-number="4.1"><h2 data-number="4.1" class="anchored" data-anchor-id="outline">
 <span class="header-section-number">4.1</span> Outline</h2>
 <p>This chapter provides a general introduction to remote sensing imagery. The authors discuss different types of remote sensing satellites (optical, SAR, hyperspectral) and include examples of satellite constellations (e.g, Landsat, Copernicus, CHEOS). The chapter describes the main characteristics of various Earth observation satellites. For a description of how to access satellites from the Copernicus and Landsat programmes, please refer to chapter on <a href="https://fao-eostat.github.io/UN-Handbook/th_data_sources.html">Earth Observation Data Sources</a>.</p>
@@ -359,9 +368,11 @@ ul.task-list li input[type="checkbox"] {
 <p>Remote sensing imagery refers to data collected by sensors mounted on satellite platforms, used to observe and analyze the Earth’s surface and its atmosphere from a distance. These images capture information about various phenomena and play an important role in the study of the surface of the Earth. These images are usually comprised of multiple bands and important for the study of agriculture statistics, land cover/land use and other different tasks. In agriculture statistics, remote sensing applications are based on the interaction of electromagnetic radiation with soil or plant material. The advantage of remote sensing in agriculture is its ability to provide detailed information about crop characteristics. For example, spectral, textural, phenological features can be used to create a map showing plant distribution. Indicators such as Normalized Difference Vegetation Index (NDVI), Leaf Area Index (LAI), biomass, crop density can be used to assess vegetation growth.</p>
 <p>Remote sensing imagery is broadly classified into two main categories based on the type of sensors used: optical remote sensing imagery and radar remote sensing imagery. Optical sensors (e.g., cameras or imaging spectrometers) primarily capture electromagnetic radiation in spectral bands such as visible light, near-infrared, or short-wave infrared. Radar remote sensing imagery, especially in the context of Earth observation, is predominantly associated with Synthetic Aperture Radar (SAR).</p>
 <p><strong>Table</strong> <strong>1 The class and applications of remote sensing</strong></p>
-<div id="tbl-bands" class="anchored">
-<table class="table">
-<caption>Table&nbsp;4.1: Spectral bands used in remote sensing</caption>
+<div id="tbl-bands" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-bands-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.1: Spectral bands used in remote sensing
+</figcaption><div aria-describedby="tbl-bands-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 16%">
 <col style="width: 25%">
@@ -431,13 +442,19 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </div>
+</figure>
+</div>
 <p>Optical remote sensing imagery makes use of visible, near-infrared and short-wave infrared sensors (passive optical sensors) to form images of the Earth’s surface by receiving the solar radiation reflected from targets on the ground. Ground objects reflect and absorb radiation differently at each wavelength. Thus, the targets can be distinguished by their spectral reflectance signatures in the remote sensing imagery. Vegetation has a unique spectral signature. This signature enables it to be distinguished readily from other types of land cover in an optical/near-infrared image. For specific crops, due to their spectral and phenological characteristics, the combination of phenological period information with multi-temporal remote sensing imagery can be used to explore a crop area and its status in the growing season.</p>
 <p>Radar satellites emit its own microwave signals and analyze the returning echoes. This capability allows radar to penetrate clouds, haze, and even vegetation canopies, providing data regardless of daylight or weather conditions.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-optical-sar" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/th_remote_sensing/image_optical_sar.jpeg" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;4.1: Comparison of optical and SAR imagery in Taishan City, Jiangmen City, Guangdong Province, China. (a) Google high resolution imagery; (b)optical satellite image of Sentinel-2 satellite, April 23, 2025; (c) SAR satellite image of Sentinel-1 satellite, April 23, 2025.</figcaption></figure>
+<div id="fig-optical-sar" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-optical-sar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/th_remote_sensing/image_optical_sar.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-optical-sar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.1: Comparison of optical and SAR imagery in Taishan City, Jiangmen City, Guangdong Province, China. (a) Google high resolution imagery; (b)optical satellite image of Sentinel-2 satellite, April 23, 2025; (c) SAR satellite image of Sentinel-1 satellite, April 23, 2025.
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -446,16 +463,22 @@ ul.task-list li input[type="checkbox"] {
 <p>Gaofen (GF, “High Resolution”) is a series of civilian Earth observation satellites developed and launched for the China High-resolution Earth Observation System (CHEOS), a state-sponsored programme aimed to develop a near-real time, all-weather, global surveillance network consisting of satellite, near-space (stratosphere) airships, and aerial observation platforms. Among these satellites, Gaofen 1 (GF-1), Gaofen 2 (GF-2), Gaofen 4 (GF-4), Gaofen 5 (GF-5), Gaofen 6 (GF-6), Gaofen 7 (GF-7) are optical satellites. They all play an important role in remote sensing for agriculture statistics.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-gaofen1" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/th_remote_sensing/image_gf1.jpeg" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;4.2: Satellite imagery of rice growth stages in Shouxian Country, Huainan City, Anhui Province, China.(a) rice distribution map (b) satellite image of GF-1 PMS, May 23, 2024 (c) satellite image of GF-1 PMS, August 11, 2024.</figcaption></figure>
+<div id="fig-gaofen1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-gaofen1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/th_remote_sensing/image_gf1.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gaofen1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.2: Satellite imagery of rice growth stages in Shouxian Country, Huainan City, Anhui Province, China.(a) rice distribution map (b) satellite image of GF-1 PMS, May 23, 2024 (c) satellite image of GF-1 PMS, August 11, 2024.
+</figcaption></figure>
 </div>
 </div>
 </div>
-<p>GF-1 and GF-6 are the Earth observation satellites operating in a 650 km Sun-Synchronous Orbit (SSO). The first GF-1 satellite was launched on April 26, 2013 and GF-6 satellite was launched on June 2, 2018. They are equipped with two high-resolution cameras and four medium-resolution wide-field cameras. The Panchromatic/Multispectral Sensor (PMS) can capture Earth imagery with a spatial resolution of 2 m in the panchromatic or black-and-white mode, and 8 m in the multispectral or color imagery. Its nominal revisit cycle is 64 days. Using its onboard pointing capabity, a specific target area can be surveyed every four days. The Wide Field View Sensor (WFV) offer a spatial resolution of 16 m and ground swath width of 800 km, allowing the satellite to collect the imagery of entire globe in only 4 days (<a href="#tbl-gaofen-1">Table&nbsp;<span>4.2</span></a>).</p>
-<div id="tbl-gaofen-1" class="anchored">
-<table class="table">
-<caption>Table&nbsp;4.2: Sensors onboard GF-1 and GF-6 satellites</caption>
+<p>GF-1 and GF-6 are the Earth observation satellites operating in a 650 km Sun-Synchronous Orbit (SSO). The first GF-1 satellite was launched on April 26, 2013 and GF-6 satellite was launched on June 2, 2018. They are equipped with two high-resolution cameras and four medium-resolution wide-field cameras. The Panchromatic/Multispectral Sensor (PMS) can capture Earth imagery with a spatial resolution of 2 m in the panchromatic or black-and-white mode, and 8 m in the multispectral or color imagery. Its nominal revisit cycle is 64 days. Using its onboard pointing capabity, a specific target area can be surveyed every four days. The Wide Field View Sensor (WFV) offer a spatial resolution of 16 m and ground swath width of 800 km, allowing the satellite to collect the imagery of entire globe in only 4 days (<a href="#tbl-gaofen-1" class="quarto-xref">Table&nbsp;<span>4.2</span></a>).</p>
+<div id="tbl-gaofen-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-gaofen-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.2: Sensors onboard GF-1 and GF-6 satellites
+</figcaption><div aria-describedby="tbl-gaofen-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 13%">
 <col style="width: 13%">
@@ -568,18 +591,26 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </div>
+</figure>
+</div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-gaofen6" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/th_remote_sensing/image_gf6.jpeg" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;4.3: GF-6 WFV image in an area of the Southern part of Goiás, Brazil (red: B9, green: B8, blue: B7).</figcaption></figure>
+<div id="fig-gaofen6" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-gaofen6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/th_remote_sensing/image_gf6.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gaofen6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.3: GF-6 WFV image in an area of the Southern part of Goiás, Brazil (red: B9, green: B8, blue: B7).
+</figcaption></figure>
 </div>
 </div>
 </div>
 <p>The GF-2 satellite was launched on August 19, 2014. It was designed and developed by China Academy of Space Technology (CAST). It is capable of collecting satellite imagery with a Ground Sampling Distance (GSD) of 0.8 m panchromatic and 3.2 m multispectral bands on a swath of 45 km. GF-2 supports applications in Geographic Information System (GIS) mapping, engineering and construction, climate change, environmental monitoring, precision agriculture, disaster relief, urban planning, and many other applications. Due to its submeter spatial resolution, it is very important to precision agriculture. Its nominal revisit cycle is 64 days. Using its onboard pointing capabity, a target area can be surveyed every five days.</p>
-<div id="tbl-gaofen-2" class="anchored">
-<table class="table">
-<caption>Table&nbsp;4.3: Sensors onboard GF-2 satellite</caption>
+<div id="tbl-gaofen-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-gaofen-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.3: Sensors onboard GF-2 satellite
+</figcaption><div aria-describedby="tbl-gaofen-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 13%">
 <col style="width: 13%">
@@ -647,18 +678,26 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </div>
+</figure>
+</div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-gaofen2" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/th_remote_sensing/image_gf2.jpeg" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;4.4: GF-2 image in an area of Jiangmen City, Guangdong Province, China, June 9, 2025 (red: B5, green: B4, blue: B3).</figcaption></figure>
+<div id="fig-gaofen2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-gaofen2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/th_remote_sensing/image_gf2.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gaofen2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.4: GF-2 image in an area of Jiangmen City, Guangdong Province, China, June 9, 2025 (red: B5, green: B4, blue: B3).
+</figcaption></figure>
 </div>
 </div>
 </div>
 <p>GF-4 is designed for Earth observation from a geosynchronous orbit and it has different features: high spatial resolution, multiple payload types, strong maneuverability, large swath width and rapid imaging. Its first satellite was launched on December 29, 2015. GF-4 features a visible light and infrared staring optical imager with common optical system. The ground resolution for the visible light imager is 50 m and for the Mid-Wave Infrared (MWIR) payload is 400 m. This payload allows the observation of China and the surrounding areas with a high temporal resolution. GF-4 data application includes disaster monitoring, meteorological observation agriculture and so on.</p>
-<div id="tbl-gaofen-4" class="anchored">
-<table class="table">
-<caption>Table&nbsp;4.4: Sensors onboard GF-4 satellite</caption>
+<div id="tbl-gaofen-4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-gaofen-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.4: Sensors onboard GF-4 satellite
+</figcaption><div aria-describedby="tbl-gaofen-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 13%">
 <col style="width: 13%">
@@ -735,18 +774,26 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </div>
+</figure>
+</div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-gaofen4" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/th_remote_sensing/image_gf4.jpeg" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;4.5: GF-4 image in an area of the Formosa Island, March 23, 2025. (a) visible light image (red: B3, green: B5, blue: B4) (b) MWIR image (B6).</figcaption></figure>
+<div id="fig-gaofen4" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-gaofen4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/th_remote_sensing/image_gf4.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gaofen4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.5: GF-4 image in an area of the Formosa Island, March 23, 2025. (a) visible light image (red: B3, green: B5, blue: B4) (b) MWIR image (B6).
+</figcaption></figure>
 </div>
 </div>
 </div>
 <p>The GF-5 satellite was launched on May 9, 2018. It simultaneously conduct comprehensive observations of both land and atmosphere. It is configured with six types of payloads, including Advanced Hyperspectral Imager (AHSI), Visual and Infrared Multispectral Sensor (VIMS), Greenhouse-gases Monitoring Instrument (GMI), atmospheric infrared ultraspectral (AIUS), environment monitoring instrument (EMI), directional polarization camera (DPC). GF-5 can acquire 330 spectral bands within the range from visible light to short-wave infrared (400-2500 nm).</p>
-<div id="tbl-gaofen-5" class="anchored">
-<table class="table">
-<caption>Table&nbsp;4.5: Sensors onboard GF-5 satellite</caption>
+<div id="tbl-gaofen-5" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-gaofen-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.5: Sensors onboard GF-5 satellite
+</figcaption><div aria-describedby="tbl-gaofen-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 18%">
 <col style="width: 19%">
@@ -981,18 +1028,26 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </div>
+</figure>
+</div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-gaofen5" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/th_remote_sensing/image_gf5.jpeg" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;4.6: GF-5 image in an area of the Northeastern coast of Guangdong Province, China, November 11, 2024. (a) GF-5 image (b) Point1: Surface Reflectance of crop (c) Point2: Surface Reflectance of buildings (d) Point3: Surface Reflectance of sea.</figcaption></figure>
+<div id="fig-gaofen5" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-gaofen5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/th_remote_sensing/image_gf5.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gaofen5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.6: GF-5 image in an area of the Northeastern coast of Guangdong Province, China, November 11, 2024. (a) GF-5 image (b) Point1: Surface Reflectance of crop (c) Point2: Surface Reflectance of buildings (d) Point3: Surface Reflectance of sea.
+</figcaption></figure>
 </div>
 </div>
 </div>
 <p>GF-7 was launched on November 3, 2019. It is an optical satellite for mapping purposes for Former National Administration of Surveying, Mapping and Geoinformation of China (NASG) similar, but improved, to the earlier ZY-3. GF-7 is China’s first civilian sub-meter resolution optical stereo mapping satellite and it features two camera systems for mapping and surveying and a laser altimeter so that it is capable of acquiring high spatial resolution optical stereo observation data and high-precision laser altimetry data.</p>
-<div id="tbl-gaofen-7" class="anchored">
-<table class="table">
-<caption>Table&nbsp;4.6: Sensors onboard GF-7 satellite</caption>
+<div id="tbl-gaofen-7" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-gaofen-7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.6: Sensors onboard GF-7 satellite
+</figcaption><div aria-describedby="tbl-gaofen-7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 13%">
 <col style="width: 13%">
@@ -1060,11 +1115,15 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </div>
+</figure>
+</div>
 <p>All GF optical remote sensing imagery can be purchased and downloaded on the website of <a href="https://data.cresda.cn/#/2dMap">China Center For Resources Satellite Data And Application</a>. GF-1 WFV, GF-4, GF-6 WFV are free. After signing up, the data can be downloaded directly without limits. GF-1 PMS、GF-2 PMS、GF-5 and GF-6 PMS require payment.</p>
 <p>Among the GF series of satellites, GF-3 is specifically designed as a radar remote sensing. GF-3 was launched on August 10, 2016. It is the first civilian C-band fully polarimetric Synthetic Aperture Radar (SAR) imaging satellite of China National Space Administration (CNSA), equipped with a multi-polarized C-band SAR at meter-level resolution. GF-3’s SAR package can operate in 12 different working modes, from high-resolution (1 m) to large-swath (650 km), and operate in all-weather, day/night conditions.</p>
-<div id="tbl-gaofen-3" class="anchored">
-<table class="table">
-<caption>Table&nbsp;4.7: Sensors onboard GF-3 SAR satellite</caption>
+<div id="tbl-gaofen-3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-gaofen-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.7: Sensors onboard GF-3 SAR satellite
+</figcaption><div aria-describedby="tbl-gaofen-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 29%">
 <col style="width: 19%">
@@ -1174,21 +1233,29 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </div>
+</figure>
+</div>
 <p>All the GF-3 SAR remote sensing imagery requires payment and can be purchased on the website of <a href="https://data.cresda.cn/#/2dMap">China Center For Resources Satellite Data and Applications</a>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-gaofen3" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/th_remote_sensing/image_gf3.jpeg" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;4.7: GF-3 fine stripmap image in an area of Jiangmen City, Guangdong Province, China, April 18, 2025: (a) HH: Horizontal-Horizontal (b) HV: Horizontal-Vertical polarizations.</figcaption></figure>
+<div id="fig-gaofen3" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-gaofen3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/th_remote_sensing/image_gf3.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gaofen3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.7: GF-3 fine stripmap image in an area of Jiangmen City, Guangdong Province, China, April 18, 2025: (a) HH: Horizontal-Horizontal (b) HV: Horizontal-Vertical polarizations.
+</figcaption></figure>
 </div>
 </div>
 </div>
 </section><section id="landsat-programme" class="level2" data-number="4.4"><h2 data-number="4.4" class="anchored" data-anchor-id="landsat-programme">
 <span class="header-section-number">4.4</span> Landsat programme</h2>
 <p>The Landsat program consists of a series of Earth-observing satellite missions jointly managed by National Aeronautics and Space Administration (NASA) and the U.S. Geological Survey (USGS). Landsat-9 is the latest satellite in the Landsat series. It was launched in September 27, 2021. Landsat-9 carries two science instruments including the Operational Land Imager2(OLI-2) and Thermal Infrared Sensor2(TIRS-2) and enables informed decision support for many key areas.</p>
-<div id="tbl-landsat-9" class="anchored">
-<table class="table">
-<caption>Table&nbsp;4.8: Sensors onboard Landsat-9 satellite</caption>
+<div id="tbl-landsat-9" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-landsat-9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.8: Sensors onboard Landsat-9 satellite
+</figcaption><div aria-describedby="tbl-landsat-9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 9%">
 <col style="width: 9%">
@@ -1323,11 +1390,17 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </div>
+</figure>
+</div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-landsat9" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/th_remote_sensing/image_landsat.jpeg" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;4.8: Landsat-9 image in an area of the Northeastern Colorado, USA, June 15, 2025 (red: B7, green: B5, blue: B3)</figcaption></figure>
+<div id="fig-landsat9" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-landsat9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/th_remote_sensing/image_landsat.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-landsat9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.8: Landsat-9 image in an area of the Northeastern Colorado, USA, June 15, 2025 (red: B7, green: B5, blue: B3)
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -1341,9 +1414,11 @@ ul.task-list li input[type="checkbox"] {
 <p>Sentinel-1 supports four primary imaging modes, each optimized to balance spatial resolution, swath width, and revisit frequency according to the observational context. The Stripmap (SM) mode provides a swath width of approximately 80 km at a spatial resolution of about 5 m in both range and azimuth directions, making it suitable for applications demanding fine spatial detail over relatively narrow swaths, such as scientific investigations and precision mapping. The Interferometric Wide Swath (IW) mode, which constitutes the default operational mode over land, achieves a swath width of roughly 250 km and a spatial resolution of about 5 m (range) by 20 m (azimuth). This mode employs the Terrain Observation by Progressive Scans (TOPS) technique, enabling high interferometric coherence and reduced azimuth scalloping, thereby supporting deformation monitoring, land-cover mapping, and interferometric SAR (InSAR) applications.</p>
 <p>The Extra-Wide Swath (EW) mode, predominantly employed for maritime and cryospheric applications, covers a swath of approximately 400 km with a spatial resolution of 20 m (range) by 40 m (azimuth). Its wide coverage facilitates large-scale change detection, sea-ice monitoring, and vessel tracking. Finally, the Wave (WV) mode acquires small image segments, or imagettes, of 20 km swath width at intervals of approximately 100 km along the satellite ground track, with a spatial resolution of about 5 m × 5 m. This mode is specifically designed for the retrieval of ocean wave spectra and sea state parameters.</p>
 <p>In summary, the Sentinel-1 mission offers a set of operational modes that balance resolution and coverage to meet the diverse observational requirements of land, ocean, and ice monitoring. Its flexible polarization schemes and consistent revisit capabilities make it a cornerstone in global SAR-based Earth observation programs.</p>
-<div id="tbl-sentinel-1" class="anchored">
-<table class="table">
-<caption>Table&nbsp;4.9: Operational modes for Sentinel-1 satellites</caption>
+<div id="tbl-sentinel-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sentinel-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.9: Operational modes for Sentinel-1 satellites
+</figcaption><div aria-describedby="tbl-sentinel-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 4%">
 <col style="width: 17%">
@@ -1390,14 +1465,18 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </div>
+</figure>
+</div>
 <p>Sentinel-1 products are openly available from cloud providers such as <a href="https://dataspace.copernicus.eu/">Copernicus Data Space Ecosystem</a> and <a href="https://planetarycomputer.microsoft.com/">Microsoft Planetary Computer</a>. Please refer to the chapter <a href="https://fao-eostat.github.io/UN-Handbook/th_data_sources.html">Earth observation big data sources</a> for a description of how to access remote sensing data in cloud collections.</p>
 </section><section id="sentinel-2-mission" class="level3" data-number="4.5.2"><h3 data-number="4.5.2" class="anchored" data-anchor-id="sentinel-2-mission">
 <span class="header-section-number">4.5.2</span> Sentinel-2 mission</h3>
 <p>The Sentinel-2 mission, developed under the European Union’s Copernicus Programme and operated by the European Space Agency (ESA), consists of a constellation of polar-orbiting satellites, Sentinel-2A (launched in June 2015), Sentinel-2B (launched in March 2017), and Sentinel-2C (launched in September 2024). The Sentinel-2 satellites are equipped with the MultiSpectral Instrument (MSI), a push-broom imaging sensor that acquires data in 13 discrete spectral bands spanning the visible, near-infrared (NIR), and shortwave infrared (SWIR) regions of the electromagnetic spectrum. The MSI is designed to provide high spatial resolution (10 m, 20 m, or 60 m depending on the spectral band) over a swath width of 290 km, enabling systematic coverage of terrestrial and coastal ecosystems.</p>
 <p>The mission supports a broad range of applications, including vegetation monitoring, agricultural management, forestry assessment, inland and coastal water quality mapping, disaster risk reduction, and land use/land cover classification. The Sentinel-2 satellites are the first civil optical Earth observation mission of its kind to include three bands in the ‘red edge’, which provides key information on the vegetation state. Sentinel-2 satellite will be able to see very early changes in plant health due to its high temporal, spatial resolution, and 3 red edge bands. This is particularly useful for the end-users and policymakers for agriculture applications and to detect early signs of food shortages in different places.</p>
-<div id="tbl-sentinel-2" class="anchored">
-<table class="table">
-<caption>Table&nbsp;4.10: Description of MSI sensor onboard Sentinel-2 satellites</caption>
+<div id="tbl-sentinel-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sentinel-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.10: Description of MSI sensor onboard Sentinel-2 satellites
+</figcaption><div aria-describedby="tbl-sentinel-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 4%">
 <col style="width: 12%">
@@ -1522,11 +1601,17 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </div>
+</figure>
+</div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-s2-rondonia" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/th_remote_sensing/image_s2_rondonia.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;4.9: Sentinel-2 image in an area of Rondonia, Brazil, September 16, 2022 (red: B11, green: B8A, blue: B4)</figcaption></figure>
+<div id="fig-s2-rondonia" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-s2-rondonia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/th_remote_sensing/image_s2_rondonia.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-s2-rondonia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.9: Sentinel-2 image in an area of Rondonia, Brazil, September 16, 2022 (red: B11, green: B8A, blue: B4)
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -1537,255 +1622,425 @@ ul.task-list li input[type="checkbox"] {
 
 
 </section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  });
-  function tippyHover(el, contentFn) {
-    const config = {
-      allowHTML: true,
-      content: contentFn,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start'
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
     };
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      return note.innerHTML;
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
         }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
       }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
+      return false;
     }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
           }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/FAO-EOSTAT\.github\.io\/UN-Handbook\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
       });
     }
-  }
-});
-</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./theory.html" class="pagination-link">
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./theory.html" class="pagination-link" aria-label="Foundations">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Foundations</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./th_data_sources.html" class="pagination-link">
+      <a href="./th_data_sources.html" class="pagination-link" aria-label="Earth observation big data sources">
         <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Earth observation big data sources</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
-    <div class="nav-footer-left">Edited by Gilberto Camara, Lorenzo de Simone and Ronald Jansen.</div>   
+    <div class="nav-footer-left">
+<p>Edited by Gilberto Camara, Lorenzo de Simone and Ronald Jansen.</p>
+</div>   
     <div class="nav-footer-center">
       &nbsp;
-    </div>
-    <div class="nav-footer-right">This book was built with <a href="https://quarto.org/">Quarto</a>.</div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/edit/quarto/th_remote_sensing.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
   </div>
 </footer>
 

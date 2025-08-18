@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.361">
-
+<meta name="generator" content="quarto-1.7.33">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Gilberto Camara, Lorenzo de Simone, Ronald Jansen">
-
-<title>UN Handbook on Remote Sensing for Agricultural Statistics - 15&nbsp; Multi-seasonal crop mapping in Senegal</title>
+<title>15&nbsp; Multi-seasonal crop mapping in Senegal – UN Handbook on Remote Sensing for Agricultural Statistics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,7 +20,6 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 
-
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -33,22 +29,28 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <link href="./ct_zimbabwe.html" rel="next">
 <link href="./ct_mexico.html" rel="prev">
-<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-931bd9de4a2e97c797357f31cd37fa94.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -57,38 +59,30 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-
-
+}</script><script src="site_libs/kePrint-0.0.1/kePrint.js"></script><link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 </head>
-
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./crop_type_mapping.html">Use Cases in Crop Type Mapping</a></li><li class="breadcrumb-item"><a href="./ct_senegal.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Multi-seasonal crop mapping in Senegal</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./crop_type_mapping.html">Use Cases in Crop Type Mapping</a></li><li class="breadcrumb-item"><a href="./ct_senegal.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Multi-seasonal crop mapping in Senegal</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">UN Handbook on Remote Sensing for Agricultural Statistics</a> 
         <div class="sidebar-tools-main">
@@ -108,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome</span></span></a>
@@ -130,12 +124,12 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="./theory.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Foundations</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./th_remote_sensing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remote sensing images: optical, SAR</span></span></a>
@@ -190,17 +184,17 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./crop_type_mapping.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Use Cases in Crop Type Mapping</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ct_poland.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Crop monitoring with SAR images in Poland</span></span></a>
@@ -237,17 +231,17 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./crop_yield_estimation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Crop yield estimation</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cy_finland.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Early-season crop yield mapping in Finland</span></span></a>
@@ -278,17 +272,17 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./additional.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Additional Topics</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ad_geoglam.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Extraction of crop statistics from crop type and crop yield maps</span></span></a>
@@ -319,27 +313,32 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">15.1</span> Overview</a></li>
+<li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">15.1</span> Introduction</a></li>
+  <li><a href="#fao-in-situ-quality-framework" id="toc-fao-in-situ-quality-framework" class="nav-link" data-scroll-target="#fao-in-situ-quality-framework"><span class="header-section-number">15.2</span> FAO in-situ quality framework</a></li>
+  <li>
+<a href="#case-study-in-senegal" id="toc-case-study-in-senegal" class="nav-link" data-scroll-target="#case-study-in-senegal"><span class="header-section-number">15.3</span> Case study in Senegal</a>
+  <ul class="collapse">
+<li><a href="#aas-2018" id="toc-aas-2018" class="nav-link" data-scroll-target="#aas-2018"><span class="header-section-number">15.3.1</span> AAS 2018</a></li>
+  <li><a href="#development-and-testing-of-an-adjusted-aas-protocol-in-2021-in-the-nioro-department" id="toc-development-and-testing-of-an-adjusted-aas-protocol-in-2021-in-the-nioro-department" class="nav-link" data-scroll-target="#development-and-testing-of-an-adjusted-aas-protocol-in-2021-in-the-nioro-department"><span class="header-section-number">15.3.2</span> Development and testing of an adjusted AAS protocol in 2021 in the Nioro department</a></li>
+  <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions"><span class="header-section-number">15.3.3</span> Conclusions</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/FAO-EOSTAT/UN-Handbook/edit/quarto/ct_senegal.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/FAO-EOSTAT/UN-Handbook/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+</li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/edit/quarto/ct_senegal.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Multi-seasonal crop mapping in Senegal</span></h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./crop_type_mapping.html">Use Cases in Crop Type Mapping</a></li><li class="breadcrumb-item"><a href="./ct_senegal.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Multi-seasonal crop mapping in Senegal</span></a></li></ol></nav><div class="quarto-title">
+<h1 class="title">
+<span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Multi-seasonal crop mapping in Senegal</span>
+</h1>
 </div>
 
 
@@ -347,9 +346,10 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">Authors</div>
     <div class="quarto-title-meta-contents">
-             <p>Lorenzo De Simone, Sophie Bontemps </p>
+             <p>Lorenzo De Simone </p>
+             <p>Sophie Bontemps </p>
           </div>
   </div>
     
@@ -358,271 +358,924 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
-</header>
 
-<section id="overview" class="level2" data-number="15.1">
-<h2 data-number="15.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">15.1</span> Overview</h2>
+</header><section id="introduction" class="level2" data-number="15.1"><h2 data-number="15.1" class="anchored" data-anchor-id="introduction">
+<span class="header-section-number">15.1</span> Introduction</h2>
+<p>Earth Observation (EO) technologies are increasingly recognized as transformative tools for enhancing agricultural statistics. However, their integration into official systems is often constrained by the structure and quality of in-situ data collected via agricultural surveys and censuses.</p>
+<p>In response, FAO, through the EOSTAT and European Space Agency Sen4Stat projects, developed a diagnostic framework to assess the fitness-for-use of collected in-situ data for EO applications. This paper introduces this framework and applies it to two country case studies — Senegal and Uganda — to illustrate common challenges and propose actionable solutions.</p>
+</section><section id="fao-in-situ-quality-framework" class="level2" data-number="15.2"><h2 data-number="15.2" class="anchored" data-anchor-id="fao-in-situ-quality-framework">
+<span class="header-section-number">15.2</span> FAO in-situ quality framework</h2>
+<p>FAO and Université catholique of Louvain in Belgium (UCLouvain) have been testing and experimenting data quality framework for the collection of in situ data that would ensure fitness for use with EO applications, in particular to combine the national surveys with crop type maps with the finality to improve crop statistics.</p>
+<p>Finally in 2025 the experience gained after several field experiments culminated in the publishing of a first in-situ quality framework for assessing the compatibility of field data collected through Surveys and Census operations with EO applications (De Simone et al., 2025).</p>
+<p>The framework includes two pillars:</p>
+<ul>
+<li><p>Survey Design Assessment (<a href="#tbl-senegal-1" class="quarto-xref">Table&nbsp;<span>15.1</span></a>): Evaluates the structural compatibility of sampling protocols with EO needs (e.g., crop observability, georeferencing precision, and metadata completeness).</p></li>
+<li><p>EO-Based Post-Hoc Assessment (<a href="#tbl-senegal-2" class="quarto-xref">Table&nbsp;<span>15.2</span></a>): Applies satellite-derived analytics (e.g., Normalized Difference Vegetation Index time series clustering, visual cross-checks) to validate the internal consistency and label quality of field samples.</p></li>
+</ul>
+<p>While the framework does not assign numerical scores, it identifies key design gaps and recommends corrective actions. A dataset is considered unfit if significant gaps in either pillar remain unresolved.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-senegal-1" class="table table-condensed quarto-float quarto-figure quarto-figure-center anchored" style="font-size: 12px; width: auto !important; " data-quarto-postprocess="true">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-senegal-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;15.1: Assessment framework to qualify the compatibility of an in-situ survey design to leverage EO satellite data for agriculture statistics
+</figcaption><div aria-describedby="tbl-senegal-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table table-condensed caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead><tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold; color: black !important;">1 Criteria related to the sampling design:</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1.1 Observation timing allowing identification of crop type in the field</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1.2 Minimum number of samples for marginal crops to provide balanced datasets</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1.3 Local homogeneity of each sample unit to match the satellite observation footprint</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold; color: black !important;">2 Criteria related to the response design:</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2.1 Georeferenced ground observation at field or point level</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2.2 Sample unit size at least matching the satellite observation footprint</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2.3 Contextual observation to document sample quality</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2.4 Rich labelling beyond crop type (e.g., weeds, water lodging, etc.)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-senegal-2" class="table table-condensed quarto-float quarto-figure quarto-figure-center anchored" style="font-size: 12px; width: auto !important; " data-quarto-postprocess="true">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-senegal-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;15.2: EO-based assessment framework to control the quality of an in-situ dataset from a satellite remote sensing point of view
+</figcaption><div aria-describedby="tbl-senegal-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table table-condensed caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead><tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold; color: black !important;">3 Criteria for EO-based data quality control:</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">3.1 Completeness of sample information</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3.2 Topology integrity of georeferenced features</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">3.3 Metadata completeness</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3.4 GPS coordinate accuracy visually checked with EO imagery</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">3.5 Sample purity based on multispectral reflectance values</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3.6 Labelling quality based on NDVI time series clustering</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="case-study-in-senegal" class="level2" data-number="15.3"><h2 data-number="15.3" class="anchored" data-anchor-id="case-study-in-senegal">
+<span class="header-section-number">15.3</span> Case study in Senegal</h2>
+<p>Since 2019, FAO and UCLouvain have collaborated with the Direction de l’Analyse, de la Prévision et des Statistiques Agricoles (DAPSA) under the EOSTAT project to assess and enhance the compatibility of Senegal’s agricultural survey system with EO applications. The Annual Agricultural Survey in place in Senegal is a list frame survey over all country. Holdings are selected through a stratified sampling from the 526.000 holdings in Senegal, which corresponds to ~ 0.4%. These holdings are spread in all the Senegalese departments, in direct ratio to the size of these departments.</p>
+<p>The AAS database from 2018 was shared by DAPSA as a baseline dataset to evaluate its fitness for EO-based crop mapping using FAO’s in-situ quality framework.</p>
+<section id="aas-2018" class="level3" data-number="15.3.1"><h3 data-number="15.3.1" class="anchored" data-anchor-id="aas-2018">
+<span class="header-section-number">15.3.1</span> AAS 2018</h3>
+<p>The AAS database included 16,861 records corresponding to individual parcels cultivated by approximately 4,693 households surveyed across the country. In each holding, farmers are interviewed during the main cropping season and GPS measurements are done in a selection of fields, which are described in terms of crop type and crop practices (<a href="#fig-senegal-1" class="quarto-xref">Figure&nbsp;<span>15.1</span></a>).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-senegal-1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-senegal-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_senegal/image1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-senegal-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.1: Household locations covered by the 2018 agricultural survey.
+</figcaption></figure>
+</div>
+</div>
+</div>
+<p>Parcels’ area is also measured with GPS and this measured area is then reported manually in the survey questionnaire available on the tablet. Unfortunately, the GPS traces are not systematically archived – only a subset of them are kept for quality control by the supervision team at DAPSA. A subset of these traces, mainly located between Touba and Thiès, was also shared by DAPSA (<a href="#fig-senegal-2" class="quarto-xref">Figure&nbsp;<span>15.2</span></a>).</p>
+<div id="fig-senegal-2" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-senegal-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-senegal-2" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-senegal-2-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-senegal-2-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/ct_senegal/image2.png" style="width:100.0%" data-ref-parent="fig-senegal-2" height="300" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-senegal-2-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) GPS tracks location
+</figcaption></figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-senegal-2" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-senegal-2-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-senegal-2-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/ct_senegal/image3.png" style="width:100.0%" data-ref-parent="fig-senegal-2" height="300" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-senegal-2-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Parcels boundaries with GPS point/lines
+</figcaption></figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-senegal-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.2: Visualization of data shared by DAPSA.
+</figcaption></figure>
+</div>
+<p>To summarize, georeferenced information is available at crop-level, as points (parcels boundaries are not available by-default), for a selection of parcels. Information is collected at the right timing to allow crop identification and additional information.</p>
+<section id="quality-control-of-aas-data" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="quality-control-of-aas-data">Quality control of AAS data</h4>
+<p>The quality of the 16,861 records as GPS points inside the AAS database was assessed through multiple stages.</p>
+<p>First, all points located too close to roads and buildings were removed and points located less than 20 meters apart but associated with different crops are removed. The second stage of the quality control addressed the important challenge of working with GPS points (and not polygons), i.e.&nbsp;checking if the point is located in the middle of the parcel. For the sake of illustration, <a href="#fig-senegal-3" class="quarto-xref">Figure&nbsp;<span>15.3</span></a> shows two situations where (i) point was taken at the middle of the parcels, thus making the parcels easily identifiable (left) and (ii) point was taken on the path along the parcels which makes almost impossible to know which parcel it refers to (right).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-senegal-3" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-senegal-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_senegal/image4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-senegal-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.3: Challenge to localize the surveyed parcels in the statistical database due to the fact that parcels are localized by geo-points (i.e.&nbsp;a single GPS coordinate)
+</figcaption></figure>
+</div>
+</div>
+</div>
+<p>In order to avoid manually checking all points, the points were transformed into polygons by applying a 20-m buffer and the homogeneity of these polygons was assessed statistically. The assumption was that if the point was taken in the middle of the parcel, the resulting buffer would be homogeneous. Conversely, a point taken along the edge of the plot would result in a buffer mixing different crop types or including other land cover types such as roads or trees. This assessment was done calculating the standard deviation of the Normalized Difference Vegetation Index standard deviation.</p>
+<p>During this step, it was observed that most points labelled as “rice” were located at the edges of the fields (probably because it is difficult to walk to the center of a rice field) and would thus be removed using the above criterion. In order to keep a good representation of rice in the reference database, all points were replaced manually in the middle of the fields thanks to Google Earth imagery.</p>
+<p>At this stage, 12,056 polygons out of the 16,861 initial records remain.</p>
+</section><section id="quality-control-of-gps-traces" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="quality-control-of-gps-traces">Quality control of GPS traces</h4>
+<p>First, the raw GPS traces were converted into usable polygon shapefiles. This process involved removing irrelevant data, correcting naming inconsistencies, and cleaning line artifacts caused by enumerator movement between fields (<a href="#fig-senegal-4" class="quarto-xref">Figure&nbsp;<span>15.4</span></a>).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-senegal-4" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-senegal-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_senegal/image5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-senegal-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.4: GPS traces successfully converted into shapefiles and represented well parcels boundaries
+</figcaption></figure>
+</div>
+</div>
+</div>
+<p>The GPS traces needed also to be quality controlled and filtered:</p>
+<ul>
+<li><p>Traces unrelated to valid records in the AAS database (e.g., invalid file name) were discarded</p></li>
+<li><p>Traces including non-boundary movements (e.g., travel paths) were removed (<a href="#fig-senegal-5" class="quarto-xref">Figure&nbsp;<span>15.5</span></a>)</p></li>
+<li><p>Traces with fewer than 3 points were excluded as they could not form polygon</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-senegal-5" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-senegal-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_senegal/image6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-senegal-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.5: Example of GPS traces that contain more than parcels boundaries
+</figcaption></figure>
+</div>
+</div>
+</div>
+<p>Finally, too small polygons (the ones that disappeared after a 10-m inside buffer) were removed.</p>
+<p>Ultimately, only 1,593 high-quality parcel boundaries remained, concentrated in central and western Senegal and representing 2089 hectares shared unequally into 22 crop type classes (<a href="#fig-senegal-6" class="quarto-xref">Figure&nbsp;<span>15.6</span></a>).</p>
+<div id="fig-senegal-6" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-senegal-6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-senegal-6" style="flex-basis: 100.0%;justify-content: center;">
+<div id="fig-senegal-6-1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-senegal-6-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_senegal/image7.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" data-ref-parent="fig-senegal-6">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-senegal-6-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) GPS boundaries
+</figcaption></figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-senegal-6" style="flex-basis: 100.0%;justify-content: center;">
+<div id="fig-senegal-6-2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-senegal-6-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_senegal/image8.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" data-ref-parent="fig-senegal-6">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-senegal-6-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Crop type distribution
+</figcaption></figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-senegal-6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.6: Localization of the 1593 crop polygons obtained from the GPS boundaries and distribution of crop polygons superficies according to the crop type
+</figcaption></figure>
+</div>
+<p>These crop data are expected to be the most useful ones because (i) they are polygons, thus including several pixels belonging to the same crop and (ii) the parcels boundaries have been checked manually. Nevertheless, these data don’t contain enough samples in all the crop types and they are not spread over the whole country.</p>
+</section><section id="crop-mapping-based-on-aas-2018" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="crop-mapping-based-on-aas-2018">Crop mapping based on AAS 2018</h4>
+<p>Before running a classification using satellite imagery, additional non-crop information was collected by visual interpretation of very high spatial resolution Google Earth and Planet imagery. This information is not collected by regular agricultural surveys, which essence focuses on crop areas, but it is needed to train classification algorithms.</p>
+<p>The classification was run using both the points and polygons dataset, based on GPS traces. The class imbalance in the dataset was addressed by limiting the number of groundnut samples to a maximum of 400 hectares and of rice samples to 100 hectares.</p>
+<p>The amended dataset enabled the generation of a national 10-meter spatial resolution binary cropland / non-cropland mask, with an overall accuracy of 98% and F-Score values of 76% and of 99% for the cropland and non-cropland classes, respectively. A visual inspection of the map revealed that the classification performed relatively well: the discrimination was good between cropland and the natural shrub and tree vegetation, the urban areas and the bare soil. The discrimination with the grassland was however of lower quality and the irrigated perimeters were not well identified as cropland, due to their poor representation in the in-situ data.</p>
+<p>A national crop type map was also generated, focusing only on the main crops for which enough samples were available (groundnut, maize, cassava, millet, cowpea, rice and sorghum). The overall accuracy was 78%. The patterns of the fields were generally well identified, showing that the Sentinel-2 10-meter spatial resolution has the capacity of mapping crop types at field-level. However, the map was affected by significant confusion between crops.</p>
+<p>A local crop type map was also produced, focusing only on the Sentinel-2 tile where polygons are available, was much more promising, with an overall accuracy increasing to 85% (<a href="#fig-senegal-7" class="quarto-xref">Figure&nbsp;<span>15.7</span></a>). The results showed the added-value of working with polygons instead of points and of relying on many more samples to calibrate the algorithm.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-senegal-7" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-senegal-7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_senegal/image9.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-senegal-7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.7: Sentinel-2 10-meter resolution crop type map over the tile where most of the GPS traces were located
+</figcaption></figure>
+</div>
+</div>
+</div>
+<p>The rigorous preprocessing and quality assessment of the AAS and GPS traces data played a pivotal role in achieving this result. However, the AAS protocol in place was not optimal to allow reaching higher mapping accuracy: GPS information is mainly recorded as points, minor crops are under-represented and contextual information was missing (e.g.&nbsp;field heterogeneity, mixed cropping).</p>
+</section></section><section id="development-and-testing-of-an-adjusted-aas-protocol-in-2021-in-the-nioro-department" class="level3" data-number="15.3.2"><h3 data-number="15.3.2" class="anchored" data-anchor-id="development-and-testing-of-an-adjusted-aas-protocol-in-2021-in-the-nioro-department">
+<span class="header-section-number">15.3.2</span> Development and testing of an adjusted AAS protocol in 2021 in the Nioro department</h3>
+<p>Building on the lessons from the 2018 AAS, FAO supported a pilot activity in Nioro du Rip district between 2021–2022 to align the agricultural survey protocol with EO requirements. The proposed adjustments primarily targeted the georeferencing of the collected data by (1) transitioning from points to polygons and (2) testing area measurement using a tablet instead of a GPS, in order to simplify protocol implementation and reduce naming errors. It also added contextual and labelling information about crops in the questionnaire.</p>
+<p>The pilot protocol discussed with the DAPSA consisted in recording parcels boundaries and no more GPS points for the visited parcels. These boundaries were recorded using two different devices for the sake of comparison: the traditional GPS and the tablet via a data collection application (which was ODK). The ODK application also allowed to collect additional information about crops, such as crop heterogeneity, weeds level and mixed cropping), as well as non cropland classes. The traditional AAS was implemented in parallel on the tablet as usual. Five teams worked on the field and the data collected were sent daily to a server accessible by all participants.</p>
+<p>Simultaneously, the DAPSA and UCLouvain carried out rapid quality control of the data each day in order to adjust the survey in real time if necessary.</p>
+<section id="parcels-boundaries-with-gps-vs-odk" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="parcels-boundaries-with-gps-vs-odk">Parcels boundaries with GPS vs ODK</h4>
+<section id="gps-data" class="level5 unnumbered"><h5 class="unnumbered anchored" data-anchor-id="gps-data">GPS data</h5>
+<p>A total of 357 Garmin GPS traces were successfully recorded during the field campaign, compared to the 396 plots listed in the AAS database. The discrepancy was explained by two main issues:</p>
+<ul>
+<li>Plot naming inconsistencies: 29 polygons were not correctly linked to AAS data due to manual errors in GPS file naming. However, several polygons could be recovered through careful manual inspection</li>
+<li>Loss of GPS traces: some GPS traces were never saved or transferred, preventing linkage with corresponding survey records.</li>
+</ul>
+<p>These gaps in AAS–GPS linkage highlight the limitations of relying on manual data entry without real-time synchronization tools.</p>
+</section><section id="odk-data" class="level5 unnumbered"><h5 class="unnumbered anchored" data-anchor-id="odk-data">ODK data</h5>
+<p>A total of 231 plots were investigated in the ODK application, out of the 396 plots inventoried by the AAS. This difference was due to a communication error during data collection: taking measurements with two different tools on all parcels complicated the task for the investigators.</p>
+<p>Taking the GPS traces as reference, the quality of the field boundaries collected with ODK was quite heterogeneous at the beginning of the field campaign (<a href="#fig-senegal-8" class="quarto-xref">Figure&nbsp;<span>15.8</span></a>). This was due to the time required to learn a new tool, and it was gradually resolved over the course of the campaign thanks to the continuous guidance provided by DAPSA and UCLouvain.</p>
+<div id="fig-senegal-8" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-senegal-8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 47.9%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/ct_senegal/image10.png" class="img-fluid figure-img"></p>
+<figcaption>(a)</figcaption></figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 52.1%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/ct_senegal/image11.png" class="img-fluid figure-img"></p>
+<figcaption>(b)</figcaption></figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="./images/ct_senegal/image12.png" class="img-fluid figure-img"></p>
+<figcaption>(c)</figcaption></figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-senegal-8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.8: Parcel’s polygons from Garmin GPS in red and from the tablet’s GPS in green.
+</figcaption></figure>
+</div>
+</section></section><section id="comparative-analysis-of-the-surfaces" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="comparative-analysis-of-the-surfaces">Comparative analysis of the surfaces</h4>
+<p>The data collected in the field by the tablet in manual mode were compared to the GPS data. <a href="#fig-senegal-9" class="quarto-xref">Figure&nbsp;<span>15.9</span></a> relates the regression line of the tablet dataset to the reference line. The value of the slope is 0.99, close to the value of the reference slope. The position of the regression line and the bias of 0.27 indicates that the tablet data generally underestimated the reference data. This bias is confirmed by a visual analysis of the data.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-senegal-9" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-senegal-9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_senegal/image13.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-senegal-9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.9: Predicted areas by the ODK app on an Android tab (blue points), the red line is the regression line related to the predicted dataset and the green line, the reference related to the GPS dataset
+</figcaption></figure>
+</div>
+</div>
+</div>
+<p>Several measurements deviate significantly from the reference, which comes from the use of the manual mode in ODK (i.e.&nbsp;enumerators to manually encode GPS measures at the inflection points of the plot). Errors in the area measurements were caused by:</p>
+<ul>
+<li>errors in encoding the points by the enumerator;</li>
+<li>waiting time: the tablet’s GPS takes time to stabilize its position with acceptable accuracy. A shortened waiting time can then lead to an error of up to 30 meters from the position of the investigator;</li>
+<li>recording errors by the tablet: it is possible that the device or application does not record a point correctly or does not record it at all.</li>
+</ul>
+<p>Statistically and visually, the tablet dataset is less accurate than the one recorded with the GPS and has a bias that underestimates the baseline value. The situation is improving when using ODK in automated mode (<a href="#fig-senegal-10" class="quarto-xref">Figure&nbsp;<span>15.10</span></a>), but the comparative analysis did not support the claim that a tablet can replace a GPS for area measurement.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-senegal-10" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-senegal-10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_senegal/image14.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-senegal-10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.10: Examples of parcel’s delineations by the GPS in red, by the tablet with ODK Collect in manual mode in orange and in automated mode in green
+</figcaption></figure>
+</div>
+</div>
+</div>
+</section><section id="additional-non-crop-class-data" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="additional-non-crop-class-data">Additional non-crop class data</h4>
+<p>As part of the pilot, enumerators were instructed to collect data on non-crop land cover classes (e.g., fallow, built-up, water) through the ODK application. However, only a limited number of non-crop polygons were recorded. Several key classes were missing. To fill this gap, additional non-crop features were manually delineated using very high-resolution satellite imagery. In total, 50 non-crop polygons were available for model calibration.</p>
+</section><section id="crop-classification-and-area-indicators" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="crop-classification-and-area-indicators">Crop Classification and area indicators</h4>
+<section id="sen4stat-solution" class="level5 unnumbered"><h5 class="unnumbered anchored" data-anchor-id="sen4stat-solution">Sen4Stat solution</h5>
+<p>The crop type classification was done using the Sen4Stat system (European Space Agency, 2019), an evolution of the Sen2Agri system, whose performance has been demonstrated and validated in a variety of contexts (Defourny et al., 2019).</p>
+<p>The Sen4Stat toolbox is a standalone operational processing chain which aims at facilitating the uptake of Earth Observation data in the official processes of National Statistical Offices, since the early stages of the agricultural surveys to the production of statistics. It automatically ingests and processes Sentinel-1 and Sentinel-2 time series in a seamless way for operational crop mapping and yield modelling, using ground data provided by national statistical surveys. It generates a set of EO-based products, such as time series of biophysical indicators, crop type maps and yield estimates. These EO products are then integrated with the agricultural survey to improve the statistics. Different types of statistics improvements are targeted by the system: (i) reduction of the estimates error, (ii) disaggregation to smaller administrative units, (iii) provision of timely crop area and yield estimators and (iv) optimization of sampling design by using maps to build or update sampling master frames. EO products are also used to support the quality control of the survey data.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-senegal-11" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-senegal-11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_senegal/image15.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-senegal-11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.11: Open-source Sen4Stat toolbox
+</figcaption></figure>
+</div>
+</div>
+</div>
+<p>The system has been tested and demonstrated in various countries around the world, thus addressing a wide diversity of both cropping systems and agricultural data collection protocols. It is available for download on the Sen4Stat website (<a href="https://www.esa-sen4stat.org/">esa-sen4stat.org</a>).</p>
+</section><section id="nioro-crop-type-map-2021" class="level5 unnumbered"><h5 class="unnumbered anchored" data-anchor-id="nioro-crop-type-map-2021">Nioro crop type map 2021</h5>
+<p>The crop type map was generated at the end of the season from May 1, 2021, to December 31, 2021, using Sentinel-2 time series. The training dataset used contains the 50 non-crop polygons and the 247 crop polygons obtained after joining and cleaning the ODK and GPS dataset (<a href="#fig-senegal-12" class="quarto-xref">Figure&nbsp;<span>15.12</span></a> – calibration polygons). The distribution of observations is very uneven for the different crops and insufficient for maize.</p>
+<div id="fig-senegal-12" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-senegal-12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-senegal-12" style="flex-basis: 100.0%;justify-content: center;">
+<div id="fig-senegal-12-1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-senegal-12-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_senegal/image16.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%" data-ref-parent="fig-senegal-12">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-senegal-12-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Statistical distribution
+</figcaption></figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-senegal-12" style="flex-basis: 100.0%;justify-content: center;">
+<div id="fig-senegal-12-2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-senegal-12-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_senegal/image17.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%" data-ref-parent="fig-senegal-12">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-senegal-12-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Spatial distribution
+</figcaption></figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-senegal-12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.12: Distribution of in-situ data into a calibration data set and a validation data set
+</figcaption></figure>
+</div>
+<p>The obtained crop type map is shown in <a href="#fig-senegal-13" class="quarto-xref">Figure&nbsp;<span>15.13</span></a></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-senegal-13" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-senegal-13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_senegal/image19.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-senegal-13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.13: Crop type classification of the Nioro department based on satellite imagery from May 1, 2021 to December 31, 2021
+</figcaption></figure>
+</div>
+</div>
+</div>
+<p>The confusion matrix (<a href="#fig-senegal-14" class="quarto-xref">Figure&nbsp;<span>15.14</span></a>) indicates an overall accuracy of 97.1% for the cropland mask and 88.2% for the crop type map. F-score values were 98% for cropland and 95% for non-cropland. For specific crops, F-scores reached 95.2% for groundnut, 83.8% for millet, but only 54.8% for maize, which showed substantial omissions. The representation of the three crops in the dataset was highly unbalanced, and the number of samples is clearly too low to allow a proper maize classification.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-senegal-14" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-senegal-14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_senegal/image18.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-senegal-14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.14: Confusion matrix (expressed in number of pixels) for the crop type map, with contamination and omission values for each crop, UA as user accuracy and PA as producer accuracy
+</figcaption></figure>
+</div>
+</div>
+</div>
+</section><section id="crop-area-indicator" class="level5 unnumbered"><h5 class="unnumbered anchored" data-anchor-id="crop-area-indicator">Crop area indicator</h5>
+<p>Crop area statistics were derived from the crop type map to support EO-based agricultural estimations at the municipality level. <a href="#fig-senegal-15" class="quarto-xref">Figure&nbsp;<span>15.15</span></a> (a) shows an estimation of the areas per crop using only the remote sensing data per municipality in the Nioro du Rip department while the bottom illustration gives an estimation of the area cultivated in each municipality by the same remote sensing approach. The surface areas per crop were calculated by counting classified pixels and applying bias correction using the confusion matrix.</p>
+<div id="fig-senegal-15" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-senegal-15-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-senegal-15" style="flex-basis: 100.0%;justify-content: center;">
+<div id="fig-senegal-15-1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-senegal-15-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_senegal/image20.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%" data-ref-parent="fig-senegal-15">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-senegal-15-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Estimation of the crop share
+</figcaption></figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-senegal-15" style="flex-basis: 100.0%;justify-content: center;">
+<div id="fig-senegal-15-2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-senegal-15-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_senegal/image21.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%" data-ref-parent="fig-senegal-15">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-senegal-15-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Cultivated area
+</figcaption></figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-senegal-15-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.15: Estimation of the crop share (a) and cultivated area (b) per municipality in the Nioro du Rip department (in percent), based on remote sensing data
+</figcaption></figure>
+</div>
+</section><section id="acreage-estimation-by-integrating-survey-and-eo-data" class="level5 unnumbered"><h5 class="unnumbered anchored" data-anchor-id="acreage-estimation-by-integrating-survey-and-eo-data">Acreage estimation by integrating survey and EO data</h5>
+<p>Producing statistics by counting those pixels classified as a given crop type does not provide unbiased area estimates. Maps are subject to omission and commission errors (Czaplewski, 1992), which are linked to the ability of the classification method to distinguish between classes. Regression estimators and calibration estimators have been widely used to correct such biases (F. J. Gallego and Rueda, 1993; Khan et al., 2018; Olofsson et al., 2014; Li et al.,2023). They are traditional ways to combine accurate, possibly unbiased, information, observed on a sample with less accurate, biased information, known for the whole population or for a larger sample. Said differently, maps are used to improve an estimator that has been computed from a ground survey on a sample in preserving as much as possible the properties of the ground survey estimators (unbiasedness) and reducing the variance (Gallego 2004).</p>
+<p>Because the sampling design in Senegal is a list frame, the integration of remote sensing and ground data cannot be done using linear models, but with multinomial logit models. These multinomial models deal with the uncertainties and generate probabilities that a pixel of a given class in the map is actually this given crop on the ground. Despite the fact that the map was not perfect, this model successfully demonstrates the added-value of EO data for agricultural statistics estimation.</p>
+<p><a href="#fig-senegal-16" class="quarto-xref">Figure&nbsp;<span>15.16</span></a> presents the crop acreage estimates in the department of Nioro, for the two main crops which are millet and groundnut and shows the efficiency of using the crop type map to support this estimation of crop acreages.</p>
+<div id="fig-senegal-16" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-senegal-16-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-senegal-16" style="flex-basis: 100.0%;justify-content: center;">
+<div id="fig-senegal-16-1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-senegal-16-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_senegal/image22.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" data-ref-parent="fig-senegal-16">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-senegal-16-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Crop acreage estimates using EO and ground data in Nioro
+</figcaption></figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-senegal-16" style="flex-basis: 100.0%;justify-content: center;">
+<div id="fig-senegal-16-2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-senegal-16-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_senegal/image23.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" data-ref-parent="fig-senegal-16">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-senegal-16-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Efficiency of using the crop type map for crop acreage estimation
+</figcaption></figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-senegal-16-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.16: Crop acreage estimates using EO and ground data in Nioro (a) and efficiency of using the crop type map for crop acreage estimation (b)
+</figcaption></figure>
+</div>
+<p>The use of a wall-to-wall map also allows to make acreage estimates available at the “arrondissement” levels with a reasonable error (expressed as the coefficient of variation), as shown in <a href="#fig-senegal-17" class="quarto-xref">Figure&nbsp;<span>15.17</span></a>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-senegal-17" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-senegal-17-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_senegal/image24.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-senegal-17-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.17: Crop acreage estimates at the district (arrondissement) level
+</figcaption></figure>
+</div>
+</div>
+</div>
+</section></section></section><section id="conclusions" class="level3" data-number="15.3.3"><h3 data-number="15.3.3" class="anchored" data-anchor-id="conclusions">
+<span class="header-section-number">15.3.3</span> Conclusions</h3>
+<p>The alignment of the AAS protocol with FAO’s in-situ data quality framework significantly enhanced the compatibility of field data with EO applications. Classification accuracy improved from below 78% (with the original 2018 AAS data) to over 85% following the pilot implementation in 2021–2022. This result has to be confirmed by an implementation at larger scale, but it already nicely illustrates the impact of structured, high-quality, plot-level georeferencing.</p>
+<p>Moreover, integrating satellite imagery with field data enabled the use of model-assisted estimators—such as regression estimators—for crop area statistics. This approach yielded more accurate results, with lower coefficients of variation, compared to using field data alone.</p>
+<p>Building on these outcomes, DAPSA endorsed the revised protocol and extended its implementation to six additional districts in 2024. This successful institutionalization underscores the value of diagnostic frameworks, phased piloting, and continuous quality improvement in advancing the operational use of EO in national agricultural statistics.</p>
 
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  });
-  function tippyHover(el, contentFn) {
-    const config = {
-      allowHTML: true,
-      content: contentFn,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start'
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
     };
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      return note.innerHTML;
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
         }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
       }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
+      return false;
     }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
           }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/FAO-EOSTAT\.github\.io\/UN-Handbook\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
       });
     }
-  }
-});
-</script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./ct_mexico.html" class="pagination-link">
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./ct_mexico.html" class="pagination-link" aria-label="Crop classification in Mexico">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Crop classification in Mexico</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ct_zimbabwe.html" class="pagination-link">
+      <a href="./ct_zimbabwe.html" class="pagination-link" aria-label="Crop classification in Zimbabwe">
         <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Crop classification in Zimbabwe</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">Edited by Gilberto Camara, Lorenzo de Simone and Ronald Jansen.</div>   
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Edited by Gilberto Camara, Lorenzo de Simone and Ronald Jansen.</p>
+</div>   
     <div class="nav-footer-center">
       &nbsp;
-    </div>
-    <div class="nav-footer-right">This book was built with <a href="https://quarto.org/">Quarto</a>.</div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/edit/quarto/ct_senegal.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
   </div>
 </footer>
-
 
 
 </body></html>

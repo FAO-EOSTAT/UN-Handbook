@@ -2,10 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.361">
+<meta name="generator" content="quarto-1.7.33">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Gilberto Camara, Lorenzo de Simone, Ronald Jansen">
-<title>UN Handbook on Remote Sensing for Agricultural Statistics - 17&nbsp; Crop classification and land use mapping in Chile</title>
+<title>17&nbsp; Crop classification and land use mapping in Chile – UN Handbook on Remote Sensing for Agricultural Statistics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,7 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 /* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -56,6 +57,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -82,21 +84,28 @@ div.csl-indent {
 <meta name="quarto:offset" content="./">
 <link href="./ct_digital_earth_africa.html" rel="next">
 <link href="./ct_zimbabwe.html" rel="prev">
-<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-931bd9de4a2e97c797357f31cd37fa94.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -105,29 +114,30 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
 }</script>
 </head>
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./crop_type_mapping.html">Use Cases in Crop Type Mapping</a></li><li class="breadcrumb-item"><a href="./ct_chile.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Crop classification and land use mapping in Chile</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./crop_type_mapping.html">Use Cases in Crop Type Mapping</a></li><li class="breadcrumb-item"><a href="./ct_chile.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Crop classification and land use mapping in Chile</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
   </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">UN Handbook on Remote Sensing for Agricultural Statistics</a> 
         <div class="sidebar-tools-main">
@@ -169,7 +179,7 @@ div.csl-indent {
       <div class="sidebar-item-container"> 
             <a href="./theory.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Foundations</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -234,7 +244,7 @@ div.csl-indent {
       <div class="sidebar-item-container"> 
             <a href="./crop_type_mapping.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Use Cases in Crop Type Mapping</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -281,7 +291,7 @@ div.csl-indent {
       <div class="sidebar-item-container"> 
             <a href="./crop_yield_estimation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Crop yield estimation</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -322,7 +332,7 @@ div.csl-indent {
       <div class="sidebar-item-container"> 
             <a href="./additional.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Additional Topics</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -361,7 +371,7 @@ div.csl-indent {
 </li>
     </ul>
 </div>
-</nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
@@ -421,10 +431,10 @@ div.csl-indent {
 </li>
   <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions"><span class="header-section-number">17.12</span> Conclusions</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
-  </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/FAO-EOSTAT/UN-Handbook/edit/quarto/ct_chile.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/FAO-EOSTAT/UN-Handbook/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/edit/quarto/ct_chile.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./crop_type_mapping.html">Use Cases in Crop Type Mapping</a></li><li class="breadcrumb-item"><a href="./ct_chile.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Crop classification and land use mapping in Chile</span></a></li></ol></nav><div class="quarto-title">
 <h1 class="title">
 <span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Crop classification and land use mapping in Chile</span>
 </h1>
@@ -448,6 +458,7 @@ div.csl-indent {
   </div>
   
 
+
 </header><section id="introduction" class="level2" data-number="17.1"><h2 data-number="17.1" class="anchored" data-anchor-id="introduction">
 <span class="header-section-number">17.1</span> Introduction</h2>
 <p>The National Institute of Statistics (INE) of Chile is the technical agency responsible for producing, collecting, processing, and disseminating official statistics. Its primary mission is to provide timely, objective, and high-quality statistical information to support public and private decision-making, public policy design, territorial planning, and socioeconomic analysis. In fulfilling this mission, the INE adheres to principles of transparency, impartiality, methodological rigor, and confidentiality, aligned with international standards set by the United Nations and other specialized organizations. It also continuously improves its processes through technological modernization, methodology validation, and ongoing staff training initiatives (<a href="https://www.ine.gob.cl/institucional/plan-estrategico-2022-2026/mision-vision-institucional-y-vision-superior">INE</a>).</p>
@@ -463,12 +474,16 @@ div.csl-indent {
 <p>One of the main challenges of this work is the territorial extent of Chile, the longest country in the world, spanning more than 4,200 kilometers from north to south and located approximately between latitudes 18° and 56° South. This geographic configuration results in high climatic variability <span class="citation" data-cites="Sarricolea2017"><a href="#ref-Sarricolea2017" role="doc-biblioref">[6]</a></span> and a wide diversity of landscapes and land-forms, which in turn condition the presence of various land cover types and land use practices</p>
 <p>In our case, we developed a proposal for subdividing continental Chile into macrozones, defined as groupings of provinces (political-administrative units within regions) with similar geographical characteristics (understood as those climatic, vegetational, and agricultural variables that determine the landscape of a given territory). To support this, three sources of geographical characteristics for Chile were considered: (1) the Chilean Agroclimatic Atlas <span class="citation" data-cites="Santibanez2017"><a href="#ref-Santibanez2017" role="doc-biblioref">[7]</a></span>, (2) the Bioclimatic and Vegetational Synopsis of Chile <span class="citation" data-cites="Luebert2017"><a href="#ref-Luebert2017" role="doc-biblioref">[8]</a></span>, and (3) the Rural Atlas of Chile <span class="citation" data-cites="Odepa2022b"><a href="#ref-Odepa2022b" role="doc-biblioref">[9]</a></span>.</p>
 <p>These three sources were analyzed spatially by identifying the territorial distribution of each classification, and then grouping, from north to south, those provinces with similar characteristics. Thus, we arrived at a proposal of nine macrozones that group the country’s 56 provinces based on similar geographical characteristics. In this case, we focused on Macrozone 4 (MZ4), which includes the provinces of the Maule and Biobío regions.</p>
-<p>MZ4 is located between latitudes 34°41’ and 37°18’ south (<a href="#fig-map">Figure&nbsp;<span>17.1</span></a>) and covers an area of 43,394 km<sup>2</sup> (approximately 5.7% of Chile’s surface area), it is characterized by a temperate Mediterranean climate with marked seasonality in precipitation. According to the updated Köppen-Geiger classification <span class="citation" data-cites="Beck2018"><a href="#ref-Beck2018" role="doc-biblioref">[10]</a></span>, the predominant climate in this area is Csb, corresponding to a dry-summer, temperate Mediterranean climate, with precipitation concentrated in the winter months (June to August) and a water deficit in the summer (December to February). In the highest areas of the foothills and the Andes Mountain Range, the climate changes to a cool-summer oceanic regime (Cfb), characterized by higher annual precipitation and lower temperature amplitudes. Its topography includes the country’s main land-forms (Andes Mountain Range, intermediate depression, coastal mountain range, coastal plains, and river basins), which gives it great geomorphological, climatic, and ecological diversity. Its topography includes mountains reaching near 4.000 m.a.s.l. in the Andes.</p>
+<p>MZ4 is located between latitudes 34°41’ and 37°18’ south (<a href="#fig-map" class="quarto-xref">Figure&nbsp;<span>17.1</span></a>) and covers an area of 43,394 km<sup>2</sup> (approximately 5.7% of Chile’s surface area), it is characterized by a temperate Mediterranean climate with marked seasonality in precipitation. According to the updated Köppen-Geiger classification <span class="citation" data-cites="Beck2018"><a href="#ref-Beck2018" role="doc-biblioref">[10]</a></span>, the predominant climate in this area is Csb, corresponding to a dry-summer, temperate Mediterranean climate, with precipitation concentrated in the winter months (June to August) and a water deficit in the summer (December to February). In the highest areas of the foothills and the Andes Mountain Range, the climate changes to a cool-summer oceanic regime (Cfb), characterized by higher annual precipitation and lower temperature amplitudes. Its topography includes the country’s main land-forms (Andes Mountain Range, intermediate depression, coastal mountain range, coastal plains, and river basins), which gives it great geomorphological, climatic, and ecological diversity. Its topography includes mountains reaching near 4.000 m.a.s.l. in the Andes.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-map" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/ct_chile/Map_MZ4_19HBA.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;17.1: Map of the Macrozone in study (Source: National Institute of Statistics of Chile with data from Conaf<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>).</figcaption></figure>
+<div id="fig-map" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_chile/Map_MZ4_19HBA.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.1: Map of the Macrozone in study (Source: National Institute of Statistics of Chile with data from Conaf<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>).
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -483,13 +498,17 @@ div.csl-indent {
 <p>The use of time classes in agricultural areas can be particularly advantageous for representing different crop cycles observed in a single agricultural year. A phenological approach distinguishes between winter, summer, succession, or double harvest crops, unlike traditional schemes that classify crops in aggregate form. It is possible to identify double crop fields by analyzing the number of phenological peaks in the NDVI time series, as demonstrated by <span class="citation" data-cites="Guo2022"><a href="#ref-Guo2022" role="doc-biblioref">[14]</a></span>. The capture of land use intensity by these time classes is essential for agricultural planning, production estimation, and water management.</p>
 <p>The integration of multi-time data is essential to represent the dynamics of land cover and use. Several studies have shown that the use of satellite images from multiple dates significantly increases the accuracy in the classification of dynamic coverage <span class="citation" data-cites="Oetter2001 Wardlow2008"><a href="#ref-Oetter2001" role="doc-biblioref">[15]</a>, <a href="#ref-Wardlow2008" role="doc-biblioref">[16]</a></span>. In agricultural landscapes, the combination of summer and winter images allows to separate crops that could be spectrally indistinguishable at single dates. In deciduous forests, the contrast between full-leaf and no-foliage images is crucial to correctly identify their type <span class="citation" data-cites="Oetter2001"><a href="#ref-Oetter2001" role="doc-biblioref">[15]</a></span>.</p>
 <p>Additionally, the utilization of phenological data enhances the detection of changes or disturbances. Time series allows for the identification of breaks in expected vegetation behavior, while static approaches tend to omit short-term events such as fires or crops. These ruptures, visible as phenological anomalies, are key to detecting real changes in soil cover. Thus, the hierarchical-phenological scheme not only allows to classify coverage but also acts as a tool for territorial monitoring <span class="citation" data-cites="Zhu2014"><a href="#ref-Zhu2014" role="doc-biblioref">[17]</a></span>.</p>
-<p>In this context, a hierarchical-phenological classification approach is proposed, whose structure incorporates the seasonal dynamism of those cover and land use classes that present phenological variations during the year, such as agricultural lands, forest plantations, grassland, and snow-covered areas. <a href="#fig-scheme">Figure&nbsp;<span>17.2</span></a> shows the complete structure of the scheme at three levels.</p>
+<p>In this context, a hierarchical-phenological classification approach is proposed, whose structure incorporates the seasonal dynamism of those cover and land use classes that present phenological variations during the year, such as agricultural lands, forest plantations, grassland, and snow-covered areas. <a href="#fig-scheme" class="quarto-xref">Figure&nbsp;<span>17.2</span></a> shows the complete structure of the scheme at three levels.</p>
 <p>In the case of agricultural land category, four major classes are distinguished at the second level: temporary crops, permanent crops, pastures, and fallow land. In turn, temporary crops are subdivided into winter, spring/summer, and successive crops. Permanent crops include deciduous and persistent fruit. Annual and perennial pastures are also differentiated, and fallow land is incorporated as a specific category. This hierarchical phenological structure allows a progressive classification based on the phenological dynamics observed in agricultural systems <span class="citation" data-cites="Zhou2024"><a href="#ref-Zhou2024" role="doc-biblioref">[18]</a></span>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-scheme" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/ct_chile/classification_scheme.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;17.2: Classification scheme used for the MZ4 (Source: National Institute of Statistics, Chile).</figcaption></figure>
+<div id="fig-scheme" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-scheme-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_chile/classification_scheme.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-scheme-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.2: Classification scheme used for the MZ4 (Source: National Institute of Statistics, Chile).
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -497,12 +516,16 @@ div.csl-indent {
 <span class="header-section-number">17.2.3</span> Training data</h3>
 <p>Field surveys have a limited number of samples, and obtaining many necessitates a significant investment in manpower, financial resources, and time. Therefore, a sampling of points generated from polygons was chosen to increase the number of samples, with the aim of improving the stability and generalization capability of the classifier <span class="citation" data-cites="Zhou2019"><a href="#ref-Zhou2019" role="doc-biblioref">[19]</a></span>. The polygons were constructed as training sites for each of the 24 classes of level three defined in the classification scheme.</p>
 <p>As a result, numerous point-level samples were obtained (near 62,000 labeled points), unlike the polygon samples (4,140 labeled polygons), each with its corresponding time curve and coverage class, derived from the crossover between these points and the satellite data cube. Sampling was designed according to the area distribution of all polygons, assigning each one a minimum and maximum number of points, determined in proportion to their relative size versus the rest.</p>
-<p>According to <a href="#fig-diag">Figure&nbsp;<span>17.3</span></a>, the process begins with the establishment of a hierarchical classification based on the phenology of the different categories of land cover and use. Data from agricultural censuses and cadastres are used to define the classes. Subsequently, each class is validated by temporal analysis of NDVI indices and seasonal RGB compositions, complemented with expert interpretation of very high resolution (VHR) images <span class="citation" data-cites="INE2025"><a href="#ref-INE2025" role="doc-biblioref">[1]</a></span>. Finally, sample polygons labeled with their respective classes are digitized, within which random points are generated in quantity proportional to their surface area. These points inherit the label of the corresponding polygon, making them suitable for use as training data in classification models.</p>
+<p>According to <a href="#fig-diag" class="quarto-xref">Figure&nbsp;<span>17.3</span></a>, the process begins with the establishment of a hierarchical classification based on the phenology of the different categories of land cover and use. Data from agricultural censuses and cadastres are used to define the classes. Subsequently, each class is validated by temporal analysis of NDVI indices and seasonal RGB compositions, complemented with expert interpretation of very high resolution (VHR) images <span class="citation" data-cites="INE2025"><a href="#ref-INE2025" role="doc-biblioref">[1]</a></span>. Finally, sample polygons labeled with their respective classes are digitized, within which random points are generated in quantity proportional to their surface area. These points inherit the label of the corresponding polygon, making them suitable for use as training data in classification models.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-diag" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/ct_chile/training_data_scheme.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;17.3: Diagram of the proposed methodological flow for generating training data (Source: National Institute of Statistics, Chile).</figcaption></figure>
+<div id="fig-diag" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-diag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_chile/training_data_scheme.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.3: Diagram of the proposed methodological flow for generating training data (Source: National Institute of Statistics, Chile).
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -554,12 +577,16 @@ div.csl-indent {
 </ul>
 </li>
 </ol>
-<p>Finally, random sampling of points proportional to the area of the polygons resulted in a total of 62,920 points in the training set. The distribution of samples is presented in <a href="#fig-ground_data">Figure&nbsp;<span>17.4</span></a> .</p>
+<p>Finally, random sampling of points proportional to the area of the polygons resulted in a total of 62,920 points in the training set. The distribution of samples is presented in <a href="#fig-ground_data" class="quarto-xref">Figure&nbsp;<span>17.4</span></a> .</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-ground_data" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/ct_chile/ground_data_distribution.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;17.4: Distribution of training data by Level 3 class for MZ4 (Source: National Institute of Statistics, Chile).</figcaption></figure>
+<div id="fig-ground_data" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-ground_data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_chile/ground_data_distribution.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ground_data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.4: Distribution of training data by Level 3 class for MZ4 (Source: National Institute of Statistics, Chile).
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -569,12 +596,16 @@ div.csl-indent {
 <p>The <code>sits</code> package introduces innovations in image catalog access for cloud computing services and deep learning algorithms for time series analysis, which have been recently published and are unavailable in other R packages. It also includes new methods for quality control of training data <span class="citation" data-cites="Santos2021"><a href="#ref-Santos2021" role="doc-biblioref">[28]</a></span>. Parallel processing methods specifically designed for data cubes ensure efficient performance. Sits provides tools for analysis, visualization, and classification of time series of satellite images (supporting the full classification cycle), offering features that surpass those of existing R packages. It proposes a standardized workflow for users to perform pixel-based classification.</p>
 <p>The package provides key tools for generating maps with potential applications in official statistics, aligning with FAO recommendations for accuracy assessment and area estimation in land use and land cover maps <span class="citation" data-cites="Finegold2016"><a href="#ref-Finegold2016" role="doc-biblioref">[29]</a></span>. It allows accuracy to be measured through confusion matrices, area estimates, and confidence intervals that reflect the precision of these estimates.</p>
 <section id="the-sits-workflow" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="the-sits-workflow">The <em>sits</em> workflow</h4>
-<p>The package provides a comprehensive set of tools for the analysis, visualization, and classification of satellite image time series. It supports a standardized workflow for pixel-based classification, in which each step corresponds to a dedicated function in the <code>sits</code> API, with well-defined inputs and outputs, as illustrated in <a href="#fig-sits">Figure&nbsp;<span>17.5</span></a>. The API is designed to be intuitive and easy to use, with sensible default parameters and user-friendly behavior. As a result, users can achieve reliable results without requiring deep expertise in machine learning or parallel processing (All the steps and example scripts could be found in <a href="https://e-sensing.github.io/sitsbook/introduction.html#how-sits-works">sitsbook</a>).</p>
+<p>The package provides a comprehensive set of tools for the analysis, visualization, and classification of satellite image time series. It supports a standardized workflow for pixel-based classification, in which each step corresponds to a dedicated function in the <code>sits</code> API, with well-defined inputs and outputs, as illustrated in <a href="#fig-sits" class="quarto-xref">Figure&nbsp;<span>17.5</span></a>. The API is designed to be intuitive and easy to use, with sensible default parameters and user-friendly behavior. As a result, users can achieve reliable results without requiring deep expertise in machine learning or parallel processing (All the steps and example scripts could be found in <a href="https://e-sensing.github.io/sitsbook/introduction.html#how-sits-works">sitsbook</a>).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-sits" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/ct_chile/sits_workflow.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;17.5: SITS API workflow for LULC classification (Source: adapted from sitsbook)</figcaption></figure>
+<div id="fig-sits" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-sits-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_chile/sits_workflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sits-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.5: SITS API workflow for LULC classification (Source: adapted from sitsbook)
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -634,7 +665,7 @@ div.csl-indent {
 <span><span class="co"># Load the color table into `sits`</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/sits/man/sits_colors_set.html">sits_colors_set</a></span><span class="op">(</span><span class="va">cl_tbl_eng</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>In this example, we replicated the land use and land cover classification results developed for the entire study area but focused on a specific region to ensure the reproducibility of the process. To illustrate the workflow, we selected a small region covering tile 19HBA, which contains a high concentration of agricultural land (<a href="#fig-map">Figure&nbsp;<span>17.1</span></a>). The classification covers the period from May 2020 to May 2021, aligned with the agricultural calendar, and uses a temporal resolution of 16 days throughout the analysis. It is important to note that the workflow includes stochastic processes, such as model training or sampling steps, which may lead to slight variations in results across different runs, even when using the same input data and parameters.&nbsp;</p>
+<p>In this example, we replicated the land use and land cover classification results developed for the entire study area but focused on a specific region to ensure the reproducibility of the process. To illustrate the workflow, we selected a small region covering tile 19HBA, which contains a high concentration of agricultural land (<a href="#fig-map" class="quarto-xref">Figure&nbsp;<span>17.1</span></a>). The classification covers the period from May 2020 to May 2021, aligned with the agricultural calendar, and uses a temporal resolution of 16 days throughout the analysis. It is important to note that the workflow includes stochastic processes, such as model training or sampling steps, which may lead to slight variations in results across different runs, even when using the same input data and parameters.&nbsp;</p>
 </section><section id="study-area-data" class="level2" data-number="17.3"><h2 data-number="17.3" class="anchored" data-anchor-id="study-area-data">
 <span class="header-section-number">17.3</span> Study area data</h2>
 <p>We begin by loading the spatial datasets for this study. The first file contains the ground-sampled points used as reference data, and the second defines the ROI that frames our analysis. Both are read with <code>sf</code> to retain their geometry and attributes for later spatial operations.</p>
@@ -691,15 +722,19 @@ div.csl-indent {
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-reg_19hba" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/ct_chile/reg_19HBA_sentinel2.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;17.6: Regularized image for Sentinel-2 tile 19HBA</figcaption></figure>
+<div id="fig-reg_19hba" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-reg_19hba-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_chile/reg_19HBA_sentinel2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-reg_19hba-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.6: Regularized image for Sentinel-2 tile 19HBA
+</figcaption></figure>
 </div>
 </div>
 </div>
 </section><section id="copernicus-dem-30-meter-images" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="copernicus-dem-30-meter-images">Copernicus DEM 30 meter images</h3>
 <p>In regions with significant topographic, soil, or climatic variability, integrating multitemporal satellite data with elevation information, such as Digital Elevation Models (DEM), can improve land use and land cover classification. Elevation adds a third dimension that helps differentiate classes influenced by altitude, such as lowland vs.&nbsp;highland forests.</p>
-<p>Given that both MZ4 and the region of interest (ROI) exhibit considerable topographic variability, with a steep altitudinal gradient (<a href="#fig-map">Figure&nbsp;<span>17.1</span></a>), it becomes relevant to integrate elevation data into the analysis. In mountainous countries like Chile, where elevation strongly influences climatic and soil conditions, this altitudinal variability plays a key role in shaping the spatial distribution of land use and vegetation cover. In our example, we integrate a DEM into a data cube (this agricultural region in Chile covers the Andes, where steep elevation gradients justify its inclusion). We use the Copernicus Global DEM-30, selecting the area covered by the 19HBA tile. For MZ4, we selected the entire ROI within the study area.</p>
+<p>Given that both MZ4 and the region of interest (ROI) exhibit considerable topographic variability, with a steep altitudinal gradient (<a href="#fig-map" class="quarto-xref">Figure&nbsp;<span>17.1</span></a>), it becomes relevant to integrate elevation data into the analysis. In mountainous countries like Chile, where elevation strongly influences climatic and soil conditions, this altitudinal variability plays a key role in shaping the spatial distribution of land use and vegetation cover. In our example, we integrate a DEM into a data cube (this agricultural region in Chile covers the Andes, where steep elevation gradients justify its inclusion). We use the Copernicus Global DEM-30, selecting the area covered by the 19HBA tile. For MZ4, we selected the entire ROI within the study area.</p>
 <div class="cell">
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># DEM irregular cube </span></span>
 <span><span class="va">dem_19HBA</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/sits/man/sits_cube.html">sits_cube</a></span><span class="op">(</span></span>
@@ -723,9 +758,13 @@ div.csl-indent {
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-dem" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/ct_chile/dem_19HBA.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;17.7: Copernicus DEM-30 covering tile 19HBA.</figcaption></figure>
+<div id="fig-dem" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-dem-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_chile/dem_19HBA.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dem-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.7: Copernicus DEM-30 covering tile 19HBA.
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -745,9 +784,13 @@ div.csl-indent {
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-ndvi" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/ct_chile/ndvi_19HBA.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;17.8: NDVI using bands B08 and B04 of Sentinel-2 for 19HBA tile.</figcaption></figure>
+<div id="fig-ndvi" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-ndvi-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_chile/ndvi_19HBA.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ndvi-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.8: NDVI using bands B08 and B04 of Sentinel-2 for 19HBA tile.
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -761,7 +804,7 @@ div.csl-indent {
 </section></section><section id="satellite-image-time-series" class="level2" data-number="17.5"><h2 data-number="17.5" class="anchored" data-anchor-id="satellite-image-time-series">
 <span class="header-section-number">17.5</span> Satellite image time series</h2>
 <section id="getting-time-series-data-from-data-cubes" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="getting-time-series-data-from-data-cubes">Getting time series data from data cubes</h3>
-<p>After creating the data cube, the next step is to extract the time series for the ground truth data. In this case we use an <code>sf</code> object with <code>POINT</code> geometry as <code>samples</code> parameter (See <a href="#sec-training-data"><span>Section&nbsp;17.2.3</span></a>). In this case, all samples share the same dates and correspond to those of the data cube.</p>
+<p>After creating the data cube, the next step is to extract the time series for the ground truth data. In this case we use an <code>sf</code> object with <code>POINT</code> geometry as <code>samples</code> parameter (See <a href="#sec-training-data" class="quarto-xref"><span>Section 17.2.3</span></a>). In this case, all samples share the same dates and correspond to those of the data cube.</p>
 <div class="cell">
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Read the points from the cube and produce a tibble with time series</span></span>
 <span><span class="va">samples_19HBA</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/sits/man/sits_get_data.html">sits_get_data</a></span><span class="op">(</span></span>
@@ -825,9 +868,13 @@ div.csl-indent {
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-patt_agric" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/ct_chile/patterns_agric_19HBA.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;17.9: Agricultural Land patterns in 19HBA sample data.</figcaption></figure>
+<div id="fig-patt_agric" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-patt_agric-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_chile/patterns_agric_19HBA.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-patt_agric-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.9: Agricultural Land patterns in 19HBA sample data.
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -835,9 +882,13 @@ div.csl-indent {
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-patt_forest" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/ct_chile/patterns_plant_19HBA.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;17.10: Forest plantations patterns in 19HBA sample data.</figcaption></figure>
+<div id="fig-patt_forest" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-patt_forest-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_chile/patterns_plant_19HBA.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-patt_forest-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.10: Forest plantations patterns in 19HBA sample data.
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -845,9 +896,13 @@ div.csl-indent {
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-patt_nat" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/ct_chile/patterns_native_19HBA.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;17.11: Natural vegetation patterns in 19HBA sample data.</figcaption></figure>
+<div id="fig-patt_nat" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-patt_nat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_chile/patterns_native_19HBA.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-patt_nat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.11: Natural vegetation patterns in 19HBA sample data.
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -855,9 +910,13 @@ div.csl-indent {
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-patt_non_veg" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/ct_chile/patterns_no_veg_19HBA.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;17.12: Non vegetated areas patterns in 19HBA sample data.</figcaption></figure>
+<div id="fig-patt_non_veg" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-patt_non_veg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_chile/patterns_no_veg_19HBA.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-patt_non_veg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.12: Non vegetated areas patterns in 19HBA sample data.
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -895,9 +954,13 @@ div.csl-indent {
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-som_map_19HBA" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/ct_chile/som_map_19HBA.png" class="img-fluid figure-img" style="width:85.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;17.13: SOM map for the 19HBA tile samples.</figcaption></figure>
+<div id="fig-som_map_19HBA" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-som_map_19HBA-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_chile/som_map_19HBA.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-som_map_19HBA-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.13: SOM map for the 19HBA tile samples.
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -914,9 +977,13 @@ div.csl-indent {
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-confusion_cluster_orig" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/ct_chile/confusion_cluster_orig_19HBA.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;17.14: Confusion between classes as measured by SOM.</figcaption></figure>
+<div id="fig-confusion_cluster_orig" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-confusion_cluster_orig-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_chile/confusion_cluster_orig_19HBA.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-confusion_cluster_orig-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.14: Confusion between classes as measured by SOM.
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -936,9 +1003,13 @@ div.csl-indent {
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-noise_samples" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/ct_chile/class_noise_orig_19HBA.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;17.15: Distribution of samples using SOM evaluation.</figcaption></figure>
+<div id="fig-noise_samples" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-noise_samples-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_chile/class_noise_orig_19HBA.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-noise_samples-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.15: Distribution of samples using SOM evaluation.
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -1012,9 +1083,13 @@ div.csl-indent {
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-confusion_cluster_bal" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/ct_chile/confusion_cluster_smote_19HBA.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;17.16: Confusion by cluster for the balanced dataset.</figcaption></figure>
+<div id="fig-confusion_cluster_bal" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-confusion_cluster_bal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_chile/confusion_cluster_smote_19HBA.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-confusion_cluster_bal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.16: Confusion by cluster for the balanced dataset.
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -1055,9 +1130,13 @@ div.csl-indent {
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-probs_19hba_raw" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/ct_chile/probabilites_raw_19HBA.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;17.17: Visualization of Deciduous fruit trees probabilities in 19HBA tile.</figcaption></figure>
+<div id="fig-probs_19hba_raw" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-probs_19hba_raw-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_chile/probabilites_raw_19HBA.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-probs_19hba_raw-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.17: Visualization of Deciduous fruit trees probabilities in 19HBA tile.
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -1065,9 +1144,13 @@ div.csl-indent {
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-probs_19hba_raw_s" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/ct_chile/probabilites_raw_19HBA_small.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;17.18: Visualization of Deciduous fruit trees probabilities in 19HBA tile zoom.</figcaption></figure>
+<div id="fig-probs_19hba_raw_s" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-probs_19hba_raw_s-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_chile/probabilites_raw_19HBA_small.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-probs_19hba_raw_s-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.18: Visualization of Deciduous fruit trees probabilities in 19HBA tile zoom.
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -1167,9 +1250,13 @@ div.csl-indent {
 <div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-smooth_prob" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/ct_chile/probabilites_smooth_19HBA.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;17.19: Visualization of Deciduous fruit trees smooth probabilities in 19HBA tile.</figcaption></figure>
+<div id="fig-smooth_prob" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-smooth_prob-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_chile/probabilites_smooth_19HBA.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-smooth_prob-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.19: Visualization of Deciduous fruit trees smooth probabilities in 19HBA tile.
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -1177,9 +1264,13 @@ div.csl-indent {
 <div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-smooth_prob_small" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/ct_chile/probabilites_smooth_19HBA_small.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;17.20: Visualization of Deciduous fruit trees smooth probabilities in 19HBA tile zoom.</figcaption></figure>
+<div id="fig-smooth_prob_small" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-smooth_prob_small-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_chile/probabilites_smooth_19HBA_small.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-smooth_prob_small-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.20: Visualization of Deciduous fruit trees smooth probabilities in 19HBA tile zoom.
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -1204,9 +1295,13 @@ div.csl-indent {
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-final_map" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/ct_chile/classified_smooth_19HBA.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;17.21: Final classification map after Bayesian smoothing for tile 19HBA.</figcaption></figure>
+<div id="fig-final_map" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-final_map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_chile/classified_smooth_19HBA.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-final_map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.21: Final classification map after Bayesian smoothing for tile 19HBA.
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -1300,9 +1395,13 @@ div.csl-indent {
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-map_mz4" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/ct_chile/classified_mosaic_mz4.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;17.22: Classified mosaic for land cover in MZ4, for May 2020 to May 2021.</figcaption></figure>
+<div id="fig-map_mz4" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-map_mz4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_chile/classified_mosaic_mz4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-map_mz4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.22: Classified mosaic for land cover in MZ4, for May 2020 to May 2021.
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -1409,9 +1508,13 @@ Snow_glaciers       75       97        </code></pre>
 <p>The resulting output is a shapefile containing point features with geographic coordinates (latitude and longitude) and their corresponding class labels derived from the classified map. During sample generation, an oversampling parameter is applied to address uncertainties in areas such as class boundaries or areas with high classification ambiguity. This strategy enables the exclusion of points with uncertain class assignments, thereby enhancing the reliability of the validation process. By avoiding ambiguous samples, the final set of points more accurately represents the reference classes and reduces potential bias introduced by misclassified pixels.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-sample_design" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/ct_chile/map_sample_design.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;17.23: Spatial distribution of the generated sampling design (Source: National Institute of Statistics, Chile).</figcaption></figure>
+<div id="fig-sample_design" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-sample_design-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_chile/map_sample_design.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sample_design-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.23: Spatial distribution of the generated sampling design (Source: National Institute of Statistics, Chile).
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -1484,12 +1587,16 @@ Snow_glaciers                 14027.70</code></pre>
 </div>
 </div>
 <p>The results show an overall accuracy of 92%, demonstrating good performance of the classification model based on satellite image time series. Stable classes, such as native forest, water bodies, and artificial surfaces, exhibit high user and producer accuracy values, reflecting a clear spectro-temporal distinction throughout the year. On the other hand, agricultural classes, while also achieving good levels of accuracy, exhibit certain differences between the accuracy metrics, especially in permanent crops and improved pastures. This may be associated with intra-class variability or the coexistence of land covers with similar temporal signatures.</p>
-<p>The comparison between the pixel-mapped area and the error-adjusted area reveals differences for several classes (<a href="#fig-area_est">Figure&nbsp;<span>17.24</span></a>), particularly those with lower individual accuracy. While a strictly linear relationship between class accuracy and the required adjustment level is not observed, trends are identified: classes with major discrepancies between user and producer accuracy (such as permanent crops and improved pastures) show more substantial adjustments, reflecting the presence of systematic errors of omission and commission. In contrast, stable and well-defined spectro-temporal classes, such as native forest, forest plantations, or water bodies, show smaller differences between the two estimates. Additionally, the figure includes error bars representing confidence intervals, and it is worth noting that the coefficient of variation (CV) can also be computed. Both the confidence interval and the CV are quality indicators widely used by national statistical offices (NSOs) when releasing survey-based estimates, as they provide transparent metrics of reliability. What is novel in this context is that such measures are not commonly applied in the field of Land Cover and Land Use (LCLU) mapping, despite their relevance for ensuring statistical rigor.</p>
+<p>The comparison between the pixel-mapped area and the error-adjusted area reveals differences for several classes (<a href="#fig-area_est" class="quarto-xref">Figure&nbsp;<span>17.24</span></a>), particularly those with lower individual accuracy. While a strictly linear relationship between class accuracy and the required adjustment level is not observed, trends are identified: classes with major discrepancies between user and producer accuracy (such as permanent crops and improved pastures) show more substantial adjustments, reflecting the presence of systematic errors of omission and commission. In contrast, stable and well-defined spectro-temporal classes, such as native forest, forest plantations, or water bodies, show smaller differences between the two estimates. Additionally, the figure includes error bars representing confidence intervals, and it is worth noting that the coefficient of variation (CV) can also be computed. Both the confidence interval and the CV are quality indicators widely used by national statistical offices (NSOs) when releasing survey-based estimates, as they provide transparent metrics of reliability. What is novel in this context is that such measures are not commonly applied in the field of Land Cover and Land Use (LCLU) mapping, despite their relevance for ensuring statistical rigor.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-area_est" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="./images/ct_chile/area_nv2_mz4.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;17.24: Estimated area (in hectares) for each Level 2 land cover class in Macrozone 4. Light bars represent the area derived from pixel counts, while dark bars indicate the area adjusted using accuracy assessment results. Error bars correspond to the confidence intervals of the adjusted estimates.</figcaption></figure>
+<div id="fig-area_est" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-area_est-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/ct_chile/area_nv2_mz4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-area_est-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.24: Estimated area (in hectares) for each Level 2 land cover class in Macrozone 4. Light bars represent the area derived from pixel counts, while dark bars indicate the area adjusted using accuracy assessment results. Error bars correspond to the confidence intervals of the adjusted estimates.
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -1557,7 +1664,7 @@ Snow_glaciers                 14027.70</code></pre>
 </section><section id="references" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
 
 
-<div id="refs" class="references csl-bib-body" role="list">
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
 <div id="ref-INE2025" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[1] </div>
 <div class="csl-right-inline">I. N. de E. INE, <span>“Documento de trabajo. Elaboración de un mapa de uso de suelo a partir de imágenes satelitales: Caso de estudio en la Región del Maule,”</span> Santiago, Chile, May 2025. [Online]. Available: <a href="https://www.ine.gob.cl/docs/default-source/documentos-de-trabajo/20250527_documento_trabajo_piloto_lc.pdf?sfvrsn=8d17acd9_2">https://www.ine.gob.cl/docs/default-source/documentos-de-trabajo/20250527_documento_trabajo_piloto_lc.pdf?sfvrsn=8d17acd9_2</a>.</div>
@@ -1850,255 +1957,425 @@ Snow_glaciers                 14027.70</code></pre>
 <li id="fn2"><p>For the entire MZ4, 16,190 samples (26% of the dataset) were flagged as potentially noisy. Removing them would increase class imbalance between 0.3% and 9%, and would even result in the complete elimination of samples from the <code>Bare_rock</code> class.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>When considering the entire MZ4, the three most common labels (<code>Mature_plantation</code>, <code>Perennial_fores</code>t, and <code>Deciduous_fruit_trees</code>) account for 24% of the total sample units. Meanwhile, the three least frequent classes (<code>Bare_rocks</code>, <code>Seasonal_snow_area</code>, and <code>Wetlands</code>) make up just 1.8% of the dataset.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  });
-  function tippyHover(el, contentFn) {
-    const config = {
-      allowHTML: true,
-      content: contentFn,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start'
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
     };
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      return note.innerHTML;
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
         }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
       }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
+      return false;
     }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
           }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/FAO-EOSTAT\.github\.io\/UN-Handbook\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
       });
     }
-  }
-});
-</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./ct_zimbabwe.html" class="pagination-link">
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./ct_zimbabwe.html" class="pagination-link" aria-label="Crop classification in Zimbabwe">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Crop classification in Zimbabwe</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ct_digital_earth_africa.html" class="pagination-link">
+      <a href="./ct_digital_earth_africa.html" class="pagination-link" aria-label="Agricultural Mapping with Digital Earth Africa">
         <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Agricultural Mapping with Digital Earth Africa</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
-    <div class="nav-footer-left">Edited by Gilberto Camara, Lorenzo de Simone and Ronald Jansen.</div>   
+    <div class="nav-footer-left">
+<p>Edited by Gilberto Camara, Lorenzo de Simone and Ronald Jansen.</p>
+</div>   
     <div class="nav-footer-center">
       &nbsp;
-    </div>
-    <div class="nav-footer-right">This book was built with <a href="https://quarto.org/">Quarto</a>.</div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/edit/quarto/ct_chile.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
   </div>
 </footer>
 
