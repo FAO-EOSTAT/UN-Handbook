@@ -46,7 +46,6 @@ knitr::include_graphics("./images/th_machine_learning/random_forest.png")
 
 `sits` provides `sits_rfor()`, which uses the R `randomForest` package [@Wright2017]; its main parameter is `num_trees`, which is the number of trees to grow with a default value of 100. The model can be visualized using `plot()`.
 
-## R
 ```{r}
 #| eval: false
 set.seed(290356)
@@ -72,7 +71,6 @@ knitr::include_graphics("./images/th_machine_learning/mlrformodel.png")
 
 The model plot shows the most important explanatory variables, which are the NIR (near infrared) band on date 17 (2007-05-25) and the MIR (middle infrared) band on date 22 (2007-08-13). The NIR value at the end of May captures the growth of the second crop for double cropping classes.  Values of the MIR band at the end of the period (late July to late August) capture bare soil signatures to distinguish between agricultural and natural classes. This corresponds to summertime when the ground is drier after harvesting crops.
 
-## R
 ```{r}
 #| eval: false
 # Classify using Random Forest model and plot the result

@@ -26,6 +26,7 @@ book:
       chapters: 
         - th_remote_sensing.qmd
         - th_data_sources.qmd
+        - th_data_cubes.qmd
         - th_lucc.qmd
         - th_quality_control.qmd
         - th_machine_learning.qmd
@@ -54,6 +55,7 @@ book:
         - ad_world_cereal.qmd
         - ad_uav_applications.qmd
         - ad_disaster_response.qmd
+        - ad_china_floods.qmd
         - ad_governance.qmd
 format:
   html:
