@@ -1,5 +1,5 @@
 ---
-title: "Crop monitoring with SAR images in Poland"
+title: "Crop monitoring with Sentinel-1 and Sentinel-2 images in Poland"
 author: "Artur Laczynski, Przemysław Slesiński, Natalia Kotulak"
 format: html
 ---
@@ -138,7 +138,93 @@ Validation of the classification results is carried out using in-situ  data (the
 
 ## Crop map publishing
 
-Area statistics are created based on the resulting classification raster. The areas are added up to all administrative levels of the country (voivodeships, districts, communes). The identification number of individual units allows for the integration of this data with the Statistics Poland reporting system. The results of the classification are published on [geostatistical portal] (https://portal.geo.stat.gov.pl/). The refence paper for this work has been published in a leading journal [@Wozniak2022].
+Area statistics are created based on the resulting classification raster. The areas are added up to all administrative levels of the country (voivodeships, districts, communes). The identification number of individual units allows for the integration of this data with the Statistics Poland reporting system. The results of the classification are published on the Statistics Poland [geostatistical portal](https://portal.geo.stat.gov.pl/).  The classification is performed for two dates July/August and October of the given year. In the first date the preliminary results on limited
+timeseries are provided and the final estimate embraces the whole
+vegetation period. The results of classification can be visualized on the map as it is
+presented in @fig-cls-poland.
+
+```{r}
+#| echo: FALSE
+#| label: fig-cls-poland
+#| out-width: 80%
+#| fig-cap: |
+#|   Crop type map for July 2025 composed of 37 crop classes.
+#| fig-align: center
+knitr::include_graphics("./images/ct_poland/classification.png")
+```
+
+
+The results can also be presented in a tabular form for the lowest
+administrative units -- municipalities (NUTS 5). Area
+estimates for major crops representing above 80% of agriculture area are
+presented. Each estimate can be accompanied with relevant quality
+parameters like accuracy, F-score, recall, precision.
+
+The selection of crops based on F-score values and only classes with
+more than 0,6 were selected. The overall accuracy of the classification
+was 0,7 for July 2025 and is expected to increase to about 0,8 in
+October due to longer time series.
+
+Nevertheless, classification based on the EO data are also dependent on
+the frequency of providing satellite data. In Poland due to cloudiness
+majority of classification is performed on SENTINEL-1 SAR imagery.
+Launching SENTINEL-1c will increase the frequency of available data,
+which will result in the increase of overall accuracy for classification
+of about 3-5%.
+
+|            |     crop plant                |     area  [ha]    |     F-score*    |
+|------------|-------------------------------|-------------------|-----------------|
+|     1.     |     broad bean                |     111 723       |     0,64        |
+|     2.     |     sugar beet                |     254 732       |     0,94        |
+|     3.     |     bean                      |     74 125        |     0,84        |
+|     4.     |     pea                       |     133 194       |     0,80        |
+|     5.     |     buckwheat                 |     171 746       |     0,60        |
+|     6.     |     apple trees               |     191 315       |     0,79        |
+|     7.     |     spring barley             |     214 655       |     0,80        |
+|     8.     |     Winter barley             |     467 074       |     0,90        |
+|     9.     |     cabbage                   |     32 697        |     0,68        |
+|     10.    |     maize                     |     1 883 463     |     0,81        |
+|     11.    |     lupin                     |     263 061       |     0,66        |
+|     12.    |     oat                       |     585 604       |     0,76        |
+|     13.    |     spring wheat              |     2 058 690     |     0,90        |
+|     14.    |     winter wheat              |     928 246       |     0,82        |
+|     15.    |     winter rapeseed           |     969 207       |     0,97        |
+|     16.    |     soya                      |     286 041       |     0,65        |
+|     17.    |     grasses and grasslands    |     2 438 595     |     0,84        |
+|     18.    |     strawberries              |     132 183       |     0,65        |
+|     19.    |     tobacco                   |     33 129        |     0,78        |
+|     20.    |     potatoes                  |     220 699       |     0,84        |
+|     21.    |     rye                       |     623 639       |     0,87        |
+
+: Estimates for major crop areas for Poland in July 2025 which
+obtained F-score results above 0.6 representing more than 80%
+agriculture area {#tbl-crop-types-poland}
+
+The other important issue limiting the scope of analysed crops appears
+good quality in situ data, which can be obtained either from
+administrative sources or own collection.
+
+In Statistics Poland the final area data are given by field experts, who
+provide estimation of area on the municipality (NUTS 5) level. The field
+experts possess the knowledge of the local agronomic conditions and are
+mostly recruited from the agriculture extension services. The field
+experts are asked to verify estimates obtained from the model based on
+their knowledge and experience as well after contacting with local
+agricultural producers.
+
+Additionally, the data from classification of EO imagery are confronted
+with administrative data from paying agency, which collect data on
+agricultural parcels reported for subsidies.
+
+## Conclusion
+
+The future development of the system of crop classification evolves in
+direction of providing better analytical tools for regional field
+experts, widening the range of modelled crop as well as looking for
+better reference data series coming from administrative registers. The
+improvement of the crop classification system is the objective of the
+EUROSTAT funded project Modernization of agricultural statistics which
+is being accomplished by Statistics Poland. The reference paper for this work has been published in a leading journal [@Wozniak2022].
 
 ## References{-}
 
