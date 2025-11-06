@@ -1,7 +1,102 @@
 ---
 title: "How to use this handbook"
-author: "Sean Lowell, Gilberto Camara, Lorenzo de Simone"
+author: "Sean Lovell, Gilberto Camara, Lorenzo de Simone"
 format: html
 ---
 
-## 
+## Overview
+
+This handbook provides comprehensive guidance on remote sensing for agricultural statistics, combining theory with practical, reproducible case studies. Each chapter can be read independently or as part of a structured learning path.
+
+## Reproducible Analysis System
+
+::: {.callout-note}
+## Under Development
+The reproducible analysis system described below is currently under development and not yet implemented. This documentation describes the planned functionality.
+:::
+
+Many chapters in this handbook will include a **"Reproduce this analysis"** button that launches a one-click, pre-configured JupyterLab environment where you can run the analysis yourself.
+
+### For Readers: One-Click Reproducibility
+
+When you click the "Reproduce this analysis" button:
+
+1. **Instant Access**: You'll be taken to a running JupyterLab session, typically ready in 15 seconds
+2. **Pre-configured Environment**: All code, data, and dependencies are already loaded
+3. **No Setup Required**: No need to install packages, configure AWS credentials, or clone repositories
+4. **Live Cloud Access**: Access up-to-date satellite imagery via STAC catalogs
+5. **Ephemeral Sessions**: Sessions automatically expire after 2 hours with an option to download your results
+
+**What You Get:**
+- JupyterLab interface with R and Python support
+- All chapter code pre-loaded and ready to execute
+- Pre-computed models and cached data (RDS files, shapefiles, etc.)
+- Automatic AWS credentials for accessing live satellite data from:
+  - Microsoft Planetary Computer
+  - AWS Sentinel-2 L2A
+  - Digital Earth Africa
+  - NASA HLS (Harmonized Landsat-Sentinel)
+  - Google Earth Engine
+
+**Resource Tiers:**
+
+Chapters are configured with appropriate computational resources:
+
+- **Light** (2 CPU, 8GB RAM): Theory chapters and small demonstrations
+- **Medium** (6 CPU, 24GB RAM): Crop type mapping, Random Forest training, most case studies
+- **Heavy** (10 CPU, 48GB RAM): Large-scale classification, SAR preprocessing
+- **GPU** (8 CPU, 32GB RAM, 1 GPU): Deep learning models (e.g., Colombia yield estimation)
+
+### Technical Architecture
+
+The reproducible analysis system uses:
+
+- **Onyxia Platform**: Provides authentication, UI, and Kubernetes orchestration
+- **Stateless Data Layer**: OCI data artifacts mounted directly as read-only volumes using CSI Image Driver
+- **Fast Startup**: 5-15 seconds via node-level container image caching
+- **Immutable Data**: Content-hashed (SHA256) data snapshots ensure exact reproducibility
+- **Portable Authentication**: Standard Kubernetes Workload Identity (IRSA) for AWS credentials
+- **Curated Environments**: Pre-built Docker images with R 4.5.1, GDAL 3.6.2, PROJ 9.1.1, and geospatial packages
+
+### For Chapter Authors
+
+If you're contributing to this handbook, the reproducible analysis workflow is designed to be zero-friction:
+
+**Simple Workflow:**
+1. Add data files to your chapter directory (e.g., `data/ct_chile/`)
+2. Run `git add` and `git push`
+3. CI pipeline automatically:
+   - Calculates SHA256 hash of your data
+   - Builds immutable OCI data artifact
+   - Commits the hash back to your chapter's `.qmd` file
+
+**Chapter Configuration:**
+
+Add this to your chapter's YAML frontmatter:
+
+```yaml
+---
+title: "Your Chapter Title"
+reproducible:
+  enabled: true
+  tier: medium              # light, medium, heavy, or gpu
+  image-flavor: base        # base or gpu
+  data-snapshot: v1.0.0     # Auto-updated by CI
+  estimated-runtime: "20 minutes"
+  storage-size: "20Gi"
+---
+```
+
+**No Docker or Kubernetes Knowledge Required**: The CI/CD pipeline handles all containerization, versioning, and deployment automatically.
+
+---
+
+## Technical Design Document
+
+::: {.callout-tip collapse="true"}
+## Advanced: Full Technical Design Document
+
+The complete technical design document is available below for infrastructure teams and advanced contributors.
+
+{{< include docs/reproducible-analysis-design.md >}}
+:::
