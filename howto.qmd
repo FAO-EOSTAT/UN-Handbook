@@ -98,5 +98,5 @@ reproducible:
 
 The complete technical design document is available below for infrastructure teams and advanced contributors.
 
-{{< include docs/reproducible-analysis-design.md >}}
+{{< include design/reproducible-analysis-design.md >}}
 :::
