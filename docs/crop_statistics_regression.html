@@ -5,7 +5,7 @@
 <meta name="generator" content="quarto-1.7.33">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Gilberto Camara, Lorenzo de Simone, Ronald Jansen">
-<title>27&nbsp; Estimating crop statistics using survey-calibrated methods – UN Handbook on Remote Sensing for Agricultural Statistics</title>
+<title>27&nbsp; Survey – Maize acreage estimation in Zimbabwe – UN Handbook on Remote Sensing for Agricultural Statistics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -84,7 +84,8 @@ div.csl-indent {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+}</script><script src="site_libs/kePrint-0.0.1/kePrint.js"></script><link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
@@ -118,7 +119,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./crop_statistics.html">Extraction of crop statistics from crop type and crop yield maps</a></li><li class="breadcrumb-item"><a href="./crop_statistics_regression.html"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Estimating crop statistics using survey-calibrated methods</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./crop_statistics.html">Extraction of crop statistics from crop type and crop yield maps</a></li><li class="breadcrumb-item"><a href="./crop_statistics_regression.html"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Survey – Maize acreage estimation in Zimbabwe</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -348,7 +349,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./crop_statistics_regression.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Estimating crop statistics using survey-calibrated methods</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Survey – Maize acreage estimation in Zimbabwe</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -449,18 +450,21 @@ window.Quarto = {
    
   <ul>
 <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">27.1</span> Introduction</a></li>
-  <li><a href="#statistical-survey" id="toc-statistical-survey" class="nav-link" data-scroll-target="#statistical-survey"><span class="header-section-number">27.2</span> Statistical survey</a></li>
-  <li><a href="#statistical-survey-data" id="toc-statistical-survey-data" class="nav-link" data-scroll-target="#statistical-survey-data"><span class="header-section-number">27.3</span> Statistical survey data</a></li>
-  <li><a href="#maize-acreage-by-regression-estimator" id="toc-maize-acreage-by-regression-estimator" class="nav-link" data-scroll-target="#maize-acreage-by-regression-estimator"><span class="header-section-number">27.4</span> Maize acreage by regression estimator</a></li>
-  <li><a href="#lessons-learned" id="toc-lessons-learned" class="nav-link" data-scroll-target="#lessons-learned"><span class="header-section-number">27.5</span> Lessons learned</a></li>
-  <li><a href="#about-the-authors" id="toc-about-the-authors" class="nav-link" data-scroll-target="#about-the-authors">About the authors</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li>
+<a href="#statistical-survey" id="toc-statistical-survey" class="nav-link" data-scroll-target="#statistical-survey"><span class="header-section-number">27.2</span> Statistical survey</a>
+  <ul class="collapse">
+<li><a href="#sampling-design" id="toc-sampling-design" class="nav-link" data-scroll-target="#sampling-design">Sampling design</a></li>
+  <li><a href="#statistical-survey-data" id="toc-statistical-survey-data" class="nav-link" data-scroll-target="#statistical-survey-data">Statistical survey data</a></li>
+  </ul>
+</li>
+  <li><a href="#maize-acreage-estimation-by-regression-estimator" id="toc-maize-acreage-estimation-by-regression-estimator" class="nav-link" data-scroll-target="#maize-acreage-estimation-by-regression-estimator"><span class="header-section-number">27.3</span> Maize acreage estimation by regression estimator</a></li>
+  <li><a href="#lessons-learned" id="toc-lessons-learned" class="nav-link" data-scroll-target="#lessons-learned"><span class="header-section-number">27.4</span> Lessons learned</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/edit/quarto/crop_statistics_regression.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/FAO-EOSTAT/UN-Handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./crop_statistics.html">Extraction of crop statistics from crop type and crop yield maps</a></li><li class="breadcrumb-item"><a href="./crop_statistics_regression.html"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Estimating crop statistics using survey-calibrated methods</span></a></li></ol></nav><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./crop_statistics.html">Extraction of crop statistics from crop type and crop yield maps</a></li><li class="breadcrumb-item"><a href="./crop_statistics_regression.html"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Survey – Maize acreage estimation in Zimbabwe</span></a></li></ol></nav><div class="quarto-title">
 <h1 class="title">
-<span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Estimating crop statistics using survey-calibrated methods</span>
+<span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Survey – Maize acreage estimation in Zimbabwe</span>
 </h1>
 </div>
 
@@ -471,7 +475,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Lorenzo de Simone, Sophie Bontemps, Boris Nörgaard </p>
+             <p>Sophie Bontemps, Boris Nörgaard, Lorenzo de Simone </p>
           </div>
   </div>
     
@@ -483,138 +487,117 @@ window.Quarto = {
 
 </header><section id="introduction" class="level2" data-number="27.1"><h2 data-number="27.1" class="anchored" data-anchor-id="introduction">
 <span class="header-section-number">27.1</span> Introduction</h2>
-<p>Producing statistics by counting those pixels classified as a given crop type does not provide unbiased area estimates. Maps are subject to omission and commission errors (Czaplewski, 1992), which are linked to the ability of the classification method to distinguish between classes. Regression estimators and calibration estimators have been widely used to correct such biases <span class="citation" data-cites="Gallego2004"><a href="#ref-Gallego2004" role="doc-biblioref">[1]</a></span> <span class="citation" data-cites="Olofsson2014"><a href="#ref-Olofsson2014" role="doc-biblioref">[2]</a></span>. They are traditional ways to combine accurate, possibly unbiased, information, observed on a sample with less accurate, biased information, known for the whole population or for a larger sample. Said differently, maps are used to improve an estimator that has been computed from a ground survey on a sample in preserving as much as possible the properties of the ground survey estimators (unbiasedness) and reducing the variance <span class="citation" data-cites="Gallego2004"><a href="#ref-Gallego2004" role="doc-biblioref">[1]</a></span>.</p>
+<p>Producing statistics by counting those pixels classified as a given crop type does not provide unbiased area estimates. Maps are subject to omission and commission errors <span class="citation" data-cites="Czaplewski1992"><a href="#ref-Czaplewski1992" role="doc-biblioref">[1]</a></span>, which are linked to the ability of the classification method to distinguish between classes. Regression estimators and calibration estimators have been widely used to correct such biases <span class="citation" data-cites="Gallego1993"><a href="#ref-Gallego1993" role="doc-biblioref">[2]</a></span> <span class="citation" data-cites="Khan2018"><a href="#ref-Khan2018" role="doc-biblioref">[3]</a></span> <span class="citation" data-cites="Olofsson2014"><a href="#ref-Olofsson2014" role="doc-biblioref">[4]</a></span> <span class="citation" data-cites="Li2023"><a href="#ref-Li2023" role="doc-biblioref">[5]</a></span>. They are traditional ways to combine accurate and possibly unbiased information observed on a limited sample with less accurate and biased information known for the whole population or for a larger sample. Said differently, maps are used to improve an estimator that has been computed from a ground survey on a sample in <strong>preserving as much as possible the properties of the ground survey estimators</strong> (unbiasedness) and <strong>reducing the variance</strong> <span class="citation" data-cites="Gallego2004"><a href="#ref-Gallego2004" role="doc-biblioref">[6]</a></span>.</p>
 <p>This chapter presents an application of such regression approach in Zimbabwe, as implemented in the framework of the EO STAT project.</p>
 </section><section id="statistical-survey" class="level2" data-number="27.2"><h2 data-number="27.2" class="anchored" data-anchor-id="statistical-survey">
 <span class="header-section-number">27.2</span> Statistical survey</h2>
-<p>As explained in the Chapter <a href="https://fao-eostat.github.io/UN-Handbook/ct_zimbabwe.html">Crop Classification in Zimbabwe</a>, a field campaign was implemented in Zimbabwe in the framework of the FAO EOSTAT project during the summer season 2024, which consisted in two complementary surveys. On one hand, a statistical area frame survey was conducted to obtain a statistically valid acreage estimate of the main crops. On the other hand, an opportunistic windshield survey was designed to acquire as many georeferenced observations as possible across all major land cover and crop types.</p>
-<p>The windshield survey has been detailed in the earlier Chapter. Those data were used to generate the national wall-to-wall crop type map from the summer 2024. The statistical survey was implemented using a two-stage stratified area sampling frame, where Primary Sampling Units (PSUs) are sampled from an initial population grid and Secondary Sampling Units (SSUs) are sampled within each PSU. The goal of the survey is to estimate the area proportion of the main crop(s) within PSUs to infer a mean proportion across the whole population grid. Knowing the total area covered by the population grid, the mean proportion estimation can be converted to a total acreage estimation.</p>
-<p>Cochran’s formula <span class="citation" data-cites="Cochran1977"><a href="#ref-Cochran1977" role="doc-biblioref">[3]</a></span> was used to compute the total number of samples, corresponding to the SSUs:</p>
-<p><span class="math display">\[
-n = \frac{(\sum{W_iS_i})^2}{[S(\hat{O})^2] + \frac{1}{N}\sum{W_iS_i^2}} \approx{ \left(\frac{\sum{W_iS_i}}{S(\hat{O)}} \right)^2}
-\]</span> where:</p>
-<ul>
-<li>
-<span class="math inline">\(N\)</span> is number of population units in the area of interest</li>
-<li>
-<span class="math inline">\(S(\hat{O})\)</span> is the expected standard error of the accuracy estimate, expressed as a proportion</li>
-<li>
-<span class="math inline">\(S_i\)</span> is the standard deviation of stratum <span class="math inline">\(i\)</span>
-</li>
-<li>
-<span class="math inline">\(W_i\)</span> is is the mapped proportion of area of class <span class="math inline">\(i\)</span>
-</li>
-<li>
-<span class="math inline">\(U_i\)</span> is the expected user accuracy of class <span class="math inline">\(i\)</span>
-</li>
-</ul>
-<p>Because N is large (over 2397 million pixels), the second term in the denominator of Eq. (1) can be ignored. A standard error for overall accuracy of 0.01 was targeted and user accuracy values ≥ 0.70 were anticipated. The resulting sample size was n = 1836, thus corresponding to SSUs.</p>
-<p>We performed a stratification with the aim of dividing the population into internally homogeneous subpopulations in terms of cropping intensity. This stratification was based on the ESA WorldCover map. The proportion of cropland within each PSU was calculated (given by the number of cropland pixels divided by the total number of pixels) and the segments were assigned to one of five strata. The strata limits were defined using the Jenks natural breaks classification method. The Jenks algorithm determines the best arrangement of values to minimize each class's average deviation from the class mean, while maximizing each class's deviation from the means of the other classes. In other words, the method seeks to reduce the variance within classes and maximize the variance between classes. Blocks having an agricultural intensity value less than 2 were dropped, as these represented areas with no agriculture, or with negligible agricultural surfaces. Results of this stratification are shown in <a href="#tbl-strata" class="quarto-xref">Table&nbsp;<span>27.1</span></a>.</p>
-<div id="tbl-strata" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-strata-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p>When coupling EO with ground data through a regression approach, two different sets of field data are required. First, a statistical survey needs to be conducted to obtain a statistically valid estimate of the crop of interest acreage. A second dataset needs to be collected, independently or in complement to the statistical survey, to train the classification algorithm and generate the crop map. This second dataset will include a large volume of spatially distributed georeferenced observations across all major land cover and crop types.</p>
+<p>As explained in the Chapter <a href="https://fao-eostat.github.io/UN-Handbook/ct_zimbabwe.html">Crop Classification in Zimbabwe</a>, a field campaign was implemented in Zimbabwe in the framework of the FAO EOSTAT project during the summer season 2024. This chapter describes the opportunistic windshield survey which was designed and implemented to acquire the training dataset. The following section will focus on the statistical survey.</p>
+<section id="sampling-design" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="sampling-design">Sampling design</h3>
+<p>The statistical survey was implemented using a two-stage stratified area sampling frame, where Primary Sampling Units (PSUs) are sampled from an initial population grid and Secondary Sampling Units (SSUs) are sampled within each PSU. The goal of the survey is to estimate the area proportion of the main crop(s) within PSUs to infer a mean proportion across the whole population grid. Knowing the total area covered by the population grid, the mean proportion estimation can be converted to a total acreage estimation.</p>
+<p>The initial population was defined as a regular grid of 2 by 2 km square segments overlaid on the area of interest (i.e.&nbsp;the full country), resulting in a population of 98,237 PSUs. The target variable of the survey was the main crops proportions within PSUs with a particular focus on maize.</p>
+<p>A stratification was performed with the aim of dividing the population into internally homogeneous subpopulations in terms of cropping intensity. This stratification was based on the ESA WorldCover map. The proportion of cropland within each PSU was calculated (given by the number of cropland pixels divided by the total number of pixels) and the segments were assigned to one of five strata. The strata limits were defined using the Jenks natural breaks classification method <span class="citation" data-cites="Jenks1967"><a href="#ref-Jenks1967" role="doc-biblioref">[7]</a></span>. Jenks algorithm determines the best arrangement of values to minimize each class’s average deviation from the class mean, while maximizing each class’s deviation from the means of the other classes. In other words, the method seeks to reduce the variance within classes and maximize the variance between classes. Blocks having an agricultural intensity value less than 2 were dropped, as these represented areas with no agriculture, or with negligible agricultural surfaces. Results of this stratification are shown in <a href="#tbl-cropping-intensity" class="quarto-xref">Table&nbsp;<span>27.1</span></a>.</p>
+<div class="cell">
+<div id="tbl-cropping-intensity" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cropping-intensity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;27.1: Cropping intensity strata characterization
-</figcaption><div aria-describedby="tbl-strata-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 15%">
-<col style="width: 17%">
-<col style="width: 15%">
-<col style="width: 22%">
-<col style="width: 29%">
-</colgroup>
+</figcaption><div aria-describedby="tbl-cropping-intensity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table table-striped table-hover do-not-create-environment cell caption-top table-sm small" data-quarto-postprocess="true">
 <thead><tr class="header">
-<th>Strata</th>
-<th>Nb of blocks</th>
-<th>Area (ha)</th>
-<th>Cropland area (ha)</th>
-<th>Agricultural Intensity (%)</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Strata</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Nb of blocks</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Area (ha)</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Cropland area (ha)</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Agricultural Intensity (%)</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td>Stratum 1</td>
-<td>11291</td>
-<td>4516400</td>
-<td>165196.4424</td>
-<td>3.6</td>
+<td style="text-align: left;">Stratum 1</td>
+<td style="text-align: right;">11291</td>
+<td style="text-align: right;">4516400</td>
+<td style="text-align: right;">165196.4</td>
+<td style="text-align: right;">3.6</td>
 </tr>
 <tr class="even">
-<td>Stratum 2</td>
-<td>22644</td>
-<td>9057600</td>
-<td>938008.2325</td>
-<td>10.3</td>
+<td style="text-align: left;">Stratum 2</td>
+<td style="text-align: right;">22644</td>
+<td style="text-align: right;">9057600</td>
+<td style="text-align: right;">938008.2</td>
+<td style="text-align: right;">10.3</td>
 </tr>
 <tr class="odd">
-<td>Stratum 3</td>
-<td>14742</td>
-<td>5896800</td>
-<td>1305204.32</td>
-<td>22.1</td>
+<td style="text-align: left;">Stratum 3</td>
+<td style="text-align: right;">14742</td>
+<td style="text-align: right;">5896800</td>
+<td style="text-align: right;">1305204.3</td>
+<td style="text-align: right;">22.1</td>
 </tr>
 <tr class="even">
-<td>Stratum 4</td>
-<td>8390</td>
-<td>3356000</td>
-<td>1250339.113</td>
-<td>37.2</td>
+<td style="text-align: left;">Stratum 4</td>
+<td style="text-align: right;">8390</td>
+<td style="text-align: right;">3356000</td>
+<td style="text-align: right;">1250339.1</td>
+<td style="text-align: right;">37.2</td>
 </tr>
 <tr class="odd">
-<td>Stratum 5</td>
-<td>2866</td>
-<td>1146400</td>
-<td>683274.7886</td>
-<td>59.6</td>
+<td style="text-align: left;">Stratum 5</td>
+<td style="text-align: right;">2866</td>
+<td style="text-align: right;">1146400</td>
+<td style="text-align: right;">683274.8</td>
+<td style="text-align: right;">59.6</td>
 </tr>
 </tbody>
 </table>
 </div>
+</div>
 </figure>
 </div>
-<p>SSUs are defined as squares of 10 x 10 meters cell size, which corresponds to the size of a single Sentinel-2 pixel. Following recommendations from Stehman <span class="citation" data-cites="Stehman2012"><a href="#ref-Stehman2012" role="doc-biblioref">[4]</a></span>, an equal number of SSUs was allocated to each stratum. 25 PSUs were randomly selected from each stratum and in the second stage of sample allocation, 15 SSUs were randomly allocated in each PSU resulting in a total of 1875. <a href="#fig-stats-zimbabwe-2" class="quarto-xref">Figure&nbsp;<span>27.1</span></a> shows the distribution of PSU across the country and across the 5 strata.</p>
+</div>
+<p>SSUs were defined as squares of 10 x 10 meters cell size, which corresponds to the size of one single Sentinel-2 pixel. 25 PSUs were randomly selected from each stratum and in the second stage of sample allocation, 15 SSUs were randomly sampled in each PSU to estimate the proportion of crops. <a href="uav_agriculture_cook_islands.html#fig-1" class="quarto-xref">Figure&nbsp;<span>33.1</span></a> shows the distribution of PSUs across the country and the 5 strata.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-stats-zimbabwe-2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-stats-zimbabwe-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="./images/crop_statistics_regression/image2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+<div id="fig-1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/crop_statistics_regression/image1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-stats-zimbabwe-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;27.1: Distribution of PSU (black dots) across the country and strata
 </figcaption></figure>
 </div>
 </div>
 </div>
-</section><section id="statistical-survey-data" class="level2" data-number="27.3"><h2 data-number="27.3" class="anchored" data-anchor-id="statistical-survey-data">
-<span class="header-section-number">27.3</span> Statistical survey data</h2>
-<p>The statistical survey was implemented during a 2 week-period in February-March 2024. It was conducted by 4 teams (each team being made of one driver and 2 enumerators). The navigation between the PSUs was facilitated by the Path Finder WebGis application and the Survey 123 application was used to collect georeferenced information for each SSU. The repartition of the classes in the dataset is shown in <a href="#fig-stats-zimbabwe-3" class="quarto-xref">Figure&nbsp;<span>27.2</span></a>.</p>
+</section><section id="statistical-survey-data" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="statistical-survey-data">Statistical survey data</h3>
+<p>The statistical survey was implemented during a 2 week-period in February-March 2024. It was conducted by 4 teams (each team being made of one driver and 2 enumerators). The navigation between the PSUs was facilitated by the Path Finder WebGis application and the Survey 123 application was used to collect georeferenced information for each SSU. The repartition of the classes in the collected dataset is shown in <a href="uav_agriculture_cook_islands.html#fig-2" class="quarto-xref">Figure&nbsp;<span>33.2</span></a>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-stats-zimbabwe-3" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-stats-zimbabwe-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="./images/crop_statistics_regression/image3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+<div id="fig-2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/crop_statistics_regression/image2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-stats-zimbabwe-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;27.2: Land cover classes distribution observed in the statistical dataset.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;27.2: Land cover classes distribution observed in the statistical dataset
 </figcaption></figure>
 </div>
 </div>
 </div>
-<p>A data cleaning step was conducted, which resulted in the removal of a significant number of SSUs that did not match the expected collection requirements. The number of SSUs available within each PSUs after this quality control step is displayed in <a href="#fig-stats-zimbabwe-4" class="quarto-xref">Figure&nbsp;<span>27.3</span></a>. This cleaning step, although necessary, decreased the number of SSUs in half the PSUs to less than 15. This will have a significant impact on the error associated to the estimation of the crop proportion within PSUs and therefore on the acreage statistics computation.</p>
+<p>A data cleaning step (similar to the one explained in Chapter <a href="https://fao-eostat.github.io/UN-Handbook/ct_zimbabwe.html">Crop Classification in Zimbabwe</a>) resulted in the removal of a significant number of SSUs that did not match the expected collection requirements. The number of SSUs available within PSUs after this quality control step is displayed in <a href="uav_agriculture_cook_islands.html#fig-3" class="quarto-xref">Figure&nbsp;<span>33.3</span></a>. This cleaning step, although necessary, resulted in the number of valid SSUs falling below 15 (out of 25) in half of the PSUs. This will have a significant impact on the error associated with the estimation of the crop proportion within PSUs and therefore on the acreage statistics computation, as shown later.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-stats-zimbabwe-4" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-stats-zimbabwe-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="./images/crop_statistics_regression/image4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+<div id="fig-3" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/crop_statistics_regression/image3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-stats-zimbabwe-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;27.3: Number of SSUs by PSUs after the data cleaning.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;27.3: Frequency distribution of the number of valid SSUs within PSUs after data cleaning
 </figcaption></figure>
 </div>
 </div>
 </div>
-</section><section id="maize-acreage-by-regression-estimator" class="level2" data-number="27.4"><h2 data-number="27.4" class="anchored" data-anchor-id="maize-acreage-by-regression-estimator">
-<span class="header-section-number">27.4</span> Maize acreage by regression estimator</h2>
+</section></section><section id="maize-acreage-estimation-by-regression-estimator" class="level2" data-number="27.3"><h2 data-number="27.3" class="anchored" data-anchor-id="maize-acreage-estimation-by-regression-estimator">
+<span class="header-section-number">27.3</span> Maize acreage estimation by regression estimator</h2>
 <p>The statistical survey and the national summer crop type map generated in the FAO EOSTAT project (see Chapter <a href="https://fao-eostat.github.io/UN-Handbook/ct_zimbabwe.html">Crop Classification in Zimbabwe</a>) were then used to estimate maize acreage.</p>
-<p>First, a statistical inference of the stratified sample was computed. The estimated mean <span class="math inline">\(Z_{i}\)</span> and total acreage <span class="math inline">\(\tau_{i}\)</span> of maize within each stratum are given by the following equations.</p>
+<p>First, a mean inference of the stratified sample was computed. The estimated mean <span class="math inline">\(Z_{i}\)</span> and total acreage <span class="math inline">\(\tau_{i}\)</span> of maize within each stratum are given by the following equations (2) and (3).</p>
 <p><span class="math display">\[
 \hat{\tau_i} = A_i * \hat{z_i}
 \]</span></p>
@@ -625,66 +608,64 @@ Figure&nbsp;27.3: Number of SSUs by PSUs after the data cleaning.
 <p><span class="math display">\[
 \hat{V}ar(\hat{\tau}) = \sum_{i=1}^H \hat{V}ar(\hat{\tau_i})
 \]</span> <span class="math display">\[
-\hat{V}ar(\hat{\tau_i}) = {A_i}^2 * (1 - \frac{n_i}{N_i}) * \frac{1}{n_i(n_j - 1)} * \sum_{j=1}^{n_j} (z_{ij} - \hat{z_i})
-\]</span></p>
-<p>The map then was combined in the estimation process using a regression estimator, combining spatially exhaustive information from the map with unbiased information from the statistical survey through linear regression.</p>
+\hat{V}ar(\hat{\tau_i}) = {A_i}^2 * (1 - \frac{n_i}{N_i}) * \frac{1}{n_i(n_j - 1)} * \sum_{j=1}^{n_j} (z_{ij} - \hat{z_i})^2
+\]</span> The map was then combined with the statistical survey using a regression estimator, combining spatially exhaustive information from the map with unbiased information from the statistical survey through linear regression.</p>
 <p>The variance of the regression estimator was computed and is given by</p>
 <p><span class="math display">\[
-S_{\hat{y}}^2 = \frac{N -n}{N} \left( \frac{s_y^2(1 - r^2)}{n} + \frac{s_y^2(1 - r^2)(\bar{x} - \mu_x)}{(n-1)s_x^2} \right)   
-\]</span> With <span class="math inline">\(N\)</span> the population size, <span class="math inline">\(n\)</span> the sample size, <span class="math inline">\(s_{y}^{2}\)</span> the variance of proportions in the sample in the statistical survey, <span class="math inline">\(s_{x}^{2}\)</span> the variance in the sample in the map.</p>
+S_{\hat{y}}^2 = \frac{N -n}{N} \left( \frac{s_y^2(1 - r^2)}{n} + \frac{s_y^2(1 - r^2)(\bar{x} - \mu_x)^2}{(n-1)s_x^2} \right)   
+\]</span></p>
+<p>With <span class="math inline">\(N\)</span> the population size, <span class="math inline">\(n\)</span> the sample size, <span class="math inline">\(s_{y}^{2}\)</span> the variance of proportions in the sample in the statistical survey, <span class="math inline">\(s_{x}^{2}\)</span> the variance in the sample in the map <span class="citation" data-cites="Gallego1993"><a href="#ref-Gallego1993" role="doc-biblioref">[2]</a></span>.</p>
+<p>Acreage estimates for maize and their 95% confidence intervals for methods without and with EO data integrated are shown in <a href="#fig-4" class="quarto-xref">Figure&nbsp;<span>27.4</span></a>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-stats-zimbabwe-8" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-stats-zimbabwe-8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="./images/crop_statistics_regression/image8.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+<div id="fig-4" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/crop_statistics_regression/image7.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-stats-zimbabwe-8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;27.4: Regression estimator for the maize between the map and the statistical survey.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;27.4: National scale area estimates for maize during the 2024 summer season
 </figcaption></figure>
 </div>
 </div>
 </div>
-<p>Acreage estimates for maize and their 95% confidence intervals for both methods are shown in <a href="#fig-stats-zimbabwe-9" class="quarto-xref">Figure&nbsp;<span>27.5</span></a>.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div id="fig-stats-zimbabwe-9" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-stats-zimbabwe-9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="./images/crop_statistics_regression/image9.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-stats-zimbabwe-9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;27.5: National scale area estimates for maize during the 2024 summer season.
-</figcaption></figure>
-</div>
-</div>
-</div>
-<p>The variance has slightly improved when integrating the map in the estimation process. However, the decrease is lower than expected and this is mainly due to the error associated with the maize proportions within PSUs (half of the PSUs with less than 15 SSUs – see figure 3). To decrease this uncertainty, only PSUs containing at least 15 SSUs were used in the regression estimator. However, since the variance of the regression estimator depends on the sample size, the removal of half the PSUs from the dataset limited the potential reduction in variance that could have been achieved using remote sensing.</p>
-</section><section id="lessons-learned" class="level2" data-number="27.5"><h2 data-number="27.5" class="anchored" data-anchor-id="lessons-learned">
-<span class="header-section-number">27.5</span> Lessons learned</h2>
-<p>This use case demonstrated how EO maps can be combined with a statistical survey to improve the acreage estimation. This was done for maize, which is the dominant summer crop in Zimbabwe. The obtained acreage figure is aligned with the estimation from AGRITEX (Department of Agricultural, Technical and Extension Services, responsible for providing technical support and advice to farmers),which, although unofficial, is one of the most reliable estimates available.</p>
-<p>This method has the advantage of being built upon official statistical surveys conducted by the NSOs, thus avoiding questions about the legitimacy of the results. Conversely, it has the drawback of being sensitive to the implementation of these statistical surveys.</p>
-<p>First, the protocols need to make sure that georeferenced information is collected at the crop-level (not only at the household-level). This is quite obvious in area frame surveys, but needs some adjustments in case of list frame.</p>
-<p>Second, samples need to be correctly allocated, which was probably not the case here. As can be seen on Figure 4, the maximum maize proportion values observed in the statistical survey reach only 0.4, which means that agriculture intensity stratification based on the ESA WorldCover product was not efficient. For the future, the stratification can be based on the EOSTAT summer crop type map, which should bring better results.</p>
-<p>Finally, enumerators need to be trained to collect the data of good quality (<strong>discuss the quality assessment here</strong>).</p>
-</section><section id="about-the-authors" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="about-the-authors">About the authors</h2>
-</section><section id="references" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
+<p>The integration of EO as auxiliary variable through the regression estimator results in a slight decrease of the confidence interval around the estimated acreage compared to the survey inference. The decrease in magnitude is however lower than expected and this can be attributed to two main factors. First, estimating an area proportion within sampling units based on 15-25 points is a source of uncertainty. This option of point sampling within PSU was selected as the least time-consuming and costly approach. However, it has clear limitations compared to a “pure” area sampling frame which would rely on an exhaustive labelling of parcels within PSUs.</p>
+<p>Second, almost half of the PSUs had less than 15 labelled SSUs and were therefore discarded (<a href="uav_agriculture_cook_islands.html#fig-3" class="quarto-xref">Figure&nbsp;<span>33.3</span></a>). The proportion estimation was therefore based on only 58 PSUs, instead of the 125 initially foreseen in the sampling design. Since the variance of the regression estimator depends on the sample size, this removal of half the PSUs from the dataset limited the potential precision increase that could have been achieved using remote sensing.</p>
+</section><section id="lessons-learned" class="level2" data-number="27.4"><h2 data-number="27.4" class="anchored" data-anchor-id="lessons-learned">
+<span class="header-section-number">27.4</span> Lessons learned</h2>
+<p>This use case demonstrates how EO maps can be combined with a statistical survey to improve the acreage estimation. This was done for maize, which is the dominant summer crop in Zimbabwe. The obtained acreage figure is aligned with the estimation provided by AGRITEX, which is the Department of Agricultural, Technical and Extension Services, responsible for providing technical support and advice to farmers. Although unofficial, the AGRITEX estimation is one of the most reliable estimates available in the country.</p>
+<p>This method benefits from being grounded in official statistical surveys carried out by the authority responsible for agricultural statistics (ZIMSTAT in Zimbabwe), which strengthens the legitimacy of the results.</p>
+<p>Conversely, it has the drawback of being sensitive to the implementation of these statistical surveys. First, the statistical survey protocol must ensure that georeferenced information is collected at the crop level, rather than solely at the household level. This requirement is quite straightforward in area frame surveys but might require some adjustments in the case of list frame surveys.</p>
+<p>Second, the samples allocation within strata must be designed to adequately capture the variability in maize cropping intensity, which was probably not the case here. This limitation stems from the absence of a detailed crop type map in Zimbabwe to support the stratification. Consequently, the stratification was based on the ESA WorldCover product, which differentiates only cropland, thereby reducing its effectiveness. In the future, the stratification can be based on the summer crop type map that was produced as part of the EO STAT project (see Chapter <a href="https://fao-eostat.github.io/UN-Handbook/ct_zimbabwe.html">Crop Classification in Zimbabwe</a>), which will certainly bring better results.</p>
 
 
 <div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
-<div id="ref-Gallego2004" class="csl-entry" role="listitem">
+<div id="ref-Czaplewski1992" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[1] </div>
-<div class="csl-right-inline">F. J. Gallego, <span>“Remote sensing and land cover area estimation,”</span> <em>International Journal of Remote Sensing</em>, vol. 25, no. 15, pp. 3019–3047, 2004, doi: <a href="https://doi.org/10.1080/01431160310001619607">10.1080/01431160310001619607</a>.</div>
+<div class="csl-right-inline">R. L. Czaplewski and G. P. Catts, <span>“Calibration of remotely sensed proportion or area estimates for misclassification error,”</span> <em>Remote Sensing of Environment</em>, vol. 39, no. 1, pp. 29–43, Jan. 1992, doi: <a href="https://doi.org/10.1016/0034-4257(92)90138-a">10.1016/0034-4257(92)90138-a</a>.</div>
+</div>
+<div id="ref-Gallego1993" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div>
+<div class="csl-right-inline">F. J. Gallego, J. Delince, and C. Rueda, <span>“Crop area estimates through remote sensing: Stability of the regression correction,”</span> <em>International Journal of Remote Sensing</em>, vol. 14, no. 18, pp. 3433–3445, 1993, doi: <a href="https://doi.org/10.1080/01431169308904456">10.1080/01431169308904456</a>.</div>
+</div>
+<div id="ref-Khan2018" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div>
+<div class="csl-right-inline">A. Khan <em>et al.</em>, <span>“Evaluating landsat and RapidEye data for winter wheat mapping and area estimation in punjab, pakistan,”</span> <em>Remote Sensing</em>, vol. 10, no. 4, p. 489, Mar. 2018, doi: <a href="https://doi.org/10.3390/rs10040489">10.3390/rs10040489</a>.</div>
 </div>
 <div id="ref-Olofsson2014" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[2] </div>
+<div class="csl-left-margin">[4] </div>
 <div class="csl-right-inline">P. Olofsson, G. M. Foody, M. Herold, S. V. Stehman, C. E. Woodcock, and M. A. Wulder, <span>“Good practices for estimating area and assessing accuracy of land change,”</span> <em>Remote Sensing of Environment</em>, vol. 148, pp. 42–57, 2014, doi: <a href="https://doi.org/10.1016/j.rse.2014.02.015">https://doi.org/10.1016/j.rse.2014.02.015</a>.</div>
 </div>
-<div id="ref-Cochran1977" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[3] </div>
-<div class="csl-right-inline">W. G. Cochran, <em>Sampling techniques</em>. John Wiley &amp; Sons, Ltd, 1977.</div>
+<div id="ref-Li2023" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div>
+<div class="csl-right-inline">H. Li <em>et al.</em>, <span>“Development of a 10-m resolution maize and soybean map over china: Matching satellite-based crop classification with sample-based area estimation,”</span> <em>Remote Sensing of Environment</em>, vol. 294, p. 113623, Aug. 2023, doi: <a href="https://doi.org/10.1016/j.rse.2023.113623">10.1016/j.rse.2023.113623</a>.</div>
 </div>
-<div id="ref-Stehman2012" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[4] </div>
-<div class="csl-right-inline">S. V. Stehman, <span>“Impact of sample size allocation when using stratified random sampling to estimate accuracy and area of land-cover change,”</span> <em>Remote Sensing Letters</em>, vol. 3, no. 2, pp. 111–120, 2012, doi: <a href="https://doi.org/10.1080/01431161.2010.541950">10.1080/01431161.2010.541950</a>.</div>
+<div id="ref-Gallego2004" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[6] </div>
+<div class="csl-right-inline">F. J. Gallego, <span>“Remote sensing and land cover area estimation,”</span> <em>International Journal of Remote Sensing</em>, vol. 25, no. 15, pp. 3019–3047, 2004, doi: <a href="https://doi.org/10.1080/01431160310001619607">10.1080/01431160310001619607</a>.</div>
+</div>
+<div id="ref-Jenks1967" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[7] </div>
+<div class="csl-right-inline">G. F. Jenks, <span>“The data model concept in statistical mapping,”</span> <em>International Yearbook of Cartography</em>, vol. 7, pp. 186–190, 1967.</div>
 </div>
 </div>
 </section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">

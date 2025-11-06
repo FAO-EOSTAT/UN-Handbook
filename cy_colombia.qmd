@@ -144,7 +144,7 @@ library(caret)     # Validation metrics
 #| eval: false
 
 # Define the directory containing DpRVI images
-dir_imgs <- "data/cy_colombia/dprvi/dprvi_reg/"
+dir_imgs <- "data/cy_colombia/dprvi_reg/"
 
 # Create the data cube with sits
 cube_dprvi <- sits_cube(
@@ -493,14 +493,15 @@ The Random Forest model was trained using the cleaned samples, which were previo
 #| fig-cap: Random Forest importance of cleaned samples
 #| out-width: 100%
 #| fig-align: center
-
 set.seed(123)
+
 # Train the Random Forest model with cleaned samples
 # Parameters:
 # - samples: cleaned training samples from SOM evaluation
 # - ml_method: Random Forest algorithm with 500 trees
 probs_cube <- sits_train(samples = new_samples,
                          ml_method = sits_rfor(num_trees = 500))
+
 # Plot the feature importance from the trained Random Forest model
 plot(probs_cube)
 ```
@@ -548,12 +549,14 @@ The results of the k-fold cross-validation are stored in a list, where each elem
 # The process is repeated k times, with each fold serving as validation set once
 # create a list to store the results
 results <- list()
+
 acc_rfor <- sits_kfold_validate(new_samples,
   folds = 10,
   multicores = 1,
   ml_method = sits_rfor()
 )
 acc_rfor$name <- "Random Forest"
+
 results[["Random Forest"]] <- acc_rfor
 ```
 
@@ -693,10 +696,13 @@ overall_long <- data.frame(
   Metric = names(overall_vec),
   Value = as.numeric(overall_vec)
 )
+
 # Multiply by 100 to convert to percentage
 overall_long$Value <- overall_long$Value * 100
+
 # round the values to 2 decimal places
 overall_long$Value <- round(overall_long$Value, 2)
+
 # Visualize the overall statistics as table
 kable(overall_long, digits = 2)
 ```
@@ -856,10 +862,12 @@ After training and evaluation of the Random Forest model, the DpRVI data cube is
 #| label: caption-classification
 # Make an output directory
 output_dir <- "data/cy_colombia/results/"
+
 # Create output directory if it does not exist
 if (!dir.exists(output_dir)) {
   dir.create(output_dir, recursive = TRUE)
 }
+
 rf_classify <- sits_classify(
   data = cube_dprvi,
   ml_model = probs_cube,
