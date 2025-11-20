@@ -10,10 +10,94 @@ This handbook provides comprehensive guidance on remote sensing for agricultural
 
 ## Reproducible Analysis System
 
-::: {.callout-note}
-## Under Development
-The reproducible analysis system described below is currently under development and not yet implemented. This documentation describes the planned functionality.
+::: {.callout-important}
+## Implementation Status
+The **"Reproduce this analysis" button** is implemented and visible in enabled chapters (see implementation at [github.com/cslovell/reproducible](https://github.com/cslovell/reproducible)). However, the backend infrastructure (Kubernetes sessions, data artifacts, compute images) is not yet deployed. Clicking the button will show an error until infrastructure is completed (estimated Q1 2026).
+
+**For chapter authors**: You can enable the button now to prepare chapters for reproducibility. The button will become functional when infrastructure is deployed.
 :::
+
+### Chapter Classification for Reproducibility
+
+The UN Handbook contains 48 chapters across five categories, each with different reproducibility requirements:
+
+#### (a) Theory and Conceptual Chapters (14 chapters)
+**Chapters**: 4, 7, 12, 13, 15, 17, 21, 24, 25, 26, 27, 28, 31, 36
+
+These chapters contain no executable code or provide conceptual frameworks.
+
+**Reproducibility approach**: Not applicable - no button needed
+
+#### (b) Cloud-Only Reproducible Code (6 chapters)
+**Chapters**: 5, 6, 8, 9, 10, 11
+
+These chapters provide executable code that accesses satellite imagery directly via STAC catalogs (Microsoft Planetary Computer, AWS Sentinel-2, Digital Earth Africa, etc.). No local data files required.
+
+**Reproducibility approach**:
+- Enable reproducible button with `enabled: true`
+- Use `tier: light` or `tier: medium` based on computational requirements
+- Data strategy: Cloud-only (no local data packaging needed)
+- Credentials: Automatic via IRSA (Kubernetes Workload Identity)
+
+**Example configuration**:
+```yaml
+---
+title: "Cloud-Only Analysis Chapter"
+reproducible:
+  enabled: true
+  tier: light
+  estimated-runtime: "10 minutes"
+---
+```
+
+#### (c) Hybrid Reproducible Code (6 chapters)
+**Chapters**: 19 (Chile), 20 (Digital Earth Africa), 23 (Colombia), 32 (China Crop Growth), 33 (Cook Islands), 35 (World Cereal)
+
+These chapters combine local cached data (pre-trained models, training samples, intermediate results) with live cloud data access.
+
+**Status**:
+- Completed: Chile (19), Digital Earth Africa (20)
+- In progress: Colombia (23), China Crop Growth (32), Cook Islands (33), World Cereal (35)
+
+**Reproducibility approach**:
+- Enable reproducible button with `enabled: true`
+- Use `tier: medium`, `tier: heavy`, or `tier: gpu` based on analysis type
+- Data strategy: Hybrid (local data artifacts + cloud STAC access)
+- Local data stored in `data/<chapter>/` directory
+- CI pipeline packages data as content-hashed OCI artifacts (when implemented)
+
+**Example configuration**:
+```yaml
+---
+title: "Crop Type Mapping - Chile"
+reproducible:
+  enabled: true
+  tier: heavy
+  estimated-runtime: "45 minutes"
+  storage-size: "50Gi"
+---
+```
+
+#### (d) External GitHub Resources (5 chapters)
+**Chapters**: 14, 16, 18, 29, 34
+
+These chapters reference GitHub repositories or code that would be too cumbersome to package in the UN Environment. They are provided as external links.
+
+**Reproducibility approach**:
+- Do not enable reproducible button
+- Provide direct GitHub links in chapter content
+- Users access these resources externally
+
+#### (e) Incomplete Chapters (2 chapters)
+**Chapters**: 22, 30
+
+These chapters have incomplete code or missing data components and are not yet ready for reproducibility.
+
+**Reproducibility approach**:
+- Do not enable reproducible button until code/data is complete
+- Mark chapters as "Work in Progress"
+
+---
 
 This handbook features a **"Reproduce this analysis"** system that all chapter authors can enable. When enabled, a button is added to the chapter that launches a one-click, pre-configured JupyterLab environment where you can run the analysis yourself.
 
@@ -21,6 +105,11 @@ This handbook features a **"Reproduce this analysis"** system that all chapter a
 
 - **Packaging Complex Chapters**: For the 2-7 chapters with local data dependencies (pre-computed models, training samples), the system packages this data into the environment for true reproducibility.
 - **Supporting All Chapters**: For the majority of the handbook (84%), the system provides a zero-setup environment with all dependencies and cloud credentials ready, allowing you to instantly run live STAC queries and code examples without any local setup.
+
+::: {.callout-warning}
+## Reader Features Not Yet Available
+The features described in the sections below ("For Readers" and "Technical Architecture") are not yet available. This documentation describes the future functionality once backend infrastructure is deployed. The button is visible in enabled chapters, but clicking it will result in an error until deployment is complete.
+:::
 
 ### For Readers: One-Click Reproducibility
 
@@ -75,12 +164,15 @@ If you're contributing to this handbook, the reproducible analysis workflow is d
 
 **Who Should Use This?**
 
-You should enable the "Reproduce this analysis" button for your chapter if you want readers to be able to run your code in a pre-configured environment. This applies to two cases:
+If you're contributing to this handbook, you should enable the "Reproduce this analysis" button if your chapter contains executable code. This applies to chapters in three categories (see "Chapter Classification" above):
 
-- **Chapters with Local Data**: If your chapter has files in `data/<your_chapter>/` (models, samples, etc.), this is essential. The system will package this data for your readers.
-- **Cloud-Only / Theoretical Chapters**: This is highly recommended. The system will provide readers a zero-setup environment with all R/Python packages and live cloud credentials (for STAC, etc.) ready to go.
+- **Cloud-Only Chapters (Category b)**: Chapters that query STAC catalogs for satellite imagery with no local data files (Chapters 5, 6, 8, 9, 10, 11). Enabling the button will provide readers with a pre-configured environment with R/Python packages and automatic cloud credentials.
 
-The "Simple Workflow" below applies mostly to case #1 (packaging local data). For cloud-only chapters, you simply need to add `reproducible: enabled: true` to your frontmatter.
+- **Hybrid Chapters (Category c)**: Chapters with local data files in `data/<your_chapter>/` (models, training samples, cached results). The system will package this data for reproducibility. This is essential for chapters like Chile (19), Digital Earth Africa (20), and upcoming chapters Colombia (23), China (32), Cook Islands (33), and World Cereal (35).
+
+- **Theory Chapters with Examples**: Even if your chapter is primarily theoretical, if you have code examples that readers should be able to run, the button provides a zero-setup environment.
+
+**Current Status**: You can enable the button now to prepare your chapter. The button will generate correct URLs but will not function until backend infrastructure is deployed (estimated Q1 2026). See the [reproducible extension repository](https://github.com/cslovell/reproducible) for implementation details.
 
 **Data Organization Patterns:**
 
@@ -96,6 +188,11 @@ The "Simple Workflow" below applies mostly to case #1 (packaging local data). Fo
    - Calculates SHA256 hash of your data
    - Builds immutable OCI data artifact
    - Commits the hash back to your chapter's `.qmd` file
+
+::: {.callout-note}
+## CI Pipeline Not Yet Implemented
+The automated CI pipeline described above (data packaging, hash calculation, auto-commit) is designed but not yet implemented. For now, simply enable the button with `enabled: true` in your chapter's frontmatter. Data packaging infrastructure will be developed in Phase 2 of the implementation roadmap.
+:::
 
 **Minimal Configuration:**
 

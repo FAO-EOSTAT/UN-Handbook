@@ -2,6 +2,11 @@
 
 **User's Entrypoint to Reproducible Sessions**
 
+::: {.callout-note}
+## Implementation Status
+This component is **IMPLEMENTED** and available at [github.com/cslovell/reproducible](https://github.com/cslovell/reproducible). The documentation below describes the high-level architecture. For implementation details, code examples, and installation instructions, see the external repository.
+:::
+
 ###### Overview
 
 The "Reproduce" button is a Lua-based Quarto extension that reads chapter metadata and generates an Onyxia deep-link URL. It serves as the user's primary entrypoint for launching reproducible analysis sessions directly from handbook chapters.
@@ -74,7 +79,9 @@ reproducible:
 
 ###### Implementation
 
-**File**: `_extensions/reproducible-button/reproduce-button.lua`
+**Note**: The full implementation is available at [github.com/cslovell/reproducible](https://github.com/cslovell/reproducible). The code below is provided for reference to illustrate the architecture.
+
+**Conceptual Reference** (see external repo for actual implementation):
 
 ```lua
 -- Quarto filter to inject Onyxia deep-link button

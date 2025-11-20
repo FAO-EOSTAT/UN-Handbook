@@ -2,6 +2,11 @@ project:
   type: book
   output-dir: docs
 
+# The reproducible extension is maintained externally at:
+# https://github.com/cslovell/reproducible
+# Install with: quarto add cslovell/reproducible
+filters:
+  - cslovell/reproducible
 
 book:
   title: "UN Handbook on Remote Sensing for Agricultural Statistics"

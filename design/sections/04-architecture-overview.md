@@ -2,6 +2,14 @@
 
 This reproducible analysis system consists of **five custom software components** that integrate with existing platforms (Kubernetes, Onyxia, AWS, and container registries) to enable one-click reproducible chapter sessions. The architecture operates in two distinct phases: a **Build-Time Flow** (automated CI/CD for chapter authors) and a **Run-Time Flow** (one-click session launching for readers).
 
+::: {.callout-important}
+## Implementation Status Summary
+**Frontend (Component #4)**: IMPLEMENTED at [github.com/cslovell/reproducible](https://github.com/cslovell/reproducible)
+**Backend (Components #1, #2, #3, #5)**: NOT IMPLEMENTED (estimated Q1 2026)
+
+The Quarto extension is functional and generates correct URLs, but clicking the button will result in an error until backend infrastructure is deployed.
+:::
+
 ##### Build-Time Flow: Automated CI/CD Pipeline
 
 When a chapter author pushes changes to the repository, an automated CI/CD pipeline ensures that all data and compute dependencies are versioned, built, and deployed as immutable OCI artifacts.
@@ -115,17 +123,17 @@ This system is built from five custom software components that work together to 
 
 **Build-Time Components** (automated CI/CD):
 
-- **Component #1: Portable CI Pipeline (Dagger)** - Orchestrates all build-time tasks: building compute images, packaging data artifacts, and generating metadata. Runs identically on developer laptops, GitHub Actions, or GitLab CI. (See [Portable CI/CD Pipeline](#component-1-portable-cicd-pipeline-dagger-sdk))
+- **Component #1: Portable CI Pipeline (Dagger)** - **[NOT IMPLEMENTED]** - Orchestrates all build-time tasks: building compute images, packaging data artifacts, and generating metadata. Runs identically on developer laptops, GitHub Actions, or GitLab CI. (See [Portable CI/CD Pipeline](#component-1-portable-cicd-pipeline-dagger-sdk))
 
-- **Component #2: Curated Compute Images** - Pre-built Docker images containing R/Python environments, system libraries (GDAL, PROJ, GEOS), and all package dependencies from `renv.lock`. Available in `base` and `gpu` flavors (GPU support subject to funding). (See [Curated Compute Images](#component-2-curated-compute-images))
+- **Component #2: Curated Compute Images** - **[NOT IMPLEMENTED]** - Pre-built Docker images containing R/Python environments, system libraries (GDAL, PROJ, GEOS), and all package dependencies from `renv.lock`. Available in `base` and `gpu` flavors (GPU support subject to funding). (See [Curated Compute Images](#component-2-curated-compute-images))
 
-- **Component #3: OCI Data Artifacts** - Content-hashed, immutable data snapshots packaged as OCI images. Mounted directly as read-only volumes using the CSI Image Driver, enabling fast startup (5-15s) via node-level caching. (See [OCI Data Artifacts](#component-3-oci-data-artifacts))
+- **Component #3: OCI Data Artifacts** - **[NOT IMPLEMENTED]** - Content-hashed, immutable data snapshots packaged as OCI images. Mounted directly as read-only volumes using the CSI Image Driver, enabling fast startup (5-15s) via node-level caching. (See [OCI Data Artifacts](#component-3-oci-data-artifacts))
 
 **Run-Time Components** (user-facing):
 
-- **Component #4: "Reproduce" Button (Quarto Extension)** - A Lua-based Quarto extension that reads chapter metadata and generates an Onyxia deep-link URL. The user's entrypoint to launching a reproducible session. (See ["Reproduce" Button](#component-4-reproduce-button-quarto-extension))
+- **Component #4: "Reproduce" Button (Quarto Extension)** - **[IMPLEMENTED at [github.com/cslovell/reproducible](https://github.com/cslovell/reproducible)]** - A Lua-based Quarto extension that reads chapter metadata and generates an Onyxia deep-link URL. The user's entrypoint to launching a reproducible session. (See ["Reproduce" Button](#component-4-reproduce-button-quarto-extension))
 
-- **Component #5: "Chapter Session" (Helm Chart)** - An Onyxia-compatible Helm chart that deploys the Kubernetes session. Translates semantic tier names (`heavy`, `gpu`) into actual resource allocations, mounts data artifacts, and configures cloud credentials via IRSA. (See ["Chapter Session" Helm Chart](#component-5-chapter-session-helm-chart))
+- **Component #5: "Chapter Session" (Helm Chart)** - **[NOT IMPLEMENTED]** - An Onyxia-compatible Helm chart that deploys the Kubernetes session. Translates semantic tier names (`heavy`, `gpu`) into actual resource allocations, mounts data artifacts, and configures cloud credentials via IRSA. (See ["Chapter Session" Helm Chart](#component-5-chapter-session-helm-chart))
 
 **Cross-Cutting Capabilities**:
 

@@ -1,5 +1,11 @@
 #### Implementation Roadmap
 
+::: {.callout-note}
+## Current Status
+**Completed**: Quarto extension (Phase 3) - available at [github.com/cslovell/reproducible](https://github.com/cslovell/reproducible)
+**In Progress**: None (backend implementation planned for Q1 2026)
+:::
+
 ###### Phase 1: Foundation
 -  Build base Docker images with curated system dependencies (GPU images contingent on funding)
 -  Configure EKS cluster for OIDC provider (IRSA)
@@ -22,7 +28,7 @@
 - Develop Onyxia Helm chart with ServiceAccount for IRSA
 - Implement CSI image volume mounting
 - Configure `region.customValues` in Onyxia for IRSA role ARN
-- Build Quarto extension for "Reproduce" button generation
+- ✅ **COMPLETED**: Build Quarto extension for "Reproduce" button generation ([github.com/cslovell/reproducible](https://github.com/cslovell/reproducible))
 - Test hybrid credential approach (IRSA primary, xOnyxiaContext fallback)
 
 ###### Phase 4: Long-Term Dependency Management

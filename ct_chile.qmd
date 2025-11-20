@@ -1,10 +1,13 @@
 ---
 title: "Crop classification and land use mapping in Chile"
-author: 
+author:
   - "Estefanía Pizarro Arias"
   - "Alexis Gamboa Maldonado"
   - "Jonathan Paredes Baez"
 format: html
+reproducible:
+  enabled: true
+  tier: heavy
 ---
 
 ## Introduction
