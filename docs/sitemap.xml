@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://FAO-EOSTAT.github.io/UN-Handbook/index.html</loc>
-    <lastmod>2025-11-05T13:23:21.007Z</lastmod>
+    <lastmod>2025-08-10T01:40:26.926Z</lastmod>
   </url>
   <url>
     <loc>https://FAO-EOSTAT.github.io/UN-Handbook/howto.html</loc>
-    <lastmod>2025-11-09T17:16:07.858Z</lastmod>
+    <lastmod>2025-11-15T20:07:21.106Z</lastmod>
   </url>
   <url>
     <loc>https://FAO-EOSTAT.github.io/UN-Handbook/introduction.html</loc>
@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://FAO-EOSTAT.github.io/UN-Handbook/th_remote_sensing.html</loc>
-    <lastmod>2025-08-16T18:51:28.695Z</lastmod>
+    <lastmod>2025-11-15T20:07:21.110Z</lastmod>
   </url>
   <url>
     <loc>https://FAO-EOSTAT.github.io/UN-Handbook/th_data_sources.html</loc>
@@ -42,7 +42,7 @@
   </url>
   <url>
     <loc>https://FAO-EOSTAT.github.io/UN-Handbook/th_uncertainty.html</loc>
-    <lastmod>2025-10-28T07:23:59.959Z</lastmod>
+    <lastmod>2025-11-18T18:14:12.625Z</lastmod>
   </url>
   <url>
     <loc>https://FAO-EOSTAT.github.io/UN-Handbook/th_validation.html</loc>
@@ -54,11 +54,11 @@
   </url>
   <url>
     <loc>https://FAO-EOSTAT.github.io/UN-Handbook/th_alignment.html</loc>
-    <lastmod>2025-10-28T06:17:33.220Z</lastmod>
+    <lastmod>2025-11-15T20:07:21.110Z</lastmod>
   </url>
   <url>
     <loc>https://FAO-EOSTAT.github.io/UN-Handbook/th_parcel_extraction.html</loc>
-    <lastmod>2025-11-04T10:14:08.578Z</lastmod>
+    <lastmod>2025-11-15T20:07:21.110Z</lastmod>
   </url>
   <url>
     <loc>https://FAO-EOSTAT.github.io/UN-Handbook/crop_type_mapping.html</loc>
@@ -66,7 +66,7 @@
   </url>
   <url>
     <loc>https://FAO-EOSTAT.github.io/UN-Handbook/ct_poland.html</loc>
-    <lastmod>2025-11-03T01:38:58.079Z</lastmod>
+    <lastmod>2025-11-15T20:07:21.094Z</lastmod>
   </url>
   <url>
     <loc>https://FAO-EOSTAT.github.io/UN-Handbook/ct_mexico.html</loc>
@@ -78,11 +78,11 @@
   </url>
   <url>
     <loc>https://FAO-EOSTAT.github.io/UN-Handbook/ct_china.html</loc>
-    <lastmod>2025-10-28T06:17:32.940Z</lastmod>
+    <lastmod>2025-11-15T20:07:21.094Z</lastmod>
   </url>
   <url>
     <loc>https://FAO-EOSTAT.github.io/UN-Handbook/ct_chile.html</loc>
-    <lastmod>2025-08-31T13:48:53.527Z</lastmod>
+    <lastmod>2025-11-19T20:21:35.536Z</lastmod>
   </url>
   <url>
     <loc>https://FAO-EOSTAT.github.io/UN-Handbook/ct_digital_earth_africa.html</loc>
@@ -94,7 +94,7 @@
   </url>
   <url>
     <loc>https://FAO-EOSTAT.github.io/UN-Handbook/cy_finland.html</loc>
-    <lastmod>2025-10-28T16:23:42.700Z</lastmod>
+    <lastmod>2025-11-15T20:07:21.094Z</lastmod>
   </url>
   <url>
     <loc>https://FAO-EOSTAT.github.io/UN-Handbook/cy_indonesia.html</loc>
@@ -106,7 +106,7 @@
   </url>
   <url>
     <loc>https://FAO-EOSTAT.github.io/UN-Handbook/cy_poland.html</loc>
-    <lastmod>2025-08-31T13:48:53.527Z</lastmod>
+    <lastmod>2025-11-15T20:07:21.094Z</lastmod>
   </url>
   <url>
     <loc>https://FAO-EOSTAT.github.io/UN-Handbook/cy_china.html</loc>
@@ -122,7 +122,7 @@
   </url>
   <url>
     <loc>https://FAO-EOSTAT.github.io/UN-Handbook/crop_statistics_regression.html</loc>
-    <lastmod>2025-11-06T00:18:25.890Z</lastmod>
+    <lastmod>2025-11-19T20:29:10.457Z</lastmod>
   </url>
   <url>
     <loc>https://FAO-EOSTAT.github.io/UN-Handbook/crop_statistics_calibration.html</loc>
@@ -150,7 +150,7 @@
   </url>
   <url>
     <loc>https://FAO-EOSTAT.github.io/UN-Handbook/uav_agriculture_cook_islands.html</loc>
-    <lastmod>2025-11-02T20:33:01.488Z</lastmod>
+    <lastmod>2025-11-19T20:16:03.248Z</lastmod>
   </url>
   <url>
     <loc>https://FAO-EOSTAT.github.io/UN-Handbook/disaster_response.html</loc>
@@ -166,7 +166,7 @@
   </url>
   <url>
     <loc>https://FAO-EOSTAT.github.io/UN-Handbook/ad_world_cereal.html</loc>
-    <lastmod>2025-08-10T01:40:26.366Z</lastmod>
+    <lastmod>2025-11-08T00:36:10.670Z</lastmod>
   </url>
   <url>
     <loc>https://FAO-EOSTAT.github.io/UN-Handbook/ad_learning.html</loc>

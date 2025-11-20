@@ -1,40 +1,38 @@
 ---
 title: "Integrating UAV Imagery into Agricultural Statistics in the Cook Islands"
-author: "Takaaki Masaki, Anthony D. Burgard"
+author: "Takaaki Masaki, Anthony D. Burgard, Anna Christine Durante and Pamela Lapitan"
 format: html
 ---
 
 ## Introduction
 
-Accurate land area estimates form the foundation of reliable agricultural statistics, providing critical inputs for estimating crop production, calculating yield, and informing key agricultural policy decisions. Traditional ground surveys where these data are collected, however, face significant resource constraints, especially in the Pacific Islands, where environmental conditions, physical distance between islands, and natural barriers can make data collection cost-prohibitive.
+Accurate land area estimates form the foundation of reliable agricultural statistics, providing critical inputs for estimating crop production, calculating yield, and informing key agricultural policy decisions. Traditional ground surveys where these data are collected, however, face significant resource constraints, especially in the Pacific Islands, where environmental conditions, physical distances between islands, and natural barriers often make data collection cost-prohibitive.
 
-In 2022, the Asian Development Bank (ADB), in collaboration with the Cook Islands Ministry of Agriculture (MOA), conducted a post-enumeration survey on the island of Rarotonga to validate agricultural area estimates using global positioning systems (GPS) reported in the 2021 Cook Islands Census of Agriculture. The study revealed that farmers generally underestimated their agricultural land areas by approximately 13% relative to objective GPS measurements, with larger plots (\>2,000 m²) more likely underestimated and smaller plots slightly overestimated [@AsianDevelopmentBank2024]. This discrepancy highlights the significance of non-sampling errors, specifically measurement error, that can systematically bias national agricultural production estimates.
+In 2022, the Asian Development Bank (ADB), in collaboration with the Cook Islands Ministry of Agriculture (MOA), conducted a post-enumeration survey on the island of Rarotonga to validate agricultural area estimates using global positioning systems (GPS) reported in the 2021 Cook Islands Census of Agriculture. The study revealed that farmers generally underestimated their agricultural land areas by approximately 13% relative to objective GPS measurements, with larger plots (\>2,000 square meters) more likely underestimated and smaller plots slightly overestimated[@AsianDevelopmentBank2024]. This discrepancy highlights the significance of non-sampling errors, specifically measurement error, that can systematically bias national agricultural production estimates.
 
-In a follow-up activity conducted in 2023, the ADB team with the MOA employed Unmanned Aerial Vehicles (UAVs) to capture high-resolution imagery and measure agricultural land areas, aiming to reduce resource intensity of field surveys in environmentally challenging terrain. While initial resource constraints may be higher, high-resolution imagery captured by UAV enabled precise plot boundary delineation and area measurements. UAVs were found to be particularly suitable for the Pacific context, where frequent cloud cover, fragmented land plots, and difficult terrain require flexible, localized, and detailed data collection methods.
+In a follow-up activity conducted in 2023, the ADB team, together with the MOA, employed unmanned aerial vehicles (UAVs) to capture high-resolution imagery and measure agricultural land areas, aiming to reduce the resource intensity of field surveys in environmentally challenging terrain. While initial resource requirements may be higher, high-resolution imagery captured by UAVs enables precise plot boundary delineation and accurate area measurements. UAVs proved particularly suitable for the Pacific context, where frequent cloud cover, fragmented land plots, and difficult terrain require flexible, localized, and detailed data collection methods.
 
-Drawing on the 2023 Cook Islands UAV survey of a census enumeration area on Rarotonga, this chapter has two aims: (i) to provide a reproducible, end-to-end workflow in R — from loading orthophotos and vector boundaries, harmonizing CRS, and visualizing imagery to computing plot-level zonal statistics — and (ii) to demonstrate, through a worked case study, how very high-resolution data (≈1.6-cm GSD) enables agricultural statistics that are difficult or impossible with 10–30 m satellite sensors. Using RGB and multispectral imagery, we quantify plot areas and derive vegetation indicators such as Normalized Difference Vegetation Index (NDVI) (mean, min–max, and within-plot coefficient of variation), revealing fine-scale patterns in crop vigor and heterogeneity that are obscured at coarser resolutions. We then contrast these plot-level metrics with Sentinel-2 and Landsat-8 views to illustrate mixed-pixel effects and the implications for area estimation, monitoring, and operational decision-making.
-
-This chapter provides an analytical framework for working with UAV imagery in R to produce agricultural statistics. Specific objectives include importing and harmonizing raster layers (RGB and NDVI orthophotos) and vector boundaries (study area and plot polygons) to a common coordinate reference system, extracting agricultural statistics through zonal analysis of NDVI values for individual plots, calculating plot areas, and comparing spatial resolution across UAV, Sentinel-2, and Landsat-8 imagery to quantify the mixed-pixel effect and its implications for area estimation accuracy.
+Drawing on the 2023 Cook Islands UAV survey of a census enumeration area on Rarotonga, this chapter has two aims: (i) to provide a reproducible, end-to-end workflow in R — from loading orthophotos and vector boundaries, harmonizing coordinate reference systems (CRS), and visualizing imagery to computing plot-level zonal statistics — and (ii) to demonstrate, through a worked case study, how very high-resolution data (≈1.6-centimeter GSD) enables agricultural statistics that are difficult or impossible with 10–30 meter (m) satellite sensors. Using red, green and blue (RGB) and multispectral imagery, we quantify plot areas and derive vegetation indicators such as Normalized Difference Vegetation Index (NDVI) (mean, min–max, and within-plot coefficient of variation), revealing fine-scale patterns in crop vigor and heterogeneity that are obscured at coarser resolutions. We then contrast these plot-level metrics with Sentinel-2 and Landsat-8 views to illustrate mixed-pixel effects and the implications for area estimation, monitoring, and operational decision-making.
 
 By the end of this chapter, you will be able to:
 
 - Understand the UAV imagery workflow from flight planning to mapping output
 
-- Load and visualize RGB (true color) and NDVI UAV imagery in R
+- Load and visualize RGB (true-color) and NDVI UAV imagery in R
 
 - Load and manage vector data in R
 
 - Extract plot-level zonal statistics from UAV imagery
 
-- Compare spatial resolutions of UAV versus publicly available satellite imagery
+- Compare the spatial resolutions of UAV imagery versus publicly available satellite imagery
 
 ## Study Area
 
-The study area comprises a single census enumeration area located on the northeastern coast of Rarotonga island in the Cook Islands encompassing 17.6 hectares. This area was selected to enable cross-validation with area estimates from the 2022 Agriculture Census and post-Agriculture Census enumeration survey. The terrain in the study area is characterized by flat topography extending from inland residential areas to the beach and ocean along the eastern boundary. Land use is mixed, including residential, sports facilities (i.e., rugby field), and fragmented agricultural plots scattered throughout the area.
+The study area comprises a single census enumeration area located on the northeastern coast of Rarotonga island in the Cook Islands encompassing 17.6 hectares. This area was selected to enable cross-validation with area estimates from the 2021 Agriculture Census and 2022 post-Agriculture Census enumeration survey. The terrain in the study area is characterized by flat topography extending from inland residential areas to the beach and ocean along the eastern boundary. Land use is mixed, including residential, sports facilities (i.e., rugby field), and fragmented agricultural plots scattered throughout the area.
 
 ## UAV Image Acquisition and Processing
 
-UAV imagery of the study area was captured on 28 August 2023 at midday. Two flight missions were conducted: the first using an RGB camera captured 347 aerial images (@fig-1), while the second using a multispectral sensor captured 318 images. Flight missions were planned using DJI Flight Planner software, where operators specified resolution requirements by setting flight height (\~100 meters) and image overlap percentages (\~80 percent) to ensure adequate coverage.
+UAV imagery of the study area was captured on 28 August 2023 at midday. Two flight missions were conducted: the first using an RGB (Red, Green and Blue) camera captured 347 aerial images (@fig-1), while the second, using a multispectral sensor captured 318 images. Flight missions were planned using DJI Flight Planner software, where operators specified resolution requirements by setting flight height (\~100 meters) and image overlap percentages (\~80 percent) to ensure adequate coverage.
 
 ```{r}
 #| echo: FALSE
@@ -46,7 +44,7 @@ UAV imagery of the study area was captured on 28 August 2023 at midday. Two flig
 knitr::include_graphics("./images/uav_agriculture_cook_islands/flight-path.png")
 ```
 
-The processing of these raw aerial images was conducted in [OpenDroneMap](https://opendronemap.org), a free and open-source photogrammetry software that stitches overlapping raw UAV images into a geometrically corrected single image known as an orthophoto. The software first uses a Structure-from-Motion (SfM) method (@Valorie2023), which identifies thousands of common feature points across the aerial images to reconstruct the camera's position for each photo and build an initial three-dimensional model of the terrain and its features (@fig-2).
+The processing of these raw aerial images was conducted in [OpenDroneMap](https://opendronemap.org), a free and open-source photogrammetry software that stitches overlapping raw UAV images into a geometrically corrected single image known as an orthophoto. The software first applies a Structure-from-Motion (SfM) method (@Valorie2023), which identifies thousands of common feature points across the aerial images to reconstruct the camera's position for each photo and build an initial three-dimensional model of the terrain and its features (@fig-2).
 
 ```{r}
 #| echo: FALSE
@@ -58,11 +56,11 @@ The processing of these raw aerial images was conducted in [OpenDroneMap](https:
 knitr::include_graphics("./images/uav_agriculture_cook_islands/3dmodel.png")
 ```
 
-Prior to the flights, operators surveyed the area to establish 23 Ground Control Points (GCPs), a centimeter-level precision point geographic coordinates distributed throughout the study area. The coordinates of these markers were measured using high-precision Global Navigation Satellite System (GNSS) receivers. During processing in OpenDroneMap, these GCPs are overlaid in the UAV imagery. The software then warps the 3D model to fit these known coordinates, correcting geometric distortions and ensuring the final orthophoto is accurately georeferenced. This step is critical for calculating reliable area calculations as it ensures the orthophoto is not biased by any distortions within the image.
+Prior to the flights, operators surveyed the area to establish 23 Ground Control Points (GCPs), a centimeter-level precision point geographic coordinates distributed throughout the study area. The coordinates of these markers were measured using high-precision Global Navigation Satellite System receivers. During processing in OpenDroneMap, these GCPs are overlaid in the UAV imagery. The software then warps the 3D model to fit these known coordinates, correcting geometric distortions and ensuring the final orthophoto is accurately georeferenced. This step is critical for reliable area calculations, as it ensures the orthophoto is not biased by any distortions within the image.
 
-The combination of the three-dimensional model and ground control points produces of an orthophoto, a geometrically corrected single image of the study area. This process is repeated for both our RGB and multispectral imagery, resulting in two orthophotos of the same study area taken by two camera sensors.
+The combination of the three-dimensional model and ground control points produces of an orthophoto, a geometrically corrected single image of the study area. This process is repeated for both RGB and multispectral imagery, resulting in two orthophotos of the same study area captured by two camera sensors.
 
-In addition to orthophotos, we also utilize OpenDroneMap to calculate crop health indicators for crop health analysis. The platform calculates 23 spectral indices from the multispectral orthophoto (@fig-3), and their calculations are documented on the OpenDroneMap github repository [here](https://github.com/OpenDroneMap/WebODM/blob/master/app/api/fields.py). These indices include the NDVI, which assesses plant vigor and photosynthetic activity. Additional indices enable detection of water stress, estimation of biomass, and soil reflectance in fallow areas.
+In addition to orthophotos, OpenDroneMap was also used to calculate crop health indicators. The platform calculates 23 spectral indices from the multispectral orthophoto (@fig-3), as documented on the OpenDroneMap github repository [here](https://github.com/OpenDroneMap/WebODM/blob/master/app/api/fields.py). These indices include the NDVI, which assesses plant vigor and photosynthetic activity. Additional indices enable detection of water stress, estimation of biomass, and soil reflectance in fallow areas.
 
 ```{r}
 #| echo: FALSE
@@ -91,7 +89,11 @@ knitr::include_graphics(image_path)
 
 ## Agricultural Plot Delineation
 
-Using the RGB orthophoto as a basemap, a subject matter expert from the Cook Islands Ministry of Agriculture manually digitized plot boundaries as polygon features in QGIS based on visual inspection of land use and plot boundaries of areas cultivated for crops. This digitization process produced 36 individual agricultural plots polygons.
+Using the RGB orthophoto as a basemap, a subject matter expert from the MOA manually digitized plot boundaries as polygon features in QGIS based on visual inspection of land use and plot boundaries of areas cultivated for crops. This digitization process produced 36 individual agricultural plot polygons.
+
+## Study objectives
+
+This chapter provides an analytical framework for working with UAV imagery in R to produce agricultural statistics. Specific objectives include importing and harmonizing raster layers (RGB and NDVI orthophotos) and vector boundaries (study area and plot polygons) to a common CRS, extracting agricultural statistics through zonal analysis of NDVI values for individual plots, calculating plot areas, and comparing spatial resolution across UAV, Sentinel-2, and Landsat-8 imagery to quantify the mixed-pixel effect and its implications for area estimation accuracy
 
 ## Data and Software Requirements
 
@@ -103,7 +105,7 @@ The analysis utilizes four primary datasets:
 
 -   **Study Area Boundary**: A vector shapefile representing the boundary of a census enumeration area in Rarotonga, Cook Islands. The boundary covers an area of \~ 17.6 hectares.
 
--   **Plot Boundaries**: 36 individual agricultural plot polygons digitized by a subject matter expert from the Cook Islands Ministry of Agriculture using the RGB Orthophoto as a basemap.
+-   **Plot Boundaries**: 36 individual agricultural plot polygons digitized by a subject matter expert from the MOA using the RGB Orthophoto as a basemap.
 
 To implement the examples in this chapter we use:
 
@@ -157,7 +159,7 @@ Let's begin with the `rgb` UAV orthomosiac image
 print(rgb)
 ```
 
-The `print(rgb)` output shows the RGB orthophoto contains 33,927 rows and 43,962 columns across 4 layers (red, green, blue, and alpha transparency). The resolution of 1.503361e-07 degrees per pixel corresponds to approximately 1.6 centimeters ground sample distance. The data uses the WGS 84 geographic coordinate system (EPSG:4326) with coordinates in decimal degrees.
+The `print(rgb)` output shows the RGB orthophoto contains 33,927 rows and 43,962 columns across 4 layers (red, green, blue, and alpha transparency). The resolution of 1.503361e-07 degrees per pixel corresponds to approximately 1.6 centimeters ground sample distance. The data uses the World Geodetic System (WGS) 84 geographic coordinate system (EPSG:4326) with coordinates in decimal degrees.
 
 Now print the `ndvi` raster details. What differences do you observe compared to the `rgb` raster?
 
@@ -175,12 +177,11 @@ Now examine the `study_area` shapefile using the same approach.
 print(study_area)
 ```
 
-
 ### Coordinate Reference System Harmonization
 
-Before conducting any further analysis, all layers must use compatible coordinate reference systems (CRS). Mismatched coordinate systems may cause misaligned layers and incorrect area calculations.
+Before conducting any further analysis, all layers must use a compatible CRS. Mismatched coordinate systems may result in misaligned layers and incorrect area calculations.
 
-First, verify that all layers use the same coordinate reference system:
+First, verify that all layers use the same CRS:
 
 ```{r}
 # Check coordinate reference systems
@@ -190,7 +191,7 @@ st_crs(study_area)$epsg           # study area (vector)
 st_crs(plots)$epsg                # agriculture plots (vector)
 ```
 
-Notice the NDVI raster uses WGS 84 / UTM Zone 4S (EPSG:32704) with units in meters, while other layers use WGS 84 geographic coordinates (EPSG:4326) with units in degrees. It is reccomended to first reproject all layers to UTM Zone 4S. This coordinate system is recommended for the Cook Islands because the islands fall within the geographic boundaries of this zone in the Universal Transverse Mercator coordinate system, and for the purposes of this analysis, distance measurements are provided in meters.
+Notice the NDVI raster uses WGS 84 / Universal Transverse Mercator (UTM) Zone 4S (EPSG:32704) with units in meters, while other layers use WGS 84 geographic coordinates (EPSG:4326) with units in degrees. It is recommended to first reproject all layers to UTM Zone 4S. This coordinate system is recommended for the Cook Islands because the islands fall within the geographic boundaries of this zone in the Universal Transverse Mercator coordinate system, and for the purposes of this analysis, distance measurements are provided in meters.
 
 ```{r}
 #| eval: false
@@ -221,7 +222,7 @@ After reprojection, the resolution of the RGB orthophoto is expressed in meters 
 
 ### Initial Visualization
 
-To confirm spatial alignment of the RGB raster and vector files, we will first create a map displaying all data layers. This visualization verifies that the orthophoto, plot boundaries, and study area boundary are properly aligned following reprojection to the common coordinate reference system:
+To confirm spatial alignment of the RGB raster and vector files, we first create a map displaying all data layers. This visualization verifies that the orthophoto, plot boundaries, and study area boundary are properly aligned following reprojection to the common CRS:
 
 ```{r}
 #| label: fig-ortho-rgb
@@ -272,7 +273,7 @@ hist(plots$area_m2,
 
 ### Visualization of NDVI values
 
-We now turn to the NDVI raster of the study area. NDVI ranges from -1 to 1, where values below 0 typically indicate water or bare soil, values between 0.2 and 0.4 indicate sparse or stressed vegetation, values between 0.4 and 0.6 indicate moderate vegetation vigor, and values above 0.6 indicate dense, healthy vegetation. Monitoring NDVI enables identification of crop stress from water deficit, nutrient deficiencies, pests, or disease. It distinguishes vegetated areas from bare soil, water, or built structures, and monitoring changes over time reveals agricultural cycles, drought impacts, deforestation, or vegetation regrowth patterns.
+We now turn to the NDVI raster of the study area. NDVI ranges from -1 to 1, where values below 0 typically indicate water or bare soil, values between 0.2 and 0.4 indicate sparse or stressed vegetation, values between 0.4 and 0.6 indicate moderate vegetation vigor, and values above 0.6 indicate dense, healthy vegetation. Monitoring NDVI enables identification of crop stress from water deficits, nutrient deficiencies, pests, or diseases. It distinguishes vegetated areas from bare soil, water, or built structures, and monitoring changes over time reveals agricultural cycles, drought impacts, deforestation, or vegetation regrowth patterns.
 
 Higher NDVI values, however, do not necessarily indicate better crop health, as dense weeds, overgrown vegetation, or mature crops can also produce higher NDVI values. Interpreting NDVI requires careful consideration of local conditions and validation with ground observations. It is not a standalone measure of crop health and can be misleading without contextual information about land use, crop types, and agricultural practices.
 
@@ -308,7 +309,7 @@ north(type = 1)
 
 ### Calculating Plot-Level NDVI Statistics
 
-With the NDVI map, we can calculate statistics based on NDVI pixel values within each plot using zonal statistics functions. Satellite and UAV sensors divide the landscape into a grid of pixels, each representing a specific area on the ground. Problems arise at boundaries between land uses where pixels straddling these edges capture information from both surfaces. Instead of recording pure crop reflectance, these boundary pixels record a blend of signals from the crop and the adjacent road. To minimize edge effects from mixed pixels at plot boundaries, a 0.5-meter negative buffer is applied to each plot polygon before extraction. Mixed pixels occur at boundary edges where a single pixel captures reflectance from multiple land cover types, such as roads and vegetation, or different crop types. The negative buffer shrinks each polygon inward by 0.5 meters, excluding these edge pixels from analysis and ensuring that extracted NDVI values represent only the interior of each agricultural plot:
+With the NDVI map, we can calculate statistics based on NDVI pixel values within each plot using zonal statistics functions. Satellite and UAV sensors divide the landscape into a grid of pixels, each representing a specific area on the ground. Problems arise at boundaries between land uses where pixels straddling these edges capture information from both surfaces. Instead of recording pure crop reflectance, these boundary pixels record a blend of signals from the crop and the adjacent features such as roads. To minimize edge effects from mixed pixels at plot boundaries, a 0.5-meter negative buffer is applied to each plot polygon before extraction. Mixed pixels occur at boundary edges where a single pixel captures reflectance from multiple land cover types, such as roads and vegetation, or different crop types. The negative buffer shrinks each polygon inward by 0.5 meters, excluding these edge pixels from analysis and ensuring that extracted NDVI values represent only the interior of each agricultural plot:
 
 ```{r}
 #| message: false
@@ -345,7 +346,7 @@ plots$ndvi_cv <- (plots$ndvi_sd / plots$ndvi_mean) * 100
 plots <- readRDS("data/uav_agriculture_cook_islands/stats/plots-ndvi-statistics.rds")
 ```
 
-Now that summary statistics have been calculated for each plot, we will visualize the mean NDVI values across plots the study area. Plots with consistently low NDVI (red-orange) may indicate recently harvested areas, fallow land, or crop stress, while high NDVI plots (green) indicate dense vegetation. Examine the map to identify which plots exhibit the lowest and highest NDVI values.
+Now that summary statistics have been calculated for each plot, we will visualize the mean NDVI values across plots in the study area. Plots with consistently low NDVI (red-orange) may indicate recently harvested areas, fallow land, or crop stress, while high NDVI plots (green) indicate dense vegetation. Examine the map to identify which plots exhibit the lowest and highest NDVI values.
 
 ```{r}
 #| label: fig-ndvi-mean
@@ -362,7 +363,7 @@ tm_shape(plots) +
   tm_title("Mean NDVI by Plot")
 ```
 
-Next, visualize the coefficient of variation (CV) for each plot. The CV map highlights plots with high internal NDVI variability (yellow-green) versus uniform plots (red-orange). High variability might indicate mixed cropping systems, uneven crop growth, patchy vegetation coverage, varying soil conditions within a plot, or potential issues with plot boundary delineation, while low CV suggests more uniform vegetation across the plot.
+Next, visualize the CV for each plot. The CV map highlights plots with high internal NDVI variability (yellow-green) versus uniform plots (red-orange). High variability may indicate mixed cropping systems, uneven crop growth, patchy vegetation coverage, varying soil conditions within a plot, or potential issues with plot boundary delineation, while low CV suggests more uniform vegetation across the plot.
 
 ```{r}
 #| label: fig-cov-plot
@@ -381,13 +382,13 @@ tm_shape(plots) +
 
 ### Resolution Comparison: UAV vs. Satellite Imagery
 
-An advantage of UAV imagery for agricultural statistics is its spatial resolution compared to publicly available satellite sources. This section demonstrates these differences by comparing the same study area captured at three resolutions: UAV imagery at 1.6 cm, Sentinel-2 satellite imagery at 10 m, and Landsat-8 satellite imagery at 30 m resolution. Understanding these resolution differences is necessary for selecting appropriate imagery sources for agricultural monitoring tasks, particularly in landscapes with small, fragmented plots.
+An advantage of UAV imagery for agricultural statistics is its spatial resolution compared to publicly available satellite sources. This section demonstrates these differences by comparing the same study area captured at three resolutions: UAV imagery at 1.6 centimeters (cm), Sentinel-2 satellite imagery at 10 m, and Landsat-8 satellite imagery at 30 m resolution. Understanding these resolution differences is necessary for selecting appropriate imagery sources for agricultural monitoring tasks, particularly in landscapes with small, fragmented plots.
 
-However, higher resolution is not always better and involves important tradeoffs. UAV and high-resolution commercial satellite imagery require greater financial costs, larger storage capacity, and more computational resources for processing. The appropriate tool depends on the analytical objective and spatial scale.
+However, higher resolution is not always better and involves important tradeoffs. UAV and high-resolution commercial satellite imagery require greater financial investment, larger storage capacity, and more computational resources for processing. The appropriate tool depends on the analytical objective and spatial scale.
 
 Satellite imagery is well-suited for large-scale regional or national agricultural monitoring where broad area coverage and frequent temporal revisits are priorities. UAVs are more appropriate for targeted interventions requiring detailed plot-level analysis, validation of satellite-based estimates, or monitoring of small, fragmented agricultural landscapes where coarser resolution would produce unacceptable mixed-pixel effects.
 
-Let's begin by loading in satellite imagery from Sentinel-2 (10 meters), and Landsat-8 (30 meters) into R.
+Let's begin by loading the satellite imagery from Sentinel-2 (10 meters), and Landsat-8 (30 meters) into R.
 
 ```{r}
 # Load satellite imagery
@@ -401,7 +402,7 @@ landsat8 <- project(landsat8, target_crs, method = "bilinear")
 
 #### Sentinel-2 (10 m resolution) {-}
 
-Sentinel-2 provides 10-meter resolution, which is suitable for larger agricultural fields but struggles with small, fragmented plots. While broad agricultural patterns are visible, plot-level detail is limited. At this resolution, each pixel covers 100 m², which exceeds the size of many individual plots in the study area, making accurate boundary delineation and individual plot identification difficult.
+Sentinel-2 provides 10-meter resolution, which is suitable for larger agricultural fields but struggles with small, fragmented plots. While broad agricultural patterns are visible, plot-level detail is limited. At this resolution, each pixel covers 100 square meters, which exceeds the size of many individual plots in the study area, making accurate boundary delineation and individual plot identification difficult.
 
 ```{r}
 #| label: fig-s2-tc
@@ -419,7 +420,7 @@ north(type=1)
 
 #### Landsat-8 (30 m resolution)  {-}
 
-Finally, compare the same area against Landsat-8's 30-meter resolution (900 m² per pixel). At this scale, individual plot delineation is impractical, though the imagery remains useful for identifying broad agricultural zones and land use patterns across larger regions.
+Finally, compare the same area against Landsat-8's 30-meter resolution (900 square meters per pixel). At this scale, individual plotdelineation is impractical, though the imagery remains useful for identifying broad agricultural zones and land-use patterns across larger regions.
 
 ```{r}
 #| label: fig-l8-tc
@@ -435,10 +436,9 @@ sbar(200, type = "line", xy = "bottom", divs = 8, below = "meters", col = "yello
 north(type = 1)
 ```
 
-
 ### Quantifying Resolution Differences
 
-To objectively demonstrate the resolution difference between sensors, we'll count how many pixels fall within each agricultural plot for each imagery source.
+To objectively demonstrate the resolution differences between sensors, we will count the number of pixels that fall within each agricultural plot for each imagery source.
 
 ```{r}
 #| eval: false
@@ -499,7 +499,7 @@ knitr::kable(comparison,
         kableExtra::kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover"))
 ```
 
-This table reveals differences in pixel density between sensors. UAV imagery provides thousands of pixels per plot, enabling detailed analysis and supporting advanced machine learning applications, such as convolutional neural networks for object detection. Sentinel-2 provides tens to hundreds of pixels per plot, while Landsat-8 provides only a handful.
+This table illustrates differences in pixel density between sensors. UAV imagery provides thousands of pixels per plot, enabling detailed analysis and supporting advanced machine learning applications, such as convolutional neural networks for object detection. Sentinel-2 provides tens to hundreds of pixels per plot, while Landsat-8 provides only a few pixels per plot.
 
 ### Mixed Pixel Problem
 
@@ -588,10 +588,11 @@ While UAV imagery offers substantial advantages for agricultural monitoring in f
 
 **Document methodologies**: As UAV technologies and analytical techniques evolve, documenting use cases supports broader adoption, encourages innovation, and improves data quality.
 
+
 ## Conclusion
 
 This study highlights the potential of UAV imagery for modernizing agricultural statistics. A primary barrier to widespread adoption by national statistics offices has been the lack of documented, end-to-end use cases on the use of the technology. By providing a reproducible workflow in R using a case study from Rarotonga, Cook Islands, this work addresses that gap. Practical demonstrations are essential for establishing standards and methodologies required to integrate UAV-derived data into official agricultural statistics production. More specifically, the findings demonstrate that UAV technology provides a solution to persistent challenges of accurate area estimation in landscapes with small, fragmented agricultural plots, where traditional ground surveys are resource-intensive and satellite imagery too coarse for reliable plot-level measurement.
 
-The key findings underscore the potential of this approach. First, the centimeter-level resolution (\~1.6 cm) of the UAV imagery effectively reducing the mixed-pixel problem compared to coarser satellite sensors like Sentinel-2 (10 m) and Landsat-8 (30 m). By capturing thousands of data points within even the smallest plots, UAVs enable precise boundary delineation and reduce the measurement error that can bias national production estimates. Second, our analysis demonstrated the extraction of detailed, plot-level vegetation metrics, including mean NDVI and its coefficient of variation, which reveal fine-scale patterns of crop health and heterogeneity that are invisible at satellite resolutions. These metrics provide agricultural stakeholders with actionable insights for monitoring and management that were previously unattainable.
+The key findings underscore the potential of this approach. First, the centimeter-level resolution (\~1.6 cm) of the UAV imagery effectively reduces the mixed-pixel problem compared to coarser satellite sensors like Sentinel-2 (10 m) and Landsat-8 (30 m). By capturing thousands of data points within even the smallest plots, UAVs enable precise boundary delineation and reduce the measurement error that can bias national production estimates. Second, our analysis demonstrated the extraction of detailed, plot-level vegetation metrics, including mean NDVI and its coefficient of variation, which reveal fine-scale patterns of crop health and heterogeneity that are invisible at satellite resolutions. These metrics provide agricultural stakeholders with actionable insights for monitoring and management that were previously unattainable.
 
 By presenting this workflow using free and open-source tools like R and OpenDroneMap, we demonstrate a reproducible and cost-effective framework for use of UAV imagery for the production of agricultural statistics, and ultimately more reliable agricultural data for evidence-based policy, improved food security, and sustainable resource management in the Pacific and beyond.
