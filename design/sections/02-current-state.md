@@ -176,3 +176,121 @@ GPU-enabled sessions are subject to funding availability and cluster configurati
 - Secure: Immutable images, no runtime privilege escalation
 - Onyxia-native: Leverages existing platform features
 
+---
+
+##### Chapter Classification and Implementation Priorities
+
+Based on analysis of all 48 handbook chapters, they are organized into five categories with different reproducibility requirements and implementation priorities:
+
+###### Category A: Theory and Conceptual Chapters (14 chapters)
+**Chapters**: 4, 7, 12, 13, 15, 17, 21, 24, 25, 26, 27, 28, 31, 36
+
+These chapters contain no executable code or provide conceptual frameworks.
+
+**Reproducibility Status**: Not applicable
+**Button Enabled**: No
+**Implementation Priority**: N/A
+
+###### Category B: Cloud-Only Reproducible Code (6 chapters)
+**Chapters**: 5, 6, 8, 9, 10, 11
+
+These chapters provide executable code that accesses satellite imagery directly via STAC catalogs (Microsoft Planetary Computer, AWS Sentinel-2, Digital Earth Africa, etc.). No local data files required.
+
+**Reproducibility Status**: Ready for button (backend deployment pending)
+**Button Enabled**: Can be enabled for preparation
+**Resource Allocation**: Light tier (2 CPU, 8GB RAM) or Medium tier (6 CPU, 24GB RAM) based on computational requirements
+**Data Strategy**: Cloud-only (no local data packaging needed)
+**Implementation Priority**: Phase 2 (after infrastructure deployment)
+
+###### Category C: Hybrid Reproducible Code (6 chapters)
+**Chapters**: 19 (Chile), 20 (Digital Earth Africa), 23 (Colombia), 32 (China Crop Growth), 33 (Cook Islands), 35 (World Cereal)
+
+These chapters combine local cached data (pre-trained models, training samples, intermediate results) with live cloud data access.
+
+**Status**:
+- Completed: Chile (19), Digital Earth Africa (20)
+- In progress: Colombia (23), China Crop Growth (32), Cook Islands (33), World Cereal (35)
+
+**Reproducibility Status**: Button enabled for Chile (19), ready for others
+**Button Enabled**: Yes (Chile), can be enabled for others
+**Resource Allocation**:
+- Medium tier (6 CPU, 24GB RAM): Standard Random Forest classification
+- Heavy tier (10 CPU, 48GB RAM): Large-scale classification, SAR preprocessing
+- GPU tier (8 CPU, 32GB RAM, 1 GPU): Deep learning (Colombia yield estimation)
+
+**Data Strategy**: Hybrid (local data artifacts + cloud STAC access)
+**Local Data**: Stored in `data/<chapter>/` directory
+**Implementation Priority**: Phase 1 (highest priority - already 2 chapters ready with data)
+
+**Data Files**:
+- Chile (19): 57 MB (models, samples, ROI boundaries)
+- Digital Earth Africa (20): 2 MB (training data, validation results)
+- Others: TBD during upcoming work
+
+###### Category D: External GitHub Resources (5 chapters)
+**Chapters**: 14, 16, 18, 29, 34
+
+These chapters reference GitHub repositories or code that would be too cumbersome to package in the UN Environment. They are provided as external links.
+
+**Reproducibility Status**: Provided as external links
+**Button Enabled**: No
+**Implementation Priority**: N/A (external resource management strategy)
+
+###### Category E: Incomplete Chapters (2 chapters)
+**Chapters**: 22, 30
+
+These chapters have incomplete code or missing data components and are not yet ready for reproducibility.
+
+**Reproducibility Status**: Not ready
+**Button Enabled**: No
+**Implementation Priority**: Low (complete chapter development first)
+
+###### Implementation Roadmap
+
+**Phase 1: Infrastructure Foundation (Weeks 1-4)**
+- Deploy CSI Image Driver
+- Configure IRSA for AWS access
+- Build base compute image (R 4.5.1, GDAL, geospatial packages)
+- Deploy Helm chart
+- **Enables**: Basic button functionality
+
+**Phase 2: Category C Chapters (Weeks 5-8)**
+- Implement Dagger CI pipeline
+- Package data for Chile (19) and DEA (20)
+- Complete Colombia (23), China (32), Cook Islands (33), World Cereal (35)
+- Deploy to production
+- **Enables**: 6 chapters with local data
+
+**Phase 3: Category B Chapters (Weeks 9-10)**
+- Enable button for cloud-only chapters (5, 6, 8, 9, 10, 11)
+- Test STAC access with IRSA credentials
+- Document workflow
+- **Enables**: 6 additional chapters
+
+**Phase 4: Documentation & Training (Weeks 11-12)**
+- Update handbook documentation
+- Author training sessions
+- Create video tutorials
+- Establish support channels
+- **Enables**: Full rollout
+
+###### Decision Tree for Chapter Authors
+
+To determine if a chapter should enable the reproducible button:
+
+1. **Does your chapter contain executable code?**
+   - No → Category A (No button)
+   - Yes → Continue to step 2
+
+2. **Does it require local data files?**
+   - No → Category B (Button, cloud-only, light/medium tier)
+   - Yes → Continue to step 3
+
+3. **Is the code/data complete?**
+   - No → Category E (Complete first, then enable button)
+   - Yes → Continue to step 4
+
+4. **Is it better as external GitHub resource?**
+   - Yes → Category D (External link, no button)
+   - No → Category C (Button, hybrid data, medium/heavy/gpu tier)
+
